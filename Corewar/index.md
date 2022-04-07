@@ -38,7 +38,7 @@ Corewar是代码间的战争（更不如说作病毒间的生存竞争）
 
 — [原版](https://corewar.co.uk/wendell/download.htm)
 
-— [作者自己的汉化版（百度网盘）](https://pan.baidu.com/s/1TQ21HmjVKcMkFfP4s87d0w)
+— [作者自己的汉化版](https://zeflox.github.io/Corewar/CoreWin.exe)
 
 界面（部分）
 
