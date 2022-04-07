@@ -34,7 +34,9 @@ Corewar是代码间的战争（更不如说作病毒间的生存竞争）
 
 ### CoreWin介绍
 
-下载
+下载（只用于Windows）
+
+若系统非Windows可到[此处](https://corewar.co.uk/simulators.htm)寻找其他系统适用软件
 
 — [原版](https://corewar.co.uk/wendell/download.htm)
 
