@@ -17,10 +17,21 @@
 <div id="result"></div>
 <script>
 
-var fso,fl
-fso = new ActiveXObject("Scripting.FileSystemObject");
+var fso, f1, ts, s;
 
-f1 = fso.CreateTextFile("./a.txt", true);
+var ForReading= 1;
+
+fso = new ActiveXObject("Scripting.FileSystemObject"); 
+f1 = fso.CreateTextFile(“c:ltestfile.txt", true);
+
+// Response.Write("Reading file <br>");
+
+ts = fso.OpenTextFile("a.txt", ForReading); 
+s= ts.ReadLine();
+
+alert(s);
+
+ts.Close();
 
 </script>
 </body>
