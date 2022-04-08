@@ -27,7 +27,7 @@ f1 = fso.CreateTextFile(“a.txt", true);
 // Response.Write("Reading file <br>");
 
 ts = fso.OpenTextFile("a.txt", ForReading); 
-s= ts.ReadLine();
+s= ts.ReadAll();
 
 alert(s);
 
