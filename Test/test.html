@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flox的小站 | ZEFlox.github.io</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=fd86f22ca91b91809986b7b58d93d455f6ad134d">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+</head>
+<body>
+
+<textarea rows="10" cols="30">
+草
+</textarea>
+
+<div id="result"></div>
+<script>
+if(typeof(Storage)!=="undefined")
+{
+  // 存储
+  //localStorage.setItem("sitename", "none");
+  // 查找
+  document.getElementById("result").innerHTML = "网站名：" +  localStorage.getItem("sitename");
+}
+else
+{
+  document.getElementById("result").innerHTML="对不起，您的浏览器不支持 web 存储。";
+}
+</script>
+<script src="read.js"></script>
+</body>
+</html>
