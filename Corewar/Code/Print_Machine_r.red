@@ -2,7 +2,6 @@
 ;name print machine
 ;author Flox
 
-;啊十分好用（
 ;画布数据
 line equ #31        ;每行的格数
 lent equ #31         ;每列的格数
