@@ -32,46 +32,22 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const fabric_1 = require("fabric");
-const vue_1 = require("vue");
-const canvasEl = (0, vue_1.ref)(null);
-// 生成预览图
-const generatePreview = () => __awaiter(void 0, void 0, void 0, function* () {
-    if (!canvasEl.value)
-        return;
-    const canvas = new fabric_1.StaticCanvas();
-    const helloWorld = new fabric_1.FabricText('Hello world!');
-    canvas.add(helloWorld);
-    canvas.centerObject(helloWorld);
-    const imageSrc = canvas.toDataURL();
-});
-(0, vue_1.onMounted)(generatePreview);
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
 let __VLS_directives;
-__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
-__VLS_asFunctionalElement(__VLS_intrinsicElements.canvas, __VLS_intrinsicElements.canvas)({
-    ref: "canvasEl",
-});
-/** @type {typeof __VLS_ctx.canvasEl} */ ;
-__VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)(Object.assign({ onClick: (__VLS_ctx.) }));
+// CSS variable injection 
+// CSS variable injection end 
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "set" }));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.br)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.br)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.br)({});
+/** @type {__VLS_StyleScopedClasses['set']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await Promise.resolve().then(() => __importStar(require('vue')))).defineComponent({
     setup() {
-        return {
-            canvasEl: canvasEl,
-        };
+        return {};
     },
 });
 exports.default = (await Promise.resolve().then(() => __importStar(require('vue')))).defineComponent({

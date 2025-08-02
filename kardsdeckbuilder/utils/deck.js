@@ -88,7 +88,9 @@ function getDeckInfo([faction1, faction2, deck]) {
             addCard(cardId, idx + 1, cardCount);
         });
     });
+    const name = '导入卡组';
     return {
+        name,
         mainFaction,
         alliedFaction,
         cards: cardCount,
@@ -116,7 +118,7 @@ function exportDeck(deck) {
         const idx = card.qty - 1;
         arr[idx].push(card.id);
     });
-    str += `%%${mainFactionIndex}${alliedFactionIndex}|`;
+    str += `${deck.name}: %%${mainFactionIndex}${alliedFactionIndex}|`;
     str += arr.map((group) => group.join('')).join(';');
     return str;
 }

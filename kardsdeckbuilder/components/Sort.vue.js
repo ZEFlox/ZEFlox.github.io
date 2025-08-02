@@ -37,12 +37,14 @@ const sort_1 = require("@/utils/sort");
 const vue_1 = require("vue");
 const props = defineProps();
 const types = ['infantry', 'tank', 'fighter', 'bomber', 'artillery', 'order', 'countermeasure'];
+const rarities = ['Standard', 'Limited', 'Special', 'Elite'];
 const sortOptions = (0, vue_1.ref)({
     addable: true,
     faction: props.nation,
     showfaction: 0,
-    cost: [0, 15],
+    cost: -1,
     type: '',
+    rarity: '',
     reserved: false,
 });
 (0, vue_1.watch)(() => props.nation, (newNation) => {
@@ -66,9 +68,11 @@ debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
 let __VLS_directives;
+/** @type {__VLS_StyleScopedClasses['sort']} */ ;
+/** @type {__VLS_StyleScopedClasses['sort']} */ ;
 // CSS variable injection 
 // CSS variable injection end 
-__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "sort" }));
 __VLS_asFunctionalElement(__VLS_intrinsicElements.label, __VLS_intrinsicElements.label)({});
 __VLS_asFunctionalElement(__VLS_intrinsicElements.input)({
     type: "checkbox",
@@ -77,23 +81,20 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.input)({
 __VLS_asFunctionalElement(__VLS_intrinsicElements.br)({});
 __VLS_asFunctionalElement(__VLS_intrinsicElements.label, __VLS_intrinsicElements.label)({});
 __VLS_asFunctionalElement(__VLS_intrinsicElements.select, __VLS_intrinsicElements.select)({
-    value: (__VLS_ctx.sortOptions.cost[0]),
+    value: (__VLS_ctx.sortOptions.cost),
 });
-for (const [i] of __VLS_getVForSourceType(([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]))) {
+__VLS_asFunctionalElement(__VLS_intrinsicElements.option, __VLS_intrinsicElements.option)({
+    value: "-1",
+});
+for (const [i] of __VLS_getVForSourceType(([0, 1, 2, 3, 4, 5, 6, 7]))) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.option, __VLS_intrinsicElements.option)({
         value: (i),
     });
     (i);
 }
-__VLS_asFunctionalElement(__VLS_intrinsicElements.select, __VLS_intrinsicElements.select)({
-    value: (__VLS_ctx.sortOptions.cost[1]),
+__VLS_asFunctionalElement(__VLS_intrinsicElements.option, __VLS_intrinsicElements.option)({
+    value: "8",
 });
-for (const [i] of __VLS_getVForSourceType(([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]))) {
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.option, __VLS_intrinsicElements.option)({
-        value: (i),
-    });
-    (i);
-}
 __VLS_asFunctionalElement(__VLS_intrinsicElements.br)({});
 __VLS_asFunctionalElement(__VLS_intrinsicElements.label, __VLS_intrinsicElements.label)({});
 __VLS_asFunctionalElement(__VLS_intrinsicElements.select, __VLS_intrinsicElements.select)({
@@ -123,11 +124,27 @@ for (const [type] of __VLS_getVForSourceType((__VLS_ctx.types))) {
     (type);
 }
 __VLS_asFunctionalElement(__VLS_intrinsicElements.br)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.label, __VLS_intrinsicElements.label)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.select, __VLS_intrinsicElements.select)({
+    value: (__VLS_ctx.sortOptions.rarity),
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.option, __VLS_intrinsicElements.option)({
+    value: "",
+});
+for (const [rarity] of __VLS_getVForSourceType((__VLS_ctx.rarities))) {
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.option, __VLS_intrinsicElements.option)({
+        value: (rarity),
+    });
+    (rarity);
+}
+__VLS_asFunctionalElement(__VLS_intrinsicElements.br)({});
+/** @type {__VLS_StyleScopedClasses['sort']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await Promise.resolve().then(() => __importStar(require('vue')))).defineComponent({
     setup() {
         return {
             types: types,
+            rarities: rarities,
             sortOptions: sortOptions,
         };
     },

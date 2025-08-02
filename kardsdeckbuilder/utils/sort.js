@@ -24,18 +24,30 @@ function sortByNation(faction, showfaction, data) {
             (showfaction === 0 || showfaction === 2)));
     return sortCardData;
 }
-function sortByType(input, data) {
-    if (input === '') {
+function sortByType(type, data) {
+    if (type === '') {
         return data;
     }
-    const sortCardData = data.filter((card) => input === card.type);
+    const sortCardData = data.filter((card) => type === card.type);
     return sortCardData;
 }
 function sortByCost(cost, data) {
-    if (!cost || cost.length === 0) {
+    let sortCardData;
+    if (cost == -1) {
         return data;
     }
-    const sortCardData = data.filter((card) => parseInt(card.kredits) >= cost[0] && parseInt(card.kredits) <= cost[1]);
+    else if (cost >= 8) {
+        sortCardData = data.filter((card) => parseInt(card.kredits) >= 8);
+    }
+    else
+        sortCardData = data.filter((card) => parseInt(card.kredits) == cost);
+    return sortCardData;
+}
+function sortByRarity(rarity, data) {
+    if (rarity === '') {
+        return data;
+    }
+    const sortCardData = data.filter((card) => rarity === card.rarity);
     return sortCardData;
 }
 function sortByReserved(input, data) {
@@ -46,13 +58,14 @@ function sortByReserved(input, data) {
     return sortCardData;
 }
 function sortData(input) {
-    const originCardData = kardsdata_navalwarfare_json_1.default;
-    const sortAddable = sortByAddable(input.addable, originCardData);
-    const sortedNation = sortByNation(input.faction, input.showfaction, sortAddable);
-    const sortedType = sortByType(input.type, sortedNation);
-    const sortedCost = sortByCost(input.cost, sortedType);
-    const sortReserved = sortByReserved(input.reserved, sortedCost);
-    const sortCardData = sortReserved;
+    let data = kardsdata_navalwarfare_json_1.default;
+    data = sortByAddable(input.addable, data);
+    data = sortByNation(input.faction, input.showfaction, data);
+    data = sortByType(input.type, data);
+    data = sortByCost(input.cost, data);
+    data = sortByRarity(input.rarity, data);
+    data = sortByReserved(input.reserved, data);
+    const sortCardData = data;
     return sortCardData;
 }
 function sortDeck(deck) {

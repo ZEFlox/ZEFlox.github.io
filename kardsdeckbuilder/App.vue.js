@@ -39,21 +39,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Cards_vue_1 = __importDefault(require("@/components/Cards.vue"));
 const Deck_vue_1 = __importDefault(require("@/components/Deck.vue"));
 const Sort_vue_1 = __importDefault(require("@/components/Sort.vue"));
+const Set_vue_1 = __importDefault(require("@/components/Set.vue"));
 const deck_1 = require("@/utils/deck");
 const sort_1 = require("@/utils/sort");
 const vue_1 = require("vue");
 const core_1 = require("@vueuse/core");
+const draw_1 = require("./utils/draw");
 const { copy } = (0, core_1.useClipboard)();
 let input = (0, vue_1.ref)('');
-let output_export = (0, vue_1.ref)('');
 let currentDeck = (0, vue_1.ref)({
+    name: '',
     mainFaction: 'Germany',
     alliedFaction: 'France',
     cards: [],
 });
 let data = (0, vue_1.ref)([]);
-let sortVisible = (0, vue_1.ref)(false);
-const deckVisible = (0, vue_1.computed)(() => !sortVisible.value);
+let viewMode = (0, vue_1.ref)('deck');
+const deckVisible = (0, vue_1.computed)(() => viewMode.value === 'deck');
+const sortVisible = (0, vue_1.computed)(() => viewMode.value === 'sort');
+const setVisible = (0, vue_1.computed)(() => viewMode.value === 'set');
 //导入
 function importInput() {
     if (input.value) {
@@ -71,21 +75,70 @@ function importInput() {
 }
 //导出
 function exportInput() {
-    if (currentDeck.value) {
+    console.log(currentDeck.value);
+    if (currentDeck.value.cards.length !== 0) {
         try {
             console.log('Exporting deck:', currentDeck.value);
-            const deckExport = (0, deck_1.exportDeck)(currentDeck.value);
-            output_export.value = `已复制：${deckExport}`;
-            copy(deckExport);
+            showToast(`
+      <div>导出方式：</div>
+      <button class="copyascode">复制为代码</button><button class="copyasimg">下载为图片</button>
+      `, 0);
         }
         catch (error) {
             console.error('Error exporting deck:', error);
-            output_export.value = '导出失败' + error;
+            showToast(`导出失败:${error}`, 3000);
         }
     }
     else {
-        output_export.value = '请先导入卡组';
+        showToast('卡组中没有任何牌', 1000);
     }
+}
+//呼出弹窗
+function showToast(message, time) {
+    const container = document.querySelector('.toast-container');
+    container.replaceChildren();
+    const toast = document.createElement('div');
+    toast.className = `toast`;
+    toast.innerHTML = `
+    ${message}
+    <button class="toast-close">&times;</button>
+  `;
+    container.appendChild(toast);
+    container.classList.add('show');
+    let timer;
+    if (time != 0) {
+        timer = setTimeout(() => {
+            container.classList.remove('show');
+            toast.remove();
+        }, time);
+    }
+    if (toast.querySelector('.toast-close')) {
+        toast.querySelector('.toast-close').addEventListener('click', () => {
+            if (time != 0)
+                clearTimeout(timer);
+            container.classList.remove('show');
+            toast.remove();
+        });
+    }
+    if (toast.querySelector('.copyascode')) {
+        toast.querySelector('.copyascode').addEventListener('click', () => {
+            copy((0, deck_1.exportDeck)(currentDeck.value));
+            showToast('复制成功', 3000);
+        });
+    }
+    if (toast.querySelector('.copyasimg')) {
+        toast.querySelector('.copyasimg').addEventListener('click', () => {
+            (0, draw_1.combineImages)(currentDeck.value, '');
+            showToast('正在下载', 3000);
+        });
+    }
+}
+//边栏控制
+function setView(type) {
+    if (viewMode.value === type)
+        viewMode.value = 'deck';
+    else
+        viewMode.value = type;
 }
 //检查更新
 function onDeckUpdate(newDeck) {
@@ -109,30 +162,33 @@ let __VLS_components;
 let __VLS_directives;
 // CSS variable injection 
 // CSS variable injection end 
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "toast-container" }));
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    id: "app",
+    id: "iapp",
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
     id: "title",
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.h3, __VLS_intrinsicElements.h3)({});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ id: "ui" }, { class: "row" }));
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    id: "toolbar",
+    id: "cards",
 });
-__VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
-    id: "import-export",
+/** @type {[typeof Cards, ]} */ ;
+// @ts-ignore
+const __VLS_0 = __VLS_asFunctionalComponent(Cards_vue_1.default, new Cards_vue_1.default(Object.assign({ 'onUpdate:deck': {} }, { deck: (__VLS_ctx.currentDeck), data: (__VLS_ctx.data) })));
+const __VLS_1 = __VLS_0(Object.assign({ 'onUpdate:deck': {} }, { deck: (__VLS_ctx.currentDeck), data: (__VLS_ctx.data) }), ...__VLS_functionalComponentArgsRest(__VLS_0));
+let __VLS_3;
+let __VLS_4;
+let __VLS_5;
+const __VLS_6 = {
+    'onUpdate:deck': (__VLS_ctx.onDeckUpdate)
+};
+var __VLS_2;
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    id: "sidebar",
 });
-__VLS_asFunctionalElement(__VLS_intrinsicElements.input)({
-    value: (__VLS_ctx.input),
-    type: "text",
-});
-__VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)(Object.assign({ onClick: (__VLS_ctx.importInput) }, { id: "import" }));
-__VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)(Object.assign({ onClick: (__VLS_ctx.exportInput) }, { id: "export" }));
-__VLS_asFunctionalElement(__VLS_intrinsicElements.pre, __VLS_intrinsicElements.pre)(Object.assign({ style: {} }));
-(__VLS_ctx.output_export);
-__VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({
-    id: "options",
-});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)(Object.assign({ class: "toolbar" }));
 __VLS_asFunctionalElement(__VLS_intrinsicElements.select, __VLS_intrinsicElements.select)(Object.assign({ onChange: (...[$event]) => {
         __VLS_ctx.sortDeck(__VLS_ctx.currentDeck);
     } }, { name: "mainFaction", value: (__VLS_ctx.currentDeck.mainFaction) }));
@@ -195,29 +251,16 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.option, __VLS_intrinsicElement
     value: "Finland",
     disabled: (__VLS_ctx.factionAble('Finland')),
 });
-__VLS_asFunctionalElement(__VLS_intrinsicElements.label, __VLS_intrinsicElements.label)({});
-__VLS_asFunctionalElement(__VLS_intrinsicElements.input)({
-    type: "checkbox",
-});
-(__VLS_ctx.sortVisible);
-__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ id: "ui" }, { class: "row" }));
-__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ id: "cards" }, { class: "col-xs-8" }));
-/** @type {[typeof Cards, ]} */ ;
-// @ts-ignore
-const __VLS_0 = __VLS_asFunctionalComponent(Cards_vue_1.default, new Cards_vue_1.default(Object.assign({ 'onUpdate:deck': {} }, { deck: (__VLS_ctx.currentDeck), data: (__VLS_ctx.data) })));
-const __VLS_1 = __VLS_0(Object.assign({ 'onUpdate:deck': {} }, { deck: (__VLS_ctx.currentDeck), data: (__VLS_ctx.data) }), ...__VLS_functionalComponentArgsRest(__VLS_0));
-let __VLS_3;
-let __VLS_4;
-let __VLS_5;
-const __VLS_6 = {
-    'onUpdate:deck': (__VLS_ctx.onDeckUpdate)
-};
-var __VLS_2;
-__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ id: "sidebar" }, { class: "col-xs-4" }));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)(Object.assign({ onClick: (...[$event]) => {
+        __VLS_ctx.setView('sort');
+    } }));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)(Object.assign({ onClick: (...[$event]) => {
+        __VLS_ctx.setView('set');
+    } }));
 /** @type {[typeof Deck, ]} */ ;
 // @ts-ignore
-const __VLS_7 = __VLS_asFunctionalComponent(Deck_vue_1.default, new Deck_vue_1.default(Object.assign({ 'onUpdate:deck': {} }, { deck: (__VLS_ctx.currentDeck) })));
-const __VLS_8 = __VLS_7(Object.assign({ 'onUpdate:deck': {} }, { deck: (__VLS_ctx.currentDeck) }), ...__VLS_functionalComponentArgsRest(__VLS_7));
+const __VLS_7 = __VLS_asFunctionalComponent(Deck_vue_1.default, new Deck_vue_1.default(Object.assign(Object.assign({ 'onUpdate:deck': {} }, { deck: (__VLS_ctx.currentDeck) }), { class: "sidecontent" })));
+const __VLS_8 = __VLS_7(Object.assign(Object.assign({ 'onUpdate:deck': {} }, { deck: (__VLS_ctx.currentDeck) }), { class: "sidecontent" }), ...__VLS_functionalComponentArgsRest(__VLS_7));
 let __VLS_10;
 let __VLS_11;
 let __VLS_12;
@@ -228,8 +271,8 @@ __VLS_asFunctionalDirective(__VLS_directives.vShow)(null, Object.assign(Object.a
 var __VLS_9;
 /** @type {[typeof Sort, ]} */ ;
 // @ts-ignore
-const __VLS_14 = __VLS_asFunctionalComponent(Sort_vue_1.default, new Sort_vue_1.default(Object.assign({ 'onUpdate:options': {} }, { data: (__VLS_ctx.data), nation: ([__VLS_ctx.currentDeck.mainFaction, __VLS_ctx.currentDeck.alliedFaction]) })));
-const __VLS_15 = __VLS_14(Object.assign({ 'onUpdate:options': {} }, { data: (__VLS_ctx.data), nation: ([__VLS_ctx.currentDeck.mainFaction, __VLS_ctx.currentDeck.alliedFaction]) }), ...__VLS_functionalComponentArgsRest(__VLS_14));
+const __VLS_14 = __VLS_asFunctionalComponent(Sort_vue_1.default, new Sort_vue_1.default(Object.assign(Object.assign({ 'onUpdate:options': {} }, { data: (__VLS_ctx.data), nation: ([__VLS_ctx.currentDeck.mainFaction, __VLS_ctx.currentDeck.alliedFaction]) }), { class: "sidecontent" })));
+const __VLS_15 = __VLS_14(Object.assign(Object.assign({ 'onUpdate:options': {} }, { data: (__VLS_ctx.data), nation: ([__VLS_ctx.currentDeck.mainFaction, __VLS_ctx.currentDeck.alliedFaction]) }), { class: "sidecontent" }), ...__VLS_functionalComponentArgsRest(__VLS_14));
 let __VLS_17;
 let __VLS_18;
 let __VLS_19;
@@ -238,9 +281,26 @@ const __VLS_20 = {
 };
 __VLS_asFunctionalDirective(__VLS_directives.vShow)(null, Object.assign(Object.assign({}, __VLS_directiveBindingRestFields), { value: (__VLS_ctx.sortVisible) }), null, null);
 var __VLS_16;
+/** @type {[typeof Set, ]} */ ;
+// @ts-ignore
+const __VLS_21 = __VLS_asFunctionalComponent(Set_vue_1.default, new Set_vue_1.default(Object.assign({ class: "sidecontent" })));
+const __VLS_22 = __VLS_21(Object.assign({ class: "sidecontent" }), ...__VLS_functionalComponentArgsRest(__VLS_21));
+__VLS_asFunctionalDirective(__VLS_directives.vShow)(null, Object.assign(Object.assign({}, __VLS_directiveBindingRestFields), { value: (__VLS_ctx.setVisible) }), null, null);
+__VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)(Object.assign({ class: "toolbar" }));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.input)({
+    value: (__VLS_ctx.input),
+    type: "text",
+    size: "12",
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)(Object.assign({ onClick: (__VLS_ctx.importInput) }, { id: "import" }));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)(Object.assign({ onClick: (__VLS_ctx.exportInput) }, { id: "export" }));
+/** @type {__VLS_StyleScopedClasses['toast-container']} */ ;
 /** @type {__VLS_StyleScopedClasses['row']} */ ;
-/** @type {__VLS_StyleScopedClasses['col-xs-8']} */ ;
-/** @type {__VLS_StyleScopedClasses['col-xs-4']} */ ;
+/** @type {__VLS_StyleScopedClasses['toolbar']} */ ;
+/** @type {__VLS_StyleScopedClasses['sidecontent']} */ ;
+/** @type {__VLS_StyleScopedClasses['sidecontent']} */ ;
+/** @type {__VLS_StyleScopedClasses['sidecontent']} */ ;
+/** @type {__VLS_StyleScopedClasses['toolbar']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await Promise.resolve().then(() => __importStar(require('vue')))).defineComponent({
     setup() {
@@ -248,15 +308,17 @@ const __VLS_self = (await Promise.resolve().then(() => __importStar(require('vue
             Cards: Cards_vue_1.default,
             Deck: Deck_vue_1.default,
             Sort: Sort_vue_1.default,
+            Set: Set_vue_1.default,
             sortDeck: sort_1.sortDeck,
             input: input,
-            output_export: output_export,
             currentDeck: currentDeck,
             data: data,
-            sortVisible: sortVisible,
             deckVisible: deckVisible,
+            sortVisible: sortVisible,
+            setVisible: setVisible,
             importInput: importInput,
             exportInput: exportInput,
+            setView: setView,
             onDeckUpdate: onDeckUpdate,
             onDataUpdate: onDataUpdate,
             factionAble: factionAble,

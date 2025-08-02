@@ -61,24 +61,40 @@ let __VLS_directives;
 // CSS variable injection 
 // CSS variable injection end 
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "deck" }));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "name" }));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.input)(Object.assign({ type: "text", maxlength: "6", value: (props.deck.name), size: "9", placeholder: "输入卡组名称" }, { style: {} }));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "decklist" }));
 for (const [card] of __VLS_getVForSourceType((props.deck.cards))) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "card" }));
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)(Object.assign({ class: "cropper" }));
     __VLS_asFunctionalElement(__VLS_intrinsicElements.img)(Object.assign({ class: "view" }, { src: (__VLS_ctx.getCardImg(card.name)) }));
     (card.cost);
     __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)(Object.assign({ onClick: (...[$event]) => {
             __VLS_ctx.changeCard(card.id, props.deck, false);
-        } }));
+        } }, { class: "cardname" }));
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.b, __VLS_intrinsicElements.b)({});
     (card.name);
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)(Object.assign({ onClick: (...[$event]) => {
+            __VLS_ctx.changeCard(card.id, props.deck, true);
+        } }));
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.b, __VLS_intrinsicElements.b)({});
     (card.qty);
 }
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "count" }));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({});
 (__VLS_ctx.mainlength);
+__VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({});
 (__VLS_ctx.alliedlength);
+__VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({});
 (__VLS_ctx.length);
 __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)(Object.assign({ onClick: (__VLS_ctx.cleanDeck) }));
 /** @type {__VLS_StyleScopedClasses['deck']} */ ;
+/** @type {__VLS_StyleScopedClasses['name']} */ ;
+/** @type {__VLS_StyleScopedClasses['decklist']} */ ;
 /** @type {__VLS_StyleScopedClasses['card']} */ ;
+/** @type {__VLS_StyleScopedClasses['cropper']} */ ;
 /** @type {__VLS_StyleScopedClasses['view']} */ ;
+/** @type {__VLS_StyleScopedClasses['cardname']} */ ;
 /** @type {__VLS_StyleScopedClasses['count']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await Promise.resolve().then(() => __importStar(require('vue')))).defineComponent({
