@@ -62,7 +62,7 @@ let __VLS_directives;
 // CSS variable injection end 
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "deck" }));
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "name" }));
-__VLS_asFunctionalElement(__VLS_intrinsicElements.input)(Object.assign({ type: "text", maxlength: "6", value: (props.deck.name), size: "9", placeholder: "输入卡组名称" }, { style: {} }));
+__VLS_asFunctionalElement(__VLS_intrinsicElements.input)(Object.assign({ type: "text", maxlength: "12", value: (props.deck.name), size: "25", placeholder: "输入卡组名称" }, { style: {} }));
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "decklist" }));
 for (const [card] of __VLS_getVForSourceType((props.deck.cards))) {
     __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "card" }));

@@ -129,7 +129,7 @@ function showToast(message, time) {
     if (toast.querySelector('.copyasimg')) {
         toast.querySelector('.copyasimg').addEventListener('click', () => {
             (0, draw_1.combineImages)(currentDeck.value, '');
-            showToast('正在下载', 3000);
+            showToast('请等待...', 3000);
         });
     }
 }

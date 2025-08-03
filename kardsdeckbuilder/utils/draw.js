@@ -29,7 +29,7 @@ function combineImages(deck, name) {
             img.onerror = (e) => reject(`图片加载失败: ${url} - ${e}`);
         })));
         // 2. 画布尺寸
-        const height = 351 * 4 + 500 + 100;
+        const height = 351 * 4 + 400 + 200;
         const width = 250 * 10 + 100 * 2;
         // 3. 创建画布并绘制
         const canvas = document.createElement('canvas');
@@ -48,9 +48,6 @@ function combineImages(deck, name) {
         ctx.font = 'bold 200px Arial';
         ctx.fillStyle = '#dddddd';
         ctx.fillText(deck.name || `${deck.mainFaction} Deck`, 100, 350);
-        ctx.strokeStyle = '#333333';
-        ctx.lineWidth = 5;
-        ctx.strokeText(deck.name || `${deck.mainFaction} Deck`, 100, 350);
         let xPosition = 100;
         let yPosition = 500;
         imgs.forEach((img) => {
