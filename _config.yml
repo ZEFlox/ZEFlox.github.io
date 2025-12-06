@@ -1,0 +1,7 @@
+theme: minima # 使用 Jekyll 主题
+
+# Markdown 处理
+markdown: kramdown
+kramdown:
+  input: GFM # GitHub Flavored Markdown
+  hard_wrap: false
