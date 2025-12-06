@@ -1,3 +1,9 @@
+---
+layout: default
+title: "页面标题"
+date: 2023-12-20
+---
+
 # 导入
 > Core War（磁芯大战）是一款由两个或多个程序（代替它们的作者）玩的游戏，这些程序用一种名为*Redcode*的汇编语言编写而成，并在一个名为 *MARS（Memory Array Redcode Simulator，内存阵列Redcode模拟器）* 的虚拟机中运行。游戏的目标是使对方程序的所有进程终止，从而使你的程序独占机器。
 

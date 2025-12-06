@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Redcode 初学者指南"
+---
+
 # Redcode 初学者指南
 Version 1.23
 
