@@ -1,0 +1,447 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+N. 1                                                               16/10/95
+
+
+Hi people,
+with this number we begin a new newsletter to cover main arguments of corwar
+game, following the steps of Paul Kline's '_push off_' and Brant Thomsen's
+'The 94 Warrior'.
+Hints, suggestions, criticism are welcome; as is welcome anyone wanting to
+join the staff. This number is care of Beppe Bezzi <bezzi@iol.it> and next
+one will be made by Myers Bremer <bremermr@ecn.purdue.edu>, we hope to have
+a couple of others, so as we can post the newsletter weekly, without too
+much effort, in a rotating schedule.
+Come on ad join, the pay isn't good but you can write for something with a
+worldwide distribution :-)
+
+Most care will be taken of the -94 hill, the one where best battles are,
+other hills will have only reports of main events, unless some fight will
+start in them too. This week we cannot cover the beginners hill because the
+test warrior submitted got meaningless results. Hope the bug in Pizza's
+hills will soon be fixed.
+First contribute to Core Warrior was from Andersen F. Scholl, that sent me
+the header, thanx.
+
+----------------------------
+For everyone interested in Corewar
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth
+http://www.ecst.csuchico.edu/~pizza/koth
+
+----------------------------------------------------------------------------
+94 Hill - Standings
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  45/ 41/ 13       Leprechaun on speed         Anders Ivner     150      15
+ 2  37/ 31/ 32                 Torch t18              P.Kline     143     219
+ 3  40/ 37/ 23               myVamp v3.7             Paulsson     143     187
+ 4  35/ 28/ 37           Jack in the box          Beppe Bezzi     142     207
+ 5  24/  6/ 70                  Die Hard              P.Kline     142       4
+ 6  40/ 38/ 23               Armory - A5            Wilkinson     141     358
+ 7  37/ 34/ 29                       Phq    Maurizio Vittuari     141     321
+ 8  35/ 31/ 34              Father & Son    Maurizio Vittuari     139      77
+ 9  41/ 44/ 14                Frontwards       Steven Morrell     139     154
+10  42/ 46/ 12   Anti Die-Hard Bevo (3c)       John Wilkinson     139      24
+11  35/ 33/ 32                Brain Vamp  B.Bezzi, M.Paulsson     138      89
+12  37/ 37/ 26              Thermite 1.0        Robert Macrae     137     782
+13  41/ 46/ 13             Super Bevo 4a       John Wilkinson     137       1
+14  40/ 45/ 15         Leprechaun deluxe         Anders Ivner     136     124
+15  35/ 35/ 30              Firestorm 08          Beppe Bezzi     134      75
+16  41/ 49/ 10              SandBlast 1a    John K. Wilkinson     134      35
+17  35/ 39/ 26               Tornado 1.8          Beppe Bezzi     131      73
+18  34/ 40/ 26                Cthulhu v7    John K. Wilkinson     129      47
+19  24/ 28/ 48                  Twimpede              Jay Han     120       6
+20  26/ 33/ 42                replicator           M R Bremer     119       2
+
+
+In this moment we have standard non-p warriors in majority on the hill and
+keeping strongly the top with the q-scanner Leprechaun on speed followed by
+the bomber Torch and the vampire myVamp; the first switcher is Jack in the
+box, followed by Paul's mysterious object Die Hard, that now seems to die a
+little and score a lot more. Comparing scores with last week's ones, is
+worth noting the rise of Armory from the bottom to near the top, this
+veteran seems to have found a new life.
+
+--------------------
+94 - What's new
+
+This week many new warriors have appeared in the 94 hill, to disappear short
+after; the tournament first round imposed maximal secrecy to everyone (but
+me :-) Worth noting are:
+
+ 1  35/ 25/ 40                test jtm09          Beppe Bezzi     145       1
+ 1  39/ 34/ 27                  aMixture             Paulsson     144       1
+ 2  47/ 40/ 13       Leprechaun on speed         Anders Ivner     153       1
+ 4  30/ 21/ 49                test jtm08          Beppe Bezzi     139       1
+ 5  43/ 45/ 12   Anti Die-Hard Bevo (3c)       John Wilkinson     141       1
+ 5  44/ 47/ 10                     TESTP    Maurizio Vittuari     141       1
+ 6  25/ 10/ 65                  Die Hard              P.Kline     140       1
+
+Of those new warriors only Leprechaun on speed and Anti Die-Hard Bevo are
+still on hill, others were but tests for the tournament, maybe we'll see
+them on hill soon.
+-----------------------
+94 - What's no more
+
+Only one near 100 :-(
+
+21  27/ 24/ 49            Dirty thinking          Beppe Bezzi     130      98
+
+The real scoop was last week
+21  38/ 53/  9                  Agony II        Stefan Strack     122     912
+
+Congratulation Stefan, you are number 2 in 94 Hall of Fame
+----------------------
+What's old
+
+12  37/ 37/ 26              Thermite 1.0        Robert Macrae     137     782
+ 6  40/ 38/ 23               Armory - A5            Wilkinson     141     358
+ 7  37/ 34/ 29                       Phq    Maurizio Vittuari     141     321
+ 2  37/ 31/ 32                 Torch t18              P.Kline     143     219
+ 4  35/ 28/ 37           Jack in the box          Beppe Bezzi     142     207
+ 3  40/ 37/ 23               myVamp v3.7             Paulsson     143     187
+ 9  41/ 44/ 14                Frontwards       Steven Morrell     139     154
+
+Thermite is dominating the age scoring; now is in 4th place in the Hall of
+Fame passing Blue Funk 3
+-------------------------
+
+HALL OF FAME
+* means the warrior is still running; > score isn't exact
+
+Pos    Name                  Author          Age     Strategy
+ 1  Iron Gate 1.5          Wayne Sheppard    926    CMP scanner
+ 2  Agony II               Stefan Strack     912    CMP scanner
+ 3  Blue Funk              Steven Morrell    869    Stone/ imp
+ 4  Thermite 1.0           Robert Macrae     782 *  Qscan -> bomber
+ 5  Blue Funk 3            Steven Morrell    766    Stone/ imp
+ 6  HeremScimitar          A.Ivner,P.Kline   666    Bomber
+ 7  B-Panama X             Steven Morrell    518    Stone/ replicator
+ 8  NC 94                  Wayne Sheppard    387    Stone/ imp
+ 9  Cannonade              P.Kline          >378    Stone/ imp
+10  Torch t17              P.Kline           378    Bomber
+11  Armory - A5            Wilkinson         358 *  P-warrior
+12  Lucky 3                Stefan Strack    >350    ?
+13  Request v2.0           Brant D. Thomsen  347    Qvamp -> vampire
+14  Dragon Spear           c w blue          346    ?
+15  juliet storm           M R Bremer        333    Stone/ imp
+16  TimeScape (1.0)        J. Pohjalainen    322    Replicator
+17  Phq                    Maurizio Vittuari 321 *  P-warrior
+18  Rave 4.1               Stefan Strack     320    CMP scanner
+19  Christopher            Steven Morrell    289    Vampire
+19  Aeka                   T.Hsu             289    Stone/ imp
+20  Marcia Trionfale       Beppe Bezzi       246    Replicator
+
+That's all I was able to do. I have a 'hole' from last number of -The 94
+Warrior- and the beginning of my personal archives in june 95.
+I need help from you to fill the Hall of Fame exactly, in particular exact
+scores of Lucky and Cannonade and missing or wrong strategies. TIA
+
+------------------
+Nandor's and Stefan's Fall Core War Tournament (NSFCWT)
+(details at http://www.stormking.com/~koth/nsfcwt.html)
+
+Round one is just finished, the battle was really an hard one and half the
+contenders are closed in a single point difference. The strategic choices of
+players have been different, some choose to play best in standard, some in
+multi, and some made a compromise. Two of the warriors mentioned before in
+-What's new- have showed down in the tournament (yes my testjtm09 is Rhino,
+and it's not very different from the one I published :-) while some have
+used their warriors in the 94 hill.
+Now the challenge is against the White warrior.
+
+I hope many more will join the tournament, it's free and sure it's fun. Even
+beginners are invited to join; you have nothing to lose, you can improve
+your redcoding, comparing your warriors with those of more expert players,
+and, seen that some rounds will have problems never met before (white
+warrior, team play, normal programs in redcode), may also be that a new
+player will beat some veteran in those unknown fields of redcoding.
+To subscribe, it's possible even in the middle of tournament, mail Stefan
+Strack <stst@idnsun.gpct.vanderbilt.edu>
+
+Now, in short, the results:
+
+Name       one-on-one   multi        combined
+_____________________________________________
+P.Kline             5      10           7.5
+Paulsson            7       8           7.5
+Beppe Bezzi         8       6           7
+M R Bremer         10       4           7
+Maurizio Vittuari   6       7           6.5
+Anders Ivner        9       2           5.5
+Steven Morrell      1       9           5
+John K. Wilkinson   3       5           4
+Derek Ross          4       3           3.5
+G. Eadon            2       1           1.5
+
+
+Here the results of the one-on-one challenge:
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     endpoint .              M R Bremer               40  28  32   1678
+  2     Leprechaun on speed     Anders Ivner             43  38  18   1631
+  3     Rhino                   Beppe Bezzi              37  31  32   1566
+  4     aMixture                Paulsson                 36  33  31   1520
+  5     Tom&Jerry               Maurizio Vittuari        31  31  38   1430
+  6     Die Hard                P.Kline                  17   7  76   1410
+  7     Miss Careless           Derek Ross               32  38  30   1391
+  8     Cthulhu v8              John K. Wilkinson        21  19  60   1352
+  9     Mythicon v1.2           G. Eadon                 29  46  25   1242
+ 10     Try fitting THIS name i Steven Morrell           25  41  34   1208
+
+The results for 1000 rounds of "all-against-all":
+_____________________________________________
+Die Hard by P.Kline scores 14162
+  Results: 0 16 26 42 86 168 179 228 137 49 69
+Try fitting THIS name into eight characters or less! by Steven Morrell
+scores 13308
+  Results: 0 2 25 41 89 157 182 227 135 49 93
+aMixture by Paulsson scores 12656
+  Results: 1 8 6 31 82 157 177 230 134 49 125
+Tom&Jerry by Maurizio Vittuari scores 12382
+  Results: 0 2 10 24 80 163 179 233 137 49 123
+Rhino by Beppe Bezzi scores 10987
+  Results: 0 0 5 22 56 144 167 220 137 49 200
+Cthulhu v8 by John K. Wilkinson scores 8590
+  Results: 1 2 12 18 28 83 120 185 124 49 378
+endpoint . by M R Bremer scores 8425
+  Results: 0 8 12 17 26 77 119 173 120 49 399
+Miss Careless by Derek Ross scores 6494
+  Results: 1 0 13 6 23 47 79 149 118 49 515
+Leprechaun on speed by Anders Ivner scores 4992
+  Results: 4 11 4 2 8 17 47 110 94 49 654
+Mythicon v1.2 by G. Eadon scores 4581
+  Results: 1 1 1 9 12 25 46 117 97 49 642
+
+
+Waiting results I submitted second round White warrior to Pizza; he
+performed very well, here are results:
+
+Date: Mon, 16 Oct 1995 07:08:22 -0700
+From: Internet Pizza Server <pizza@ecst.csuchico.edu>
+To: bezzi@iol.it
+Subject: 94 : White warrior challenge results
+
+Program "White warrior" (length 17) by "Nandor & Stefan"
+(contact address "bezzi@iol.it"):
+has challenged the ICWS '94 Draft hill.
+
+White warrior wins: 19
+Phq wins: 28
+Ties: 203
+
+White warrior wins: 102
+Leprechaun on speed wins: 81
+Ties: 67
+
+White warrior wins: 4
+Jack in the box wins: 2
+Ties: 244
+
+White warrior wins: 15
+Father & Son wins: 30
+Ties: 205
+
+White warrior wins: 51
+Brain Vamp wins: 25
+Ties: 174
+
+White warrior wins: 91
+Thermite 1.0 wins: 61
+Ties: 98
+
+White warrior wins: 51
+Torch t18 wins: 93
+Ties: 106
+
+White warrior wins: 47
+Frontwards wins: 137
+Ties: 66
+
+White warrior wins: 135
+SandBlast 1a wins: 45
+Ties: 70
+
+White warrior wins: 76
+Armory - A5 wins: 93
+Ties: 81
+
+White warrior wins: 87
+myVamp v3.7 wins: 93
+Ties: 70
+
+White warrior wins: 126
+Leprechaun deluxe wins: 71
+Ties: 53
+
+White warrior wins: 84
+Anti Die-Hard Bevo (3c) wins: 102
+Ties: 64
+
+White warrior wins: 89
+Firestorm 08 wins: 90
+Ties: 71
+
+White warrior wins: 105
+Cthulhu v7 wins: 42
+Ties: 103
+
+White warrior wins: 88
+Tornado 1.8 wins: 74
+Ties: 88
+
+White warrior wins: 19
+Twimpede wins: 2
+Ties: 229
+
+White warrior wins: 188
+Web wins: 30
+Ties: 32
+
+White warrior wins: 0
+simple wins: 2
+Ties: 248
+
+White warrior wins: 5
+Die Hard wins: 8
+Ties: 237
+
+Program "White warrior" (length 17) by "Nandor & Stefan"
+;strategy White warrior for round 2 of Nandor and Stefan's fall 1995 tournament
+;strategy Out of senseless cruelty, we'll show the load file format only :-)
+;strategy Results will be published in the newsletter -Beppe
+White warrior wins: 9
+Ties: 233
+
+Your overall score: 131.714286
+
+Die Hard has been pushed off the ICWS '94 Draft hill.
+The current ICWS '94 Draft hill:
+
+ 6  26/ 21/ 52             White warrior      Nandor & Stefan     132       1
+
+Not bad for something we have to beat 80% of times.
+
+Nandor, Stefan, you are not more out of warriors in Pizza hill :-)
+
+---------------------------
+The hint
+
+Replicators (part 1)
+
+Having to make the hint of the week, I start with the kind of warriors I
+like more and I can do better, replicators, or paper; the sort of warrior
+that use the sheer number to overcome the enemy.
+Paper warriors, like every other, have evoluted a lot from the beginnings of
+the game; presently they use almost all the so called 'silk' style, i.e.
+splitting before copying. This can be done only under 94 rules because
+requires post increment and a-field addressing. Now let's give a look at a
+very simple guy.
+
+
+start   spl     1
+        mov     -1,     0       ;generate 3 parallel processes
+
+1 silk  spl.a   @0,     100     ;split
+2       mov.i   }silk,  >silk   ;copy
+3       jmp.a   silk,   {silk   ;repeat the thing resetting pointer
+
+First two lines generate 3 processes that execute the same line one after
+the other, before executing the next. First line creates another process to
+execute line start+1, then process 1 copy start line over the mov and
+process two splits, adding another process to execute silk. The simpler way
+to generate an exact number of parallel processes is converting the number
+required in binary 3 -> 11, subtract one -> 10, use a spl 1 for every one
+and a mov -1,0 for every zero. Much simpler to do than to tell. For the
+warrior to work we need at least as many processes as we have lines to copy.
+Let's go back toour warrior; now we have three processes executing line 1
+they split, where, at the a-field address i.e. the address pointed by
+b-field of line 0 locations away, the b-field of the line they are
+executing, 100 locations away. When all three process executed this line we
+have three others process ready to execute line silk+100, there is nothing
+to execute here but we have some time because new generated processes are
+queued after those executing the split.
+First three processes now execute line 2, they move what's pointed by
+a-field of line 1 to the location pointed by b-field of line 1 then they
+increment both a and b field of line 1. First process moves line 1 100 cells
+away from line 1 and leaves line 1 changed such a way:
+1 silk  spl.a    @1,    101
+so it copyes line 2 101 cells away from silk, just after the previous line.
+Process 3 does same thing copying line3.
+Now it's the turn of the new processes, those created by line1, to execute,
+they are not more sitting on an empty cell but over the copy of line1
+created by line2, they execute it and begin creating third generation copy.
+First three processes now reach line3, now the warrior has modifyed in such way
+
+1 silk  spl.a   @3,     102
+2       mov.i   }silk,  >silk
+3       jmp.a   silk,   {silk
+The a-field of line 3 is the address of the jump while b-field decrements
+a-field of line 1 so that the warrior can go on splitting and copying.
+
+This one is not a real warrior, his offensive potential is too small, it's
+just to understand how a silk replicator works. Simple improvements are
+adding an add line so as copies are not packed one near the other, and
+adding some bombing to make it a bit nastier. The warrior following is
+Paperone, my first warrior to enter 94 hill, it was on top of beginner hill
+for some time a few months ago.
+It's similar to the example in the FAQ (very similar indeed :-) but to make
+it run well I had to work on the many constants.
+
+;redcode-94
+;name Paperone
+;author Beppe Bezzi
+;strategy Silk replicator
+;kill Paperone
+;assert CORESIZE == 8000
+
+start   spl     1,      <300    ;\
+        spl     1,      <150    ;  generate 7 consecutive processes
+        mov     -1,     0       ;/
+
+silk    spl     3620,   #0      ;split to new copy
+        mov.i   >-1,    }-1     ;copy self to new location
+
+;this is another way to copy using multiple processes, the other one is a
+bit better because we can decrement the cell we are splitting to and, if we
+are lucky, kill an imp.
+
+        mov.i   bomb,   >2005   ;linear bombing
+        mov.i   bomb,   }2042   ;A-indirect bombing for anti-vamp
+;The first bomb laid down acts as a pointer for the following stream, laying
+down a carpet.
+
+        add.a   #50,     silk    ;distance new copy
+        jmp     silk,   <silk   ;reset source pointer, make new copy
+bomb    dat.f   >2667,  >5334   ;anti-imp bomb
+
+This is very effective against 3 points imp rings. A lucky hit on the
+executing process can kill many others; other kinds of bombs are used, by me
+at least, we'll discuss them another time.
+
+Another time we'll discuss more advanced questions: another replicating
+engine, that is better than this one, and some other paper related topics
+like spread constants, bombs, strategies...
+
+For questions mail me <bezzi@iol.it> or if you think it's of general
+interest post to rec.games.corewar
+
+Anyone with hints or warriors to publish is welcome.
+
+
