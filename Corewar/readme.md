@@ -13,7 +13,7 @@ Core War 是一个有趣的游戏：相较于其它的编程游戏，这个*老�
 
 一篇文档如果有其 MD 文件，会将其拷贝至译后文档同一文件夹；否则会提供 TXT 版本（事实上，大多数文档也只有 TXT 版本，但翻译我会将其稍稍格式化为 MD ;-) ）
 
-- 如果你想简单了解 Core War，来看这篇文章：[磁芯大战——充满恶意的编程的入门](Core%20War%20-%20An%20Introduction%20to%20Hostile%20Programming/入门)
+- 如果你想简单了解 Core War，来看这篇文章：[磁芯大战——充满恶意的编程的入门](Core%20War%20-%20An%20Introduction%20to%20Hostile%20Programming/介绍)
 - 想学习如何游玩 Core War，这是一篇极佳的教程：[Redcode 初学者指南](The%20beginners'%20guide%20to%20Redcode/Redcode指南)
 - 查看[所有文章](index)
 
