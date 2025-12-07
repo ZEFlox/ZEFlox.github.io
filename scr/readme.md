@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Scratch作品"
-permalink: index.html
+permalink: ./index.html
 ---
 
 # Scratch 作品
