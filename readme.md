@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Flox 的小站"
+permalink: index.html
 ---
 
 # Flox 的小站
