@@ -6,6 +6,6 @@ title: "目录-总"
 # 目录-总
 
 - [导入](readme)
-- [磁芯大战——充满恶意的编程的入门](Core%20War%20-%20An%20Introduction%20to%20Hostile%20Programming/介绍)
-- [Redcode 初学者指南](The%20beginners'%20guide%20to%20Redcode/Redcode指南)
-- [CW hints](CoreWarrior/index)
+- [磁芯大战——充满恶意的编程的入门](docs/introduction/介绍)
+- [Redcode 初学者指南](docs/guide/Redcode指南)
+- [CW hints](docs/corewarrior/index.md)
