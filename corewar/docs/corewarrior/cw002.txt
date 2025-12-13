@@ -1,0 +1,548 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+Issue 2                                                           Oct 23, 1995
+______________________________________________________________________________
+
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth
+http://www.ecst.csuchico.edu/~pizza/koth
+______________________________________________________________________________
+Greetings.
+
+I can't speak for Beppe Bezzi, but I'm pretty new at this, so bear with our
+format and content changes until we produce something nice.  Complaints and
+criticism are welcome.  Mail them to Beppe <bezzi@iol.it>.  Praise and
+encouragment are also accepted.  Just mail those flowery comments to me--
+Myer R Bremer <bremermr@ecn.purdue.edu>.  We would love to have more people
+join our staff.  I promise I'll take all the credit for your hard work, too.
+How can you resist?
+
+Another note of appreciation to Andersen F. Scholl, for the Core_Warrior_
+logo.
+______________________________________________________________________________
+Tournament Time
+
+NSFCWT round 2 is over, and it's been a tough challenge (so we were told :).
+There were lots of interesting and unique solutions to the problem how to
+kill the white warrior most effectively. The white warrior was an aggressive
+silk style paper which was launched after a brief bombing phase. Most
+challengers featured some form of multi-pass core clear (one or more spl
+runs followed by a dat clear) teamed up with a scanner. A brief description
+of the strategies is below. The winning challenger and the two runners-
+up are posted in the next message.
+
+twoOFaKIND
+        Is two jmn.F scanners that scan in parallel for the white warrior body,
+        avoiding bombs. The two parts then perform a checksum on the attack
+        body and commit suicide when overrun by white. Multi-pass core clear
+        code is then placed inside the found white warrior body where it is
+        safe from attack. This proved to be the most effective strategy.
+
+v15
+        Is an unrolled (sne/sne/seq) scanner that bombs with a SPL carpet
+        and finishes in a multi-pass core clear. For each bombed location,
+        the scanner also checks 1800 addresses away, which is a likely
+        place for white to be.
+
+blackTN
+        Tandem sne/seq scanners bombing with spl/spl/spl/jmp and
+        finishing with a multi-pass clear.
+
+safeclear
+        has two redundant quickscan parts that checks for the 80
+        most dangerous white starting positions before a multi-pass
+        core clear is executed.
+
+Umbrella
+        A multi-pass core clear protected by a bomber that concentrates
+        on the most dangerous locations.
+
+WhiteSimple
+        Multi-pass core clear
+
+Taking Trains (;-)
+        sne/seq scanner bombing with spl carpet
+
+Futility
+        Two redundant multi-pass core clears
+
+Mr Speculative
+        cmp scan/bomber with spl bomb and single dat core clear
+
+PlinyScan
+        cmp scanner with spl bomb and multi-pass core clear
+
+so I won't lose a lotta points
+        imp spiral
+
+Welcome to our new player Anders Scholl, it's good to have you. Now
+for the scores; Magnus Paulsson won this round with a comfortable
+lead over Steven Morrell and Paul Kline.
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     twoOFaKIND              Paulsson                 89   5   6   2738
+  2     v15                     Steven Morrell           73  18   8   2283
+  3     blackTN                 P.Kline                  64  16  20   2128
+  4     safeclear               Anders Ivner             61  16  23   2058
+  5     Umbrella                Beppe Bezzi              56  12  32   1996
+  6     WhiteSimple             John K. Wilkinson        56  14  30   1986
+  7     Taking Trains           Maurizio Vittuari        59  32  10   1853
+  8     Futility                M R Bremer               42   8  50   1768
+  9     Mr Speculative          Derek Ross               45  39  16   1506
+ 10     PlinyScan               G. Eadon                 41  35  24   1479
+ 11     so i won't lose a lotta Anders Scholl             0  12  88   892
+
+After the first two rounds, these are the points:
+
+Name    pts for round   1        2
+__________________________________
+Beppe Bezzi             7        7
+M R Bremer              7        4
+G. Eadon                1.5      2
+Anders Ivner            5.5      8
+P.Kline                 7.5      9
+Steven Morrell          5       10
+Paulsson                7.5     11
+Derek Ross              3.5      3
+Anders Scholl            -       1
+Maurizio Vittuari       6.5      5
+John K. Wilkinson       4        6
+
+Magnus Paulsson is leading with 18.5 points, followed by Paul Kline with
+16.5 and Steven Morrell with 15 points.
+
+Good luck for round 3!
+        Nandor & Stefan
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 250
+  instruction set: ICWS '94 Draft
+
+Last challenge: Mon Oct 23 11:06:37 PDT 1995
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  48/ 40/ 12                Frontwards       Steven Morrell     155     201
+ 2  46/ 41/ 13       Leprechaun on speed         Anders Ivner     150      62
+ 3  35/ 28/ 37                    test r          Beppe Bezzi     142       4
+ 4  37/ 32/ 31                 Torch t18              P.Kline     142     266
+ 5  35/ 28/ 36           Jack in the box          Beppe Bezzi     142     254
+ 6  39/ 36/ 24               Armory - A5            Wilkinson     141     405
+ 7  40/ 40/ 21                 myZizzor8             Paulsson     139       1
+ 8  34/ 31/ 35              Father & Son    Maurizio Vittuari     137     124
+ 9  41/ 45/ 14   Anti Die-Hard Bevo (3c)       John Wilkinson     137      71
+10  38/ 39/ 22                 session Z           M R Bremer     137      20
+11  36/ 35/ 29                Brain Vamp  B.Bezzi, M.Paulsson     136     136
+12  38/ 41/ 21               myVamp v3.7             Paulsson     136     234
+13  40/ 45/ 15         Leprechaun deluxe         Anders Ivner     134     171
+14  34/ 34/ 31                       Phq    Maurizio Vittuari     134     368
+15  41/ 48/ 11    Anti-DieHard Bevo (3f)       John Wilkinson     134      29
+16  23/ 12/ 65                  Die Hard              P.Kline     133      10
+17  28/ 24/ 48                    simple           M R Bremer     132      13
+18  38/ 46/ 16                   blackTN              P.Kline     131      27
+19  34/ 38/ 28               Tornado 1.8          Beppe Bezzi     130     120
+20  40/ 51/ 10              SandBlast 1a    John K. Wilkinson     129      30
+
+It's been a difficult time for replicators this week.  It seems some authors
+are testing their tournament entries on the hill.  P.Kline's blackTN appeared
+along with myZizzorX from Magnus Paulsson.  Paulsson's earlier test program
+produced huge losses for papers, but was too specialized to score well on the
+hill.  simple--a non-pspace replicator/bomber once held a lofty position until
+all those scanners came along.  It quickly needed to be recoded to survive.
+Phq is also suffering a bit from the increased scanner presence.
+
+The many versions of Die Hard have attempted the hill lately.  Perhaps Kline
+will finally settle on a version he's satisfied with.  Maybe then he'll tell
+us what's in that thing!  For a interesting clue, read Extra Extra for
+Paulsson's comments on Die Hard and Kline's response.
+______________________________________________________________________________
+94 - What's New
+
+ 3  35/ 28/ 37                    test r          Beppe Bezzi     142       4
+ 7  40/ 40/ 21                 myZizzor8             Paulsson     139       1
+10  38/ 39/ 22                 session Z           M R Bremer     137      20
+15  41/ 48/ 11    Anti-DieHard Bevo (3f)       John Wilkinson     134      29
+18  38/ 46/ 16                   blackTN              P.Kline     131      27
+______________________________________________________________________________
+94 - What's No More
+
+21  34/ 39/ 27                Cthulhu v7    John K. Wilkinson     129      66
+21  34/ 41/ 24              Thermite 1.0        Robert Macrae     128     802
+
+Congratulations to Thermite for its long and successful run.  Armory is now
+the oldest program on the hill at 405.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 250
+  instruction set: ICWS '94 Draft
+
+Last challenge: Mon Oct 23 08:14:39 PDT 1995
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  57/  7/ 36              juliet storm           M R Bremer     208      25
+ 2  56/ 31/ 13                 Heatseek2        Phil Whineray     182       3
+ 3  49/ 32/ 20                   Test-Fc             G. Eadon     165      11
+ 4  49/ 38/ 13                       Web        Gareth Thomas     160      26
+ 5  34/ 11/ 55                 ShadowImp     Robert J. Street     156      99
+ 6  42/ 32/ 26                    Weasel          Kurt Franke     153      17
+ 7  44/ 38/ 18                 Hint Test           M R Bremer     151       5
+ 8  32/ 19/ 49                   Cyclone         Scott Manley     145      13
+ 9  42/ 41/ 17                   Obvious        John K. Lewis     143      10
+10  42/ 43/ 15            Mythicon v1.1a             G. Eadon     142      84
+11  42/ 45/ 13                     Eradu         Scott Manley     139       4
+12  29/ 23/ 48           Imp Craze 91.43               Planar     135       1
+13  19/  3/ 78              Cotton-DH 8a            Wilkinson     135      20
+14  41/ 47/ 12                   Skimmer        Gareth Thomas     134      52
+15  38/ 48/ 14                 PlinyScan             G. Eadon     128       7
+16  33/ 42/ 25               DeathWalker         Scott Manley     125      36
+17  21/ 43/ 35              Mokkori v0.2         David Boeren      99      47
+18  25/ 52/ 23          Enlightenment II         Scott Manley      98      38
+19  29/ 60/ 12              Apple attack        Gareth Thomas      98      53
+20  31/ 67/  2                 Banzai0.2           Calvin Loh      96      18
+
+John Wilkinson has decided to play on the beginner hill even though his
+programs on the '94 draft hill are doing well.  I suppose I shouldn't
+talk.  juliet storm was just meant to monitor the hill, but has jumped to
+the number one position.  Below is a copy of the code in case it's not in
+your collection already.  Simplicity and compactness are the keys to its
+success.  Is the actual running code ( code that is executed many times--like
+a bomber--as opposed to code that is only executed once--like a quick scan )
+of your warrior more than 15 lines long?  If it is, you're probably trying to
+do too much.  Keep it simple.  Focus on one strategy and do it well.
+
+;redcode-94
+;name juliet storm
+;author M R Bremer
+;strategy bomber--yippee
+
+ptr     EQU -1333
+
+gate    dat <-445, <-446
+s       spl #445, <-445
+        spl #0, <-446
+        mov {445-1, -445+2
+        add -3, -1
+        djn.f -2, <-2667-500
+        mov 33, <-20
+go      dat #0, #ptr
+start   mov {-1, <-1            ;boot the bomber into core
+        mov {-2, <-2
+        mov {-3, <-3
+        mov {-4, <-4
+        mov {-5, <-5
+        mov {-6, <-6
+        mov gate, ptr+24
+        mov gate, ptr+24
+        spl @go, <-4000
+        jmp boot, <-4013
+for 73
+        dat #0, #0
+rof
+
+imp_sz  equ     2667
+
+boot    spl     1      ,#0              ;vector launched imp ala T. Hsu
+        spl     1      ,#0
+        spl     <0     ,#vector+1
+        djn.a   @vector,#0
+
+imp     mov.i   #0,imp_sz
+
+        jmp     imp+imp_sz*7,imp+imp_sz*6
+        jmp     imp+imp_sz*5,imp+imp_sz*4
+        jmp     imp+imp_sz*3,imp+imp_sz*2
+vector  jmp     imp+imp_sz  ,imp
+
+        end     start
+
+______________________________________________________________________________
+The hint
+
+Do you often ask yourself:  Why do my warriors do well on the beginner's
+and get thrashed on the '94 draft hill?  This hint should help all newcomers
+in writing more viable code.
+
+I have asked the 15th place author to send me his warrior so we can dissect
+it as a case study.  Thanks to Scott Manley for sharing his code.  If you
+are in 15th place around the end of the week, you could be getting mail from
+me.  Unfortunately, Mutagen has dropped off the hill, but I suspect that
+Scott will have a brand new version real soon.
+
+;redcode-b
+;name Mutagen
+;author Scott Manley
+;strategy Scan -> SPL/JMP bomb -> split to Imp gate / 2 pass  forward
+;strategy travelling core clear
+;assert CORESIZE==8000
+
+plength EQU     35
+inc     EQU     6
+carpet  EQU     (CORESIZE-MINDISTANCE)/inc
+
+
+adds    DAT     #inc , #inc
+begin   SPL     clear2
+start   SEQ.I   *scan, @scan
+        JMP     scan1
+cont    ADD.F   adds , scan
+        DJN     start , count
+        JMP     clear3
+scan1   MOV     sbomb , * scan
+scan2   MOV     sbomb2 , @ scan
+        JMP     cont
+scan    DAT     MINDISTANCE-10 , MINDISTANCE-9
+target1 DAT     23 , -23
+target2 DAT     22 , -22
+target3 DAT     -1 , -21
+target4 DAT     -2 , -20
+        DAT     0 , 0
+        DAT     0 , 0
+        DAT     0 , 0
+        JMP     0 , } cont
+clear2  MOV.I   sbomb , } target1
+        DJN     clear2 , target1
+        JMP     clear4
+clear3  MOV.I   target2 , } target2
+        DJN     clear3 , target2
+clear1  MOV.I   target4 , { target4
+        DJN     clear1 , target4
+        JMP     0 , > -10
+clear4  MOV.I   sbomb , { target3
+        DJN     clear4 , target3
+        MOV     0,1
+sbomb   SPL     0 , 0
+sbomb2  JMP     -1
+count   DAT     #carpet-1,#carpet-1
+        END     begin
+
+The basic concept is to scan and spl coreclear simultaneously.  Once
+the scan is finished (one pass through core), jump to a dat coreclear to
+follow the spl clear. There are other startegies involved but we'll just
+focus on the scan engine and multi-pass coreclear.
+
+Mutagen's scan is 11 lines long--13 lines if the stun bomb is included in
+the count.  We can reduce the length a bit without affecting the behavior
+too much by using the following code:
+
+        add.f split, scan
+scan    sne.i loc1, loc+1
+        djn.f -2, <DJNSTREAM1   ;djn.f will decrement both the a and b field.
+        mov.i split, *scan
+        mov.i jump, @scan
+        djn.f -5, <DJNSTREAM2   ;need to have a trigger so this falls thourgh
+        jmp clear               ;after scan is complete.
+split   spl #step, #step        ;try to find other uses for these
+jump    jmp -1                  ;can be anywhere in code
+
+Remember that the bigger your executing code is, the more inviting target
+you make to the enemy. The split and jump lines can be moved away from the
+executing code to provide the smallest possible profile.  Also: the scanning
+step is not optimal.  If an enemy instruction is at location N, most likely
+there will be another instruction at N+1.  So there is no need to scan there.
+There are two basic ways to spread the scan out.  One is to scan N and N+step
+then bomb every location in between.  Another is to bomb N and then check
+N+step in a separate step.  Check out Agony and Irongate for good examples
+of these two methods.
+
+Next let's talk multi-pass coreclears.  Muatagen's clear is lengthy and easy
+prey for scanners.  In a multi-pass coreclear, only a few things change--the
+bomb being swept through core and the pointer that does it.  We can reuse
+the movement instructions and just change the bomb and pointer with this
+code:
+
+org a1
+ptr1    dat a1, end+100
+a4      dat 0,  end+2+1
+a3      dat 1,  end+2+2
+a2      spl #2, end+2+3         ; spl #X, <-Y acts like a split 0.
+a1      spl #3, end+2+4         ; you can use x and Y as step values
+        mov *ptr1, >ptr1        ; and use the decrement in the b-field
+        mov *ptr1, >ptr1        ; as part of an imp gate.
+        mov *ptr1, >ptr1        ; > (post-increment) keeps adding 1 to
+end     djn.f -3, <4000         ; the b-field of ptr1 to move the bomb
+                                ; through core.
+
+The clear starts with a1 being swept forward through core.  Notice that the
+move instructions use a pointer (ptr1) to determine which bomb to sweep with.
+ptr1's b-field is also used to do the actual clearing.  When the clear wraps
+around the core, it will eventually overwrite ptr1 with a1.  Now the move
+instructions will look where the old ptr1 used to be to find what they should
+move through core.  The new ptr1 (a1) points towards a2, so the move
+instructions will move a2 through core.  The new pointer also has a new
+b-field.  The value of this b-field ensures that the clear skips over the
+core clear code.  Then a2 overwrites the pointer.  The pointer is now
+points to a3.  And so on.  This code will continue to clear until time run
+out.
+
+ 7  44/ 38/ 18                 Hint Test           M R Bremer     151       5
+A simple version of these improvements has been submitted to the beginner
+hill.  The code does reasonably well against bombers and replicators, but
+its large size makes it vulnerable to scanners.  A good project would be
+to pspace it with a small fast bomber.
+______________________________________________________________________________
+Extra Extra:
+
+P.Kline usually publishes his warriors fairly quickly.  However Die Hard has
+been a mystery for quite some time.  Magnus Paulsson is one of the few
+authors who has had some success against the many interations of Die Hard.
+Paulsson has been kind enough to share his thoughts ( along with his newest
+program--theMystery ) with us:
+
+How does Die Hard work?
+That thought came to mind when some version of myVamp didn't score more than
+1% wins!  It was double disturbing as myVamp has a coreclear spl/spl/dat and
+a djn stream at the same time, no normal imp could survive it (nothing else
+either if lucky).
+
+Why is that?
+If you get the other program in such a clear it will fast spl it self to 8000
+processes.  No you have about 8000 cycles and then the imp spiral will
+execute. In my coreclear I change a location in core every cycle which means
+that when the imp-spiral execute it is (should be) overwritten/djned already.
+
+What then?
+Now if you place two spirals on top of each other, and plan in which order
+they and the rest of the code will be in the execution. In the coreclear the
+spl processes will be like 4000 processes, spiral, 4000 processes, spiral.
+That means the clear has to kill spiral in 4000 cycles which isn't possible
+in a clear.
+
+Is that how Die Hard works?
+(Actually I don't know :-) But I'll keep on guessing for a while.)
+So, because there is a thing called gate which kills spirals. In order to tie
+you have to have something like 100 processes in a spiral to slow it down as
+much that it doesn't reach the gate. Now you can't launch such a monster
+without getting killed before the launch is complete.
+
+How then?
+Have a look at theMystery!
+It is three papers working together to launch imp-rings in such a way that
+there will never be more that say 1500 cycles between a ring is executed.
+
+What is the diffrence between Die Hard and theMystery?
+Die Hard is a lot better :-(, I don't know how Paul did it but theMystery
+doesn't kill anything! (I'm totaly wortless on papers, I can't get the
+constants right and it's to bloody complicated to get a paper effective.)
+
+Actually I don't belive that theMystery could ever beat anything 20%,
+maybee Paul has taken the idea one step further?  (stone?)
+
+(Now I resubmitted theMystery1.5 to the hill and it wins 17% :-)
+15  25/ 19/ 57                  Die Hard              P.Kline     131       3
+..
+20  17/  7/ 76             theMystery1.5             Paulsson     127       1
+
+
+/Magnus Paulsson
+(More fun to write this than to think about Peierls substitution)
+(I should heve mentioned CottonDH (J.Wilkinson) but I wont :-) )
+______________________________________________________________________________
+Paul responds:
+
+Magnus' approach is intriguing.  Lots of ties but not many wins, which
+is about where Die Hard was until I worked in some bombing.  Not much but
+enough to pump up the score and move him up the Hill.  Die Hard doesn't
+look much like theMystery, but his kernel is based on something I published
+a looong time ago.
+
+Another tidbit about Die Hard.  He starts with a very brief quick-scan
+and vamp.  The pit does a one-pass suicidal clear incorporating a brainwash
+which, when it works forces programs like Jack in the Box to revert from
+paper to something which Die Hard can kill.  Instead of going 1/0
+he now goes about 12/0 against JitB :-)
+
+theMystery sure does a lot better against myZizzor than Die Hard does :-(
+(I have a pretty good idea what Magnus' missing line in myZizzor might be!)
+
+Paul
+______________________________________________________________________________
+;redcode-94
+;name theMystery1.5
+;author Paulsson
+;strategy How does Die Hard work? (this way maybee?)
+;strategy Looking gooood, could it be somthing that begins
+;strategy with an i and ends with p?
+;assert CORESIZE > 1
+;kill theMystery
+
+org start
+
+step1   equ             1800
+step2   equ             -1922
+
+start   spl 1           ;\
+        mov.i -1,0      ;- make 7 processes
+        mov.i -1,0      ;/
+        mov {ptr2,<ptr2 ; move out second paper
+        mov {ptr1,<ptr1 ; move out first paper
+        spl 3
+        spl 4
+        jmp @ptr1       ; jump to 1
+        mov {ptr3,<ptr3 ; move out third paper
+        jmp     @ptr3   ; jump to 3
+        jmp @ptr2       ; jump to 2
+
+pap     spl step1,0             ;\
+        mov.i >-1,}-1           ;\\ Normal paper, with bad constants
+        mov.i <-2,<1            ;// (I think I riped it from timescape :-) )
+        spl     @0,}step2       ;/
+        mov.i #0,2667           ;Impy!
+
+ptr1 dat 5+pap,pap+5+500
+ptr2 dat pap+5,pap+5+2667+500
+ptr3 dat pap+5,pap+5+2667*2+500
+______________________________________________________________________________
+Most losses:
+Program "myZizzor" (length 58) by "Paulsson"
+(contact address "mpn@ifm.liu.se"):
+;strategy Cissors (or whatever way you spell it)
+;strategy Let's se how hard Die Hard is this time :-)
+theMystery1.5 wins: 27
+myZizzor wins: 55
+Ties: 168
+
+Program "Anti Die-Hard Bevo (3c)" (length 76) by "John Wilkinson"
+(contact address "jwilkinson@mail.utexas.edu"):
+;strategy I didn't have a single program on my HD that could beat
+;strategy my Cotton-DH, so I made this.  Let's see how it fares
+;strategy against the real Die Hard. :)
+theMystery1.5 wins: 60
+Anti Die-Hard Bevo (3c) wins: 54
+Ties: 136
+______________________________________________________________________________
+Questions?  Concerns?  Comments?   Complaints?  Mail them to:
+Beppe Bezzi <bezzi@iol.it> or Myer R Bremer <bremermr@ecn.purdue.edu>
+

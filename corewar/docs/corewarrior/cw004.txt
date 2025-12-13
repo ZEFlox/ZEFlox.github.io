@@ -1,0 +1,826 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 4                                                            Nov 6, 1995
+______________________________________________________________________________
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth
+http://www.ecst.csuchico.edu/~pizza/koth
+______________________________________________________________________________
+Greetings.
+
+It's been two weeks since I've last forced you to read my rantings.  I
+suppose it's time to impose my will once again.  I'm happy to announce that
+this week's Extra Extra is written by 'guest columnist' Damien Doligez a.k.a.
+Planar.  Thought you knew a lot about imps?  Check out his thoughts on
+Impfinity--a continously launching imp SPIRAL ( no wimpy series of imp rings
+here ).  As always, contributions are welcome becuase it means I don't have
+to write as much. 8-)
+______________________________________________________________________________
+Tournament Time
+(details at http://www.stormking.com/~koth/nsfcwt.html)
+
+Round 5 is over, and boy was it a pain to score. We had 5 fast sorters (quick-,
+shell-) and 8 slower bubble/insertion sorters. The fast sorters ended up
+holding the top 4 positions in the overall rank. The smallest sorter was
+Magnus Paulsson's myKindOfSort with 33 instructions; the fastest sorter was
+Robert Macrae's Shell Sort; and the best overall was Steven Morrell's
+Sort of, which ranked #6 in size and #2 in speed.
+
+Data sets:
+          Sets ranged from 20 to 854 instructions in length (average: 409);
+          5 had to be sorted in ascending, 5 in descending order; duplicates
+          had to be deleted in 6 sets. Data set 1,2,8,9 were for/rof
+          generated; set 7 was pseudo-random number generated; the remaining
+          sets were concatenated pre-assembled warrior codes in various pre-
+          sort stages. An interesting set is #6 which is strongly presorted
+          and highly redundant, taxing the deletion routines. Drop a note
+          if you want a copy of the test sets.
+
+Sorted by length:
+-----------------                                     Length index:
+Program "myKindOfSort" (length 33) by "Paulsson"            0.53
+Program "Mister Understudy" (length 39) by "Derek Ross"     0.626
+Program "Points is Points" (length 45) by "Karl Lewin"      0.723
+Program "PaulSort" (length 50) by "P.Kline"                 0.803
+Program "bubble gum" (length 51) by "M R Bremer"            0.819
+Program "Sort of" (length 54) by "Steven Morrell"           0.867
+Program "Bubble-Sort" (length 54) by "G. Eadon"             0.867
+Program "SnafSort v0.5" (length 54) by "anders scholl"      0.867
+Program "sort of sorter" (length 56) by "Beppe Bezzi"       0.899
+Program "Shell Sort" (length 60) by "Robert Macrae"         0.964
+Program "SnailSort" (length 61) by "Maurizio Vittuari"      0.98
+Program "Consortium" (length 96) by "Randy Graham"          1.542
+Program "Kurt's Qsort" (length 156) by "Kurt Franke"        2.506
+
+average length: 62.23, index = length/62.23
+
+Cycles required:
+set(len)  P.Kline         K.Franke        B.Bezzi        M.Bremer
+----------------------------------------------------------------------------
+0 (525)   180,134 0.17     68,362 0.06  2,572,613 2.55    848,917 0.84
+1 (300)    41,647 0.18    130,561 0.56    581,159 2.52    325,876 1.41
+2 (300)    37,684 0.15     28,330 0.11    442,350 1.78    233,273 0.94
+3 (178)    47,857 0.49     15,110 0.15    203,804 2.09     92,156 0.94
+4 (854)   475,822 0.20     98,277 0.04  5,347,465 2.31  2,561,037 1.10
+5 (268)    77,508 0.33     32,379 0.14    611,536 2.64    238,839 1.03
+6 (401)    80,204 0.20     27,064 0.06  1,215,022 3.05    541,308 1.35
+7 (499)   233,783 0.29     64,632 0.08  1,759,465 2.25    686,847 0.87
+8 (20)        624 0.57      1,118 1.02        754 0.69        211 0.19
+9 (750)   200,345 0.11     89,910 0.05  3,535,038 2.05  2,078,960 1.20
+---------------------------------------------------------------------------
+Avg. index  0.27357668      0.23163087      2.19801421      0.99347397
+
+          R.Macrae        R.Graham       S.Morrell      M.Paulsson
+----------------------------------------------------------------------------
+0 (525)    64,221 0.06     55,898 0.05     39,789 0.03    920,836 0.91
+1 (300)    25,475 0.11     36,610 0.15     19,515 0.08     97,355 0.42
+2 (300)    20,751 0.08     33,550 0.13     19,082 0.07    295,648 1.19
+3 (178)    15,439 0.15     14,308 0.14     12,268 0.12    107,230 1.10
+4 (854)   110,751 0.04     96,670 0.04     85,497 0.03  2,691,899 1.16
+5 (268)    56,023 0.24     27,615 0.11     20,602 0.08    195,258 0.84
+6 (401)    27,837 0.06    154,935 0.38    124,374 0.31     29,740 0.07
+7 (499)    61,767 0.07     46,844 0.05     38,149 0.04    811,726 1.03
+8 (20)        519 0.47        408 0.37        646 0.59      1,240 1.13
+9 (750)    85,285 0.04     73,101 0.04     60,245 0.03  2,092,599 1.21
+---------------------------------------------------------------------------
+Avg. index  0.13824197      0.15245615      0.14426386      0.91166251
+
+          G.Eadon         D.Ross          K.Lewin         M.Vittuari
+----------------------------------------------------------------------------
+0 (525) 1,711,257 1.70  1,241,525 1.23  1,528,707 1.51  1,648,478 1.63
+1 (300)    32,628 0.14    131,559 0.57    416,132 1.80    619,280 2.68
+2 (300)   303,303 1.22    316,321 1.27    499,758 2.02    383,131 1.54
+3 (178)   104,887 1.07    112,616 1.15    178,306 1.83    175,408 1.80
+4 (854) 2,641,569 1.14  2,575,723 1.11  4,045,693 1.75  4,688,083 2.03
+5 (268)   178,923 0.77    255,462 1.10    397,633 1.72    471,450 2.04
+6 (401)    45,728 0.11     40,272 0.10    698,546 1.75    858,134 2.15
+7 (499)   947,669 1.21  1,120,708 1.43  1,377,600 1.76  1,187,956 1.52
+8 (20)        629 0.57      1,957 1.79      2,436 2.23        307 0.28
+9 (750) 1,882,398 1.09  1,969,529 1.14  3,107,832 1.80  3,694,820 2.15
+---------------------------------------------------------------------------
+Avg. index  0.90663812      1.09411928      1.82153461      1.78592881
+
+          A.Scholl
+----------------------
+0 (525) 2,204,582 2.19
+1 (300)   535,834 2.32               Numbers are given as:
+2 (300)   601,235 2.43                  Cycles Index
+3 (178)   184,700 1.89               where Index is Cycles/AvgCycles
+4 (854) 4,589,327 1.98
+5 (268)   548,652 2.37
+6 (401) 1,335,274 3.35
+7 (499) 1,820,651 2.33
+8 (20)      3,321 3.04
+9 (750) 3,470,048 2.01
+----------------------
+Avg. index  2.39604507
+
+Sorted by speed:
+----------------
+Program "Shell Sort" (length 60) by "Robert Macrae"         0.13824197
+Program "Sort of" (length 54) by "Steven Morrell"           0.14426386
+Program "Consortium" (length 96) by "Randy Graham"          0.15245615
+Program "Kurt's Qsort" (length 156) by "Kurt Franke"        0.23163087
+Program "PaulSort" (length 50) by "P.Kline"                 0.27357668
+Program "Bubble-Sort" (length 54) by "G. Eadon"             0.90663812
+Program "myKindOfSort" (length 33) by "Paulsson"            0.91166251
+Program "bubble gum" (length 51) by "M R Bremer"            0.99347397
+Program "Mister Understudy" (length 39) by "Derek Ross"     1.09411928
+Program "SnailSort" (length 61) by "Maurizio Vittuari"      1.78592881
+Program "Points is Points" (length 45) by "Karl Lewin"      1.82153461
+Program "sort of sorter" (length 56) by "Beppe Bezzi"       2.19801421
+Program "SnafSort v0.5" (length 54) by "anders scholl"      2.39604507
+
+Overall rank (length index * speed index):
+-------------                                                           pts.
+Program "Sort of" (length 54) by "Steven Morrell"           0.12507677   13
+Program "Shell Sort" (length 60) by "Robert Macrae"         0.13326526   12
+Program "PaulSort" (length 50) by "P.Kline"                 0.21968207   11
+Program "Consortium" (length 96) by "Randy Graham"          0.23508738   10
+Program "myKindOfSort" (length 33) by "Paulsson"            0.48318113    9
+Program "Kurt's Qsort" (length 156) by "Kurt Franke"        0.58046696    8
+Program "Mister Understudy" (length 39) by "Derek Ross"     0.68491867    7
+Program "Bubble-Sort" (length 54) by "G. Eadon"             0.78605525    6
+Program "bubble gum" (length 51) by "M R Bremer"            0.81365518    5
+Program "Points is Points" (length 45) by "Karl Lewin"      1.31696952    4
+Program "SnailSort" (length 61) by "Maurizio Vittuari"      1.75021023    3
+Program "sort of sorter" (length 56) by "Beppe Bezzi"       1.97601477    2
+Program "SnafSort v0.5" (length 54) by "anders scholl"      2.07737108    1
+
+Name    pts for round   1    2    3    4    5   6   7   8   | Total so far
+________________________________________________________________________
+Beppe Bezzi             7    7   13    2                    | 29
+M R Bremer              7    4   3.6   5                    | 19.6
+G. Eadon                1.5  2    5    6                    | 14.5
+Randy Graham            -    -    8   10                    | 18
+Anders Ivner            5.5  8    4    -                    | 17.5
+P.Kline                 7.5  9    7   11                    | 34.5
+Karl Lewin              -    -   10    4                    | 14
+John Lewis              -    -    3    -                    | 3
+Calvin Loh              -    -    1    -                    | 1
+Steven Morrell          5   10    9   13                    | 37
+Paulsson                7.5 11   11    9                    | 38.5
+Derek Ross              3.5  3   3.3   7                    | 16.8
+Anders Scholl           -    1    2    1                    | 4
+Maurizio Vittuari       6.5  5    6    3                    | 20.5
+John K. Wilkinson       4    6   12    -                    | 22
+Robert Macrae           -    -    -   12                    | 12
+Kurt Franke             -    -    -    8                    | 8
+
+Good luck for round 5,
+    Nandor & Stefan
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 250
+  instruction set: ICWS '94 Draft
+
+Last challenge: Mon Nov  6 09:53:41 PST 1995
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  40/ 41/ 19             Porch Swing +         Randy Graham     140      38
+ 2  41/ 43/ 15                Frontwards       Steven Morrell     139     272
+ 3  37/ 36/ 28                endpoint .           M R Bremer     138      18
+ 4  33/ 28/ 39                       Phq    Maurizio Vittuari     138     439
+ 5  31/ 26/ 42           Jack in the box          Beppe Bezzi     136     325
+ 6  36/ 35/ 29                Armory 6.1            Wilkinson     136       6
+ 7  34/ 32/ 34                 Torch t18              P.Kline     136     337
+ 8  40/ 45/ 15       Leprechaun on speed         Anders Ivner     135     133
+ 9  36/ 39/ 25                  myZizzor             Paulsson     134      68
+10  36/ 38/ 25               myVamp v3.7             Paulsson     134     305
+11  26/ 19/ 55            Impfinity v3e7               Planar     132       2
+12  33/ 35/ 32               Armory - A5            Wilkinson     132     476
+13  39/ 46/ 15         Leprechaun deluxe         Anders Ivner     132     242
+14  29/ 26/ 45              .Brain Vamp.  B.Bezzi, M.Paulsson     131      39
+15  24/ 19/ 57                     Tican       John Wilkinson     130      31
+16  32/ 35/ 32               Tornado 1.8          Beppe Bezzi     129     191
+17  24/ 19/ 57                  paper01o          Beppe Bezzi     129      15
+18  18/  7/ 75            Chugging Along           Karl Lewin     128      22
+19  37/ 47/ 16   Anti Die-Hard Bevo (3c)       John Wilkinson     127     142
+20  28/ 33/ 40                 test ss04          Beppe Bezzi     123       1
+
+It's been a sloooooooowwwww week for the '94 draft hill.  I suspect most
+authors are polishing up their more benign programming skills by writing
+sorting algorithms instead of blood thirsty warriors.  Beppe Bezzi has been
+testing away giving all the warriors on the hill some easy 'age'.  A new
+version of Father and Son appeared and that's about it.  ( The real action
+is on the beginner's hill this week! )
+______________________________________________________________________________
+94 - What's New
+
+ 3  37/ 36/ 28                endpoint .           M R Bremer     138      18
+ 6  36/ 35/ 29                Armory 6.1            Wilkinson     136       6
+11  26/ 19/ 55            Impfinity v3e7               Planar     132       2
+17  24/ 19/ 57                  paper01o          Beppe Bezzi     129      15
+20  28/ 33/ 40                 test ss04          Beppe Bezzi     123       1
+
+Seems John decided to polish up Armory and resubmit it.  You ARE going to
+kill off your old version, right? 8)  Congratulations to Planar for getting
+a warrior on the '94 draft hill.
+______________________________________________________________________________
+94 - What's No More
+
+21  23/ 66/ 10              Tornado 1.9a          Beppe Bezzi      80       0
+
+Bezzi pushes off his own warrior with a test.  I guess there are worse ways
+to go. . .
+______________________________________________________________________________
+HALL OF FAME
+* means the warrior is still running; > score isn't exact
+
+Pos    Name                  Author          Age     Strategy
+ 1  Iron Gate 1.5          Wayne Sheppard    926    CMP scanner
+ 2  Agony II               Stefan Strack     912    CMP scanner
+ 3  Blue Funk              Steven Morrell    869    Stone/ imp
+ 4  Thermite 1.0           Robert Macrae     802    Qscan -> bomber
+ 5  Blue Funk 3            Steven Morrell    766    Stone/ imp
+ 6  HeremScimitar          A.Ivner,P.Kline   666    Bomber
+ 7  B-Panama X             Steven Morrell    518    Stone/ replicator
+ 8  Armory - A5            Wilkinson         476 *  P-warrior
+ 9  Phq                    Maurizio Vittuari 439 *  Qscan -> replicator
+10  NC 94                  Wayne Sheppard    387    Stone/ imp
+11  Cannonade              P.Kline           382    Stone/ imp
+12  Torch t17              P.Kline           378    Bomber
+13  Lucky 3                Stefan Strack     355    Stone/ imp
+14  Request v2.0           Brant D. Thomsen  347    Qvamp -> vampire
+15  Dragon Spear           c w blue          346    CMP scanner
+16  Torch t18              P.Kline           337 *  Bomber
+17  juliet storm           M R Bremer        333    Stone/ imp
+18  Jack in the box        Beppe Bezzi       325 *  P-warrior
+19  TimeScape (1.0)        J. Pohjalainen    322    Replicator
+20  Rave 4.1               Stefan Strack     320    CMP scanner
+
+Torch t18 moves up to number 16 from number 19.  Jack in the Box also moves
+up this week.  myVamp is next in line to enter the HALL OF FAME.
+
+Thanks to Steven Morrell for providing missing data.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 250
+  instruction set: ICWS '94 Draft
+
+Last challenge: Mon Nov  6 07:08:38 PST 1995
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  42/ 27/ 31                Lurker 1.1          Kurt Franke     156      28
+ 2  29/ 11/ 60              juliet storm           M R Bremer     148      67
+ 3  39/ 31/ 29                   Test-Fc             G. Eadon     147      53
+ 4  28/ 13/ 59               Trapper 1.1          Kurt Franke     143       3
+ 5  38/ 40/ 22                 Searching          Kurt Franke     135      34
+ 6  39/ 44/ 17                 Heatseek2        Phil Whineray     135      45
+ 7  31/ 32/ 37              Hint Test v4           M R Bremer     131       1
+ 8  20/ 10/ 71           Impfinity v3c11               Planar     130      10
+ 9  17/  9/ 74                 Sheet 1.0            J. Doster     125       8
+10  16/ 10/ 74                    Paper8             G. Eadon     123      29
+11  11/  5/ 84              Impfinity v1               Planar     117      42
+12  13/ 11/ 76             RingWorm_v1.0           Calvin Loh     114      14
+13  12/ 10/ 78             RingWorm_v1.4           Calvin Loh     114      12
+14  16/ 20/ 63                  NewPaper          Kurt Franke     112      15
+15  15/ 21/ 64              Paper Dragon          Kurt Franke     110      24
+16  20/ 31/ 49          Morgenshtern II+           Don Julian     108       4
+17  23/ 37/ 40                    Weasel          Kurt Franke     108      59
+18  11/ 16/ 73             P_Banzai_v1.2           Calvin Loh     105      16
+19  11/ 20/ 69                   Cyclone         Scott Manley     103      55
+20  20/ 40/ 40     Forked Lite Ning 4.02 Ansel Greenwood Serm     101      19
+
+The beginner hill has been active.  Since I've last wrote, the hill as aged
+by approximately 37 warriors.  And most of these weren't repeated tests,
+either.  Kurt Franke decided he didn't like the rankings on the hill, so he
+went about changing them.  First came the scanners:  Weasel, Lurker,
+Searching.  That was all good for juliet's reign.  Unsatisfied, Franke probed
+juliet's weaknesses with Paper Dragon and NewPaper.  Coupled with papers from
+G. Eadon ( Paper8 ) and J. Doster ( Sheet 1.0 ), Lurker was able to claim the
+top slot.  Congratulations.  Phil Whineray has been quiet ever since the
+introduction of Heatseek 2.  Heatseek has hung around on the top despite the
+efforts of Franke and others.  Hopefully, he'll have something ready before
+his warrior dies of old age.  Speaking of which, two programs--Mythicon and
+Shadow Imp--proved to be too tough to kill in 100 challenges.  I hope to see
+new and improved versions soon.
+______________________________________________________________________________
+The Hint
+
+Core_Warrior_ #2 contained some improvements to Scott Manley's Mutagen.  We
+are going to continously improve this warrior until it reaches the top of the
+beginner hill.  Daunting challenge?  We'll see.  The code that _was_ residing
+on the beginner hill is included below:
+
+;redcode-b
+;name Hint Test v2
+;author M R Bremer
+;strategy Original code based on Scott Manley's Mutagen
+;strategy Once through scan --> spl spl dat dat coreclear
+;strategy Core_Warrior_ #2:  compressed code
+;kill Hint
+;assert CORESIZE==8000
+
+step EQU 11
+
+begin   SPL     a1+2
+        jmp start
+for 20
+        dat 0, 0
+rof
+start   add.f split, scan
+scan    sne.i 112, 113
+        djn.f -2, <-400         ;djn.f will decrement both the a and b field
+        mov.i split, *scan
+        mov.i jump, @scan
+        jmn.b -5, scan
+        jmp a1
+split   spl #step, #step        ;try to find other uses for these
+jump    jmp -1                  ;can be anywhere in code
+        DAT     0 , 0
+        DAT     0 , 0
+        DAT     0 , 0
+ptr1    dat a1, out+200
+a4      dat 0,  out+2+1
+a3      dat 1,  out+2+2
+a2      spl #2, out+2+3
+a1      spl #3, out+2+4
+        mov *ptr1, >ptr1
+        mov *ptr1, >ptr1
+        mov *ptr1, >ptr1
+out     djn.f -3, <4000
+        END     begin
+
+Hint Test was introduced onto the hill at #7.  All the replicators that
+have landed on the hill ( thanks to Beppe Bezzi's hints I believe ) have
+pushed it even higher.  Unless you're in a coma, you may have figured out
+that papers are going to be a lot tougher in the future due to the
+optimization procedures Bezzi wrote about.  For Mutagen to survive, we
+are going to have to improve its scanner element.  And you other scanner boys
+have been scoring way too many points against Mutagen.  Time for that to end.
+A pspaced bomber should do the trick.  Lucky for you, we'll save that step
+until Bezzi presents a The Hint on bombers next week.
+
+SCANNERS:
+That's a big topic.  There are two general types of scans--jmz scanners and
+cmp scanners.  A jmz scanner is very small but only scans core at 1 scan in
+a two instruction loop or .5c.  A simple jmz scanner could look something
+like this:
+
+inc     add.ab #8, scan         ;set up location to scan
+scan    jmz.f -1, 100           ;if both value at b-field = 0, goto inc
+attack  mov bomb, @-1           ;attack
+        jmn.a -3, -2            ;check to see if done
+bomb    spl #0, <-10
+        mov 1, <attack          ;coreclear
+        dat <-11, <-11
+
+Core is initially filled with dat 0, 0 (duh).  For the most part, the
+add/jmz.f lines will keep looping because the b-value of scan most likely
+points to empty core instructions.  Jmz.f will not loop when it points to
+a core location that has at least one non-zero operand.  Hopefully this is
+the enemy code.  It is attacked with whatever you want and then the process
+is looped back to the add/jmz.f scan.  The jmn.a will fall through when you
+eventually bomb 'scan'.  This will start your core clear which ends in a imp
+gate.  While the above warrior works, it suffers from a few major problems.
+Eight is not a very optimal step size and paper needs more than a single
+split bomb to stun it sufficiently.  Attack with spl 0/jmp -1, spl 0/spl 0/
+jmp -2, or spl 0,2/mov -1, >-1 bombs for additional stun power.  myZizzor
+by Paulsson uses a once through jmz scan with variable length spl 0 carpet
+to great effect.  One version is published.  Get your copy today.
+
+Cmp scanners are bigger, but faster.  They can scan 2 locations in a three
+instruction loop for a speed of .66c.  The basic scan engine looks something
+like this:
+
+inc     add step, scan
+scan    cmp 100, 112    ;remember that cmp is the same is seq!
+        slt.ab #special_value, scan     ;we'll talk about the value later
+        djn.f inc, <STREAM
+attack  <different stuff we can do here>
+check   <code to determine if done scanning>
+clear   <do coreclear>
+step    dat X, X
+
+Since most of core is filled with dat 0, 0's, the cmp instruction will most
+likely being comparing these empty core locations.  Therefore it will skip
+the slt instruction.  The add/cmp/djn cycle will repeat until either the a or
+b operand point to different instructions.  One of these locations ( a or b )
+may have the enemy code.  When the cmp finds something, the slt instruction
+is executed.  This instruction is used to protect the scanning code from
+bombing itself.  When the scan finds itself, the slt checks one of the
+pointers and makes sure that it is greater than the last instruction in the
+scanner.  If it is, it will skip the djn instruction and do the attack
+routine.  Otherwise the djn will be executed and it will continue to scan.
+Notice that the first two instructions are not protected.  We can use this
+fact to determine when to start the coreclear.  This will become more clear
+later with some examples I hope.
+
+Although cmp scanners are faster, we have to have some way of checking or
+attacking _both_ the a and b targets.  Afterall,  the enemy code can
+potentially be at a or b ( or maybe both ).  I know of two approaches.
+Attack the b value and then add a special offset to the scan to make the last
+scan's a value be the b value.  That way, if there is something there, it
+will get attacked on the second 'special' scan.  Iron Gate uses this approach
+and is included below ( I hope the author doesn't mind ):
+
+;redcode
+;name Iron Gate
+;author Wayne Sheppard
+;strategy CMPscanner
+
+dist equ 98
+scan equ dist*2
+
+a add d,@x
+c cmp a+dist,a
+  slt #20,@x
+  djn a,<7000
+  mov j,@c
+x mov s,<c
+  sub n,@x
+  jmn c,a
+s spl 0,<1-dist
+  mov 2,<-3
+j jmp -1
+n dat <0-dist,<0-dist-1
+d dat <scan,<scan
+
+'d' is the normal scan step and 'n' is the special one.  If the cmp finds
+something, the location at the b value is attacked.  The special step is
+subtracted from the scan and the scan is repeated.  Now the old a value is
+the new b value after the subtraction.  This ensures that both locations
+pointed to by the a and b values are checked.  When 'a' is bombed by the
+jmp -1, 0 ( remember the instructions above the slt are not protected ), the
+jmn instruction will not jump.  Instead the spl instruction 's' will execute
+and the coreclear will begin.
+
+Another way to attack both pointers is to bomb a, b, and every instruction
+in between.  Let's look at Agony to illustrate this technique.
+
+;redcode-94
+;name Agony II
+;kill Agony
+;author Stefan Strack
+;strategy Small-interval CMP scanner that bombs with a SPL 0 carpet.
+;strategy This is the good old '88 Agony with some '94 enhancements:
+;strategy  - boots off decoy to delay (quick)scanners; erases boot pointer
+;strategy  - optimized decoy to avoid self-triggering for more than 6000 cycles
+;strategy Submitted: Sun Jul 31 14:11:05 CDT 1994
+;pushed off at age 912 more than 14 months later
+;assert CORESIZE == 8000
+;$Id: agony_2.red,v 1.4 1995/07/12 07:03:46 stst Exp stst $
+
+CDIST   equ 12
+IVAL    equ 42
+FIRST   equ scan+OFFSET+IVAL
+OFFSET  equ IVAL
+DJNOFF  equ -431
+DESTIN  equ 2878
+
+scan    sub incr,comp
+comp    cmp a=FIRST-CDIST,b=FIRST
+        slt #incr-comp+CDIST+(bptr-comp)+1,comp
+        djn.f scan,<c=FIRST+DJNOFF
+bptr    mov.b comp,#bptr
+        mov #d=CDIST+(bptr-comp)+1,count
+split   mov bomb,<bptr
+count   djn split,#0
+        jmn.a scan,*0
+bomb    spl #0,>-IVAL+1
+        mov incr,<-2
+incr    dat >-IVAL,>-IVAL
+
+Agony compares location N and N+12.  Its scan phase operates much the same as
+Iron Gate.  However, it has a completely different method of attacking both
+the a and b pointers.  If it finds something, it will bomb locations N, N+1,
+N+2, . . . N+12, N+13, N+14, and N+15 with spl 0's.  Again, the coreclear
+is started ( the jmn drops through ) when Agony attack its own code that is
+not protected.
+
+We are going to utilize Iron Gate's constants and basic structure, but attack
+the a and b locations specifically.
+
+dist equ 98
+scan equ dist*2
+
+a add d,c
+c cmp a+2*dist,a+dist
+  slt.a #dist+m-a, c
+  djn.f a,<7000
+  mov s, *c
+x mov m, @c
+  jmn a,a
+s spl #-dist+1, <0
+  mov 1, <-3
+d dat <scan,<scan
+m mov.i dist, }dist
+
+You should know by now how the add/cmp/slt/djn scan engine works.  Let's talk
+a little more about the slt instruction.  Assume that core is numbered from
+top to bottom, 0 to 8000.  Let the a value of slt be the low pointer and the
+b value be the high pointer.  Therefore the scan looks something like this:
+
+0  <-- b value ( high pointer )         The slt above checks the low pointer
+1                                       against the 'special value'.  If the
+2                                       value was the length of my code, say
+.                                       10, then an attack is made only if
+.                                       10 is less than the a value.  This
+.                                       protects the slt and the instructions
+96                                      below from the a pointer.  However,
+97                                      if the b value is pointing to your
+98 <-- a value ( low pointer )          code, you will get bombed.  So, we
+                                        can add on the distance between the
+pointers to the special value to ensure that the scanning code is safe from
+the b pointer as well.  Remember that the instructions above the slt are not
+protected from the low pointer.  The scanner above sets up the scan so that
+the a value points to the add instruction.  It's not protected, so it gets
+bombed.  The jmn detects this bomb and instead of looping back up to the
+scan, it will drop through to the coreclear.  Got it?  ( Sheesh, I probably
+confused everybody enough that no one will ever want to code a scanner. )
+
+The scanner above bombs with an incindiary bomb.  If you don't quite
+understand how it works, trace the m instruction and watch what happens when
+the enemy replicator executes it.  Self-splitting bombers get severely
+punished with this bomb.
+
+Okay we're almost there.  We can insert this in the scanner part of Mutagen.
+Increase the 'special value' so that the scanner will not bomb the multipass
+coreclear.  Switch the clear to backwards instead of forwards ( so it
+doesn't stun the scanner ).  The clear from the scanner interferes with the
+multipass clear, so I changed it to use the same bomb and pointer.  This is
+not the best solution becuase the scan and clear should operate independent
+of each other.  If a replicator overwrites the clear, then most likely the
+clear pointer that the scan is using will be scrambled too.  Ah well, here it
+is:
+
+;redcode-b
+;name Hint Test v4
+;author M R Bremer
+;strategy Original code based on Scott Manley's Mutagen
+;strategy Once through scan --> spl spl dat dat coreclear
+;strategy Core_Warrior_ #2:  compressed code
+;strategy Core_Warrior_ #4:  improved scanner
+;kill Hint
+;assert CORESIZE==8000
+
+dist equ 98
+scan equ dist*2
+
+begin   SPL     b1+2
+        jmp a
+for 20
+        dat 0, 0
+rof
+a       add d,c
+c       cmp a+2*dist,a+dist
+        slt.a #dist+ptr2-a, c
+        djn.f a,<7000
+        mov s, *c
+x       mov m, @c
+        jmn a,a
+s       spl #-dist+1, <0
+        mov *ptr2, <ptr2
+d       dat <scan,<scan
+m       mov.i dist, }dist
+        dat 0, 0
+        dat 0, 0
+        dat 0, 0
+        dat 0, 0
+b5      dat 0, 0
+b4      dat b5-ptr2, a-2-8
+b3      dat b4-ptr2, a-2-7
+b2      spl #b3-ptr2, a-2-6
+b1      spl #b2-ptr2, a-2-5
+        mov *ptr2, <ptr2
+        mov *ptr2, <ptr2
+        mov *ptr2, <ptr2
+        djn.f -3, <6000
+ptr2    dat b1, -100+a
+        END     begin
+
+Yikes.  Hint Test does worse!
+10  29/ 41/ 30              Hint Test v4           M R Bremer     116       1
+
+Instead of having the scanner clear independently, let's jump it to b1
+instead.  Much better.
+ 7  31/ 32/ 37              Hint Test v4           M R Bremer     131       1
+
+Hint Test still scores about the same unfortunately.  Go figure.  It does
+really well against papers, but is trounced by scanners.  Bombers are going
+50/50 or so.  The Hint Test that will be on the hill in the near future ( I
+haven't received the results yet ), is attempting to kill imps a little bit
+more effectively by changing the first dat clear to a dat X, <2667.  The next
+step to improving Mutagen will be to pspace it with a small bomber.  Stay
+tuned.
+
+Too basic?  Too complex?  I'm a terrible redcoder?  I have no clue?  Needs to
+have more explanation?  Flame me at will ( just leave my mom out of it ).
+<bremermr@ecn.purdue.edu>.
+______________________________________________________________________________
+Extra Extra:
+
+This is Impfinity v1.  Seeing how Imp Craze did well (but it's falling off
+the beginner hill even as I'm writing this), I started thinking harder about
+imp spirals.  I was dreaming of an spiral with an ever-growing number of
+processes.  This would be very hard to kill.  It turns out this can be done
+by continuously launching the spiral.
+
+I started with the standard binary launch.  In a binary launch, you draw a
+binary tree of SPLs, and you put jumps to the imp processes at the leaves.
+For a 3-process spiral, you have this tree:
+
+                 A
+                / \
+               B   C
+              / \  |
+             D   E F
+
+And here is the corresponding redcode:
+
+A       spl     C
+B       spl     E
+D       jmp     imp
+E       jmp     imp+step
+C       nop
+F       jmp     imp+2*step
+imp     mov     0, step
+
+Here is what happens when you launch it.  I'll represent the run queue as a
+list of labels.  We start with only A in the run queue: [A].  We execute the
+first instruction in the run queue (instruction at A).  This is an spl, so it
+will push back at the end of the queue, first its following
+instruction (B), then its target (C): [B C].  We then execute the next
+instruction: B.  It is also an spl, so it pushes back D and E: [C D E].  Then
+we execute C.  It does nothing and pushes the next instruction (F) into the
+queue: [D E F].  We now execute D, E, and F which jump to the three parts of
+the ring: [imp imp+step imp+2*step].  Now the imp ring is launched.
+
+So we see that the program will execute the tree in top-to-bottom order:
+A then B, C then D, E, F.
+
+Let's add an instruction at the start:
+
+Z       spl     Z
+
+This adds a loop at the top of the tree (not easy to draw):
+
+             +-+
+             | |
+             Z-+
+             |
+             A
+         ... etc.
+
+This spl-loop will send processes down the tree, one after the other:
+  [Z]
+  [A Z]
+  [B C A Z]
+  [D E F B C A Z]
+  [imp imp+step imp+2*step D E F B C A Z]
+etc.
+
+I'll call "rounds" the lines in this sequence: one round is executing all the
+processes in the process queue.  (This is what the cdb command "thread" does:
+execute one round.)
+
+So we can launch imp ring after imp ring.  This is not a true spiral because
+the process queue after the next round is:
+
+  [imp+1 imp+step+1 imp+2*step+1 imp imp+step imp+2*step D E F B C A Z]
+
+A true imp spiral would be: (imp+2 is the same as imp+3*step+1)
+
+  [imp+1 imp+step+2 imp+2*step+1 imp+2 imp+step+2 imp+2*step+2 ...]
+
+So we need to add 2 to each JMP instruction in each round.  We can do this
+with a-field postincrement addressing mode, because we have six nodes in our
+tree, and each node is executed once in each round.
+
+A       spl     C, }D
+B       spl     E, }E
+D       jmp     imp, }D
+E       jmp     imp+step, }E
+C       nop     }F
+F       jmp     imp+2*step, }F
+imp     mov     0, step
+
+This is almost working code.  We now have to adjust the JMPs to compensate
+for the incrementations during the first few rounds, and we get the code to
+launch a continously-growing imp spiral:
+
+Z       spl     Z
+A       spl     C, }D
+B       spl     E, }E
+D       jmp     imp-2, }D
+E       jmp     imp+step-1, }E
+C       nop     }F
+F       jmp     imp+2*step-1, }F
+imp     mov     0, step
+
+And this is all there is to Impfinity.  I have used the idle cycle at C to
+launch a bombing process.  This is not nearly enough bombing to do much
+difference.  Impfinity wins mostly by overrunning the opponent with its
+spiral.  It resists anti-imp programs thanks to its unorthodox spiral size.
+
+This is the code:
+
+;redcode-b
+;name Impfinity v1
+;author Planar
+;strategy continuous-launching 13-point imp spiral + a few incendiary bombs
+;assert CORESIZE == 8000
+
+step    equ     3077
+bstep   equ     -50
+binit   equ     -200
+
+        org     a
+
+bomb1   spl     #6, <2667
+bomb2   mov.i   -1, {-1
+
+a       spl     #binit, }z0
+b       spl     d, }z1
+c       spl     f, }z2
+e       spl     j, }z4
+i       spl     z1, }z8
+z0      jmp     imp-5, }z0
+z1      jmp     imp+step-4, }z1
+j       spl     z3, }z9
+z2      jmp     imp+2*step-3, }z2
+z3      jmp     imp+3*step-3, }z3
+f       spl     l, }z5
+k       spl     z5, }z10
+z4      jmp     imp+4*step-2, }z4
+z5      jmp     imp+5*step-2, }z5
+l       spl     z7, }z11
+z6      jmp     imp+6*step-2, }z6
+z7      jmp     imp+7*step-2, }z7
+d       spl     h, }z3
+g       spl     n, }z6
+m       spl     z9, }z12
+z8      jmp     imp+8*step-1, }z8
+z9      jmp     imp+9*step-1, }z9
+n       mov.i   bomb1, }a
+z10     jmp     imp+10*step-1, }z10
+h       spl     p, }z7
+o       mov.i   bomb2, *a
+z11     jmp     imp+11*step-1, }z11
+p       add.a   #bstep-1, a
+z12     jmp     imp+12*step-1, }z12
+imp     mov.i   #1, step
+
+        end
+
+I'd like to add a word about the choice of a spiral size.  There is
+one warrior on the beginner hill with a 9-point spiral.  I think this
+is a bad idea.  Because 2667 is a multiple of 889, an anti-3-point-imp
+bomb (dat <2667, <5334) will also cause a 9-point spiral to decrement
+its own instructions.  (The same is true for any multiple of 3.)
+Against myZizzor, for example, a 9-point version of Impfinity get very
+bad scores compared to a 7-point version or an 11-point version.
+So if you choose a big size for your spiral, make it a prime number.
+
+Finally, you may want to know if there's a way of doing an SPL/ADD
+continuous launch.  Yes.  That's what Impfinity v3 uses (soon on a
+hill near you--I hope).  A vector launch is also possible, but I
+haven't written the code yet.
+
+My warriors are not very good, but they are fun to write.
+<Damien.Doligez@inria.fr>
+http://pauillac.inria.fr/~doligez/corewar/
+
+EDITOR'S NOTE:  Damien is much too modest.  Imp spirals are one of the most
+difficult subjects to understand.  Impfinity missed the '94 draft hill by
+only a fraction of a point.  I'm sure he'll breach the hill very soon.  Spoke
+too soon.  Impfinity has just entered the hill as I am posting.
+______________________________________________________________________________
+Questions?  Concerns?  Comments?   Complaints?  Mail them to:
+Beppe Bezzi <bezzi@iol.it> or Myer R Bremer <bremermr@ecn.purdue.edu>
+

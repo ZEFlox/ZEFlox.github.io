@@ -1,0 +1,650 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 10                                                       January 1, 1996
+______________________________________________________________________________
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+______________________________________________________________________________
+Happy New Year!
+The 1996 begins, and we have reached the issue number 10 of your
+favourite Core War newsletter!
+At the moment Beppe is skiing so I have the honour to keep this number.
+I remind you that Nandor & Stefan tourney is over, and soon you'll be able to
+look at winners' faces on Stormking web pages!
+At the moment maybe we're all busy in eating big Milanese cakes or similar,
+but I hope you'll have some free time to "waste" in redcoding (or at least
+to read us ;-).
+In this issue, among other things, Planar continues the useful tutorial on
+cdb, while I try to show to the beginners some basic rules to keep in mind,
+when starting making a warrior.
+Let's go!
+
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+ 1  45/ 39/ 16                      quiz              Schitzo     150     267
+ 2  42/ 41/ 18             Frontwards v2       Steven Morrell     143     120
+ 3  38/ 34/ 29                 Mason 2.0        Robert Macrae     141       3
+ 4  40/ 40/ 20                Boombastic    Maurizio Vittuari     141       2
+ 5  34/ 26/ 40                  La Bomba          Beppe Bezzi     141     262
+ 6  36/ 32/ 32                 Torch t18              P.Kline     140     646
+ 7  41/ 42/ 18                   Harmony              P.Kline     139      13
+ 8  29/ 19/ 53            Impfinity v4g1               Planar     139      67
+ 9  42/ 46/ 12                      crow           Karl Lewin     139     100
+10  34/ 30/ 36           Jack in the box          Beppe Bezzi     138     634
+11  41/ 44/ 15             Provascan 3.0          Beppe Bezzi     138      17
+12  40/ 44/ 15             Porch Swing 2                  JKW     135     175
+13  29/ 22/ 49                  Hector 2          Kurt Franke     135     182
+14  35/ 36/ 29            Tornado 2.0 h1          Beppe Bezzi     135     107
+15  40/ 45/ 15            Provascan 2.0d              B.Bezzi     135       1
+16  29/ 24/ 47          juliet and paper M R Bremer, B. Bezzi     134     263
+17  39/ 45/ 15                    testPW    Maurizio Vittuari     134       8
+18  21/  9/ 70               Night Train           Karl Lewin     134     154
+19  37/ 41/ 22                  Derision           M R Bremer     133     286
+20  37/ 43/ 20                  Qwiksand       Wayne Sheppard     130      73
+21  31/ 32/ 36               Dynamo v.1a    John K. Wilkinson     130       6
+22  37/ 45/ 18               Persistence          Kurt Franke     130      74
+23  27/ 24/ 49                      Aeka                T.Hsu     129      27
+24  19/  9/ 72              DoorMat v0.1              K Lewin     129     116
+25  36/ 43/ 22               myVamp v3.7             Paulsson     128     614
+
+As you can see quiz still strongly holds the leadership, followed by Frontwards,
+La Bomba and two new entries: R. Macrae's Mason 2.0, an evolution of
+Mason 1.0, and my own Boombastic, a fast bomber based on Tornado engine.
+A new entry gets also a good position: Harmony's P. Kline, a couple of
+scanners that work in parallel (you can find it just published!).
+Provascan 2.0d, by B. Bezzi, has been subscribed by me as a test (and yet
+alive only for error): I'll kill it as soon as possible.
+Note that it has been subscribed also a copy of Aeka, an old warrior: we aren't
+able to guess the reason...
+We think it would be fair to free a slot, in favour of other original
+programs.
+
+______________________________________________________________________________
+94 - What's New (in order of appearance)
+
+10  40/ 42/ 18          Fire Master v1.5            JS Pulido     138       1
+23  20/ 13/ 67                      test              P.Kline     127       1
+25  35/ 45/ 20                    testSC              P.Kline     126       1
+13  28/ 24/ 48                      Aeka                T.Hsu     132       1
+16  38/ 44/ 18           Prova_e_Riprova    Maurizio Vittuari     133       1
+ 4  30/ 13/ 57                  test i4h               Planar     146       1
+ 8  39/ 41/ 21                   Harmony              P.Kline     136       1
+21  39/ 46/ 15                    testPW    Maurizio Vittuari     132       1
+15  33/ 32/ 34               Dynamo v.1a    John K. Wilkinson     134       1
+17  35/ 36/ 29                 Brand 3.0        Robert Macrae     133       1
+ 6  37/ 34/ 29                 Mason 2.0        Robert Macrae     140       1
+ 8  40/ 41/ 20                Boombastic    Maurizio Vittuari     139       1
+
+A particular mention to Mason 2.0, Harmony, a redundant (published) scanner,
+and... Boombastic, my new bomber under costruction.
+
+______________________________________________________________________________
+94 - What's No More
+
+26  37/ 46/ 17             Porch Swing +         Randy Graham     127      79
+26  33/ 39/ 28                endpoint .           M R Bremer     126     254
+26  29/ 33/ 38             Paper8-IV 2.1             G. Eadon     125      28
+26  20/ 15/ 65                      test              P.Kline     125      12
+26   2/  2/  1                   testbns    Maurizio Vittuari       5      15
+26   1/  2/  0                    testbn    Maurizio Vittuari       5      26
+26   2/  1/  1                    testSC              P.Kline       6       4
+26   4/  0/  0                  test i4h               Planar      12       1
+26  36/ 51/ 13              Babbo Natale    Maurizio Vittuari     121       5
+26   2/  1/  0           Prova_e_Riprova    Maurizio Vittuari       7       5
+26   1/  2/  1                 Brand 3.0        Robert Macrae       4       2
+26  36/ 45/ 19          Fire Master v1.5            JS Pulido     127      38
+26  37/ 48/ 14                     ltest         Anders Ivner     126     183
+
+Many tests, two ultra centenaries (ltest and endpoint .) and some younger
+warriors are no more.
+
+______________________________________________________________________________
+What's Old
+
+ 6  36/ 32/ 32                 Torch t18              P.Kline     140     646
+10  34/ 30/ 36           Jack in the box          Beppe Bezzi     138     634
+25  36/ 43/ 22               myVamp v3.7             Paulsson     128     614
+19  37/ 41/ 22                  Derision           M R Bremer     133     286
+ 1  45/ 39/ 16                      quiz              Schitzo     150     267
+16  29/ 24/ 47          juliet and paper M R Bremer, B. Bezzi     134     263
+ 5  34/ 26/ 40                  La Bomba          Beppe Bezzi     141     262
+
+Seven warriors passed 200 age, the three veterans are over 600.
+They're quite healthy, excepted myVamp with more than one trouble to solve...
+
+_____________________________________________________________________________
+HALL OF FAME
+* means the warrior is still running.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Iron Gate 1.5          Wayne Sheppard    926    CMP scanner
+ 2  Agony II               Stefan Strack     912    CMP scanner
+ 3  Blue Funk              Steven Morrell    869    Stone/ imp
+ 4  Thermite 1.0           Robert Macrae     802    Qscan -> bomber
+ 5  Blue Funk 3            Steven Morrell    766    Stone/ imp
+ 6  HeremScimitar          A.Ivner,P.Kline   666    Bomber
+ 7  Torch t18              P.Kline           646 *  Bomber
+ 8  Jack in the box        Beppe Bezzi       634 *  P-warrior
+ 9  myVamp v3.7            Paulsson          614 *  Vampire
+10  Armory - A5            Wilkinson         609    P-warrior
+11  Phq                    Maurizio Vittuari 589    Qscan -> replicator
+12  B-Panama X             Steven Morrell    518    Stone/ replicator
+13  NC 94                  Wayne Sheppard    387    Stone/ imp
+14  Cannonade              P.Kline           382    Stone/ imp
+15  Torch t17              P.Kline           378    Bomber
+16  Lucky 3                Stefan Strack     355    Stone/ imp
+17  Request v2.0           Brant D. Thomsen  347    Qvamp -> vampire
+18  Dragon Spear           c w blue          346    CMP scanner
+19  Leprechaun on speed    Anders Ivner      344    Qscan -> scanner/bomber
+20  juliet storm           M R Bremer        333    Stone/ imp
+
+The "three musketeers", Torch, Jack and myVamp, pass Phq and Armory and
+continue running (with some problems for myVamp...).
+The next step will be HeremScimitar ?
+
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  48/  8/ 44                      Aeka                T.Hsu     187      22
+ 2  59/ 31/  9                      Rave        Stefan Strack     187      21
+ 3  48/ 16/ 37              Spacehead1.1                Warpi     179      39
+ 4  49/ 20/ 31              Hint Test v6           M R Bremer     178      94
+ 5  55/ 34/ 11               Our Vamp v2 R Bartolome & JS Pul     175      27
+ 6  48/ 20/ 32               Serendipity         A. Nevermind     175      95
+ 7  45/ 17/ 38                 Spacehead                Warpi     173      50
+ 8  47/ 30/ 23           Winter Werewolf         W. Mintardjo     163      19
+ 9  44/ 29/ 27       Hey, Kool-Aid! v2.9         David Boeren     160      10
+10  46/ 33/ 21       Hey, Kool-Aid! v2.2         David Boeren     159      18
+11  30/  7/ 63                 Fortitude         A. Nevermind     152      93
+12  33/ 15/ 52                  GCSpiral              Example     150      20
+13  43/ 36/ 21                Paperstone                Warpi     150      54
+14  42/ 38/ 20                     test3                Kafka     145      75
+15  45/ 48/  7               polyphemous                Kafka     143      61
+16  39/ 39/ 23                     test4                Kafka     139      74
+17  38/ 38/ 24           Paperstone v1.2                Warpi     138      51
+18  33/ 36/ 31 Everybody Must Get Stoned       Nathan Summers     129      63
+19  40/ 51/  9                      test                Kafka     129      84
+20  37/ 48/ 16                    test-b       Raul Bartolome     125       2
+21  35/ 50/ 16                    test-A       Raul Bartolome     119       1
+22  33/ 55/ 12                     Dwarf         T. H. Davies     111      59
+23  25/ 67/  9               Cancer v1.0         David Boeren      83       5
+24  25/ 70/  5                Hopper 2.0            J.Shelton      81       6
+25  21/ 74/  5                    Hopper            J.Shelton      69       9
+
+As you can see the hill is actually leaded by two old warriors, not
+beginner's warriors at all!
+We have received lots of remostrances...
+What we can tell here is that it would be fair that they'd be deleted, as soon
+as possible, by the person who has subcribed them if possible.
+
+______________________________________________________________________________
+The hint
+The very basics of Core War game strategy.
+(How to improve your beginner's warrior)
+
+In this issue we shall try to discuss about improving warriors.
+First of all a little preface for the beginner: we want to clarify the
+meaning of the sentence "a warrior better than another one".
+At the moment, as you know, our "work" is to try to make our warriors
+enough powerful so that they can enter in a 25 warrior populed heap, that we
+usually call hill ;-).
+One of the first things that a novice (apart the redcode language ;-) should
+know about this game, is that for each given warrior, there exists a warrior
+that can defeat it in the long distance.
+Maybe one of the main differences between a beginner's and a veteran's program
+is the range of enemy types it can succesfully face: this is often the reason
+why a warrior going very well in the beginner hill, often finds many problems
+if subscribed on the 94 hill.
+Let's see some examples...
+In the last number Beppe showed us how to improve a beginner's scanner, and he
+put it into the 94-hill (Provascan 2.0); then he modified again the warrior
+and reached the second place (Provascan 3.0)!
+I tried to make some changes to version 2.0, and even if I couldn't score as
+high as Beppe (Provascan 3.0 is in the top ten, and it can be considered, as
+his previous version, no more a beginner's warrior!), I think it's an useful
+challenge for the beginner trying to improve it (not such an easy exercise!).
+Now we discuss some basic and reasonable moves that can be attempted to
+modify it succesfully.
+I remind you that Provascan is a 50%c B-scanner with boot and relative decoy,
+and spl0-dat core clear (for further details see Core Warrior 9); it plays
+conventionally the role of scissors, in the well known
+scissors-paper(replicators)-stone(bombers) analogy.
+
+We start analizying some interesting results of Provascan 2.0:
+
+Provascan 2.0d vs Frontwards    95/72/33        (one shot scanner)
+Noboot vs Frontwards            55/129/16
+
+Provascan 2.0d vs La Bomba      87/70/43        (QScan--> Paper)
+Noboot vs La Bomba              97/76/27
+
+Provascan 2.0d vs Impfinity4g1  93/93/14        (Imp stuffs! ;-)
+Noboot vs Impfinity v4g1        90/88/22
+
+Provascan 2.0d vs Torch t18     85/88/27        (incendiary bomber)
+Noboot vs Torch t18             91/77/32
+
+Provascan 2.0d vs Porch Swing 2 81/80/39        (one shot scan/bomber)
+Noboot vs Porch Swing 2         59/111/30
+
+Question: but booting is truly useful ?
+Let's see the result!
+Noboot (the same version but without boot) is faster, because doesn't
+have to spend some initial cycles executing the copy, and can immediately
+start scanning.
+It's reasonable to think that Noboot will gain something against warriors
+not scanning the core.
+If we neglect fluctuations, we see that Noboot works quite better against
+Torch (a bomber) and also against La Bomba (maybe Noboot can reach and hit,
+with a spl0 carpet, the paper before it spreads away.
+Against Impfinity we can't see any obvious difference.
+But take a look of what happens with one-shot scanners!
+Against these guys the boot is highly recommended, as you can see from
+the scores: they stop scanning and start to fire from your decoy
+(with the core clear), while you are safe in another part of the core,
+scanning and ready to bomb them later.
+Overally we understand that isn't a very good idea to take away the booting
+section (at least in the current hill) from our 50%c scanner!
+
+Now, extablished that booting is a quite pretty idea ;-), we want to try
+another stuff: who of you, did never hate (maybe even for a while) those
+little, ugly and hard-to-die imps ;-) ?
+(answer: maybe only our dad_of_imp_Planar never hated his little
+and *pretty* "creatures"...;-)
+So what about on installing an anti-imp core clear on our favourite scanner ?
+Let's take a look at this version of ProvaScan (I left the original comments
+of Beppe and changed just the clear and very very other little things):
+BTW Prova_and_Riprova means Try_and_Try_Again!
+
+;redcode-94
+;name Prova_e_Riprova
+;author Maurizio Vittuari
+;strategy B-scanner
+;strategy This is a personal defiance to Beppe ;-)
+;strategy hoping to improve Provascan for the hint
+;strategy on the New Year's Day issue
+;assert CORESIZE == 8000
+
+step    equ     3364
+away    equ     3198+1
+
+trap    dat     0,      0       ;0
+        dat     0,      0    ;we can use equs for those dat 0,0 they are left
+dest    dat     0,      0    ;for clarity
+        dat     0,      0
+        dat     0,      0       ;0
+loop    add     #step,  ptr
+ptr     jmz     loop,   trap+step
+        mov.b   ptr,    dest
+cnt     mov     #7,     0       ;0
+clear   mov     bomb,   >dest
+        djn     clear,  cnt
+        jmn     loop,   trap
+bomb    spl     #6,     0       ;0
+        mov     kill,   }bomb   ;1st pass: spl0-dat carpet
+        mov     kill-1, }bomb   ;and then 2nd pass: only dat <2667,<-2666
+        jmp     -2
+        spl     #4,     0       ;0
+kill    dat     <2667,  <-2666
+
+boot    mov     kill,   away
+for 12
+        mov     {boot,  <boot        ;the faster way to boot away
+rof
+        mov     #0,     boot+2       ;we have to set those b-fields to zero
+        mov     #0,     boot+6       ;to save time later
+        mov     #0,     boot+10
+        mov     #0,     boot+14
+jump    jmp     boot+away-11,>away-34   ;> is to set trap b-field non zero
+
+for (MAXLENGTH-CURLINE)/4
+        dat     jump,   0           ;this decoy doesn't have two equal cells
+        dat     bomb,   boot        ;and also has all fourth b-field at zero
+        dat     boot,   kill
+        dat     clear,  boot
+rof
+end boot
+
+Prova_e_Riprova vs Impfinity v4g1       10/96/94    (AArgh!)
+Prova_e_Riprova vs Torch t18            81/86/33
+Prova_e_Riprova vs Provascan 3.0        93/94/13
+Prova_e_Riprova vs Frontwards v2        86/74/40
+Prova_e_Riprova vs La Bomba             58/85/57
+Prova_e_Riprova vs Night Train          98/36/66
+Prova_e_Riprova vs DoorMat              99/36/65
+
+Provascan 2.0d vs Night Train wins:     44/39/117
+Provascan 2.0d vs DoorMat v0.1 wins:    46/48/106
+
+Two words about these results:
+They follow our expectations when fighting against Torch and Provascan 3.0;
+this version is quite better then 2.0d against imp stuffers as Doormat
+and Night Train.
+On the contrary I can't understand what actually happened against La Bomba
+(at home my tests gave very different results...); against Frontwards the
+performance was slightly worse than the one by version 2.0d, maybe for the
+couple of istructions added for the clear (now P_e_R is no more so tiny,
+and also a bit slower in core cleaning!).
+What is quite unexpected is the score against Impfinity; maybe here the
+bi-directional core clear is much better, and probably P_e_R is very often
+stoned!
+
+Some interesting changes, left as an useful exercise to my twenty-five readers,
+can be:
+-try to change the scan step
+-try to change the carpet dimension
+-try to change the starting offset of the core clear
+-try to change boot distance
+-try to write a better coreclear: smaller than mine [not so hard] and possibly
+ bidirectional and anti-imp [not so easy]
+-reengineer the program and reduce the number of istructions [quite hard]
+-find the changes that make this version score better than Provascan 3.0 ;-)
+
+Well, I think that's all for this issue, hoping to have been clear...
+anyway you can mail me at pan0178@bologna.iperbole.it
+Now I leave you with Planar and his interesting tutorial.
+
+_____________________________________________________________________________
+
+                          CDB tutorial, part 2
+
+
+In the first part of this tutorial, we explored the most basic
+commands of GDB.  Now we are ready for much more powerful features,
+features that give most of its power to CDB (and make its input look
+like line noise).  We won't write macros yet, but we'll write CDB
+programs in the form of complex command lines.
+
+
+Sequence
+--------
+
+Last time, we found the point where Fahrenheit bombed itself with the
+"skip" command.  It was a bit tedious because we were typing these two
+commands over and over:
+
+(cdb) skip 999
+(cdb) 0,4
+
+There is a better way.  Just type:
+
+(cdb) skip 999 ~ 0,4
+
+CDB will execute the two commands and display their results before
+giving the prompt back.  So you can put a tilde instead of pressing
+<Enter> between two commands.  Big deal.
+
+Indeed, this feature will save a lot of your time.  Press <Enter> now,
+and CDB will repeat the entire command line, not just the last
+command.  You don't have to retype the two commands over and over.
+
+Suppose you lose track of the time and you want to use "registers" to
+see the current cycle.  If you type
+
+(cdb) registers
+
+you'll see the cycle count, but you lose your "previous command"
+buffer and you have to type "skip 999~0,4" again.  But if you type
+
+(cdb)  registers
+
+with a space before the "registers", CDB will execute "registers" but
+keep the old "previous command".  Now if you press <Enter>, CDB will
+execute the "skip" and the "list".
+
+Notice that, when you type "skip 999 ~ 0,4", CDB will execute both
+commands and display their results.  "skip" executes first and
+displays the next instruction to execute, then "0,4" displays the
+first five core locations.  This is messy.  If you type instead
+
+(cdb) @skip 999 ~ 0,4
+
+the "skip" command will execute without display.  The "@" operator,
+placed before a command, will tell CDB to suppress the display of this
+command.
+
+
+Tests
+-----
+
+Use "go" to skip to a new battle, then type
+
+(cdb) @skip 999 ~ @list 0 ~ if B!=3039 ~ 0,4
+
+Here is what CDB will do:
+1. silently step 1000 times (@skip 999)
+2. silently list the first core location (@list 0)
+   What's the point in listing the first core location if you don't
+   display the listing ?  It's to set the dot address (and the A and B
+   values).  You'll do it all the time in CDB programming.
+3. Test if the B-value of location 0 is different from 3039.  If so,
+   CDB will execute the next command (0,4); if not, CDB will skip
+   the next command and give the prompt back.
+
+Now, you can press <Enter> until CDB displays the listing of
+Fahrenheit.  You'll see that Fahrenheit has bombed itself.
+
+So this is how the "if" command works: execute the following command
+only if the condition is true.  The condition is any expression, it is
+true if not equal to zero, false if equal to zero.  Easy, isn't it ?
+
+
+Loops
+-----
+
+Try this:
+
+(cdb) @step ~ !1000
+
+and notice that it is exactly equivalent to "@skip 999".  What does it
+mean ?  The "!" command means "repeat the beginning of the command
+line up to this (!) command".  Here, this will repeat the "@step".
+The argument to "!" is the number of times that CDB must repeat the
+line.  (Warning: for some strange reasons, sometimes MacpMARS will not
+accept a space between the ~ and the !)
+
+So we told CDB to repeat 1000 times "@step".  If we use
+
+(cdb) @step ~ !999 ~ step
+
+this is equivalent to "skip 999": step 999 times silently and once
+with display.
+
+If you omit the argument to "!", CDB will loop forever.  Typing
+
+(cdb) @step ~ !
+
+is equivalent to "continue", but slower.  You'll have to press
+Control-C to get back to the prompt.  (In this case, Control-C doesn't
+work in the X-window version.  I have to type Control-C in the
+terminal window where I launched pMARS from.  This will be fixed in
+the next version of pMARS.)
+
+In addition to the loop count, you can use "if" to break out of a
+loop: if you use "if" to skip over the "!" command, the loop will
+stop.  Use "go" to skip to a new battle and type:
+
+(cdb) @step ~ @list 0 ~ if B==3039 ~ !
+
+CDB will step until Fahrenheit has bombed itself.  Use "registers" to
+get the exact cycle when this happens, subtract the remaining cycles
+from 80000, use "go" to start an new battle and skip to just before
+the bombing.  Check that the next instruction will bomb core
+location 0, step over it and check that it does bomb that core
+location.
+
+So this is finally the right way of finding when and how Fahrenheit
+bombs itself.  In just one short command line, we can do the same work
+as the tedious process of skipping in decreasing increments that we
+used last time.  Note that we can use this technique only if we know
+which of Fahrenheit's instructions is bombed.  I think Stefan has some
+predefined macros that will help us further.  We'll keep them for
+part 3.
+
+
+Changing the core
+-----------------
+
+We'll want to experiment by changing some of Fahrenheit's constants to
+see which one makes it bomb itself the latest.  For example, to set
+the B-value of location 1, we'll set the whole location with the
+command "edit".  It takes an address as argument.  In interactive
+mode, "edit" will prompt you for a line of redcode to put at this
+address.  In a command line, "edit" will take the next "command"
+(whatever is between the next ~ and the following one) as the line of
+redcode.  For example, if you type:
+
+(cdb) edit 1
+mov.i <100, <2000
+
+CDB will set the contents of core location 1 to this instruction, in
+effect changing the B-value of the instruction to 2000.  You could
+instead type:
+
+(cdb) edit 1 ~ mov.i <100, <2000
+
+If we want to see the effect of a big decoy on Fahrenheit's DJN
+stream, we can use:
+
+(cdb) fill 5700,5800
+dat 1, 1
+
+This will set the 101 core locations between 5700 and 5800 to
+"DAT 1, 1".  As with "edit", we can give the instruction on the
+command line after a ~.  Determine on which cycle Fahrenheit bombs
+itself when this decoy is present.
+
+
+Computing
+---------
+
+CBD can also do arbitrary calculations (and display the results).  The
+command to use for this is "calc".  Try:
+
+(cdb) calc 2+2
+(cdb) calc B+1, .+A
+(cdb) calc D=D+1
+
+CDB provides 24 variables for your use: C...Z (remember that A and B
+contain the A-value and B-value of the dot address; you cannot assign
+to them).  An expression can contain an assignment, as in the C
+language.  You will often use "@calc" to do an assignment and avoid
+printing the result.
+
+
+Nested loops
+------------
+
+Let's make CDB work hard to determine the constant that will make
+Fahrenheit bomb its SPL line as late as possible.  We'll try the
+values of the interval [1004,1007] for the B-field of the first MOV.
+
+We'll use two nested loops: the outer loop will enumerate the 4
+values for the constant, and the inner loop will execute the battle
+step by step, checking the SPL after each instruction.
+
+For nested loop, we use the "!!" instruction.  It marks the opening of
+the loop, which is closed by a matching "!".  Our command lines will
+be (I've broken the long line, but you must type it in one line
+without the \):
+
+(cdb) ca C=1003,X=3039
+(cdb) !!~ca C=C+1,D=0~@ed1~mov.i<100,<C~!!~@ca D=D+1~@s~@0~if \
+B==X~!~ca d~@g~@s~!4
+
+This is a detailed explanation:
+
+!!                        start the outer loop
+   ca C=C+1, D=0             increment the outer loop counter, reset
+                             the inner loop counter (and print the
+                             constant)
+   @ed 1~mov.i <100,<C       set the first MOV instruction
+   !!                        start the inner loop
+      @ca D=D+1                increment the inner loop counter
+      @s                       step the warrior once
+      @0                       set the dot address to 1
+      if B==3039~!             end the inner loop if self-bombed
+   ca D                      print the constant and number of cycles
+   @g~@s                     skip to the first cycle of the next battle
+!4                        loop 4 times for the outer loop
+
+Four values is not a lot, but I couldn't do better with the strong
+suicidal tendency of Fahrenheit (see exercise 6 below).  What would
+you do to reduce this tendency ?
+
+There's no reason I should be the one doing all the work, so here are
+a few exercises.  Note that you won't be able to test your solutions
+because my command line is very close to the maximum size allowed by
+pMARS.  We'll have to define macros to overcome this limitation.
+
+1. The above loop will take a lot of time.  Accelerate it by stepping
+   10 by 10 instead of 1 by 1.
+2. We're only interested in the value that gives the greatest number
+   of cycles.  Change the command line to display only that value and
+   the corresponding number of cycles.
+3. Use "fill" to abort the current battle instead of finishing it with
+   "go".  How much faster is this ?
+4. Even faster: instead of doing the inner loop step by step all the
+   way, skip to the greatest number of cycles so far, and start
+   stepping from there if the SPL is still not bombed.  (Is that
+   clear ?)
+5. Figure out a way of putting a sequence of instructions under an
+   "if" instead of a single instruction, so that the sequence is
+   executed only when the condition is true.
+6. [hard] The inner loop fails to stop if the self-bombing doesn't
+   occur on the SPL.  How do you make it work in all cases ?
+
+
+The end
+-------
+
+This is all for this part.  In the next one, you'll have the answers
+to the exercises, and Stefan will tell us about macros.  There's a
+whole lot of useful predefined macros that come with pMARS.
+
+Stefan is on vacation, so he didn't proofread this part.  Blame him if
+it is not as good as part 1 (-:
+
+______________________________________________________________________________
+
+I want to greet you with a few lines written by Myer R Bremer on issue 4...
+
+#############################################################################
+EDITOR'S NOTE:  Damien is much too modest.  Imp spirals are one of the most
+difficult subjects to understand.  Impfinity missed the '94 draft hill by
+only a fraction of a point.  I'm sure he'll breach the hill very soon.  Spoke
+too soon.  Impfinity has just entered the hill as I am posting.
+#############################################################################
+
+Well, I think that now Impfinity is going very well!
+Myer has a very good sight! ;-)
+
+______________________________________________________________________________
+Questions?  Concerns?  Comments?   Complaints?  Mail them to:
+Beppe Bezzi <bezzi@iol.it> or Myer R Bremer <bremermr@ecn.purdue.edu> or
+for this issue to Maurizio Vittuari <pan0178@iperbole.bologna.it>
+

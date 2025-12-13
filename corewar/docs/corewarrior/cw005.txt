@@ -1,0 +1,955 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 5                                                               13/11/95
+______________________________________________________________________________
+
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth
+http://www.ecst.csuchico.edu/~pizza/koth
+http://pauillac.inria.fr/~doligez/corewar/
+______________________________________________________________________________
+
+Hi people,
+
+this one is quick scanners week. We have two real scoops for you: Thermite,
+n. 4 in hall of fame, and never published before, with comments of its
+author, Robert Mcrae, and Phq by Maurizio Vittuari, second old warrior in 94
+hill, also with author's comments.
+Planar, our free lance columnist has a short hint, on equ behaviour, and a
+call for volunteer.
+We also have to report of great battles in 94 hill, after a couple of quiet
+weeks, a p-space hint, and a lot more for you dear readers.
+_____________________________________________________________________________
+Tournament Time
+(details at http://www.stormking.com/~koth/nsfcwt.html)
+
+NSFCWT round 5 is over. Good news. Michael Constant joined our tournament
+( better late than never :-)
+There were 10 battles of 10-round round robins.
+
+A turbo Pascal program generated the following parameters:
+
+Battle Coresize-Processes
+1.  12164-4245
+2.  9414-5576
+3.  13230-1033
+4.  12016-72
+5.  6280-1164
+6.  13810-6126
+7.  14599-9549
+8.  2798-5242
+9.  6483-1330
+10 .8597-2180
+
+The detailed scores are:
+
+Battle 1.
+
+  1   Simple Scissors         John K. Wilkinson      58  33   9 275
+  2   Frontwards              Steven Morrell         49  30  21 253
+  3   Perspire                Robert Macrae          44  23  33 248
+  4   WT-Round5               P.Kline                47  35  18 240
+  5   Mr Dumb                 Maurizio Vittuari      38  25  37 226
+  6   black & white           Anders Ivner           41  33  25 224
+  7   Rubber wall             Beppe Bezzi            30  17  53 214
+  8   Rand-Man                Randy Graham           15  12  73 178
+  9   A Quick Hack            Karl Lewin             16  16  68 174
+ 10   blah blah blah          M R Bremer             15  17  67 170
+ 11   Miss Careworn           Derek Ross             30  47  23 169
+ 12   Theme                   Michael Constant       13  15  71 167
+ 13   myImp                   Paulsson                8  30  62 129
+ 14   Multi-Stone             G. Eadon               12  84   4 60
+
+Battle 2.
+
+  1   Simple Scissors         John K. Wilkinson      57  29  13 278
+  2   Frontwards              Steven Morrell         55  29  16 270
+  3   WT-Round5               P.Kline                49  33  17 248
+  4   Perspire                Robert Macrae          44  26  30 243
+  5   Mr Dumb                 Maurizio Vittuari      40  25  35 232
+  6   black & white           Anders Ivner           39  29  32 225
+  7   Rubber wall             Beppe Bezzi            29  17  53 212
+  8   blah blah blah          M R Bremer             23  13  65 199
+  9   Theme                   Michael Constant       11  10  79 169
+ 10   A Quick Hack            Karl Lewin             13  16  71 164
+ 11   Miss Careworn           Derek Ross             28  49  23 161
+ 12   myImp                   Paulsson                9  25  66 138
+ 13   Rand-Man                Randy Graham            6  41  53 106
+ 14   Multi-Stone             G. Eadon               15  75   9 83
+
+Battle 3.
+
+  1   Simple Scissors         John K. Wilkinson      53  26  21 269
+  2   Perspire                Robert Macrae          45  22  33 251
+  3   Frontwards              Steven Morrell         50  35  15 248
+  4   black & white           Anders Ivner           41  27  32 234
+  5   WT-Round5               P.Kline                46  41  13 227
+  6   Rubber wall             Beppe Bezzi            28  11  61 218
+  7   Mr Dumb                 Maurizio Vittuari      28  20  52 204
+  8   blah blah blah          M R Bremer             21  10  69 197
+  9   Theme                   Michael Constant       12   7  81 175
+ 10   A Quick Hack            Karl Lewin             11  11  78 168
+ 11   Miss Careworn           Derek Ross             29  51  20 162
+ 12   Rand-Man                Randy Graham           11  23  66 150
+ 13   Multi-Stone             G. Eadon               16  65  19 101
+ 14   myImp                   Paulsson                0  45  55 83
+
+Battle 4.
+
+  1   Perspire                Robert Macrae          49  21  30 267
+  2   Rubber wall             Beppe Bezzi            37   5  58 252
+  3   Mr Dumb                 Maurizio Vittuari      43  21  35 248
+  4   A Quick Hack            Karl Lewin             32   2  66 243
+  5   blah blah blah          M R Bremer             34  13  53 233
+  6   black & white           Anders Ivner           37  30  33 215
+  7   Theme                   Michael Constant       27  15  59 208
+  8   Rand-Man                Randy Graham           19   5  76 198
+  9   Simple Scissors         John K. Wilkinson      37  52  11 182
+ 10   Frontwards              Steven Morrell         32  51  17 169
+ 11   myImp                   Paulsson               13  17  70 165
+ 12   WT-Round5               P.Kline                31  57  12 159
+ 13   Miss Careworn           Derek Ross             17  61  22 111
+ 14   Multi-Stone             G. Eadon               16  75   9 86
+
+Battle 5.
+
+  1   Frontwards              Steven Morrell         50  28  22 258
+  2   Perspire                Robert Macrae          47  24  29 254
+  3   WT-Round5               P.Kline                47  34  19 241
+  4   black & white           Anders Ivner           39  28  33 226
+  5   Simple Scissors         John K. Wilkinson      45  39  16 225
+  6   blah blah blah          M R Bremer             25  10  65 211
+  7   Rand-Man                Randy Graham           22  10  68 201
+  8   Rubber wall             Beppe Bezzi            27  21  52 201
+  9   Mr Dumb                 Maurizio Vittuari      29  25  46 198
+ 10   A Quick Hack            Karl Lewin             15  19  66 165
+ 11   Theme                   Michael Constant        9   8  83 164
+ 12   Miss Careworn           Derek Ross             23  55  23 136
+ 13   myImp                   Paulsson                9  27  65 136
+
+Battle 6.
+
+ 14   Multi-Stone             G. Eadon               16  74  10 87
+  1   Frontwards              Steven Morrell         57  23  21 286
+  2   WT-Round5               P.Kline                51  27  23 262
+  3   Simple Scissors         John K. Wilkinson      49  37  13 242
+  4   black & white           Anders Ivner           45  29  27 241
+  5   Perspire                Robert Macrae          36  25  39 221
+  6   Mr Dumb                 Maurizio Vittuari      34  26  40 213
+  7   Rubber wall             Beppe Bezzi            27  30  43 185
+  8   blah blah blah          M R Bremer             19  17  65 181
+  9   Theme                   Michael Constant       12   9  79 173
+ 10   Rand-Man                Randy Graham           15  17  69 169
+ 11   A Quick Hack            Karl Lewin             11  15  73 161
+ 12   myImp                   Paulsson               11  21  68 150
+ 13   Miss Careworn           Derek Ross             23  53  23 140
+ 14   Multi-Stone             G. Eadon               17  77   6 84
+
+Battle 7.
+
+  1   Simple Scissors         John K. Wilkinson      63  29   7 296
+  2   Frontwards              Steven Morrell         55  24  21 278
+  3   Perspire                Robert Macrae          40  27  33 229
+  4   WT-Round5               P.Kline                41  33  26 225
+  5   black & white           Anders Ivner           39  31  29 221
+  6   Rubber wall             Beppe Bezzi            28  11  61 217
+  7   blah blah blah          M R Bremer             18  13  69 184
+  8   Mr Dumb                 Maurizio Vittuari      25  30  45 179
+  9   Theme                   Michael Constant       15  15  70 171
+ 10   Miss Careworn           Derek Ross             28  45  27 166
+ 11   A Quick Hack            Karl Lewin             14  20  66 162
+ 12   Rand-Man                Randy Graham           11  17  72 156
+ 13   myImp                   Paulsson                5  21  75 133
+ 14   Multi-Stone             G. Eadon               17  80   3 80
+
+Battle 8.
+
+  1   Frontwards              Steven Morrell         65  23  13 310
+  2   black & white           Anders Ivner           46  21  33 256
+  3   WT-Round5               P.Kline                49  29  22 255
+  4   Perspire                Robert Macrae          38  29  33 221
+  5   Simple Scissors         John K. Wilkinson      43  42  15 217
+  6   Rubber wall             Beppe Bezzi            31  22  47 211
+  7   blah blah blah          M R Bremer             25  15  59 203
+  8   A Quick Hack            Karl Lewin             18  11  71 187
+  9   Miss Careworn           Derek Ross             35  45  21 187
+ 10   Mr Dumb                 Maurizio Vittuari      21  27  52 171
+ 11   Theme                   Michael Constant       10  23  67 145
+ 12   Rand-Man                Randy Graham           10  26  64 141
+ 13   myImp                   Paulsson                7  23  70 138
+
+Battle 9.
+
+ 14   Multi-Stone             G. Eadon               16  79   5 80
+  1   Frontwards              Steven Morrell         54  31  15 266
+  2   WT-Round5               P.Kline                51  32  17 254
+  3   Mr Dumb                 Maurizio Vittuari      34  17  49 227
+  4   Simple Scissors         John K. Wilkinson      44  42  14 219
+  5   blah blah blah          M R Bremer             25   9  67 211
+  6   Perspire                Robert Macrae          36  33  31 209
+  7   Rubber wall             Beppe Bezzi            25  15  59 203
+  8   black & white           Anders Ivner           35  35  30 201
+  9   Theme                   Michael Constant       15   5  79 188
+ 10   A Quick Hack            Karl Lewin             15  14  71 175
+ 11   Miss Careworn           Derek Ross             26  49  25 155
+ 12   Rand-Man                Randy Graham            8  21  71 143
+ 13   myImp                   Paulsson                9  23  69 142
+ 14   Multi-Stone             G. Eadon               20  72   8 102
+
+Battle 10.
+
+  1   Simple Scissors         John K. Wilkinson      57  25  17 284
+  2   WT-Round5               P.Kline                49  33  18 249
+  3   black & white           Anders Ivner           45  28  27 242
+  4   Frontwards              Steven Morrell         47  34  19 239
+  5   Mr Dumb                 Maurizio Vittuari      41  23  35 239
+  6   Perspire                Robert Macrae          37  28  35 218
+  7   blah blah blah          M R Bremer             21   9  71 199
+  8   Rubber wall             Beppe Bezzi            21  18  61 187
+  9   A Quick Hack            Karl Lewin             15  13  73 175
+ 10   Theme                   Michael Constant       13  11  77 172
+ 11   myImp                   Paulsson                9  23  68 144
+ 12   Rand-Man                Randy Graham            8  23  69 140
+ 13   Miss Careworn           Derek Ross             20  52  28 132
+ 14   Multi-Stone             G. Eadon               15  79   5 77
+
+
+Here are the total scores of the 10 battles:
+
+Name                    Scores
+
+G. Eadon                840
+Paulsson                1358
+Derek Ross              1519
+Randy Graham            1582
+Michael Constant        1732
+Karl Lewin              1774
+M R Bremer              1988
+Beppe Bezzi             2100
+Maurizio Vittuari       2137
+Anders Ivner            2285
+P.Kline                 2360
+Robert Macrae           2361
+John K. Wilkinson       2487
+Steven Morrell          2577
+
+
+The overall rank after round 5:
+
+Name                    1       2       3       4       5       total
+
+Steven Morrell          5       10      9       13      14      51
+P.Kline                 7.5     9       7       11      11      45.5
+Paulsson                7.5     11      11      9       2       40.5
+Beppe Bezzi             7       7       13      2       8       37
+John K. Wilkinson       4       6       12      -       13      35
+Maurizio Vittuari       6.5     5       6       3       9       29.5
+Anders Ivner            5.5     8       4         -     10      27.5
+M R Bremer              7       4       3.6     5       7       26.6
+Robert Macrae           -        -        -     12      12      24
+Randy Graham            -        -      8       10      4       22
+Karl Lewin              -        -      10      4       6       20
+Derek Ross              3.5     3       3.3     7       3       19.8
+G. Eadon                1.5     2       5       6       1       15.5
+Kurt Franke             -        -        -     8        -      8
+Michael Constant        -        -       -       -      5       5
+Anders Scholl           -       1       2       1        -      4
+John Lewis              -        -      3         -      -      3
+Calvin Loh              -        -      1         -      -      1
+
+Paulsson, previous leader, had a flop in this round, losing the head. Now
+Steven Morrell is the new leader with 5.5 points over Paul Kline, that seems
+the only one able to contend him first place, and more than 10 over other
+contenders. The fight is open for third position, with three players in near
+five points.
+_____________________________________________________________________________
+94 Hill - Standings
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  41/ 23/ 36                  La Bomba          Beppe Bezzi     158       8
+ 2  42/ 38/ 20                  Derision           M R Bremer     145       9
+ 3  43/ 44/ 13       Leprechaun on speed         Anders Ivner     141     165
+ 4  35/ 32/ 32                       Phq    Maurizio Vittuari     138     471
+ 5  35/ 32/ 33                 Torch t18              P.Kline     137     369
+ 6  37/ 38/ 25                endpoint .           M R Bremer     137      14
+ 7  40/ 43/ 17             Porch Swing +         Randy Graham     137      70
+ 8  37/ 39/ 24               myVamp v3.7             Paulsson     135     337
+ 9  33/ 32/ 35              Father & Son    Maurizio Vittuari     135      19
+10  34/ 35/ 32           Thieves Like Us           M R Bremer     133      27
+11  33/ 34/ 33              Son & Father    Maurizio Vittuari     132      20
+12  30/ 28/ 41           Jack in the box          Beppe Bezzi     132     357
+13  39/ 46/ 15         Leprechaun deluxe         Anders Ivner     132     274
+14  26/ 20/ 54            Impfinity v3e7               Planar     132      34
+15  39/ 47/ 14                Frontwards       Steven Morrell     131     304
+16  18/  6/ 76            Chugging Along           Karl Lewin     130      54
+17  34/ 38/ 28               Armory - A5            Wilkinson     130     508
+18  28/ 29/ 43              .Brain Vamp.  B.Bezzi, M.Paulsson     128      71
+19  38/ 48/ 15   Anti Die-Hard Bevo (3c)       John Wilkinson     127     174
+20  29/ 30/ 42            nobody special              Schitzo     127       1
+
+Revolution may be the theme word this week, the 94 hill has awaken after
+some sleep. Bezzi's La Bomba exploded on the hill, taking strongly the head;
+new Bremer's warrior in not worth Derision indeed: now and we have new n. 1
+and n. 2
+_____________________________________________________________________________
+
+94 - What's new
+
+ 1  40/ 24/ 36                  La Bomba          Beppe Bezzi     156       1
+ 2  42/ 38/ 20                  Derision           M R Bremer     145       1
+ 5  34/ 28/ 38              Father & Son    Maurizio Vittuari     139       1
+ 7  37/ 38/ 24                endpoint .           M R Bremer     136       1
+ 9  34/ 33/ 33           Thieves Like Us           M R Bremer     135       1
+ 9  33/ 32/ 35              Son & Father    Maurizio Vittuari     133       1
+20  29/ 30/ 42            nobody special              Schitzo     127       1
+
+Just a few ;-) a new King, a new n. 2 some new entries in the middle.
+Welcome back to Mike 'Schitzo' Nonemacher with his improved version of an
+old King.
+_____________________________________________________________________________
+94 - What's no more
+
+
+21  32/ 36/ 32               Tornado 1.8          Beppe Bezzi     129     203
+21  34/ 43/ 23                  myZizzor             Paulsson     126      75
+21  22/ 18/ 59                  paper01o          Beppe Bezzi     126      18
+
+A veteran, Tornado 1.8, leaves us at 203 age :-( a younger but rather famous
+warrior, myZizzor, the Die Hard killer, is out too.
+_____________________________________________________________________________
+
+What's old
+
+17  34/ 38/ 28               Armory - A5            Wilkinson     130     508
+ 4  35/ 32/ 32                       Phq    Maurizio Vittuari     138     471
+ 5  35/ 32/ 33                 Torch t18              P.Kline     137     369
+12  30/ 28/ 41           Jack in the box          Beppe Bezzi     132     357
+ 8  37/ 39/ 24               myVamp v3.7             Paulsson     135     337
+15  39/ 47/ 14                Frontwards       Steven Morrell     131     304
+13  39/ 46/ 15         Leprechaun deluxe         Anders Ivner     132     274
+
+Armory passed age 500 and Frontwards 300, congratulations.
+No new entry in the over 200, the only one went out at 203, see above.
+Some veteran begins having problems; Torch and Phq keep positions, Jack in
+the Box and myVamp lose a few places, Armory and Frontward begin to risks
+being pushed off.
+_____________________________________________________________________________
+
+HALL OF FAME
+* means the warrior is still running.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Iron Gate 1.5          Wayne Sheppard    926    CMP scanner
+ 2  Agony II               Stefan Strack     912    CMP scanner
+ 3  Blue Funk              Steven Morrell    869    Stone/ imp
+ 4  Thermite 1.0           Robert Macrae     802    Qscan -> bomber
+ 5  Blue Funk 3            Steven Morrell    766    Stone/ imp
+ 6  HeremScimitar          A.Ivner,P.Kline   666    Bomber
+ 7  B-Panama X             Steven Morrell    518    Stone/ replicator
+ 8  Armory - A5            Wilkinson         508 *  P-warrior
+ 9  Phq                    Maurizio Vittuari 471 *  Qscan -> replicator
+10  NC 94                  Wayne Sheppard    387    Stone/ imp
+11  Cannonade              P.Kline           382    Stone/ imp
+12  Torch t17              P.Kline           378    Bomber
+13  Torch t18              P.Kline           369 *  Bomber
+14  Jack in the box        Beppe Bezzi       357 *  P-warrior
+15  Lucky 3                Stefan Strack     355    Stone/ imp
+16  Request v2.0           Brant D. Thomsen  347    Qvamp -> vampire
+17  Dragon Spear           c w blue          346    CMP scanner
+18  myVamp v3.7            Paulsson          337 *  Vampire
+19  juliet storm           M R Bremer        333    Stone/ imp
+20  TimeScape (1.0)        J. Pohjalainen    322    Replicator
+
+my Vamp enters the elite, pushing Rave off. Torch and Jack gain a few
+positions. Armory is now very near B-Panama X.
+_____________________________________________________________________________
+
+Beginner's Hill standings
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  41/ 29/ 30                Lurker 1.1          Kurt Franke     152      36
+ 2  30/ 12/ 58              juliet storm           M R Bremer     147      75
+ 3  37/ 34/ 29                   Test-Fc             G. Eadon     140      61
+ 4  25/ 11/ 64                    Schizo            J. Doster     139       6
+ 5  27/ 16/ 57               Trapper 1.1          Kurt Franke     139      11
+ 6  39/ 41/ 20                      Look            J. Doster     137       3
+ 7  38/ 41/ 21                 Searching          Kurt Franke     136      42
+ 8  32/ 33/ 35              Hint Test v4           M R Bremer     132       7
+ 9  21/ 11/ 68           Impfinity v3c11               Planar     131      18
+10  16/  8/ 75                 Sheet 1.0            J. Doster     124      16
+11  17/  9/ 74                    Paper8             G. Eadon     124      37
+12  35/ 47/ 18                 Heatseek2        Phil Whineray     123      53
+13  16/ 11/ 72             RingWorm_v2.4           Calvin Loh     122       4
+14  32/ 45/ 24                Recon V7.0         A. Nevermind     119       1
+15  12/  6/ 81              Impfinity v1               Planar     118      50
+16  15/ 15/ 70             P_Banzai_v2.1           Calvin Loh     114       5
+17  12/ 13/ 75             RingWorm_v1.0           Calvin Loh     112      22
+18  11/ 11/ 78             RingWorm_v1.4           Calvin Loh     111      20
+19  14/ 19/ 66              Paper Dragon          Kurt Franke     109      32
+20  12/ 16/ 72             P_Banzai_v1.2           Calvin Loh     109      24
+
+Not too much movement here; less than 10 new warriors. I cannot say more
+because I haven't got my test warrior's results.
+_____________________________________________________________________________
+
+The hint
+
+P-space
+
+Hi,
+this time we'll speak of p-space, the last tool, implemented by pmars08,
+that allows our warrior to change strategy according to the history of the
+match.
+P-space is a protected area of memory, i.e. every warrior has its own
+p-space and cannot read or write opponent's one. P-space hold but values,
+not whole instructions, and is accessed by two specific instructions LDP and
+STP load and store Pspace.
+At the beginning of every round p-space cell 0 holds the result of previous
+round, -1 at the very beginning, others cells hold the value they had at the
+end of previous round, 0 at the start of the match. The value is 0 if we
+lose, and the number of alive warriors if we survive; in standard one
+against one matches those values are 1 for the win and 2 for the tie.
+
+Warriors using p-space are called p-warriors or p-switchers; they store in a
+location of p-space informations on the strategy they are using, at the end
+of the round they evaluate the result of prvious round and, according to it
+and, sometimes, the result of others rounds, continue with current strategy
+or change to another, in the hope of doing better. In practice, if you are a
+general, planning long term strategies, the switcher is your colonel,
+deciding on battlefield what to use against your opponent.
+It's important to say that even the best switching routine is worthless if
+you don't have sound combat routines; if all you components lose against
+your enemy, the mix will lose too, sometimes even worst because you lose
+some time at the beginning to pplan the round, and to boot components away
+from the big warrior body.
+P-space is a tool for intermediate players, not for beginners; until you
+don't have at least two average level different warriors, a stone and a
+paper for example, you cannot get anyhing good from it.
+
+Now let's see how to assemble a p-warrior; first we need good components,
+able to score points against different kind of enemies; we have them:
+Paper01, to score against enemy bombers, juliet storm, to kill enemy
+scanners; against enemy paper we are not defenceless, a paper usually cannot
+beat another paper, so we should score:
+Well against bombers, thanks Paper01
+Well against scanners, thanks juliet
+Ties against replicators, thanks Paper01.
+
+Once chosen our hands, we have to assemble the brain; unless you want to do
+something very complex, the switcher is not a difficult thing to do. Let's
+give a look at a very simple one, and BTW successful, the switcher of Jack
+in the Box, for three main reasons: it's one of my warriors, is doing well,
+is the only one published :-)
+Jack's has two components, a very heavy replicator, four times Paper01, and
+a very fast bomber, Tornado.
+Its strategy is simple: the replicator scores lots of points against enemy
+bombers but, because of the size, is rather vulnerable to scanners; well if
+we are winning or tieing all right, we continue with the same strategy; if a
+bad scanners happens to kill the paper, BOOH, Tornado pop up and with its
+high speed and colored bombs kill him.
+Here it's, very simple indeed.
+
+        _RES    equ 0           ;here pmars loads results
+        _STR    equ 1           ;here I store my strategy
+
+res     ldp.ab  _RES,   #0      ;load result last match
+str     ldp.a   _STR,   str1    ;load strategy in use
+        sne.ab  #0,     res     ;check result, win or tie OK
+lost    add.a   #1,     str1    ;lost change
+        mod.a   #2,     str1    ;secure jump
+win     stp.ab  str1,   _STR    ;save strategy
+str1    jmp     @0,     juliet
+        dat     0,      paper
+
+We load in res.b the result of last match, in str1.a the strategy we used,
+then we compare res to 0, if it's zero we add one to the strategy, if it's
+different, tie or win, we don't. The mod instruction assure us to have a
+value of 0 or 1.
+At last we save new strategy for the round, and we jump at bomber or paper,
+according to str1.a
+In 7 cycles we have finished, so even a Qscan has hard times to hang on.
+Now the code, nothing more than taking the waariors, the switcher an putting
+all together.
+
+Last note, near to forget it, P-space has a 'dark side', brainwashing.
+You cannot access your opponent p-space, but if you mage to force your
+opponent, with a vampire attack, to execute these lines of code, or
+something similar:
+
+bwash   spl     0,>1
+        stp.ab  #0,#0
+        jmp     -2,{-1
+(usually this code is together with others spl and a core clear)
+
+its p-space will soon fill of garbish and it's rather difficult that, in the
+following round, its switcher will found what it needs to make a correct
+decision. So, when you make your switcher, don't forget to think at what
+will happens if something goes wrong in your p-space, and, _most_important_,
+never forget to mod you STR value before executing the jump.
+
+        mod     #2, 1
+str     jmp     @0, paper       ;a field holds strategy
+        dat     0,  juliet
+
+If you forget it, may happens your warrior will have to execute something like
+
+str     jmp     @1234,paper
+
+and you will score something like 0/249/1 :-(
+
+Here is the code. I submitted the warrior at both -94 and beginners hill, if
+you have any question, or you are interested in results, mail me <bezzi@iol.it>
+------------------------------
+;redcode-b quiet
+;name juliet and paper
+;author M R Bremer, B. Bezzi
+;strategy p-warrior for C.W. n.5 hint
+;strategy switches juliet storm and Paper01
+;kill juliet and paper
+;assert CORESIZE == 8000
+
+ptr     EQU     -1333
+dest0   equ     2200
+dest1   equ     3740
+dest2   equ     -1278
+range   equ     933
+
+        RES     equ 0           ;here pmars loads results
+        STR     equ 1           ;here I store my strategy
+
+imp_sz  equ     2667
+
+org     start
+
+gate    dat <-445, <-446
+s       spl #445, <-445
+        spl #0, <-446
+        mov {445-1, -445+2
+        add -3, -1
+        djn.f -2, <-2667-500
+        mov 32, <-20
+go      dat     #0,     #ptr
+juliet  mov     {-1,    <-1
+        mov     {-2,    <-2
+        mov     {-3,    <-3
+        mov     {-4,    <-4
+        mov     {-5,    <-5
+        mov     {-6,    <-6
+        mov     gate,   ptr+24
+        mov     gate,   ptr+24
+        spl     @go,    <4000
+        jmp     boot,   <4013
+start
+
+res     ldp.ab  RES,    #0      ;load result last match
+str     ldp.a   STR,    str1    ;load strategy in use
+        sne.ab  #0,     res     ;check result, win or tie OK
+lost    add.a   #1,     str1    ;lost change
+        mod.a   #2,     str1    ;secure jump
+win     stp.ab  str1,   _STR    ;save strategy
+str1    jmp     @0,     juliet
+        dat     0,      paper
+
+
+
+paper
+        spl     1,      <300    ;\
+        spl     1,      <400    ;-> generate 8 consecutive processes
+        spl     1,      <500
+
+silk    spl     @0,     {dest0
+        mov.i   }-1,    >-1
+silk1   spl     @0,     <dest1  ;split to new copy
+        mov.i   }-1,    >-1     ;copy self to new location
+        mov.i   bomba,  }range
+        mov     {silk1, <silk2
+silk2   jmp     @0,     >dest2
+bomba   dat     <2667,  <1
+
+for MAXLENGTH-CURLINE-9
+        dat     0,0
+rof
+
+boot    spl     1      ,#0
+        spl     1      ,#0
+        spl     <0     ,#vector+1
+        djn.a   @vector,#0
+
+imp     mov.i   #0,imp_sz
+
+        jmp     imp+imp_sz*7,imp+imp_sz*6
+        jmp     imp+imp_sz*5,imp+imp_sz*4
+        jmp     imp+imp_sz*3,imp+imp_sz*2
+vector  jmp     imp+imp_sz  ,imp
+
+        end
+
+______________________________________________________________________________
+Planar's corner:
+
+Next week, you'll get the sequel to my article about imp spirals.
+Today, I have a short hint for beginners and a call for volunteers.
+
+The short hint:
+---------------
+I have written the following program:
+
+        ;redcode
+        foo     equ     1+2
+                nop     foo*2
+
+Giving it to pMARS, I get this load file:
+
+        START  NOP.F  $     5, $     0
+
+Hey !  What's going on here ?  If foo is 1+2 and the argument to NOP is
+foo*2, then it must be 6, right ?  Wrong.  The argument is 1+2*2 = 5,
+because EQU does a textual replacement of the label with its argument,
+not a numerical evaluation of its argument (there is a good reason for
+this).
+
+The solution is the same as in the C language: use parentheses generously:
+
+        foo     equ     (1+2)
+
+Now the argument to NOP is (1+2)*2 and I'm happy.  Maybe this was the
+reason why my warrior failed on the hill.  But then again, maybe not.
+
+
+The call for volunteers:
+------------------------
+I have started updating the ICWS'94 draft standard.  My new version
+includes the new addressing modes and opcodes we are all using every
+day.  Who will add p-space into it ?  We have missed the '94 deadline
+by a long time now, and I think it's time to turn the draft into a
+standard (does the ICWS still exist, by the way ?)  Or at least the
+draft should describe the language that we are using.
+
+Before we start discussing read/write limits, Stefan asked that I post
+a summary of all the good arguments against them, so I have to find
+the postings of one and a half year ago (does anybody know where to
+find an archive of recent postings to r.g.cw ?)  Please no flame war
+before I declare the season open.
+
+The new version of the ICWS'94 draft standard is available at
+http://pauillac.inria.fr/~doligez/corewar/icws94.95
+
+<Damien.Doligez@inria.fr>
+______________________________________________________________________________
+Extra Extra:
+Thermite
+
+With impeccable timing I re-arrive on the internet just as Thermite is
+knocked off the hill, appropriately enough by Michael Constant. I don't
+think I ever published the code, so here it is with explanations as
+accurate as the mists of time permit. I'm not really sure why it worked
+for so long, but I guess it was a lack of decisive weaknesses rather than
+any single strength. Maybe P-space even helped, making targets bigger...
+
+Thermite was standard quickscan, followed by a Torch-like incendiary bomber.
+The quickscan was originally developed from Michael Constant's Sauron (94
+tournament) and ended up almost exactly like his Pyramid. I experimented with
+various warriors to follow the scanning stage: a vampire, Midge, sadly couldn't
+bite as fast as Silks could grow, and Queasy (4-word Mod-1 MOV <A,B bomber) was
+good against scanners but otherwise weak.
+
+Then Paul Kline published Torch which looked too good not to steal:
+fast incendiary bombing, and multi-process -- so tending to draw if
+damaged. The only constructive change I made removed the anti-scanner gaps
+from the code, to make it more resistant to Silk-type strip bombing.
+I called the result Phosphorus and it was modestly effective (somewhat
+less so than Torch :) but it proved a great partner to the quickscan.
+
+The Phosphorus code may appear puzzling if you don't know Torch. The key idea,
+is that the instructions in the loop are executed in _reverse_ order because
+the SPL #0 instruction keeps feeding new processes into the loop.
+
+
+:(             No-one "hides" near large decoys any more...             :(
+
+
+
+;redcode-94
+;name Thermite 1.0
+;kill Phosphorus
+;author Robert Macrae
+;strategy  Quick-scan -> incendiary bomber.
+;assert CORESIZE == 8000
+
+; Since I don't launch phosphorus, vulnerable to carpet bombers. May
+; pay to put it at start? I should make better use of DJN stream
+; (nascent). Either use <, or else start it somewhere which gets bombed
+; by mov fairly quickly. What happens if I fall through early, due to
+; DAT 1,1s? Should check this doesn't hurt...
+
+SPC     equ 7700            ; (CORESIZE-MAXLENGTH-MINDISTANCE*2)
+STP1     equ 81              ; (SPC / (RAM/2) / 2)
+Lookat  equ look+237+8*(qscan-1)*STP1
+
+; First scan at 237; last at -67?
+
+traptr  dat     #0,     #trap
+bite    jmp     @traptr,    0         ; Vampire bite.
+
+; Lots of pointers to these, so keep them away from trap!
+
+look
+qscan   for     6
+        sne.i   Lookat+0*STP1, Lookat+2*STP1
+        seq.i   Lookat+4*STP1, Lookat+6*STP1
+        mov.ab  #Lookat-bite-2*STP1, @bite
+        rof
+
+        jmn     test+1, bite   ; Save a few cycles
+
+qscan   for     6
+        sne.i   Lookat+48*STP1, Lookat+50*STP1
+        seq.i   Lookat+52*STP1, Lookat+54*STP1
+        mov.ab  #Lookat-bite+46*STP1, @bite
+        rof
+
+        jmn     test+1, bite   ; Save a few cycles
+
+qscan   for     6
+        sne.i   Lookat+1*STP1, Lookat+3*STP1
+        seq.i   Lookat+5*STP1, Lookat+7*STP1
+        mov.ab  #Lookat-bite-STP1, @bite
+        rof
+
+        jmn     test+1, bite   ; Save a few cycles
+
+qscan   for     6   ; Should be 7 if I had space...
+        sne.i   Lookat+49*STP1, Lookat+51*STP1
+        seq.i   Lookat+53*STP1, Lookat+55*STP1
+        mov.ab  #Lookat-bite+47*STP1, @bite
+        rof
+
+; Intention is to place points evenly through the target area.
+
+test    jmz.b   blind,  bite            ; if no address stored, no hit.
+        add     #STP1*2, bite            ; Smaller than pyramid, as fast.
+        jmz.f   -1,     @bite           ; find nonzero element.
+
+        mov     spb,    @bite           ; Quick pre-bomb...
+
+        add     #49,    bite            ; aim 51 past the hit
+attack  sub.ba  bite,   bite            ; bite(b) contains target-bite
+loop    mov     bite,   @bite           ; (a) contains the bite addr.
+        add.f   step,   bite
+        djn     loop,   #24             ; 6 spacing => 72 cycles...
+
+
+; Incendiary bomber based on Phosphorus 1.0 (from Torch).
+
+bstp     equ    155       ; Mod 5, as too big for mod 4 to miss!
+gap      equ    15        ; Gap between mov and spl.
+offset   equ    130       ; Chosen with step and gap to give long bombing run.
+count    equ    1500
+
+blind
+spb      spl    #0,         <-gap+1    ; spl half of the incendiary
+         add    #bstp,      1
+         mov    spb,        @tgt-offset ; Gives longest run, given gap & step.
+         mov    mvb,        @-1
+tgt      djn.f  -3,         >300       ; gets bombed with spl to start clear
+         mov    ccb,        >spb-1     ; Uses copied mvb for CC.
+         djn.f  -1,         <spb-18    ; Aids clear.
+mvb      mov    gap,        >gap       ; mov half of the incendiary
+ccb      dat    0,          10         ; Core Clear.
+
+; Bit worried about having trap so close to my code...
+
+trap    spl     0,      >-200         ; Lackadaisical attempt at gates.
+        spl     -1,     >-200+2667    ; Each increments many times between
+        jmp     -2,     >-200+2*2667  ; imp steps, but then the whole imp
+                                      ; moves! I only blow away rings...
+
+step    dat     #6,     #-6           ; QS step size. Up from 5 for speed.
+
+        end     look
+
+
+(Editor note: I had to change it a little, because Robert used STP as a
+label, and now it's not allowed being it an opcode. Just hope I didn't
+introduce bugs; I tested it and all seems OK. - B.B.)
+______________________________________________________________________________
+Extra Extra Extra:
+Phq
+
+Well! I have received lots of requests about Phq so I have decided to publish
+it... (in other words CoreWarrior' staff has payed me enough ! ;-)
+Phq is one of my first programs written in 94 standard (I have started
+redcoding with the 86 standard...)
+First of all two words about the name...
+Phq recalls a formula of quantum mech: the original name had been
+Emc2 (reference to 2c initial qscan) but Emc2 was also the name of another my
+QScan-->Stone warrior that never worked very fine...
+When I began making Phq, another program behaved very well:
+Marcia Trionfale of our friend Beppe Bezzi; so I decided that my warrior
+should contain a paper module!
+At those times most of the programs on the hill reached the limit of 100
+istructions, this made me choose for the initial QScan pass.
+The initial QScan is also very useful to solve (without any PSpace routines)
+the problem of papers in gaining points during self fighting:
+QScan makes Phq able to kill itself in self fighting about 83% times.
+So I took the decision: my program will have to be a Qscan --> Paper !
+Well! At this point I had to decide what could I do if QScan found an enemy,
+or simple a decoy :(  !
+The first attempt was to bomb the neighborhood of the cell differing from
+dat.f 0,0 (blank) with simple dat bombs, using a series of "mov bomb,<ptr"
+istructions.
+The problem is finding the size of the neighborhood.
+I had obtained just slight better results using incendiary bombing.
+I'd have liked to use spl 0 bombs but this wasn't possible for after bombing
+I had to start with paper, and a paper isn't the best to kill lots of
+processes executing a "spl 0  jmp -1" loop (or similar)!
+Maybe I could have tried some vamp bombing, but I didn't do this...
+I choosed to copy some suicide 3-instr core-clear routines "around", hoping
+that the enemy executes one of them!
+This solution was quite good: if even only one enemy task executes this
+3-instr code it may kill other eventually (near) enemy tasks; note that its
+bombing is harmless against my paper!
+An interesting question is: ...and what about against Pspace programs?
+I'm mainly a paper and if the enemy switches on a scanner module, it's a
+slaughter for me! :(
+So I'd liked to have some brainwashing routines: I added to my core-clear a
+brainwashing stp line (who fills enemy PSpace with non-sense values).
+Well! This program worked quite fine but another little change made it
+even better!
+After bombing my initial strategy was simple to jump to paper routines...
+...and what about using a spl to have in any case a task who executes my
+core-clear?
+Well! I added this spl line and results were 3 points more then previous
+version!
+I'm not sure why this works better...
+maybe because I bomb more wide around the non-blank cell and sometimes I
+reach the enemy before the paper itself kills my own task.
+Note that I'm brainwashing myself! (as you can read in the initial strategy
+line;-), but this is unrelevant 'cos I don't use PSpace in "active mode",
+meaning with "active mode" that I don't use PSpace for switching.
+That's all!
+What?
+The program?
+Yeah! Of course! Here you are!
+(Hoping that Phq will reach at least Thermite in old scored programs ;-)
+Note that it's quite full of bugs ;-)
+I leave to find them out, to my "25 readers" as exercise (as my prof. of
+geometry always said...)
+
+For any questions, flaming etc. your mail is welcome!
+Mail to pan0178.iperbole.bologna.it
+
+-----------------------
+;redcode-94
+;author Maurizio Vittuari
+;name Phq
+;assert CORESIZE==8000
+;strategy New version! This one likes brainwashes...
+
+step1   equ     3743    ; unoptimized replicator costants
+step2   equ     1567    ; see CoreWarrior issue 3
+step3   equ     1349
+
+
+;       ****** QSCAN ROUTINES ******
+
+start
+s1 for 4
+        sne start+400*s1,start+400*s1+100
+        seq start+400*s1+200,start+400*s1+300
+        mov #start+400*s1-found,found
+rof
+        jmn which,found
+s2 for 4
+        sne start+400*(4+s2),start+400*(4+s2)+100
+        seq start+400*(4+s2)+200,start+400*(4+s2)+300
+        mov #start+400*(4+s2)-found,found
+rof
+        jmn which,found
+s3 for 4
+        sne start+400*(s3+8),start+400*(s3+8)+100
+        seq start+400*(s3+8)+200,start+400*(s3+8)+300
+        mov #start+400*(s3+8)-found,found
+rof
+        jmn which,found
+s4 for 4
+        sne start+400*(s4+12),start+400*(s4+12)+100
+        seq start+400*(s4+12)+200,start+400*(s4+12)+300
+        mov #start+400*(s4+12)-found,found
+rof
+
+; just missed a line... :(
+
+s5 for 3
+        sne start+400*(s5+16),start+400*(s5+16)+100
+        seq start+400*(s5+16)+200,start+400*(s5+16)+300
+        mov #start+400*(s5+16)-found-100,found
+rof
+
+found   jmz rabbit,#0
+        add #100,-1
+which   jmz -1,@found
+        add #10,found
+for 4                           ; bombing enemy
+        mov m3,<found
+        mov m2,<found
+        mov mp,<found
+        mov m1,<found
+rof
+        spl @found,{100         ; So... why not ?
+
+;       ****** REPLICATOR ******
+
+rabbit  spl     1,      <200    ;create 11 processes
+        mov     -1,     0
+        spl     1,      <300
+        mov     -1,     0
+s1      spl     step1,  #0
+        mov.i   >-1,    }-1
+        mov.i   bomb,   }1942
+s2      spl     step2,  #0
+        mov.i   >-1,    }-1
+        mov.i   bomb,   }1842   ;I've changed > with } so many times
+        mov.i   bomb,   >1900   ;that I can't remember if this version
+        mov.i   bomb,   }2000   ;is the one actually on the hill...
+        mov.i   <s2,    <s3
+s3      jmp     @0,     }step3
+bomb    dat     <2667,  <5334   ;anti-imp bomb
+
+;       ****** BRAINWASHING CORE-CLEAR ******
+
+m1      mov     m3,     {m3
+mp      stp     <0,     #20     ; brainwashing instruction
+m2      djn.f   m1,     }m3+1
+m3      dat     }bomb,  <2667
+end start
+
+
+
+_____________________________________________________________________________
+
+For questions and congratulations mail me <bezzi@iol.it>, flame Myer
+<bremermr@ecn.purdue.edu> or if you think it's of general interest post to
+rec.games.corewar
+
+Anyone with hints or warriors to publish is welcome.
+

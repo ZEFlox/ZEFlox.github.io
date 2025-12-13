@@ -1,0 +1,936 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 7                                                      November 27, 1995
+______________________________________________________________________________
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+______________________________________________________________________________
+Greetings.
+
+This week there is another juicy, at least in my hopes, number of Core
+warrior. The hint will cover bombers and bombs, including Paul Kline's
+contribute and Torch 18 code; Robert Mcrae introduces you to quickscannes
+secrets and Planar finishes the continual launch imps topic, and unveils his
+new warrior Impfinity 3i.
+Many thanks to them and to all contributing to the newsletter.
+Last minute new: big (CORESIZE 55440) hill has been reopened at Stormking
+server, address: <koth@stormking.com> ;redcode-94x
+Enjoy it and many thanks Tuc.
+
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  47/ 38/ 14                      quiz              Schitzo     156      78
+ 2  43/ 34/ 23                 test lp 2          Beppe Bezzi     152       4
+ 3  38/ 25/ 37                  La Bomba          Beppe Bezzi     151      73
+ 4  43/ 36/ 22                  Derision           M R Bremer     150      97
+ 5  37/ 31/ 32                 Torch t18              P.Kline     143     457
+ 6  37/ 39/ 24               myVamp v3.7             Paulsson     135     425
+ 7  36/ 37/ 27                endpoint .           M R Bremer     134     102
+ 8  38/ 43/ 19             Porch Swing +         Randy Graham     134     158
+ 9  26/ 20/ 54 Fly Fishing w/Plastic Wor           Karl Lewin     131      55
+10  38/ 45/ 17                Frontwards       Steven Morrell     131       5
+11  33/ 35/ 32                       Phq    Maurizio Vittuari     131     559
+12  40/ 48/ 13       Leprechaun on speed         Anders Ivner     131     253
+13  33/ 35/ 32              Son & Father    Maurizio Vittuari     130     108
+14  36/ 44/ 20             myZizzor v2.0             Paulsson     128       8
+15  27/ 27/ 46           Jack in the box          Beppe Bezzi     128     445
+16  20/ 12/ 67             Impfinity v3i               Planar     128       7
+17  31/ 34/ 36              Father & Son    Maurizio Vittuari     127     107
+18  33/ 41/ 25               Armory - A5            Wilkinson     126     596
+19  24/ 22/ 54          juliet and paper M R Bremer, B. Bezzi     125      74
+20  19/ 21/ 60                     test4          Kurt Franke     118       1
+
+After last week revolution we had a quiet one. Very little to report: quiz
+takes the head even if La Bomba is still in top positions, Morrell and
+Paulsson submitted new version of their warriors pushed off last week.
+Planar's new Impfinity enters the hill, you can see the code in Planar's
+corner, Kline attempted a new p-spacer without success. In the bottom Armory
+is shuffling a bit, but still resists junger warrior challenges. Franke, one
+of beginners hill top scorers, enters the bottom of 94
+______________________________________________________________________________
+94 - What's New
+
+11  39/ 43/ 19             myZizzor v2.0             Paulsson     135       1
+10  23/ 13/ 64             Impfinity v3i               Planar     133       1
+19  37/ 47/ 16                Frontwards       Steven Morrell     128       1
+20  19/ 21/ 60                     test4          Kurt Franke     118       1
+______________________________________________________________________________
+94 - What's No More
+
+21  34/ 49/ 17             Scissors v.a1    John K. Wilkinson     119      28
+21  31/ 50/ 19             Scissors v.a4    John K. Wilkinson     113       4
+21  20/ 17/ 63           TimeScape (1.7)       J. Pohjalainen     122      17
+21  14/ 11/ 75                Evolve 6.3       John Wilkinson     118      24
+
+The calm after the tempest, no aged warrior has been pushed off.
+______________________________________________________________________________
+
+What's old
+
+18  33/ 41/ 25               Armory - A5            Wilkinson     126     596
+11  33/ 35/ 32                       Phq    Maurizio Vittuari     131     559
+ 5  37/ 31/ 32                 Torch t18              P.Kline     143     457
+15  27/ 27/ 46           Jack in the box          Beppe Bezzi     128     445
+ 6  37/ 39/ 24               myVamp v3.7             Paulsson     135     425
+12  40/ 48/ 13       Leprechaun on speed         Anders Ivner     131     253
+
+Veterans surviving last week carnage improve their scores a little. Armory
+and Jack in the box are having some problems, while Torch and myVamp are
+still very effective.
+_____________________________________________________________________________
+
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  45/ 35/ 20          Clear Sighted v1            JS Pulido     156       3
+ 2  45/ 38/ 18           dualstrat v.0.2         Brian Haskin     152       2
+ 3  36/ 22/ 41                 teamwork?          Kurt Franke     150      23
+ 4  44/ 39/ 17          Fire Master v1.5            JS Pulido     148       6
+ 5  36/ 33/ 31                Lurker 1.1          Kurt Franke     139      21
+ 6  33/ 29/ 38                  test L 9          Beppe Bezzi     136       4
+ 7  26/ 20/ 54                    Schizo            J. Doster     132      53
+ 8  31/ 31/ 38              Hint Test v4           M R Bremer     131      19
+ 9  21/ 12/ 67           Impfinity v3c11               Planar     130      65
+10  21/ 21/ 58               Trapper 1.1          Kurt Franke     121       1
+11  20/ 19/ 61                Paper8-III             G. Eadon     120      11
+12  32/ 45/ 23                      Look            J. Doster     120      50
+13  19/ 18/ 64                 Sheet 1.0            J. Doster     120      63
+14  14/  9/ 77             RingWorm_v2.5           Calvin Loh     118      36
+15  17/ 17/ 65             RingWorm_v2.4           Calvin Loh     118      51
+16  12/  7/ 81              Impfinity v1               Planar     116      97
+17  28/ 41/ 31         Good old DJN Test           Karl Lewin     115      16
+18  20/ 26/ 53               Loh_tst_1.3           Calvin Loh     114      26
+19  10/  9/ 81                NewerPaper          Kurt Franke     111      17
+20  27/ 45/ 28        Paper Shredder 2.1          Kurt Franke     108      20
+
+The very active beginners hill shows five new entries in the top ten
+positions. Pulido, Haskin and Franke seem ready to make the jump to veterans.
+Bezzi, a new author, at least from when I'm following beginners, enters in
+6th position with a warrior that was 3rd in 94 hill :-)
+The morale of the story is that:
+The beginners hill level has grown in these weeks, perhaps it's higher than
+ever.
+All those who have a warrior doing well in -b hill have to try the -94, at
+worst you'll score 90 points finding 94 hill hostile to the warrior kind you
+are submitting, but with a little luck you can enter and begin making
+experience.
+_____________________________________________________________________________
+
+HALL OF FAME
+* means the warrior is still running.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Iron Gate 1.5          Wayne Sheppard    926    CMP scanner
+ 2  Agony II               Stefan Strack     912    CMP scanner
+ 3  Blue Funk              Steven Morrell    869    Stone/ imp
+ 4  Thermite 1.0           Robert Macrae     802    Qscan -> bomber
+ 5  Blue Funk 3            Steven Morrell    766    Stone/ imp
+ 6  HeremScimitar          A.Ivner,P.Kline   666    Bomber
+ 7  Armory - A5            Wilkinson         596 *  P-warrior
+ 8  Phq                    Maurizio Vittuari 559 *  Qscan -> replicator
+ 9  B-Panama X             Steven Morrell    518    Stone/ replicator
+10  Torch t18              P.Kline           457 *  Bomber
+11  Jack in the box        Beppe Bezzi       445 *  P-warrior
+12  myVamp v3.7            Paulsson          425 *  Vampire
+13  NC 94                  Wayne Sheppard    387    Stone/ imp
+14  Cannonade              P.Kline           382    Stone/ imp
+15  Torch t17              P.Kline           378    Bomber
+16  Lucky 3                Stefan Strack     355    Stone/ imp
+17  Request v2.0           Brant D. Thomsen  347    Qvamp -> vampire
+18  Dragon Spear           c w blue          346    CMP scanner
+19  juliet storm           M R Bremer        333    Stone/ imp
+20  Frontwards             Steven Morrell    323    One shot scanner
+
+Armory, very near 600 age now, and Phq consolidate their position in the
+hall of fame; Torch enters top ten trailing Jack and myVamp, all three well
+over 400 age.
+Frontwards enters bottom place pushing Timescape off.
+______________________________________________________________________________
+The Hint
+
+Hello folks, last week Myers introduced the bomber topic with two classic
+stones, Blue Funk and juliet storm; these guys are four-five lines long, and
+found their effectiveness on their small size and resilience more than on
+speed, they are both at 33% c, one bomb every three cycles, and
+effectiveness of their bombs, simple dat 0,0.
+There is another category of more complex bombers that balance the increased
+size with a greater speed and/or deadlier bombs.
+
+Who better than Paul Kline, Torch's author, can speak of this argument.
+
+----------
+
+Your basic 'stone' bomber is based on this fragment:
+
+incr     spl  #step,#-step   <- self-splitter
+         add  incr,1         <- step up the pointers
+         mov  <0,0           <- decrement one and bomb the other
+         djn  -2,<-10        <- loop and sequential decrement
+
+Steven Morrell's discussion last issue showed how to optimize this for
+maximum bombing duration, but his comment about Emerald is too generous.
+I never realized or designed Emerald's pattern, it was just the best
+of a large number of step sizes I tried.
+
+Anyway, the above delivers one decrement and one bomb in three cycles.
+However it is possible for the opponent to immunify part of his code to
+decrements, and thereby reduce this bomber to something much less
+than 66% effective speed.  A search through old programs (still a gold
+mine!) turns up this one by Paul Kilroy:
+
+;name Ike v.21
+;author Paul S. Kilroy
+;strategy A bomber with a cool twist
+
+bomb       spl 0   ,jump
+ptr        dat #0  ,#0
+inc        add #468,b
+start      jmz inc ,@b
+b          mov bomb,@464
+           mov bomb,@b
+jump       jmp inc
+           mov 10  ,<-2
+           end start
+
+Which is your basic spl-bombing b-scanner with, as he says "a cool twist".
+When he finds a non-zero location he uses it as a pointer and bombs through
+it, then bombs the found location.  In other words, bombing two locations
+without an intermediate ADD.
+
+I was wanting to make this a pure non-scanning bomber, which is easy enough.
+But the results were not exceptional.  With this code you get a nice 50%
+hard bomber:
+
+bomber   add   #step+step,2
+         mov   bomb,@1
+         mov   bomb,@0
+         jmp   bomber
+bomb     dat   #0,step
+
+Unfortunately it is a little bigger than the 4-line version and not quite
+as fast, even though it delivers real bombs instead of decrements.  It
+becomes a little more durable with a leading SPL which keeps single
+dat-bombs from killing it.  And it still loses completely to paper.
+
+Anders Ivner's HeremII uses similar code to drop alternating spl and
+dat-bombs that are very widely spaced in core.  HeremII works somewhat
+against old style paper, but is helpless against Silk.
+
+To kill paper requires some kind of spl-bomb that slows it down enough
+to give a sequential clear time to wipe the whole core.  A split-carpet
+like Agony's works very well, but this bombing routine won't accomodate
+one.  A spl-jmp could be delivered by alternating spl's and jmp's, with
+an eventual wrap-around to match spl's to jmp's.  But single spl's and
+single jmp's are not only useless against today's paper, they are
+actually dangerous, since they can mutate the opponent into a whole
+lot of sequential core-clear/bombers.
+
+Enter the mov-spl ('incendiary') bomb, which is a little two-line
+program that you drop on the opponent causing him to write and
+execute his own spl-carpet.  The important feature of this bomb is that
+the components can be well separated - hence alternating bombs.
+
+Here is the working part of Torch 18, which bombs extensively with
+mov-spl bombs, does one core wipe with a spl, then goes into a repeating
+forward core-clear with dat.  It also has a nice feature in that if
+it is overrun with a djn-stream it immediately starts the forward
+dat-clear process, usually killing the nasty opponent.
+
+gate     dat   0,0
+     for 3
+         dat   0,0
+     rof
+w2       dat   -7,cp-gate+3
+         dat   0,0
+wipe     dat   -7,cp-gate+3
+sp       spl   #-1-step,-step    ; spl half of the incendiary
+in       sub   #step+step,@msp
+msm      mov   sm,*tgt+(step*count)-17228
+msp      mov   sp,@msm           ; bomb alternately with spl & mov
+tgt      jmz   in,#0             ; bombed with spl to start clear
+clr      mov   @cp,>gate
+cp       djn.b clr,{wipe+1
+     for 2
+         dat   0,0
+     rof
+sm       mov   step+1,>step+1    ; mov half of the incendiary
+
+Notice that in the inner loop the instructions are reversed from the
+example - instructions following a SPL execute in reverse order.
+
+Torch is bigger than a 4-line stone and will lose most of those battles.
+However, those stones are paper-bait even with supporting imps while
+Torch has the punch to stay on the Hill.  The current version also
+uses a decoy to foil programs like Withershins Thrice and Porch Swing.
+
+Questions for thought:
+   What is the best 1-line bomb?
+   What is the best 2-line bomb?
+   What is the best 3-line bomb?
+
+Answer correctly and you could go straight to the top of the heap .. uh Hill!
+
+Paul Kline
+pk6811s@acad.drake.edu
+
+----------
+
+Let's speak a bit of bombs; what is the best possible bomb?
+The answer to this question is another question: who are you shooting at?
+
+If our enemy is a single process, long warrior like a scanner the answer is
+easy, no bomb at all... yes no bomb, taking a cell from somewhere in the
+core, usually a dat 0,0 and throwing it in the middle of our enemy is enough
+to kill him, and we have no need to include the bomb in our code, reducing
+our size. This is the approach of Blue Funk and juliet.
+
+If our enemy is a replicator this is pointless; we have no chance to kill
+all paper bodies at the rate they spread. To kill them we have to slow them
+first and, at the end deliver our deadly blow at wounded enemy, yes a very
+evil act :-) This can be accomplished with more complex bombs either spl 0
+followed by jmp -1, as Iron gate does when it finds a target, or with the so
+called incendiary,
+
+        mov   step,  >step    ;alternated with
+        spl   0,     -step+1
+
+when the mov is executed it take the spl, step cells away, and moves it
+immediatly after the mov itself; if the mov is executed by a multiprocess
+paper the effect is creating a spl carpet. Devastating indeed.
+
+If our enemy is a coreclear, something with a very reduced footprint like:
+
+gate    dat     -20,20
+wipe    spl     #-20,20
+
+...
+
+split   spl     0,0
+move    mov     @1,>gate
+jump    djn     -1,{wipe
+
+A dat 0,0 hit at the gate, split or jump instruction won't stop the clear
+running, we need something more effective like Tornado's bomb, (I have not
+invented it, it's due to Paul Kline if I'm not wrong, I just used it)
+
+        mov     step,1  ;step away there is another one
+
+Using this bomb we have added to our target the 'split' line and the 'gate'
+line, increasing our chances to kill.
+
+To finish bombers argument I'll introduce now Tornado, the faster pure
+bomber and, BTW, one of my favourite babies. It has never had a great
+success alone, its best version stayed on hill little more than 200
+challenges, never climbing higher than 10th position, but proved very
+effective as component of successful warrior like Jack in the box.
+
+Tornado pushes the indirect bombing one step farther, he lays down two bombs
+and uses the second one as pointer for the third reaching a speed of 60% c,
+three bombs in a five instruction loop.
+This is the version included as scanner/clear killer in the p-warrior Jack
+in the box
+
+step    equ     95
+count   equ     533
+
+bomber  mov     bd,     *stone
+        mov     bm      @stone
+stone   mov     *step+2,*(2*step)+2
+
+stone line is the hearth of the bomber. It can be changed slightly if we
+want to use bombs with fixed a or b fields of values different from the step
+What's important is that the bomb addressed by b field of stone had one of
+its fields with the value step
+
+        add     incr,   stone
+jump    djn.b   bomber, #count
+
+Three bombs in a 5 instructions loop means 60% c speed, comparable with that
+of a cmp scanner (66%c) and without any problem of being delayed by decoys
+and bomb's color. In fact Tornado easily kills any scanner and clear
+
+incr    spl     #3*step,#3*step
+clr     mov     -12,    }bomber+1
+djmp    jmp     clr,    <bomber-5
+
+This is not the best clear, giving no imp protection, is those with the
+smallest footprint using the bombs as pointers.
+
+...[some empty lines]
+
+bm      mov     step,   1       ;have care that bm be overwritten by another bm
+bd      dat     #step, #1
+
+Tornado drops a dat, then a mov step cells away, then takes this mov and
+drops it step cells away from it before adding and jumping.
+Once finished the run there is a dat bombs 12 cells before the clr line,
+this is used to clear core.
+This is not the most effective all purpose version of Tornado, v1.8
+alternate spl and mov and uses a multipass clear to better resist paper
+attacks and a > clear to try catching imps, but is the best fit for the role
+of 'scanners/clears killer' in the p-warrior.
+Tweaking a litle the code Tornado can be armed with incendiary bombs too;
+the incendiary version has been submitted to the hill as Firestorm, and was
+included in the p-warrior Brain Wash.
+
+I won't tell you now, without a substantial payment to my bank account :-),
+what I have put in La Bomba, and how I use it; stay tuned near Christmas,
+with most chances I'll make you a gift.
+
+For next hint I'm waiting your suggestions.
+
+______________________________________________________________________________
+Tournament Time
+(details at http://www.stormking.com/~koth/nsfcwt.html)
+No tournament round this week, Thanksgiving break.
+
+This is the rank after round 6:
+
+
+Name                    1       2       3       4       5       6       total
+
+Steven Morrell          5       10      9       13      14      10      61
+P.Kline                 7.5     9       7       11      11      12      57.5
+Paulsson                7.5     11      11      9       2       5       45.5
+Anders Ivner            5.5     8       4       0       10      14      41.5
+Beppe Bezzi             7       7       13      2       8       3       40
+M R Bremer              7       4       3.6     5       7       11      37.6
+Maurizio Vittuari       6.5     5       6       3       9       8       37.5
+John K. Wilkinson       4       6       12      0       13      2       37
+Robert Macrae           0       0       0       12      12      13      37
+Karl Lewin              0       0       10      4       6       10      30
+Randy Graham            0       0       8       10      4       7       29
+Derek Ross              3.5     3       3.3     7       3       6       25.8
+G. Eadon                1.5     2       5       6       1       4       19.5
+Kurt Franke             0       0       0       8       0       0       8
+Michael Constant        0       0       0       0       5       0       5
+Anders Scholl           0       1       2       1       0       0       4
+John Lewis              0       0       3       0       0       0       3
+Calvin Loh              0       0       1       0       0       1       2
+
+______________________________________________________________________________
+Planar's Corner:
+
+               Continuous imp-launching (final part)
+
+Impfinity v1 is now close to dying of old age, after being published
+in Core Warrior 4 and spending most of its life in the bottom half of
+the beginner hill.
+
+I was writing version 2 when I realized that binary launching is not
+the only way of launching a continuous spiral.  The JMP/ADD launch can
+also be adapted.
+
+I'll first explain JMP/ADD launching.  Old-timers may want to skip
+three paragraphs.  This is a JMP/ADD launcher, taken from the FAQ:
+
+    A   spl     1, 0
+    B   spl     1, 0
+    C   spl     E, 0
+    D   jmp     imp, 0
+    E   add.a   #step, D
+    F   dat     0, 0
+    imp mov.i   #0, step
+
+This is how it works:
+   [A]
+   [B B]
+   [C C C C]
+   [D E D E D E D E]
+   [imp F imp+step F imp+2*step F imp+3*step F]
+   [imp+1 imp+step+1 imp+2*step+1 imp+3*step+1]
+
+It's pretty straightforward: we interleave processes at D and E, the
+processes at D jump to the spiral, and the processes at E increment
+the JMP at D to make it point to the right place for each jump.
+
+How do we convert this into a continuous launch ?  We have to
+alternate ADDs and JMPs.  The easiest way to do it:
+
+    Z   spl     0, 0
+    A   add.a   #step+1, J
+    J   jmp     imp-step-1, 0
+
+Here is what it does:
+                       [Z]
+                     [A Z]
+                   [J A Z]
+               [imp J A Z]
+  [imp+1 imp+step+1 J A Z]
+
+So this code will alternate ADDs and JMPs and add one process to the
+spiral at each turn.  We have to ADD step+1 because the spiral will
+advance by one location before we add a process.
+
+The above piece of code is what I call the "pump", because it pumps
+processes into the spiral.
+
+There's one little problem because the pump only adds one process per
+round.  An incomplete spiral is not viable, its processes will die
+within one round.  So we have to keep the spiral alive until the first
+ring is completed.  There are several ways of doing this.  I've
+considered launching a complete ring with one of the three classical
+launchers, and synchronizing the pump to add processes at the right
+place.  Finally, I've decided to use a little piece of code to prime
+the pump:
+
+    instr   mov.i   #0, step
+    primer  spl     0, >1
+            mov.i   instr, imp
+
+This will unroll a carpet of imp instructions under the tail of the
+spiral.  If you locate the primer at the right place in front of the
+spiral, it will be overwritten by the spiral when its job is finished
+(or you can arrange for your stone to kill it, or whatever).  Note
+that you have to do one MOV in each turn.  A DJN loop will not work
+here.
+
+So this is it.  Six lines of code, three of them can be located away
+from the three others, and they are only used for a few dozen cycles.
+What is left for scanners to find is just three lines.  Pretty good,
+no ?
+
+A few ideas occured to me while I was writing this.  I'll give them as
+exercises to the reader:
+
+- There may be a way of launching several processes per round with
+  something like this:
+
+     Z   spl     Z, }J
+     A   spl     1, 0
+     B   spl     1, 0
+     C   spl     E, 0
+     J   jmp     imp, 0
+     E   add.a   #step, J
+     F   dat     0, 0
+     imp mov.i   #0, step
+
+  This will add 4 processes to the imp in each round, so it doesn't
+  need a primer for a 3-point imp.  It launches faster but it's
+  longer.
+
+- We could incorporate the primer into the pump (build an auto-prime
+  pump ?) like this:
+
+     Z   spl     0, >P
+     P   mov.i   imp, imp
+     A   add.a   #step+1, J
+     J   jmp     imp-step-1, 0
+     imp mov.i   #0, step
+
+  Hmm, I think I'm going to integrate something like this into a
+  future version of Impfinity.
+
+- Because in a core of size 55440 imp spirals have at least 13 points,
+  launchers tend to be bigger and easier to kill.  This is not true
+  for this launcher, so this technique may be more useful in the
+  experimental hill.
+
+Finally, I'll give you the latest version of Impfinity.  I've provided
+a reasonable set of constants that are completely different from what
+I've sent to the hill.
+
+Impfinity v3i implements the ideas given by Magnus Paulsson in Core
+Warrior 2 about how Die Hard might be working.  We now know that Die
+Hard has nothing to do with Magnus' guesses, but his ideas are still
+good.  I'll quote him:
+
+>Now if you place two spirals on top of each other, and plan in which order
+>they and the rest of the code will be in the execution. In the coreclear the
+>spl processes will be like 4000 processes, spiral, 4000 processes, spiral.
+>That means the clear has to kill spiral in 4000 cycles which isn't possible
+>in a clear.
+
+Right.  And since scanners were the real danger for Impfinity, I've
+interleaved the two spirals with two self-splitting stones that eat
+most of the processes (because they will be stunned anyway).  When one
+of the stone is stunned, the other one keeps going at about the same
+speed because it splits almost as fast as the stunned one.  In the
+real world, it's more like 2000 processes, spiral, 6000 processes,
+spiral. But it does give better protection against core-clears.
+
+>So, because there is a thing called gate which kills spirals. In order to tie
+>you have to have something like 100 processes in a spiral to slow it down as
+>much that it doesn't reach the gate. Now you can't launch such a monster
+>without getting killed before the launch is complete.
+
+Aha, but with continuous launching, you can launch a monster of any
+size with a 3-line launcher that scanners (and stones) will find hard
+to kill.  And because the self-splitting stones eat most of the
+cycles, 60 processes in the spirals are largely enough: by the time
+the stones are killed and the spirals advance at full speed, the game
+is almost over.
+
+Impfinity v3i starts with an SPL that divides the cycles in half.
+Each half is doing the same thing (but with different offsets):
+bootstrap the pump, primer, and stone; launch the pump and primer.
+The primer will launch the stone after a (short) while.  If I start
+the stone too early, the spiral is too short (it doesn't grow much,
+once the stone is started).
+
+So we have two stones and two spirals.  The spirals are exactly on top
+of each other, so they help keep each other alive.
+
+The stones are synchronized with magic01, magic02, stnof01, and
+stnof02, so they won't kill each other (or themselves) until very
+late, and one of them turns itself into a core-clear (one-pass,
+unfortunately).  Oh, and I have a 7-point spiral, so I can use
+anti-3-point bombs, but I have no idea how much good it does.
+
+Finally, I think the stone design warrants a few words.  It is
+self-splitting, changes 3 core locations in 4 cycles, throws colored
+bombs, and turns itself into a suicidal core-clear if you use the
+right magic constant.  And I can make it switch bombs in the middle of
+the bombing run (not shown here).  Is it original ?  I don't know.
+
+A little bit of version history:
+Version 3e7, which stayed on the bottom half of the '94 hill for some
+time, didn't have the twin spirals and stones, and had a slower
+bootstrap.
+Version 3c11 (sent to the beginner hill after it failed to enter the
+'94 hill) has a slower stone and an 11-point spiral.
+
+I'll put them both on my Web page, along with version 3i, when this
+issue of Core Warrior is posted.
+
+;redcode-94
+;name Impfinity v3i
+;author Planar
+;strategy boot,imp,stone,clear
+;assert CORESIZE == 8000
+
+; The constants on the lines marked with "C" are all different
+; from the version on the hill.
+; To synchronize the two stones, I had to do a lot of tweaking of
+; magic01, magic02, stnof01, and stnof02.  Thanks to cdb, it only
+; took a few hours.
+
+istep   equ     1143
+bstep01 equ     2214
+bstep02 equ     3285
+magic01 equ     (-2)                  ; C
+magic02 equ     (-3)                  ; C
+fuse    equ     13                    ; C
+
+trash   equ     (Z-200)               ; C
+impoff  equ     (Z+500)               ; C
+prmof01 equ     (impoff+2*istep+20)   ; C
+prmof02 equ     (impoff+5*istep+20)   ; C
+pmpof01 equ     (impoff+4*istep-20)   ; C
+pmpof02 equ     (impoff+1*istep-20)   ; C
+stnof01 equ     (impoff+3*istep-21)   ; C
+stnof02 equ     (impoff+6*istep-19)   ; C
+
+        org     boot
+Z
+boot    spl     boot02
+
+i FOR 2
+
+boot&i  mov.i   {ppmp&i, <ppmp&i
+        mov.i   {ppmp&i, <ppmp&i
+        mov.i   {ppmp&i, <ppmp&i
+
+        mov.i   {pprm&i, <pprm&i
+        mov.i   {pprm&i, <pprm&i
+        mov.i   {pprm&i, <pprm&i
+        mov.i   {pprm&i, <pprm&i
+
+        mov.i   {pstn&i, <pstn&i
+        mov.i   {pstn&i, <pstn&i
+        mov.i   {pstn&i, <pstn&i
+        mov.i   {pstn&i, <pstn&i
+        mov.i   {pstn&i, <pstn&i
+
+        mov.i   >trash-15-i*2, pstn&i
+        spl     @ppmp&i, >pprm&i
+        mov.i   >trash-i*2, ppmp&i
+        spl     @pprm&i, >trash-5-i*2
+        mov.i   >trash-10-i*2, pprm&i
+
+ppmp&i  dat     ptr&i+1, pmpof&i+ptr&i+1-pump&i
+pprm&i  dat     prime&i+3, prmof&i+prime&i+3-instr&i
+pstn&i  dat     jump&i+1, stnof&i+jump&i+1-bomb&i
+
+pump&i  spl     #1, >ptr&i
+        add.f   #istep+1, ptr&i
+ptr&i   jmp     pump&i-pmpof&i+impoff-istep-1, {200   ; C
+
+instr&i mov.i   #1, istep
+prime&i spl     #instr&i-prmof&i+impoff, >23          ; C
+        mov.i   instr&i, }prime&i
+        jmn.b   instr&i-prmof&i+stnof&i+1, instr&i-prmof&i+impoff+fuse
+
+bomb&i  dat     <5334, <2667
+stone&i spl     #stone&i+bstep&i+magic&i, {-1000      ; C
+        mov.i   bomb&i, }stone&i
+        add.f   #bstep&i-1, stone&i
+jump&i  djn.f   stone&i, <-30                         ; C
+
+ROF
+
+FOR (MAXLENGTH-CURLINE)/3
+        mov     #1, 1
+        mov     #1, @1
+        spl     #1, 1
+ROF
+
+FOR MAXLENGTH-CURLINE
+        dat     #1, 1
+ROF
+
+        end
+
+Unless I'm mistaken, Calvin Loh has not published his JMP/ADD
+continuous launching design yet.  Does it look like the above ?
+
+<Damien.Doligez@inria.fr>
+
+
+______________________________________________________________________________
+Extra Extra:
+Quickscanners
+by Robert Mcrae
+
+Core_Warrior_#4 carried a description of scanners. 0.66c or 0.80c is fast, but
+they're not _quick_! Lets look at the central loop of a very basic 0.66c
+scanner and ask what baggage can be removed.
+
+
+; Code loosely based on simplified Core_Warrior_#4 scanner
+
+inc     add.f   step, scan      ; nudge scan along
+scan    sne.i   100, 112        ; scan
+        djn.b   inc, #1000      ; repeat 1000 times
+attack  <different stuff we can do here; avoid self-bombing>
+step    dat     24, 24
+
+
+
+The main loop takes 3 cycles to check 2 locations, hence the 0.66c figure. INC
+nudges the locations which are compared by SEQ instruction, DJN is needed to
+jump back to INC -- this looks like about as fast as we can get. But...
+
+                Quickscanners Use INLINE CODING.
+
+The essential instruction to the above code is the comparison SNE. If we
+"unwrap" the loop into a long list of SNEs with no ADDs (since we hard-code the
+addresses to be scanned) and no DJNs (because we are not looping) then the
+comparison speed hits 2c -- every (executed) instruction is a SNE comparing _2_
+locations. The result might look like this:
+
+start   sne.i   start+100, start+112
+         mov.ab  #100, target
+        sne.i   start+124, start+136
+         mov.ab  #124, target
+        sne.i   start+148, start+160
+         mov.ab  #148, target
+        sne.i   start+172, start+184
+         mov.ab  #172, target
+        sne.... etc
+
+where target is used by the attack code as a pointer to the locations which
+have failed the SNE test. These may be attacked by any method such as SPL
+carpet, incendiary etc, but before considering attacks, ask whether the above
+code gains more than it loses compared to the scanner we derived it from:
+
+Good
+        We have scanned 8 locations in just 4 cycles (given no hits).
+Bad
+        The code to scan 8 locations fills 8 locations, so we are very
+        vulnerable to bombers and scanners.
+        We don't know where we've hit till the end of the inline
+        sequence.
+        A maximum-length warrior (100 instruction) can only scan 100
+        locations, or 1.3% of core. What do we do then?
+
+These features make Quickscans rather specialised tools. They are always
+(AFAIK) used as the _first_ stage of a composite warrior. Scanning less than
+100 locations they cannot guarantee to hit anything, so some fallback strategy
+is needed -- scanner, bomber, whatever -- to handle the warriors they miss. If
+they hit, you should win. If they miss, you've just lost a few tens of cycles.
+
+Since they are run once through and then discarded, the vulnerability to
+bombers is ameliorated. It is a good exercise to calculate how likely a c=0.33
+bomber is to kill a Quickscanner (say) 80 words long. (No, I don't know either,
+but I'd like to :)
+
+Quickscanners will be scanning early in the battle, certainly in the first 100
+cycles, before many bombs have been thrown or replicators sprouted. Anything
+they detect is quite likely to be the enemy warrior code or a decoy close to
+it. This means they can afford to invest a _lot_ of effort on damaging that
+area of core.
+
+This completes the outline and philosophy of Quickscanners (didn't take long:),
+so now onto practical tips. Actually, since asking the right kind of question
+is more useful than reading a recipe, most of the work is up to you...
+
+
+        Where to Scan?
+
+You occupy 100 cells, and the enemy is at least 100 away. That gives you 7700
+to examine; why not space them evenly? Where should the end points be?
+
+
+        What Order to Scan?
+
+If you do enough scans so that the spacing between locations is less than 100,
+
+here is a minor gain to scanning 1st, 3rd, 5th .. n-1th before you do 2nd, 4th
+.. nth. To see why, imagine your target is 100 cells long. Once you have
+scanned the 3rd location and found it empty, you have eliminated _some_ of the
+possible positions of the enemy which would give rise to a hit in the 2nd and
+4th locations. This makes them worse bets than other locations, so leave them
+till later. (How big is the gain here? Is there any cost?)
+
+
+        Are There Other Forms of QS?
+
+Several. The most interesting makes somewhat more efficient use of space by a
+sequence:
+
+        SNE.i   start+150, start+250
+        SEQ.i   start+350, start+450
+        MOV.ab  #150, Target
+        ...
+
+Speed is still 2c, but this method packs 4 comparisons into 3 locations at the
+cost of requiring more work in decoding exactly where the hit occurred. This
+method was used in Pyramid and Thermite, which aim to win via their thorough
+QS, but Paul Klein's recently-published Die Hard used the simpler SNE/MOV
+scheme for maximum speed in decoding. He was just aiming to hit often enough to
+do damage with his brainwash, so packing density came second to decoding speed.
+
+Randy Graham came up with a scheme intermediate between a QS and a scanner, in
+which a long block of DAT pointers were used. This scans at "only" c=1, but has
+benefits in robustness (why?) and packing.
+
+          SNE.i @ListTop, *ListTop
+          DJN.f -1, -1
+
+          <attack here>
+
+List    DAT     #7750, #7850
+        ...
+ListTop DAT     #150, #250
+
+[BTW I should credit the rest of the article too. Most of the things I know
+about Quickscanners came from experimenting with Michael Constant's Sauron-T,
+which is in the 1993 competition archive. Pyramid, a later QS of Michael's, is
+an excellent basis for experiment because it is fully parameterised. Apologies
+for any missed names, mistakes, misrepresentations or misrecollections.]
+
+
+        How Should I Attack?
+
+Big topic, vital to any warrior so I'm going to digress.
+
+Any attack has to pay off being deadly against being quick to deliver. Classic
+bombers go for fast delivery, but typically of a single <, DAT or SPL. Scanners
+only spend time attacking plausible targets, by ignoring blank areas, so when
+they find something they can afford to take more time and deliver bigger,
+nastier bombs -- SPL carpets, incendiaries etc.
+
+Right at the end of the quick-to-nasty spectrum come Quickscanners. These will
+usually only find one target, but it is very high quality, meaning that there
+is a good chance that the enemy has a substantial fraction of his processes
+working near to the scanned location. We should invest substantial time
+flattening the whole area. I've seen various schemes for this. I like launching
+vampiric JMP instructions which suck enemy processes into a prepared SPL pit.
+Multiple incendiaries could do the trick, and so could SPL carpets, though this
+gets slow if you want to carpet a large area.
+
+
+        How large Should the Area Be?
+
+Well... not more than +-100 cells from the location scanned. (Why?) This
+decision interacts with the speed of the method of bombing you use. We _hope_
+we have clobbered the opponents code before he can boot away, but we cannot
+assume it. Another salutary calculation is just how fast we have to be; big
+imps are easy meat (you should probably make that "extinct" meat) but a bomber
+can boot in 20 cycles and leave you pasting his decoy. If he has booted away,
+we can't waste too long bombing air before we fall back on our second
+strategy...
+
++-50 cells is probably as long as is needed, and you certainly hit diminishing
+returns if you bomb more than every 4th cell. Using a 0.33c bomber and hitting
+every 6th cell takes about 50 cycles to complete. Die Hard hit a smaller range,
+every 8th cell, with a 0.4c bomber for 20 cycles or so. The best solution here,
+as usual, is to experiment. If you can get hold of likely opponents and work
+out how quickly they boot, this will help guide the choices.
+
+
+        Thermite
+
+[Editor note: Thermite has been posted in Core warrior # 5; you can find it
+at Planar's home page -
+http://pauillac.inria.fr/~doligez/corewar/rc/Thermite.txt]
+
+I hope that these notes have given sufficient background so that the choices
+made in Thermite (Core_Warrior_#5) make sense. These notes go into a little
+more detail than the in-code comments but see #5 for the source.
+
+Most importantly, I use FOR/ROF rather than typing the addresses! Pyramid goes
+further, with adjustable parameters for number of scans etc. I use the SNE/SEQ
+form of scan to get the scan spacing down to 81 cells. When I have a hit, I
+scan through the 4 alternatives in a short loop. (Spot the weakness here; Randy
+pointed out a wasted cycle or two, but I don't remember where...) I launch an
+SPL bomb straight at my hit, before starting the main vampiric bomb run. I
+believe this reduces the chance of the enemy booting away before the bomb-run
+gets back to the original hit (but why not check?).
+
+The occasional JMN instructions check whether a hit has been made. If it has, I
+jump direct to the bombing routine saving a few wasted scanning cycles. The
+gain is not great, because each JMN test is guaranteed to cost one cycle but
+has a relatively small chance of saving any. (For _real_ enthusiasts, what is
+the spacing of the JMNs which optimises expected speed of hits? I think there
+are more JMNs near the beginning...)
+
+I bite at 0.33c, from about 50 after the hit to 100 before. The asymmetry arose
+because I was keen to bomb "near" the original hit quickly, but didn't mind
+spending a few extra cycles "making sure" on the far end. Does the asymmetry
+pay? What is the chance that I miss a kill by not biting +50 to +100? What is
+the (weak) reason for bombing from -81 to -100?
+
+I use fangs which do an indirect jump via a location well away from the trap.
+This is meant to help against indirect-bombing silks, because I have only 1
+pointer to the trap which is shared by all the bites. My pit concentrates on
+splitting as fast as possible, but why not add a brainwash? Beppe pointed out
+that if you plan to use the QS with a paper, the pit should commit suicide
+eventually because the paper cannot guarantee to kill it. Perhaps use a DJN
+trail wrapping round core? Or should the pit work as a bomber?
+
+How many points do I lose not booting?
+
+
+There are lots of options to explore. It is easy to add a QS to most
+conventional warriors and the performance gain can be substantial. If you
+already have a reasonable warrior less than 70 cycles long, why not trade in
+the decoy for a QS, which will work for its living..?
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to:
+Beppe Bezzi <bezzi@iol.it> or Myer R Bremer <bremermr@ecn.purdue.edu>
+

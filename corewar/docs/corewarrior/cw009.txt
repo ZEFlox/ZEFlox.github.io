@@ -1,0 +1,1187 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 9                                                      December 18, 1995
+______________________________________________________________________________
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+______________________________________________________________________________
+Greetings.
+After two weeks, filled by Steven Paper, we are back with Corewarrior. This
+one is a juicy issue too with Armory and La Bomba code, not considering
+Provascan the hint warrior. Planar after some number theory begins its
+turorial on cdb, something surely useful even to veteran redcoders.
+After removal of forced submission to 94x, Pizza's hills are now going fine,
+very good; I think that submission to Pizza 94x, an intermediate level
+beetween -b and -94, is still possible. A bit of advertsing fo Stormking
+94x, it's but half filled and without queue, you have entry assured and both
+redcode and strategies are the same of standard 94, just imps are a bit
+stronger and replicators weaker.
+I'll be away from the net, for Christmas holidays, from 24-12 to 5-1-96, so
+next number will be taken care by Maurizio Vittuari
+<pan0178@comune.bologna.it>, send to him your inputs for next issue and feel
+free to flame him heavily, he'll be happy to learn some new english word :-)
+Congratulations to Steven, Robert and Paul for tournament results, we'll see
+soon your face on Stormking web page.
+I wish you a merry Christmas and happy new year, take care of Jack while I'm
+away.
+
+______________________________________________________________________________
+Tournament Time:
+
+Tournament is over, we have a champion, but I want to keep a bit of suspence :-)
+
+-------
+Round 8 was about writing a big hill (94x) warrior.
+Myer Bremer's victorious warrior "finals: no time" is a straight one-shot
+scanner and shows that Myer works best under stress :-). Runner-up Bigboy
+by Robert Macrae features some interesting switching code.
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     finals: no time         M R Bremer               61  29  10   2511
+  2     Bigboy                  Robert Macrae            55  29  17   2346
+  3     Illusion-94/55          Randy Graham             54  41   6   2161
+  4     myVamp v3.7             Paulsson                 46  30  24   2107
+  5     Frontwards v2           Steven Morrell           48  37  14   2076
+  6     Cocktail                Maurizio Vittuari        38  37  25   1797
+  7     black & white           Anders Ivner             39  40  21   1791
+  8     Jack in the (big) box   Beppe Bezzi              27  24  49   1700
+  9     Mister Bump             Derek Ross               33  55  12   1446
+ 10     MSweep                  P.Kline                  18  40  42   1242
+ 11     Night Train 55440       Karl Lewin                9  37  54   1057
+ 12     Paper8-IV (54400)       G. Eadon                 10  39  52   1045
+
+
+Results of the ninth and final round of NSFCWT are in. This round was
+about writing a warrior in a minimalist version of ICWS'88. Robert Macrae's
+One Fat Lady finished first and catapults him to rank 2 overall. Remarkably,
+Robert joined NSFCWT late in the fourth round. Greg Eadon also did really
+well with Nothing Special, finishing second. Beppe Bezzi's Turkey (do
+Italian's have turkey for Chrismas dinner?) landed on place three.
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     One Fat Lady            Robert Macrae            38  10  52   1985
+  2     Nothing Special         G. Eadon                 31   3  65   1913
+  3     Turkey                  Beppe Bezzi              31   6  64   1872
+  4     myVamp3.7 :-)           Paulsson                 32  14  54   1790
+  5     RingThing2              Anders Ivner             26   5  70   1755
+  6     Nine                    P.Kline                  38  44  18   1588
+  7     RISC-88                 Maurizio Vittuari        15   8  77   1473
+  8     Chris                   Steven Morrell           17  45  38   1070
+  9     No Hope                 M R Bremer               24  58  18   1069
+ 10     Baby Swing              Randy Graham             22  55  23   1063
+ 11     Miss Impertinent        Derek Ross               10  34  56   1016
+
+
+
+            NSFCWT is over, and the winners are ......
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+       &                                        &
+       &    Winner:         Steven Morrell      &
+       &    1st runner up:  Robert Macrae       &
+       &    2nd runner up:  Paul Kline          &
+       &                                        &
+       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Please email a GIF file or mail a printed portrait of yourself (postal address
+below) to us for inclusion in the "Core War Hall of Fame" at stormking. Try
+to keep the GIF under 60K or so, otherwise we'll have to crop the image or
+lower the resolution.
+
+Below are the complete rankings:
+
+Name                 1     2     3     4     5     6     7     8     9    total
+
+Steven Morrell       5     10    9     13    14    10    4     8     4    77
+Robert Macrae        0     0     0     12    12    13    12    11    11   71
+P.Kline              7.5   9     7     11    11    12    3     3     6    69.5
+Paulsson             7.5   11    11    9     2     5     6     9     8    68.5
+Beppe Bezzi          7     7     13    2     8     3     10    5     9    64
+M R Bremer           7     4     3.6   5     7     11    11    12    3    63.6
+Anders Ivner         5.5   8     4     0     10    14    9     6     7    63.5
+Maurizio Vittuari    6.5   5     6     3     9     8     5     7     5    54.5
+Randy Graham         0     0     8     10    4     7     8     10    2    49
+G. Eadon             1.5   2     5     6     1     4     7     1     10   37.5
+John K. Wilkinson    4     6     12    0     13    2     0     0     0    37
+Karl Lewin           0     0     10    4     6     10    2     2     0    34
+Derek Ross           3.5   3     3.3   7     3     6     1     4     1    31.8
+Kurt Franke          0     0     0     8     0     0     0     0     0    8
+Michael Constant     0     0     0     0     5     0     0     0     0    5
+Anders Scholl        0     1     2     1     0     0     0     0     0    4
+John Lewis           0     0     3     0     0     0     0     0     0    3
+Calvin Loh           0     0     1     0     0     1     0     0     0    2
+
+Thanks to everyone for playing. We hope you had as much fun playing
+as we had holding the tournament. We have one favor to ask: Please
+give us some feedback and tell us which round(s) you liked best,
+which least. Also let us know what other types of rounds you'd like
+to see in the next tournament. We'd like your feedback even if you
+were just a spectator; maybe you'll join us next time?
+
+The code for all warriors submitted to NSFCWT will soon appear at
+Planar's web site and an archive inclucing code and all announcements
+will eventually make it to ftp.csua.berkeley.edu.
+
+Happy Holidays,
+    Nandor & Stefan
+
+;-----------
+
+Many thanks to Nandor and Stefan for the great job organizing the
+tournament, I enjoyed it a lot and I think the same was for all.
+Congratulations to Steven Morrell for winning and to all others for playing
+and see you at next tournament.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  45/ 37/ 17                      quiz              Schitzo     153     224
+ 2  30/ 16/ 53            Impfinity v4g1               Planar     144      24
+ 3  43/ 42/ 15             Frontwards v2       Steven Morrell     144      77
+ 4  34/ 26/ 40                  La Bomba          Beppe Bezzi     142     219
+ 5  40/ 39/ 21                  Derision           M R Bremer     141     243
+ 6  36/ 32/ 32                 Torch t18              P.Kline     140     603
+ 7  43/ 46/ 12                      crow           Karl Lewin     140      57
+ 8  35/ 31/ 35           Jack in the box          Beppe Bezzi     139     591
+ 9  23/  7/ 71               Night Train           Karl Lewin     139     111
+10  41/ 44/ 15             Porch Swing 2                  JKW     138     132
+11  41/ 45/ 15            Provascan 2.0d          Beppe Bezzi     137       1
+12  36/ 36/ 29            Tornado 2.0 h1          Beppe Bezzi     136      64
+13  29/ 23/ 47          juliet and paper M R Bremer, B. Bezzi     135     220
+14  20/  8/ 72              DoorMat v0.1              K Lewin     133      73
+15  35/ 38/ 27                endpoint .           M R Bremer     132     248
+16  27/ 22/ 50                  Hector 2          Kurt Franke     131     139
+17  38/ 44/ 18               Persistence          Kurt Franke     131      31
+18  38/ 45/ 18             Porch Swing +         Randy Graham     130      74
+19  31/ 33/ 36                Mason 1.01        Robert Macrae     129       7
+20  38/ 47/ 15                     ltest         Anders Ivner     129     140
+21  36/ 43/ 21                  Qwiksand       Wayne Sheppard     128      30
+22  30/ 31/ 40             Paper8-IV 2.1             G. Eadon     128      20
+23  35/ 42/ 23               myVamp v3.7             Paulsson     128     571
+24  31/ 34/ 35                 Charybdis                Kafka     128       6
+25  38/ 51/ 11              Babbo Natale    Maurizio Vittuari     126      61
+
+Usual great battles in the 94 hill caused a great turnover, more than half
+warriors are new entries, and this with but an aging of 87. Quiz still hold
+strongly King position, but the two runners up are new entries: Frontward
+and Impfinity, enhanced versions of old warriors. Leprechaun on speed
+greeted us at 344 age, entering the hall of fame. Welcome back to Wayne
+Sheppard with his new warrior Qwicksand, Rober Mcrae with Mason and a
+welcome to Eadon and Kafka entering the main hill with their Paper8-IV and
+Charybdis; keep on good work.
+The warrior diversity is very high, all main categories are well represented
+on the hill, this give even chances for all good warriors to enter.
+
+______________________________________________________________________________
+94 - What's New
+
+ 2  43/ 41/ 17             Frontwards v2       Steven Morrell     145       1
+ 3  30/ 16/ 53            Impfinity v4g1               Planar     144       1
+ 3  37/ 33/ 30            Tornado 2.0 h1          Beppe Bezzi     141       1
+ 7  43/ 42/ 15                      crow           Karl Lewin     143       1
+11  37/ 42/ 21             Porch Swing +         Randy Graham     132       1
+13  40/ 41/ 19               Persistence          Kurt Franke     138       1
+16  37/ 44/ 18            Provascan 2.0d          Beppe Bezzi     131       1
+17  17/  6/ 77              DoorMat v0.1              K Lewin     127       1
+17  40/ 49/ 11              Babbo Natale    Maurizio Vittuari     132       1
+21  31/ 33/ 36                 Charybdis                Kafka     128       1
+22  30/ 30/ 40             Paper8-IV 2.1             G. Eadon     130       1
+23  30/ 32/ 38                Mason 1.01        Robert Macrae     127       1
+23  37/ 42/ 22                  Qwiksand       Wayne Sheppard     132       1
+
+13 new entries with 25 spots, more than half hill is new. Worth mention as
+top ten entries Frontwards v2, Impfinity v4g1, Tornado 2.0h1 and the
+misterious crow.
+______________________________________________________________________________
+94 - What's No More
+
+26  36/ 48/ 15       Leprechaun on speed         Anders Ivner     125     344
+26  29/ 35/ 35              Son & Father    Maurizio Vittuari     123     182
+26   0/  0/  3                  Die Hard              P.Kline       4     109
+26  30/ 37/ 32                   Saveme!    Maurizio Vittuari     123      98
+26  20/ 17/ 63             Impfinity v3i               Planar     122      82
+26  36/ 49/ 15              Taking Names              P.Kline     122      66
+26  33/ 42/ 25                    Test z                  JKW     123      58
+26  22/ 21/ 57              Evolve-- v.1                  JKW     124      50
+26  31/ 39/ 30              anything box              schitzo     124      40
+26  28/ 29/ 43                    test9q          Kurt Franke     126      30
+26  21/ 24/ 56                    test9p          Kurt Franke     117      12
+26   1/  1/  2               Tornado 2.0          Beppe Bezzi       5      10
+26  31/ 49/ 19               The Inferno          Kurt Franke     114       2
+
+One veteran, Leprechaun on speed, two ultra centenaries and a lot of younger
+warrior are no more.
+______________________________________________________________________________
+What's Old
+
+ 6  36/ 32/ 32                 Torch t18              P.Kline     140     603
+ 8  35/ 31/ 35           Jack in the box          Beppe Bezzi     139     591
+23  35/ 42/ 23               myVamp v3.7             Paulsson     128     571
+15  35/ 38/ 27                endpoint .           M R Bremer     132     248
+ 5  40/ 39/ 21                  Derision           M R Bremer     141     243
+ 1  45/ 37/ 17                      quiz              Schitzo     153     224
+13  29/ 23/ 47          juliet and paper M R Bremer, B. Bezzi     135     220
+ 4  34/ 26/ 40                  La Bomba          Beppe Bezzi     142     219
+
+A few warrior passed 200 age, the three veterans are around 600 and but
+myVamps seems to be in danger even if, with present hill turmoil, none can
+be sure to see again his beloved warrior next day.
+Worth notice the other gap in age, after La Bomba next warrior is 80
+younger; maybe there are good and bad seasons for warriors.
+_____________________________________________________________________________
+
+HALL OF FAME
+* means the warrior is still running.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Iron Gate 1.5          Wayne Sheppard    926    CMP scanner
+ 2  Agony II               Stefan Strack     912    CMP scanner
+ 3  Blue Funk              Steven Morrell    869    Stone/ imp
+ 4  Thermite 1.0           Robert Macrae     802    Qscan -> bomber
+ 5  Blue Funk 3            Steven Morrell    766    Stone/ imp
+ 6  HeremScimitar          A.Ivner,P.Kline   666    Bomber
+ 7  Armory - A5            Wilkinson         609    P-warrior
+ 8  Torch t18              P.Kline           603 *  Bomber
+ 9  Jack in the box        Beppe Bezzi       591 *  P-warrior
+10  Phq                    Maurizio Vittuari 589    Qscan -> replicator
+11  myVamp v3.7            Paulsson          571 *  Vampire
+12  B-Panama X             Steven Morrell    518    Stone/ replicator
+13  NC 94                  Wayne Sheppard    387    Stone/ imp
+14  Cannonade              P.Kline           382    Stone/ imp
+15  Torch t17              P.Kline           378    Bomber
+16  Lucky 3                Stefan Strack     355    Stone/ imp
+17  Request v2.0           Brant D. Thomsen  347    Qvamp -> vampire
+18  Dragon Spear           c w blue          346    CMP scanner
+19  Leprechaun on speed    Anders Ivner      344    Qscans -> scanner/bomber
+20  juliet storm           M R Bremer        333    Stone/ imp
+
+Armory and Phq stop their run for glory at the venerable age of 609 and 589.
+The three musketeers, Torch, Jack and myVamp, pass the 500 milestone and
+continue running. Leprechaun on speed enters the hall of fame, pushing
+Frontwards off, just to stop its run shortly after.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  58/ 29/ 13          Fire Master v1.5            JS Pulido     188      75
+ 2  48/ 22/ 30              Hint Test v6           M R Bremer     175      58
+ 3  47/ 21/ 33              Spacehead1.1                Warpi     173       3
+ 4  46/ 22/ 32                 Spacehead                Warpi     169      14
+ 5  52/ 34/ 14           dualstrat v.0.2         Brian Haskin     169      71
+ 6  53/ 37/  9          Clear Sighted v1            JS Pulido     168      72
+ 7  41/ 27/ 32               Serendipity         A. Nevermind     156      59
+ 8  47/ 40/ 13       Hey, Kool-Aid! v1.6         David Boeren     155       4
+ 9  45/ 36/ 19                     test3                Kafka     153      39
+10  45/ 38/ 16       Hey, Kool-Aid! v1.0         David Boeren     152       8
+11  43/ 14/ 20                  test L 9          Beppe Bezzi     150      73
+12  42/ 37/ 20                     test4                Kafka     148      38
+13  45/ 45/ 10               polyphemous                Kafka     146      25
+14  44/ 45/ 12                      test                Kafka     143      48
+15  40/ 41/ 19                Paperstone                Warpi     139      18
+16  36/ 34/ 31               Loh_tst_1.3           Calvin Loh     138      95
+17  35/ 37/ 27 Everybody Must Get Stoned       Nathan Summers     133      27
+18  31/ 30/ 39         Good old DJN Test           Karl Lewin     132      85
+19  37/ 46/ 17                    Test-G             G. Eadon     129      50
+20  20/ 14/ 66                 Fortitude         A. Nevermind     127      57
+21  33/ 43/ 24           Paperstone v1.2                Warpi     122      15
+22  37/ 53/ 11                  Headache       Andy Nevermind     121      56
+23  35/ 50/ 16         Slave Master v0.5         Brian Haskin     120      31
+24  31/ 48/ 21                     Dwarf         T. H. Davies     114      23
+25   0/ 78/ 22          JumpingJack v0.1               Uranov      23       1
+
+The hill aged 50 in last two weeks, JS Pulido still holds the top. Eadon
+removed his warriors after entering the pro as did Franke last week.
+______________________________________________________________________________
+The hint
+How to improve your beginner's warrior.
+
+This week hint is again an how to improve a warrior; having received no
+warrior I was able to improve :-), I toke a warrior of a six months ago
+beginner, good in the -b hill but unable to enter 94: Provascan 2.0 by ...
+me :-)
+
+Here is Provascan code, 'prova' in italian means test, a tweaking of XTC a
+very successful warrior of a few years ago, and a classic sample of
+beginner's coding (Provascan not XTC :-)
+
+;redcode-94
+;name Provascan 2.0
+;author Beppe Bezzi
+;strategy B-scanner
+;strategy a six months ago beginner's warrior :-)
+;kill Provascan
+;assert CORESIZE == 8000
+;
+step    equ #3364
+loop    add.ab step,    ptr ;scanner modulo 4
+ptr     jmz loop,       trap
+        mov ptr,        dest
+cnt     mov #17,        cnt     ;0
+kill    mov @trap,      <dest
+        djn kill,       cnt
+        jmn loop,       trap
+        jmp cocl                ;0
+        dat 0,0
+        dat 0,0
+        dat 0,0
+        dat 0,0                  ;0
+        dat 0,0
+dest    dat 0,0
+        dat 0,0
+        dat 0,0                  ;0
+        dat 0,0
+        dat 0,0
+        dat 0,0
+trap    dat #1                  ;0
+bomb    spl 0
+        dat 0,0
+        dat 0,0
+        dat 0,0                  ;0
+        dat 0,0
+        dat 0,0
+gate    dat 0,0
+        dat 0,0                  ;0
+        dat 0,0
+        dat 0,0
+        dat 0,0
+        dat 0,0                  ;0
+cocl    sub #15,       cont
+        mov cocl-4,    <cocl-4
+        djn -1,        cont
+cont    spl 1 ,<0               ;0
+        spl 0,<gate
+        mov mark,<cocl-1
+        jmp -1,<gate
+        dat 0,0                 ;0
+mark    dat <-11, <-11
+void    for 35
+        dat 0,0
+        rof
+esca    for 4
+        dat 0,2
+        dat 0,2
+        dat 0,2
+        dat 0,0
+        rof
+        dat 0,0
+        dat 0,0
+        dat 0,0
+        dat 0,0
+        dat 0,0
+        dat 0,0
+        dat 0,0
+end loop
+
+lines with ;0 must have a zero b-field to avoid self bombing.
+
+It's a classic b-scanner that covers nonzero locations with a wide carpet of
+spl 0,0 until it covers the label trap; at such point it begins a coreclear
+with spl and then dats, ugly indeed, but I was a beginner :-)
+
+I resubmitted it to 94 hill and I scored a nice 109, just what I needed to
+start with. The idea of a carpet bombing b-scanner isn't that bad, the
+implementation is really nasty, we can cut it _a lot_ and have it make the
+same work, 17 is a too big number for the carpet, a smaller one, 7, is sure
+better, so we are not delayed too much by decoys. Another improvement is
+using the post increment for bombing, better with imps and allowing us
+another trick we'll speak of later, and adding a forward running perpetual
+clear;
+The new code:
+
+name author blah blah ...
+;
+step    equ     #3364
+
+trap    dat     0,      1       ;0
+        dat     0,      0
+dest    dat     0,      0
+        dat     0,      0
+        dat     0,      0       ;0
+
+;the use of postincrement allow us to put dest before our code
+
+loop    add.ab  step,   ptr
+ptr     jmz     loop,   trap
+        mov.b   ptr,    dest
+cnt     mov     #7,     0       ;0
+kill    mov     bomb,   >dest
+        djn     kill,   cnt
+        jmn     loop,   trap
+bomb    spl     #0,     0       ;0
+        mov     2,      >ptr
+        djn.f   -1,     {ptr
+        dat     -5,     #15
+end loop
+
+Much better, isn't it, now we are but 10 lines long plus two dats nonzero.
+We have not to worry of self bombing when we bomb dest to end scanning,
+because moving a spl 0,0 at a cell addressed with > is uneventful, the cell
+is overwritten with zero after the increment, because of 'in register'
+evaluation.
+
+With a bit more confidence I resubmitted it to pizza 94 to score a 121,
+better but not enough, something is still going wrong.
+We lose a lot from Frontwards, Porch Swing and others once through scanners,
+and we cannot stop Impfinity and Night Train's imps. To solve the first
+problem the solution is simple, boot away and leave a decoy behind; for
+second problem the solution is more subtle. Let's give a look at our clear:
+we are using 'ptr' as clear pointer, when imps get incremented and attacked,
+they stop being imps but begin executing our code, so we cannot kill them;
+to do so we must have a dat after the clear pointer; we can use the line
+'dest', it will be split covered but it's goo for our job.
+
+New version:
+
+;redcode-94
+;name Provascan 2.0d
+;author Beppe Bezzi
+;strategy B-scanner
+;strategy a six months ago beginner's warrior :-)
+;strategy trying to improve it for the hint
+;kill Provascan
+;assert CORESIZE == 8000
+;
+step    equ     #3364
+away    equ     3198
+
+trap    dat     0,      0       ;0
+        dat     0,      0       ;we can use equs for those dat 0,0 they are left
+dest    dat     0,      0       ;for clarity
+        dat     0,      0
+        dat     0,      0       ;0
+loop    add.ab  step,   ptr     ;
+ptr     jmz     loop,   trap
+        mov.b   ptr,    dest
+cnt     mov     #7,     0       ;0
+clear   mov     bomb,   >dest
+        djn     clear,  cnt
+        jmn     loop,   trap
+bomb    spl     #0,     0       ;0
+        mov     2,      >dest
+        djn.f   -1,     {dest
+kill    dat     -5,     #kill-dest+2
+        dat     0,      0       ;0
+
+boot    mov     kill,   away
+for 10
+        mov     {boot,  <boot          ;the faster way to boot away
+rof
+        mov     #0,     boot+3         ;we have to set those b-fields to zero
+        mov     #0,     boot+7         ;to save time later
+        mov     #0,     boot+11
+jump    jmp     @boot,  >away-29       ;> is to set trap b-field non zero
+
+a for (MAXLENGTH-CURLINE)/4
+        dat     jump,   0              ;this decoy doesn't have two equal cells
+        dat     bomb,   boot           ;and still has all fourth b-field at zero
+        dat     boot,   kill
+        dat     clear,  boot
+rof
+end boot
+
+Results are good now: 136.5 and 11th place in 94 hill, yuppee :-)
+
+We beat Frontwards and La Bomba, we tie Impfinity, Porch Swing2, and Torch
+and we score an high nuber of wins that boost our score, it's better losing
+45/55/0, as we did against Derision, than scoring 100 ties. We are still
+losing bad against quiz, solving this problem is left as an exercise for the
+reader :-)
+BTW it's my best ever result with a scanner, were it not the hint test I'm
+not sure I had published it. ;-)
+
+Detailed 94 scores are available on request (mail me), I haven't tested the
+warrior against beginners hill, feel free to do it and make public domain
+the results.
+
+Next hint will be made by Maurizio <pan0178@comune.bologna.it>, mail him
+with your requests.
+______________________________________________________________________________
+Extra Extra:
+La Bomba
+by Beppe Bezzi
+
+La Bomba is the first program allowing me to become King of the Hill
+and to remain in such position for some time, Jack in the box was King
+for but few challenges.  The reasons of its success was its very high
+speed together with the very favourable environment it found; looking
+at it now I can see some ways to improve it, like using the faster
+decoding of Pyramid, but now it's no time for La Bomba 2.
+
+La Bomba is a qscan followed by a simple replicator, the same of the
+hint of CW #3, the innovative part is the Tornado bombing engine used
+to drop a cluster of dat bombs on the opponent, in the hope of
+catching it during boot; this proved very effective against p-warriors
+and stationary warriors using a decoy.
+
+
+;redcode-94
+;name La Bomba
+;author Beppe Bezzi
+;assert CORESIZE == 8000
+;kill La Bomba
+
+org     start
+qstep   equ     5
+qrounds equ     7
+bigst   equ     99
+
+qst     equ     qstart -(4*bigst)
+qstart  equ     start+145
+
+dest0   equ     2200
+dest1   equ     3740
+dest2   equ     -1278
+range   equ     933
+
+
+start
+s1 for 5
+        sne.x   qst+4*bigst*s1, qst+4*bigst*s1+bigst*1  ;check two locations
+        seq.x   qst+4*bigst*s1+bigst*2, qst+4*bigst*s1+bigst*3
+        mov.ab  #qst+4*bigst*s1-found, found  ;they differ so set pointer
+     rof
+        jmn  which,   found
+s2 for 5
+        sne.x   qst+4*bigst*(s2+5), qst+4*bigst*(s2+5)+bigst*1
+        seq.x   qst+4*bigst*(s2+5)+bigst*2, qst+4*bigst*(s2+5)+bigst*3
+        mov.ab  #qst+4*bigst*(s2+5)-found, found
+     rof
+        jmn  which,   found
+s3 for 5
+        sne.x   qst+4*bigst*(s3+10), qst+4*bigst*(s3+10)+bigst*1
+        seq.x   qst+4*bigst*(s3+10)+bigst*2, qst+4*bigst*(s3+10)+bigst*3
+        mov.ab  #qst+4*bigst*(s3+10)-found, found
+     rof
+        jmn.b   which,  found
+s4 for 5
+        sne.x   qst+4*bigst*(s4+15), qst+4*bigst*(s4+15)+bigst*1
+        seq.x   qst+4*bigst*(s4+15)+bigst*2, qst+4*bigst*(s4+15)+bigst*3
+        mov.ab  #qst+4*bigst*(s4+15)-found, found
+     rof
+        jmn.b   which,  found
+
+found   jmz.b   warr,   #0        ;skip attack if qscan found nothing
+        add     #bigst, -1        ;increment pointer till we get the
+which   jmz.f   -1,     @found    ;right place
+qattack                           ;found.b points target
+        mov     bomba,  @found    ;in case small and dangerous
+for 0
+        After decoding enemy position it checks the location found+32 and, if it
+        proves not to be empty, shifts 30 cells the bombing zone to the right
+        This added near 5 points to my score
+rof
+
+        add.ba  found,  qstone
+        add.b   found,  qstone
+        seq     *qstone,-100
+        add.f   shift,  qstone
+
+qst1    mov     qbomb,   *qstone       ;Tornado bombing engine the faster way
+        mov     qbomb,   @qstone       ;to fill your enemy with hot lead
+qstone  mov     32,     *32-qstep
+        sub.f   qincr,   qstone
+        djn.b   qst1,   #qrounds
+
+warr                                    ;Paper01 the hint warrior
+paper   spl     1,      <300
+        spl     1,      <400
+        spl     1,      <500
+silk    spl     @0,     {dest0
+        mov.i   }-1,    >-1
+silk1   spl     @0,     <dest1
+        mov.i   }-1,    >-1
+        mov.i   bomba,  }range
+        mov     {silk1, <silk2
+silk2   jmp     @0,     >dest2
+bomba   dat     <2667,  <1
+
+qbomb   dat     #-qstep, #-qstep
+qincr   dat     #3*qstep,#3*qstep
+shift   dat     #30,    #30
+
+for MAXLENGTH-CURLINE-9
+        dat     0,0
+rof
+
+for 9
+        dat     1,1
+rof
+end
+______________________________________________________________________________
+Extra Extra:
+Armory - A5
+by J.K. Wilkinson
+
+Ok, Armory was my first succesful Hill challenge.
+It's based on a simple idea: beat scanners/scissors with a stone,
+beat stones with an imp-stone, and beat papers with scissors.
+
+The only thing really new/interesting is the boot method and
+pspace.  All the components are highly standard and well-known
+warriors.
+
+In order to squeeze all this code in, (and do it fast, I wanted
+to make a splash on the Hill!) I had to throw together some stuff
+like this:
+
+sboot:   mov.a  #cgate-2-tboot, tboot
+         mov.a  #T+18-goboot, goboot
+         jmp    2
+
+tboot:   dat    gate,   T
+tornado: mov    }tboot, >tboot
+         djn    -1,     #8
+
+That "jmp 2", for instance, is 100% pointless. :)
+100%!  I mean, I've seen code where I thought something _could_
+be trimmed down... but placing your own dats so your jumping
+over them???
+As you can see, there's much room for optimizing, but when A5
+hit the big time, I decided to leave well enough alone. :)
+
+As for the pspace, it's perhaps the smartest one that's been
+attempted on the Hill.  You can't be too smart, or you get you
+ass kicked while your trying to decide what to do.  Heh.
+I think I struck I happy medium with my system.
+
+Basically, if I've just been brainwashed, I reinitialize
+pspace and just keeping going with what ever is in my NUM_STR
+(my strategy pspace.)  That means if I'm washed with 0 I go
+to scissors when I lose.  Is that a good idea?
+
+Well, think about this: If I'm brainwashed and I don't lose
+I go to tornado, because on a loss I add 1 to the strategy.
+This means that q-brainwash->papers can't really lock on.
+I've still got a shot do bounce out of the "just lost, now
+you're brainwashed->your screwed" cycle. :)
+In retrospect, a better system might be just the opposite,
+but it's difficult to predict your opponent's methodology.
+
+It seemed to work fairly well though, until I went and killed
+it. :(  <g>
+
+Oh, and if you're wondering what the "Major changes" were,
+I removed a paper module.  The paper just couldn't launch
+in enough time, from that much space... so I redesigned all
+the boots.  You'll notice they aren't in-line boots (they
+use djn.b to loop the boot.)
+
+Here's Armory...
+
+
+-----------c-u-t---o-n---t-h-e---d-o-t-t-e-d---l-i-n-e--:-)-----------
+;redcode-94
+;name Armory - A5
+;kill Armory - A4a
+;author Wilkinson
+;strategy use pspace to go to battle
+;strategy v 5 - well, I'm still losing to Brain Wash... I may still
+;strategy have a pcode bug. :/
+;strategy Major changes.  Hoping for more wins, and less ties...
+;assert 1
+
+i       equ imp+100
+NUM_STR equ #3
+_RESULT equ #0
+_LOSS   equ #222
+_STR    equ #333
+BOUND   equ #800
+CDIST   equ 12
+IVAL    equ 42
+FIRST   equ scan+OFFSET+IVAL
+OFFSET  equ (2*IVAL)
+DJNOFF  equ -431
+BOMBLEN equ CDIST+2
+GATE    equ tie-4000
+stinc   equ 190
+d       equ 2667
+S       equ stone+2537
+T       equ gate+5500
+step    equ 52
+count   equ 665
+
+res:  ldp _RESULT,  #0      ;load last result into B-field
+loss: ldp   _LOSS,  #0
+      jmz goloss,   res          ;a zero indicates a loss in the last round
+
+      djn tie,res
+
+win:     add    #-1,    loss
+         stp.b  loss,   _LOSS
+tie:
+go:      ldp    _STR,   #0
+
+         slt    BOUND-100, loss   ;check for illegal _LOSS record
+         stp    BOUND,     _LOSS
+
+         mod.ab NUM_STR,   go      ; in case _STR ever gets screwed up
+         mov.ba go,      case
+gojmp:   jmp    case               ;after this gojmp, we jump again from case
+
+goloss:  add    #1,     loss
+         slt    loss,   BOUND+2;if we've lost more than we won, then switch
+         jmp    switch
+
+         slt    BOUND-100, loss   ;check for illegal _LOSS record
+
+         jmp    switch
+         stp.b  loss,   _LOSS
+         jmp    go
+
+switch:  ldp    _STR,   #0
+         add    #1,     -1
+         slt    -2,     NUM_STR
+         mov    #0,     switch
+         stp    BOUND,  _LOSS
+         stp.b  switch, _STR
+         add.ba switch, case
+
+case:
+         jmp    @0,     tornado    ;3
+         jmp    @0,     sboot      ;3
+         jmp    @0,     stonespir  ;3
+
+;***Cannonade
+stone:   mov   <1+5+(stinc*800),1
+         spl   -1,    <2
+         add    3,    stone
+         djn   -2,    <5141+1
+         dat    0,    0
+         mov   stinc, <-stinc
+
+           dat stone,   S
+stonespir: mov }-1,     >-1
+           djn -1,      #6
+           spl S+1
+
+spir:      mov.i  imp,   i
+           spl.a  1,     <GATE-200
+           mov.i -1,     0          ;2
+           spl.a  1,     <GATE-300  ;3
+           spl.a  1,     <GATE-400  ;6
+           spl    2                 ;12
+           jmp.a @imp-1, {0
+           jmp.a *imp-1, {0
+
+           dat   #i+2*d+7, #i+1*d+7
+           dat   #i+7,     #i+2*d+6
+           dat   #i+1*d+6, #i+6
+           dat   #i+2*d+5, #i+1*d+5
+           dat   #i+5,     #i+2*d+4
+           dat   #i+1*d+4, #i+4
+           dat   #i+2*d+3, #i+1*d+3
+           dat   #i+3,     #i+2*d+2
+           dat   #i+1*d+2, #i+2
+           dat   #i+2*d+1, #i+1*d+1
+           dat   #i+1,     #i+2*d
+           dat   #i+1*d,   #i
+imp:       mov.i #1,    2667
+
+sboot:   mov.a  #cgate-2-tboot, tboot
+         mov.a  #T+18-goboot, goboot
+         jmp    2
+
+tboot:   dat    gate,   T
+tornado: mov    }tboot, >tboot
+         djn    -1,     #8
+         add.ab #10,    tboot
+         mov    }tboot, >tboot
+         djn    -1,     #4
+goboot:  jmp    T+1,    {0
+
+;***Tornado
+gate    dat     #step,       #-step           ;step equ 52
+start   mov     bombd+10,    *tstone
+        mov     bombd+10,    @tstone
+tstone  mov     *(2*step)+1, *(3*step)+1
+        add     incr+10,     tstone
+jump    djn.b   start,       #count          ;count equ 665
+        spl     #step,       #0
+clr     mov     gate,        }gate-5 ;jump ;gate-3
+
+; 10 "dat 0, 0"'s need to be inserted here
+
+incr    dat     3*step, 3*step
+bombd   dat     #52   , #1         ;hit dat
+dat 0, 0
+dat 0, 0
+
+;***Scissors
+         dat    #cgate-10, clear-cgate+8+10    ; just in case clr is decremented
+cgate    dat    #4000,    3000
+wipe4    dat    #4000,    clear-cgate+8+10
+wipe3    dat    #4000,    clear-cgate+8+10
+         spl    #6000,    clear-cgate+8+10   ; redundant wipers
+wipe2    spl    #6000,    clear-cgate+8+10   ; redundant wipers
+wipe1    spl    #3050,    clear-cgate+8+10
+
+; 10 "dat 0, 0"'s need to be here
+clear    spl    #0, >-20
+         mov    @2, >cgate-10
+         mov    @1, >cgate-10
+         djn.b  -2, {wipe1-10
+end
+---------------------------------------------------------------------
+
+
+As you can see from the Armory ;strategy lines, I thought I was losing
+to brainwashes.  It turns out that my scissors was so pitiful
+that any decent paper could thrash me, and I don't think
+Brainwash's brainwashing was really much of a factor. :/
+
+_________________________________________________________________________
+Planar's corner
+
+
+                         CDB tutorial, part 1
+
+
+This is the first article of a long series that we will write, Stefan
+Strack and I.  We will start at the level of "I haven't even read the
+docs yet" and we'll hopefully end up at the level of "why don't we
+have a CDB macro programming contest ?"
+
+Because Stefan has written CDB itself, he probably wouldn't see much
+difference between a three-line macro and a one-character command, so
+I get to write this first article.  We're writing this in the hope
+that it will be useful to you, so your feedback is vital: tell us what
+is missing, what is unclear, what you would like to see explained in
+more detail, etc.
+
+After this introduction, we can start learning CDB.  The hardest step
+is the first one: you must realize that CDB is at the same time
+extremely powerful and quite easy to use.  I'll take myself as an
+example.  I was reading the docs for the first time less than three
+months ago.  Have a look at Core Warrior 8 to see what kind of macros
+I can write now.  And I'm still far from Stefan's level.
+
+So CDB is easy to use, and by learning it you can greatly speed up
+your warrior development: once you master CDB, you'll be able to do
+such things as:
+
++ explore the functioning of a warrior in a single-warrior "fight" and
+  discover any unexpected problems (i.e. debug a program)
++ find the right set of constants for a stone to remove its suicidal
+  tendencies
++ optimize a paper's constants to cover the most core locations in the
+  smallest time
++ gather statistics on how much of a spiral is still alive at the end of
+  a typical fight
++ automatically find the best constants for a warrior against a given
+  "White warrior"
++ many other things that I haven't thought of yet: the only limit is your
+  imagination.
+
+Let's go on to the technical stuff.  We will use the following program
+for the examples.  Save it in a file named "fahr.red".
+
+;redcode-94
+;name Fahrenheit 0
+;author Planar
+;assert CORESIZE == 8000
+
+steps   spl     #2044, <3039
+ptr     mov.i   <100, <1000
+attack2 mov.i   <-2000, *-1
+        add.f   steps, ptr
+        djn.f   -3, {attack2
+        end
+
+This is a fast stone with a strong suicidal tendency.  We'll try to
+find a good set of constants to replace those 100 and 1000.
+
+
+General description
+-------------------
+
+CDB is a line-oriented debugger.  CDB controls the pMARS simulator and
+you control CDB by typing commands to the (cdb) prompt.  The best way
+to get this prompt is using the "-e" option to the pMARS command line.
+We will use the following command line.  Type this at your shell, or
+(if you use a Macintosh) use the "command line" item in the "file"
+menu:
+
+    pmars -e -b -r 100 fahr.red
+
+This launches pMARS and immediately enters CDB.  CDB displays the next
+instruction to execute (i.e. the first instruction of the program),
+and our good friend the (cdb) prompt.  Now we get to decide what
+happens next simply by typing a command.
+
+You can also get the prompt by typing 'd' (in the DOS version), or
+control-C (in the Unix versions) or command-. (in the Mac version)
+when pMARS is running.  If you're looking at a battle and you see
+something strange happen, you can stop the battle and use CDB to
+investigate.
+
+The best way to read this tutorial is to launch your pMARS on your own
+computer and try the commands when you read their description.  I was
+going to show the example commands and CDB's answers in the following
+format:
+
+00000   SPL.B  #  2044, <  3039
+(cdb) echo coucou
+coucou
+(cdb)
+
+CDB displays the first line when it is triggered by the "-e" option on
+the command line.  If you enter CDB with control-C, you'll get a
+different display.  The (cdb)'s are the prompts, "echo coucou" is what
+I typed, and "coucou" is CDB's answer.  After printing "coucou", CDB
+is ready for a new command.
+
+Because this tutorial is mostly useless if you're not trying the
+commands on your pMARS, and because Beppe won't be happy if Planar's
+corner gets bigger than the rest of Core Warrior, I'm not going to
+show CDB's answers to my example commands.  Try them and see.  If you
+can't view this file and use pMARS at the same time, print this file.
+If you don't have a printer, contact me and I'll send you a paper
+copy.
+
+The first thing to learn is of course how to get out of CDB.  Here is
+one command to do that:
+
+(cdb) quit
+
+After this command, CDB is not ready for a new command because it has
+exited, along with pMARS itself.  Here is the other command to exit
+CDB:
+
+(cdb) continue
+
+With this command, CDB exits and lets pMARS run as if CDB had not been
+invoked, until the end of the 100 rounds we specified on the command
+line.  If you type control-C again, you get back in control.
+
+
+Displaying the current state
+----------------------------
+
+The most useful command of CDB is "list".  It takes as argument a core
+address or a range of addresses, and it displays the contents of the
+core at that address or range of addresses.  For example, you can get
+a listing of Fahrenheit by typing:
+
+(cdb) list 0,4
+
+If you want to see the next core cell:
+
+(cdb) list 5
+
+This cell contains "DAT 0, 0", which CDB displays as blank, because it
+is the default cell contents at the beginning of a battle.
+
+You can abbreviate "list" to "l", or even nothing at all, like this:
+
+(cdb) 1,3
+
+Instead of numbers, you can use expressions as arguments to "list"
+(this is true for all cdb commands that take numeric arguments).  I
+won't describe in detail the syntax of expressions, they are the same
+as what you use in redcode programs.  There are a few special values
+that you can use in CDB expressions.
+
+The most important of these special values is the dot address; it is
+entered as a period, and it represents the address of the last core
+cell displayed by CDB.  For example, after the last example above, you
+can type:
+
+(cdb) .
+
+And to see what the B-field of this instruction points to:
+
+(cdb) .-2
+
+The variables A and B contain the A-field and B-field of the
+instruction at the dot address.  And as a further shortcut, CDB
+accepts "+expr" and "-expr" for ".+expr" and ".-expr", so the above
+example could be entered as:
+
+(cdb) 3
+(cdb) +b
+
+You can also type:
+
+(cdb) +1,+10
+
+Then press <Enter> at the CDB prompt.  When you enter a null command
+like this, CDB will repeat the previous command, so you can list the
+whole core 10 cells at a time by simply pressing <Enter> repeatedly.
+
+That's all for the "list" command.  It took a long explanation because
+it is the most often used.  With some graphical interfaces, you can
+also activate it by clicking in the core with the mouse.
+
+To get a general view of what's going on, type:
+
+(cdb) registers
+
+This will display a the number of the current round, the number of
+cycles remaining before the end of this round, and a listing of each
+warriors with its name, its number of processes, and a summary of its
+process queue and p-space.
+
+The process queue is a list of core addresses.  The process that
+will execute next is in [brackets], and the following process is
+pointed by the arrow.
+
+
+Running the program
+-------------------
+
+To run the program until completion, just type:
+
+(cdb) go
+
+pMARS will run until the program dies or the cycles have run out.
+While the program is running, you can still press control-C to get the
+prompt back.  To know which condition ended the "go", use "registers".
+
+To execute one instruction and get back to the (cdb) prompt, type:
+
+(cdb) step
+
+To step again, just press <Enter>.
+
+Executing one instruction at a time is useful, but you'll often want
+to go forward in time at a faster pace.  To this end, CDB provides the
+"skip" command, which takes an argument.  Just type
+
+(cdb) skip 999
+
+The simulator will execute 1000 steps before giving back the (cdb)
+prompt.  Use "registers" to check the number of cycles left: 1000
+fewer than before you used "skip".  Note that "skip 0" is equivalent
+to "step".
+
+With "skip" commands, we can already zero in on the most interesting
+parts of a fight.  For example, let us find out when Fahrenheit bombs
+itself.  Use "go" to finish the current round, then "step" to get to
+the first cycle of a new round.  Now type
+
+(cdb) skip 999
+(cdb) 0,4
+
+You'll see that Fahrenheit is still intact after 1000 cycles.  Type
+that sequence a second and a third time.  Fahrenheit has bombed itself
+between the 4000th and the 5000th cycle.  Use "go" to skip the rest of
+this round, skip to cycle 4000, and then 100 by 100 until the self-
+bombing.  Then 10 by 10, then just step until the self-bombing.  If
+you lose track of how many cycles have elapsed, "registers" will tell
+you.
+
+This is a bit tedious, and CDB provides much better ways for doing
+this, but I have to keep something for next time, or I'll lose all my
+readership.  We already have a useful piece of information: after 4136
+cycles, Fahrenheit destroys its own SPL instruction.
+
+Use "go" to reach the end of the battle, step once to start a new
+battle, and "skip 4135".  Type "registers" and look at the process
+queue.  Between the brackets is the address of the instruction about
+to execute: 1.  type "1" and you'll see how this instruction bombs the
+SPL.  (Note that the instruction at 1 was already displayed by CDB
+right after your "skip".)
+
+Exercise: change the constant 1000 in Fahrenheit to avoid self-
+bombing at cycle 4136.  Find out when the self-bombing occurs with
+your new constant, and which instruction of Fahrenheit is bombed.
+
+There is one more way to do big steps.  You can step all processes
+once by typing:
+
+(cdb) thread
+
+CDB will step once for every process in the process queue, and you'll
+get right back at your current process, one step later.  This is very
+useful when you're debugging multi-threaded programs (which is not the
+case of Fahrenheit, but you can try it on the bootstrap sequence of
+Impfinity v3i, for example).
+
+To conclude this first part, here is the great debugger classic,
+breakpoints.  Type:
+
+(cdb) trace 0
+
+CDB will place a breakpoint on the SPL instruction of Fahrenheit.
+Every time a traced instruction is about to be executed, CDB will stop
+and display the instruction.  If you repeatedly enter
+
+(cdb) go
+(cdb) registers
+
+you'll notice how often the SPL injects a process into the loop.
+You'll also notice that the listing of the traced instruction has a
+"T" at its right.  To remove a breakpoint, use "untrace".
+
+For your homework, look up the "moveable" command in the docs, and
+think up a use for moveable breakpoints, and one for non-moveable
+breakpoints.
+
+
+Abbreviations
+-------------
+
+CDB provides a good way of saving your fingers: you may abbreviate a
+command to its first few letters.  Here is a complete list of the
+shortest abbreviations accepted by CDB.  Each command is listed with
+its optional part in (parentheses).
+
+c(ontinue)               g(o)                     r(egisters)
+ca(lc)                   h(elp)                   res(et)
+cl(ear)                  if                       s(tep)
+cl(s)                    l(ist)                   se(arch)
+clo(se)                  m(acro)                  sk(ip)
+d(isplay)                mo(veable) of(f)         sw(itch)
+d(isplay) c(lear)        mo(veable) on            t(race)
+d(isplay) o(ff)          p(rogress)               th(read)
+d(isplay) on             pq(ueue)                 u(ntrace)
+e(dit)                   pq(ueue) of(f)           w(rite)
+ec(ho)                   ps(pace)                 wq(ueue)
+ex(ecute)                ps(pace) of(f)           wq(ueue) of(f)
+f(ill)                   q(uit)
+
+Next time, we'll yield much more power with ~! !!@& and the commands
+for changing the core.
+
+-- Planar <Damien.Doligez@inria.fr>
+
+Many thanks to Stefan for the very useful remarks he made on a draft
+of this text.
+

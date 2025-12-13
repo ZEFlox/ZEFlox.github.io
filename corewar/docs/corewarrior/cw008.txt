@@ -1,0 +1,1545 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 8                                                      December 4, 1995
+______________________________________________________________________________
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+______________________________________________________________________________
+Greetings.
+
+BIG changes this week.  The Pizza server has some new additions.  The
+'Holding Pen' lists the queue of warriors awaiting battle much like the
+StormKing page.  Beppe grilled Thos on the meanings of the numbers at the
+bottom labeled load average and he had this to say:
+
+3:39pm   load average: 3.49, 2.75, 2.68
+
+The numbers are the load average for the last 1, 5, and 15 minutes.
+1 / (load average) = % CPU pmars is getting.  During the day here load is
+about 2.5, at night it drops to 1.8 or less.  When the pen finally empties,
+the load average should go to less than 1.0.
+
+Going by the "last challenge" times of the hill, it looks like it takes about
+35 minutes to run the 94 hill with a load of around 2.5.  It looks like it
+takes about 45 minutes to run the 94x hill, but that may just be standard
+deviation.  Looks like a 94 + 94x challenge will take around 1:15 or so
+during the day here, and a little under an hour at night.
+
+Those are about as accurate as I can give you.
+
+-Thos
+____
+Pizza has also opened a new hill, the 5*40.  Also notice that five new slots
+have opened up on the pizza hills and the number of battles was reduced to
+200.  Makes the division easier for slow people like me.
+
+We've said it once, and we'll say it again--the big (CORESIZE 55440) hill has
+been reopened at the Stormking server, address: <koth@stormking.com>.
+Access the hill with ;redcode-94x
+
+In addition to Planar's Corner, we have the staffs'--M R Bremer's and Beppe
+Bezzi's--tournament entires for you to enjoy along with comments by the
+authors.  Check out Extra, Extra for all the goods.
+
+The hints section is the last in the line in presenting basic warrior
+strategies.  Maybe one more.  The question is:  where do we go from here?
+Your input is always appreciated.  Also included in the hint:  a version of
+myVamp by Magnus Paulsson.
+______________________________________________________________________________
+Tournament Time:
+
+The results of round 7 are in. To recap, the challenge was to beat your up to
+500 line long opponent loaded at a fixed position halfway through core.  This
+was an exciting round with huge score ranges.  Robert Macrae's Last Laugh won
+by a land slide, with 90% wins. We saw some intriguingly new P-space
+strategies, and we'd like to ask the top 3 contenders, Robert Macrae,
+Myer Bremer and Beppe Bezzi to post their warriors with discussion of their
+strategy.  (Editior's Note:  Macrae has already posted his warrior to the
+newsgroup.  Bremer's and Bezzi's warrior are in Extra Extra.)
+
+The results in detail:
+
+Battle 1 of 66 (2%) is finished:
+Back Propagation by M R Bremer scores 471 (93 1 6)
+BlackMoor by P.Kline scores 11 (1 93 6)
+
+Battle 2 of 66 (3%) is finished:
+Back Propagation by M R Bremer scores 484 (96 0 4)
+Burger Chef & Jeff by Karl Lewin scores 4 (0 96 4)
+
+Battle 3 of 66 (5%) is finished:
+Back Propagation by M R Bremer scores 500 (100 0 0)
+Frontwards by Steven Morrell scores 0 (0 100 0)
+
+Battle 4 of 66 (6%) is finished:
+Back Propagation by M R Bremer scores 15 (3 97 0)
+Last Laugh by Robert Macrae scores 485 (97 3 0)
+
+Battle 5 of 66 (8%) is finished:
+Back Propagation by M R Bremer scores 176 (19 0 81)
+Mister Bond by Derek Ross scores 81 (0 19 81)
+
+Battle 6 of 66 (9%) is finished:
+Back Propagation by M R Bremer scores 0 (0 100 0)
+myVamp v3.7 by Paulsson scores 500 (100 0 0)
+
+Battle 7 of 66 (11%) is finished:
+Back Propagation by M R Bremer scores 50 (8 82 10)
+run and hit by Beppe Bezzi scores 420 (82 8 10)
+
+Battle 8 of 66 (12%) is finished:
+Back Propagation by M R Bremer scores 240 (38 12 50)
+Settete by Maurizio Vittuari scores 110 (12 38 50)
+
+Battle 9 of 66 (14%) is finished:
+Back Propagation by M R Bremer scores 483 (96 1 3)
+Slayer by Randy Graham scores 8 (1 96 3)
+
+Battle 10 of 66 (15%) is finished:
+Back Propagation by M R Bremer scores 444 (86 0 14)
+Tim by G. Eadon scores 14 (0 86 14)
+
+Battle 11 of 66 (17%) is finished:
+Back Propagation by M R Bremer scores 443 (88 9 3)
+Victory or death by Anders Ivner scores 48 (9 88 3)
+
+Battle 12 of 66 (18%) is finished:
+BlackMoor by P.Kline scores 0 (0 100 0)
+Burger Chef & Jeff by Karl Lewin scores 500 (100 0 0)
+
+Battle 13 of 66 (20%) is finished:
+BlackMoor by P.Kline scores 485 (97 3 0)
+Frontwards by Steven Morrell scores 15 (3 97 0)
+
+Battle 14 of 66 (21%) is finished:
+BlackMoor by P.Kline scores 5 (1 99 0)
+Last Laugh by Robert Macrae scores 495 (99 1 0)
+
+Battle 15 of 66 (23%) is finished:
+BlackMoor by P.Kline scores 425 (84 11 5)
+Mister Bond by Derek Ross scores 60 (11 84 5)
+
+Battle 16 of 66 (24%) is finished:
+BlackMoor by P.Kline scores 500 (100 0 0)
+myVamp v3.7 by Paulsson scores 0 (0 100 0)
+
+Battle 17 of 66 (26%) is finished:
+BlackMoor by P.Kline scores 93 (15 67 18)
+run and hit by Beppe Bezzi scores 353 (67 15 18)
+
+Battle 18 of 66 (27%) is finished:
+BlackMoor by P.Kline scores 113 (22 75 3)
+Settete by Maurizio Vittuari scores 378 (75 22 3)
+
+Battle 19 of 66 (29%) is finished:
+BlackMoor by P.Kline scores 96 (18 76 6)
+Slayer by Randy Graham scores 386 (76 18 6)
+
+Battle 20 of 66 (30%) is finished:
+BlackMoor by P.Kline scores 50 (10 90 0)
+Tim by G. Eadon scores 450 (90 10 0)
+
+Battle 21 of 66 (32%) is finished:
+BlackMoor by P.Kline scores 75 (15 85 0)
+Victory or death by Anders Ivner scores 425 (85 15 0)
+
+Battle 22 of 66 (33%) is finished:
+Burger Chef & Jeff by Karl Lewin scores 100 (0 0 100)
+Frontwards by Steven Morrell scores 100 (0 0 100)
+
+Battle 23 of 66 (35%) is finished:
+Burger Chef & Jeff by Karl Lewin scores 97 (19 79 2)
+Last Laugh by Robert Macrae scores 397 (79 19 2)
+
+Battle 24 of 66 (36%) is finished:
+Burger Chef & Jeff by Karl Lewin scores 140 (13 12 75)
+Mister Bond by Derek Ross scores 135 (12 13 75)
+
+Battle 25 of 66 (38%) is finished:
+Burger Chef & Jeff by Karl Lewin scores 0 (0 100 0)
+myVamp v3.7 by Paulsson scores 500 (100 0 0)
+
+Battle 26 of 66 (39%) is finished:
+Burger Chef & Jeff by Karl Lewin scores 8 (1 96 3)
+run and hit by Beppe Bezzi scores 483 (96 1 3)
+
+Battle 27 of 66 (41%) is finished:
+Burger Chef & Jeff by Karl Lewin scores 100 (0 0 100)
+Settete by Maurizio Vittuari scores 100 (0 0 100)
+
+Battle 28 of 66 (42%) is finished:
+Burger Chef & Jeff by Karl Lewin scores 0 (0 100 0)
+Slayer by Randy Graham scores 500 (100 0 0)
+
+Battle 29 of 66 (44%) is finished:
+Burger Chef & Jeff by Karl Lewin scores 32 (6 92 2)
+Tim by G. Eadon scores 462 (92 6 2)
+
+Battle 30 of 66 (45%) is finished:
+Burger Chef & Jeff by Karl Lewin scores 225 (45 55 0)
+Victory or death by Anders Ivner scores 275 (55 45 0)
+
+Battle 31 of 66 (47%) is finished:
+Frontwards by Steven Morrell scores 0 (0 100 0)
+Last Laugh by Robert Macrae scores 500 (100 0 0)
+
+Battle 32 of 66 (48%) is finished:
+Frontwards by Steven Morrell scores 500 (100 0 0)
+Mister Bond by Derek Ross scores 0 (0 100 0)
+
+Battle 33 of 66 (50%) is finished:
+Frontwards by Steven Morrell scores 0 (0 100 0)
+myVamp v3.7 by Paulsson scores 500 (100 0 0)
+
+Battle 34 of 66 (52%) is finished:
+Frontwards by Steven Morrell scores 496 (99 0 1)
+run and hit by Beppe Bezzi scores 1 (0 99 1)
+
+Battle 35 of 66 (53%) is finished:
+Frontwards by Steven Morrell scores 500 (100 0 0)
+Settete by Maurizio Vittuari scores 0 (0 100 0)
+
+Battle 36 of 66 (55%) is finished:
+Frontwards by Steven Morrell scores 10 (2 98 0)
+Slayer by Randy Graham scores 490 (98 2 0)
+
+Battle 37 of 66 (56%) is finished:
+Frontwards by Steven Morrell scores 204 (26 0 74)
+Tim by G. Eadon scores 74 (0 26 74)
+
+Battle 38 of 66 (58%) is finished:
+Frontwards by Steven Morrell scores 35 (7 93 0)
+Victory or death by Anders Ivner scores 465 (93 7 0)
+
+Battle 39 of 66 (59%) is finished:
+Last Laugh by Robert Macrae scores 496 (99 0 1)
+Mister Bond by Derek Ross scores 1 (0 99 1)
+
+Battle 40 of 66 (61%) is finished:
+Last Laugh by Robert Macrae scores 486 (97 2 1)
+myVamp v3.7 by Paulsson scores 11 (2 97 1)
+
+Battle 41 of 66 (62%) is finished:
+Last Laugh by Robert Macrae scores 500 (100 0 0)
+run and hit by Beppe Bezzi scores 0 (0 100 0)
+
+Battle 42 of 66 (64%) is finished:
+Last Laugh by Robert Macrae scores 500 (100 0 0)
+Settete by Maurizio Vittuari scores 0 (0 100 0)
+
+Battle 43 of 66 (65%) is finished:
+Last Laugh by Robert Macrae scores 500 (100 0 0)
+Slayer by Randy Graham scores 0 (0 100 0)
+
+Battle 44 of 66 (67%) is finished:
+Last Laugh by Robert Macrae scores 104 (19 72 9)
+Tim by G. Eadon scores 369 (72 19 9)
+
+Battle 45 of 66 (68%) is finished:
+Last Laugh by Robert Macrae scores 500 (100 0 0)
+Victory or death by Anders Ivner scores 0 (0 100 0)
+
+Battle 46 of 66 (70%) is finished:
+Mister Bond by Derek Ross scores 23 (0 77 23)
+myVamp v3.7 by Paulsson scores 408 (77 0 23)
+
+Battle 47 of 66 (71%) is finished:
+Mister Bond by Derek Ross scores 53 (6 71 23)
+run and hit by Beppe Bezzi scores 378 (71 6 23)
+
+Battle 48 of 66 (73%) is finished:
+Mister Bond by Derek Ross scores 194 (32 34 34)
+Settete by Maurizio Vittuari scores 204 (34 32 34)
+
+Battle 49 of 66 (74%) is finished:
+Mister Bond by Derek Ross scores 276 (50 24 26)
+Slayer by Randy Graham scores 146 (24 50 26)
+
+Battle 50 of 66 (76%) is finished:
+Mister Bond by Derek Ross scores 211 (28 1 71)
+Tim by G. Eadon scores 76 (1 28 71)
+
+Battle 51 of 66 (77%) is finished:
+Mister Bond by Derek Ross scores 130 (26 74 0)
+Victory or death by Anders Ivner scores 370 (74 26 0)
+
+Battle 52 of 66 (79%) is finished:
+myVamp v3.7 by Paulsson scores 10 (2 98 0)
+run and hit by Beppe Bezzi scores 490 (98 2 0)
+
+Battle 53 of 66 (80%) is finished:
+myVamp v3.7 by Paulsson scores 100 (0 0 100)
+Settete by Maurizio Vittuari scores 100 (0 0 100)
+
+Battle 54 of 66 (82%) is finished:
+myVamp v3.7 by Paulsson scores 0 (0 100 0)
+Slayer by Randy Graham scores 500 (100 0 0)
+
+Battle 55 of 66 (83%) is finished:
+myVamp v3.7 by Paulsson scores 87 (9 49 42)
+Tim by G. Eadon scores 287 (49 9 42)
+
+Battle 56 of 66 (85%) is finished:
+myVamp v3.7 by Paulsson scores 85 (17 83 0)
+Victory or death by Anders Ivner scores 415 (83 17 0)
+
+Battle 57 of 66 (86%) is finished:
+run and hit by Beppe Bezzi scores 96 (16 68 16)
+Settete by Maurizio Vittuari scores 356 (68 16 16)
+
+Battle 58 of 66 (88%) is finished:
+run and hit by Beppe Bezzi scores 481 (96 3 1)
+Slayer by Randy Graham scores 16 (3 96 1)
+
+Battle 59 of 66 (89%) is finished:
+run and hit by Beppe Bezzi scores 319 (57 9 34)
+Tim by G. Eadon scores 79 (9 57 34)
+
+Battle 60 of 66 (91%) is finished:
+run and hit by Beppe Bezzi scores 75 (15 85 0)
+Victory or death by Anders Ivner scores 425 (85 15 0)
+
+Battle 61 of 66 (92%) is finished:
+Settete by Maurizio Vittuari scores 363 (66 1 33)
+Slayer by Randy Graham scores 38 (1 66 33)
+
+Battle 62 of 66 (94%) is finished:
+Settete by Maurizio Vittuari scores 314 (58 18 24)
+Tim by G. Eadon scores 114 (18 58 24)
+
+Battle 63 of 66 (95%) is finished:
+Settete by Maurizio Vittuari scores 85 (17 83 0)
+Victory or death by Anders Ivner scores 415 (83 17 0)
+
+Battle 64 of 66 (97%) is finished:
+Slayer by Randy Graham scores 88 (1 16 83)
+Tim by G. Eadon scores 163 (16 1 83)
+
+Battle 65 of 66 (98%) is finished:
+Slayer by Randy Graham scores 480 (96 4 0)
+Victory or death by Anders Ivner scores 20 (4 96 0)
+
+Battle 66 of 66 (100%) is finished:
+Tim by G. Eadon scores 491 (98 1 1)
+Victory or death by Anders Ivner scores 6 (1 98 1)
+
+Elapsed time: 5286 seconds (01:28:06)
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     Last Laugh              Robert Macrae            90   9   1   4963
+  2     Back Propagation        M R Bremer               57  27  16   3306
+  3     run and hit             Beppe Bezzi              54  36  10   3096
+  4     Victory or death        Anders Ivner             52  48   0   2864
+  5     Slayer                  Randy Graham             45  41  14   2652
+  6     Tim                     G. Eadon                 40  27  32   2579
+  7     myVamp v3.7             Paulsson                 37  48  15   2201
+  8     Settete                 Maurizio Vittuari        30  37  33   2010
+  9     Frontwards              Steven Morrell           31  53  16   1860
+ 10     BlackMoor               P.Kline                  33  64   3   1853
+ 11     Burger Chef & Jeff      Karl Lewin               17  57  26   1206
+ 12     Mister Bond             Derek Ross               15  54  31   1164
+
+The scores so far:
+
+Name                 1       2       3       4       5       6       7   total
+
+Steven Morrell       5       10      9       13      14      10      4   65
+P.Kline              7.5     9       7       11      11      12      3   60.5
+Paulsson             7.5     11      11      9       2       5       6   51.5
+Anders Ivner         5.5     8       4       0       10      14      9   50.5
+Beppe Bezzi          7       7       13      2       8       3       10  50
+Robert Macrae        0       0       0       12      12      13      12  49
+M R Bremer           7       4       3.6     5       7       11      11  48.6
+Maurizio Vittuari    6.5     5       6       3       9       8       5   42.5
+Randy Graham         0       0       8       10      4       7       8   37
+John K. Wilkinson    4       6       12      0       13      2       0   37
+Karl Lewin           0       0       10      4       6       10      2   32
+Derek Ross           3.5     3       3.3     7       3       6       1   26.8
+G. Eadon             1.5     2       5       6       1       4       7   26.5
+Kurt Franke          0       0       0       8       0       0       0   8
+Michael Constant     0       0       0       0       5       0       0   5
+Anders Scholl        0       1       2       1       0       0       0   4
+John Lewis           0       0       3       0       0       0       0   3
+Calvin Loh           0       0       1       0       0       1       0   2
+
+As this tournament draws to a close -- only 2 more rounds to go, it looks like
+we're up for some up for some final stretch excitement. The lead of Steven
+Morrell and Paul Kline has dwindled to a mere 9 points and the midfield is
+densely packed with 5 players scoring between 48 and 51 points. The game is
+still wide open. Just as a reminder, the GIFs of winner and two runners-up
+will be featured in the upcoming Core War Hall of Fame at stormking -- how's
+that for an incentive?
+
+Good luck for the remaining rounds,
+Nandor & Stefan
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+Last challenge: Sun Dec  3 10:16:49 PST 1995
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  44/ 37/ 19                      quiz              Schitzo     151     137
+ 2  38/ 36/ 25                  Derision           M R Bremer     140     156
+ 3  42/ 44/ 14                   TestTTB    Maurizio Vittuari     139       6
+ 4  35/ 31/ 34               Tornado 2.0          Beppe Bezzi     138       1
+ 5  40/ 42/ 18             Porch Swing 2                  JKW     138      45
+ 6  37/ 37/ 26               myVamp v3.7             Paulsson     137     484
+ 7  20/  5/ 75                  Die Hard              P.Kline     135      38
+ 8  33/ 30/ 36                 Torch t18              P.Kline     135     516
+ 9  30/ 25/ 44                  La Bomba          Beppe Bezzi     134     132
+10  27/ 20/ 53          juliet and paper M R Bremer, B. Bezzi     133     133
+11  29/ 27/ 43           Jack in the box          Beppe Bezzi     131     504
+12  19/  7/ 74               Night Train           Karl Lewin     130      24
+13  38/ 46/ 17              Taking Names              P.Kline     130      25
+14  37/ 46/ 16                     ltest         Anders Ivner     128      53
+15  33/ 37/ 30                endpoint .           M R Bremer     128     161
+16  24/ 20/ 56                  Hector 2          Kurt Franke     128      52
+17  21/ 15/ 64             Impfinity v3i               Planar     127      66
+18  34/ 40/ 26                    Test z                  JKW     127      44
+19  26/ 25/ 49                    test9q          Kurt Franke     126      11
+20  31/ 36/ 33                   Saveme!    Maurizio Vittuari     126      51
+21  22/ 19/ 59              Evolve-- v.1                  JKW     124      33
+22  36/ 47/ 17       Leprechaun on speed         Anders Ivner     124     312
+23  30/ 36/ 34              Son & Father    Maurizio Vittuari     123     167
+24  22/ 23/ 55                    test9p          Kurt Franke     120       8
+25  31/ 45/ 24               The Inferno          Kurt Franke     116       2
+
+Two behemoths get pushed off this week.  Armory has been suffering for a
+awhile and was finally pushed off by JKW's own test.  Phq has had similar
+problems.  His last ditch defense (Saveme!) wasn't quite enough to keep it on
+the hill.  Torch t18 and Jack in the box move up to claim the vacated spots.
+Torch is in very good health, as high as third, as low as 11th, but overall
+hanging around 5th or 6th.  Jack in the box is a super elastic yo-yo.  Bezzi
+thought it may get pushed off soon, but it has hung out in the top 5 this
+week and is currently in 11th place.  You'll have to see next week's issue
+for the updated Hall of Fame.  Sorry.
+
+quiz continues to dominate, usually enjoying a >10 point advantage.  Someone
+_really_ needs to smash that thing.  Who would be king then? ;-)  La Bomba
+RULED and is now sliding down the hill.  Are qscanners becoming ineffective?
+Hector 2 is a qscan --> replicator.  Smart Bomb is a qscan --> p-warrior.
+We'll see how these three fare in the weeks ahead.
+
+The five additional slots on the hill means lots of new boys.  P.Kline
+decided to increase his presence on the hill with the addition of Taking
+Names (which pushed off Phq) and Die Hard.  Maurizio Vitturari has a warrior
+under wraps that looks to be a worthy successor to Phq.
+______________________________________________________________________________
+94 - What's New
+
+ 3  42/ 44/ 14                   TestTTB    Maurizio Vittuari     139       6
+ 4  35/ 31/ 34               Tornado 2.0          Beppe Bezzi     138       1
+ 5  40/ 42/ 18             Porch Swing 2                  JKW     138      45
+ 7  20/  5/ 75                  Die Hard              P.Kline     135      38
+12  19/  7/ 74               Night Train           Karl Lewin     130      24
+13  38/ 46/ 17              Taking Names              P.Kline     130      25
+14  37/ 46/ 16                     ltest         Anders Ivner     128      53
+16  24/ 20/ 56                  Hector 2          Kurt Franke     128      52
+18  34/ 40/ 26                    Test z                  JKW     127      44
+19  26/ 25/ 49                    test9q          Kurt Franke     126      11
+20  31/ 36/ 33                   Saveme!    Maurizio Vittuari     126      51
+21  22/ 19/ 59              Evolve-- v.1                  JKW     124      33
+24  22/ 23/ 55                    test9p          Kurt Franke     120       8
+25  31/ 45/ 24               The Inferno          Kurt Franke     116       2
+______________________________________________________________________________
+94 - What's No More
+
+21  22/ 21/ 57                     test4          Kurt Franke     122       2
+21  31/ 35/ 33              Father & Son    Maurizio Vittuari     127     110
+21  36/ 45/ 19             myZizzor v2.0             Paulsson     127      12
+21  35/ 49/ 16                Frontwards       Steven Morrell     121      10
+21  36/ 47/ 17             Porch Swing +         Randy Graham     124     166
+21  32/ 40/ 28               Armory - A5            Wilkinson     123     609
+26  25/ 27/ 47 Fly Fishing w/Plastic Wor           Karl Lewin     122      83
+26  31/ 40/ 29                       Phq    Maurizio Vittuari     121     589
+26   1/  2/  1                 test lp 2          Beppe Bezzi       4      36
+______________________________________________________________________________
+What's Old
+
+ 8  33/ 30/ 36                 Torch t18              P.Kline     135     516
+11  29/ 27/ 43           Jack in the box          Beppe Bezzi     131     504
+ 6  37/ 37/ 26               myVamp v3.7             Paulsson     137     484
+22  36/ 47/ 17       Leprechaun on speed         Anders Ivner     124     312
+
+No other warrior is even above 200.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 200
+  instruction set: ICWS '94 Draft
+
+Last challenge: Sun Dec  3 15:11:21 PST 1995
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  54/ 29/ 16          Fire Master v1.5            JS Pulido     179      26
+ 2  52/ 32/ 15          Clear Sighted v1            JS Pulido     172      23
+ 3  41/ 15/ 44             Paper8-IV 1.1             G. Eadon     167       6
+ 4  47/ 34/ 18           dualstrat v.0.2         Brian Haskin     160      22
+ 5  36/ 14/ 49                    Schizo            J. Doster     158      73
+ 6  38/ 28/ 34              Hint Test v6           M R Bremer     148       9
+ 7  42/ 37/ 21                      Look            J. Doster     147      70
+ 8  29/ 14/ 57           Impfinity v3c11               Planar     144      85
+ 9  28/ 13/ 59                 Sheet 1.0            J. Doster     143      83
+10  27/ 17/ 56             RingWorm_v2.4           Calvin Loh     136      71
+11  21/  9/ 69             RingWorm_v2.5           Calvin Loh     133      56
+12  34/ 40/ 26         Good old DJN Test           Karl Lewin     127      36
+13  33/ 43/ 24                    Test-G             G. Eadon     124       1
+14  26/ 28/ 46               Loh_tst_1.3           Calvin Loh     123      46
+15  23/ 30/ 47               Serendipity         A. Nevermind     115      10
+16  31/ 48/ 21                  Headache       Andy Nevermind     113       7
+17  27/ 50/ 23         Enlightenment III         Scott Manley     104      12
+18  10/ 16/ 74                 Fortitude         A. Nevermind     103       8
+19  21/ 55/ 24                      Joy!      Kevin Deitchman      87      11
+20  21/  8/ 13                  test L 9          Beppe Bezzi      78      24
+21  22/ 11/ 10                Lurker 1.1          Kurt Franke      76      41
+22  14/ 56/ 29       Frau Langmeier v2.4          Ian Oversby      73       4
+23  17/  5/ 20               Trapper 1.1          Kurt Franke      70      21
+24   1/ 46/ 53             PlinyScan 1.1             G. Eadon      57       3
+25  15/ 17/ 11        Paper Shredder 2.1          Kurt Franke      55      40
+
+Twenty new entries on the hill this week.
+
+Pulido has had solid lock on the hill lately.  Fire Master was seen on the
+'94 draft hill for awhile.  The top 5 warriors are the same this week except
+the absence of two of Franke's--Lurker and teamwork.  Franke has been trying
+to gain a foothold on the '94 hill.  Hector 2 is in 16th place there.  His
+test program is at the _top_ of the '94x hill.  Lewin has also claimed a
+spot on the '94 hill with Night Train riding in 12th place.  From the looks
+of his score, it seems to be some kind of Die Hard derivative.
+
+Bezzi's test L 9 is in 20th place.  It was riding high on the '94 draft hill
+if you can recall.  If your program dominates the b hill and fares poorly on
+the '94 draft hill, don't lose confidence.  The composition of the hill has a
+huge effect on how your warrior scores.  Keep trying.
+______________________________________________________________________________
+Planar's Corner
+
+                    The mathematics of imp steps
+
+If you find this too mathematical, there is some redcode and cdb
+macros in section 4.
+
+0. Notations
+------------
+We'll talk about an imp number N and its corresponding imp step S in a
+core of size C.  This will give us an N-point ring or spiral with this
+instruction:
+
+    MOV     0, S
+
+N, S, and C must be such that, for some integer k,
+        N*S = k*C + 1        (1)
+
+Given C and N, the game is to find an S that satisfies equation (1).
+We're not really interested in the value of k.  We'll call (N,S) an
+imp pair in C.  When C is implicit from the context, we'll simply
+say that (N,S) is an imp pair.
+
+We can see that equation (1) is unchanged when we exchange N and S:
+if (N,S) is an imp pair, then (S,N) is also an imp pair.
+
+1. Existence
+------------
+Let me state here the most important theorem of mathematics (as far as
+imp rings are concerned, anyway), Bezout's theorem:
+
+For any integers x, y, and g, there exists integers u and v such that
+        u*x + v*y = g        (2)
+if and only if g is a multiple of the Greatest Common Divisor of x and y.
+
+I won't explicitely prove Bezout's theorem here.  One of the
+implications is easy, and the programs below are proof of the other.
+Trust me, Bezout's theorem is true.
+
+Let us take x = N, y = C, and g = 1, and equation (2) is almost the
+same as equation (1):   u*N + v*C = 1
+
+If we can find u and v that satisfy this relation, then (u,N) is an imp
+pair.  Conversely, if (N,S) is an imp pair, then S*N + (-k)*C = 1, so 1
+must be a multiple of GCD(N,C).  This means that 1 = GCD(N,C), so N
+and C have no common factors.
+
+Our first result is:
+In a core of size C, there is an imp step for N if and only if N and
+C have no common factor.
+
+Examples:
+In a core of size 8192 all odd numbers are imp numbers.
+In a core of size 8000 all numbers ending in 1, 3, 7, or 9 are imp numbers.
+In any core size, (1,1) is an imp pair.
+In any core size C, (C-1,C-1) is  an imp pair.
+In any odd core size C, ((C-1)/2,C-2) is an imp pair.
+
+2. Unicity
+----------
+Assume that (N,S) and (N,T) are both imp pairs.  We have:
+(a)      N*S = k*C + 1
+(b)      N*T = i*C + 1
+
+Subtracting (b) from (a), we get:
+(c)      N*(S-T) = (k-i)*C
+
+But N and C have no common factors, so S-T must be a multiple of C.
+Thus, S = T + j*C: S and T are congruent modulo C.  In a redcode
+program they are equal, since all redcode arithmetic is done modulo C.
+
+Our second result is:
+In a core of size C, if both (N,S) and (N,T) are imp pairs, then S
+and T must be congruent modulo C, and thus equal, as far as redcode
+programs are concerned.
+
+3. Computation with recursion
+-----------------------------
+Computing the u and v parameters of equation (1) can be done with
+Euclid's extended algorithm.  This is a simple extension of Euclid's
+algorithm for computing the GCD.  Given x and y, Euclid's extended
+algorithm will compute g = GCD(x,y) and values for u and v that make
+equation (1) hold.
+
+The algorithm is extremely simple.  You want to solve
+       u*x + v*y = g
+
+if x > y, solve u'*y + v'*x = g and take u = v', v = u'.
+if x = 0, take g = y, u = 0, and v = 1.
+else compute q and r such that y = q*x + r   and   0 <= r < x;
+     solve  u'*r + v'*x = g;
+     take u = v'-q*u' and v = u'.
+
+This is the same as Euclid's algorithm except that you keep track of the
+quotients of the divisions and use them to compute u and v.
+
+4. Computation without recursion
+--------------------------------
+There is a version of Euclid's extended algorithm that uses a loop
+instead of the recursion.  Instead of boring you with a description
+of how it works, I'll simply give the code:
+
+;redcode
+;name Euclid's extended
+;author Planar
+;assert MAXLENGTH >= 15 && CORESIZE >= 16
+
+; To compute the imp step for a given imp number,
+; enter the imp number in the following line:
+
+n       equ     3
+
+; The program terminates with gcd (n,CORESIZE) in the a-value at
+; address 0.  If this is 1, there is a spiral of size n, and the
+; b-value at address 1 is the corresponding step.
+
+; This program works in any core size, and it computes imp steps
+; for that core size.
+
+; Use the following cdb macro to display all the (N,S) imp pairs
+; with N <= 100 in the current core size.
+; imps=@ca z=0~!!~@ca z=z+1~@ed 0~dat z~@g~@0~if a==1~!!~@1~ca z,b~!1~@s~!100
+; (and launch pMARS with -r 100)
+
+        org     start
+
+yx      dat     0, n          ; y = CORESIZE = 0
+ab      dat     1, 0
+
+done    equ     ab
+start   sub.b   yx, q         ; (CORESIZE-n)
+        div.b   yx, q         ; ((CORESIZE-n)/n)
+        add.ab  #1, q         ; q = (CORESIZE-n)/n+1 = CORESIZE/n
+loop    mul.ab  ab, q         ; (a*q)
+        mov.x   ab, ab        ; (b);   b' = a
+        sub.ba  q, ab         ; a' = b - a*q
+        mov.x   yx, yx        ; (y);   y' = x
+        sub.ab  yx, yx        ; (y - x)
+        mod.ab  yx, yx        ; x' = (y-x) % x = y % x
+        jmz.b   done, yx      ; We're done if x = 0
+        mov.ab  yx, q         ; (y)
+        div.b   yx, q         ; q' = y' / x'
+        jmp     loop
+
+q       end
+
+This program is quite fast for every imp number N and core size C:
+the number of loop iterations is bounded by 2*ceil(log N/log 2).
+
+And this is a version entirely written in cdb macros:
+
+euclid=@ca c=1,d=0~m eucloop
+eucloop=!!~@ca t=d-y/x*c,d=c~@ca c=t,t=y%x~@ca y=x,x=t~if x!=0~!
+imp-pairs=@ca s=$~@ca z=0~!!~@ca x=z=z+1,y=$+1~m euclid~if y==1~ca z,d~!s
+
+(Do not try to tune your modem, the above is not line noise.)
+
+This macro is much faster than Stefan's "imp-numbers", and it really
+finds all imp pairs, whereas Stefan's misses a few.
+
+To use it, save it in a file named "planar.mac", launch pMARS with the
+core size you're interested in and type "m imp-pairs,planar.mac".
+pMARS will list all (N,S) imp pairs.  When N = S, for some reason
+pMARS will only display one of them.  (Bug or feature ?)
+
+If you dislike negative numbers, just add CORESIZE to them.  This is
+an easy exercise in cdb programming.
+
+If you only want the reasonable imp numbers, change the "s" at the end
+of the last line into 100, and it will display only the imp numbers up
+to 100.
+
+5. Future work
+--------------
+There is a relation between imp numbers, Euclid's algorithm, and
+bombing patterns.  I'll try to work it out.
+
+Now that I've been showing off my new cdb skills (two months ago I was
+reading the docs for the first time), I guess I'll have to write the cdb
+tutorial I promised to Beppe and Myer.
+
+<Damien.Doligez@inria.fr>
+______________________________________________________________________________
+Extra Extra
+
+You ask; we deliver.  As promised the second and third place entries for
+the tournament--round 7.
+_____
+run and hit by BEPPE BEZZI
+
+I pswitch 5 attack modules:
+
+A very fast static, non booted, vector bomber mov <x,y followed by a quick
+boot of Tornado
+
+A booted away multiprocess vector vampire to a large pit, self clearing and
+brainwashing. This is followed by a forward running continual dat clear.
+
+shot1   mov     >0,     @vector1-A0
+
+This is the module that, hanging your warrior, cused my victory against you
+after a few wins yours and ties.
+
+A Tornado bomber with multipass clear.
+
+A stone--juliet storm.
+
+A paper module, in case someone uses a single pass clear.
+
+I'm too surprised of how good I did. In fact, having nothing to test it
+against I tried to mix as many thing I was able to.
+
+-Beppe
+
+;redcode-94
+;name run and hit
+;author Beppe Bezzi
+;contact bezzi@iol.it
+;NSFCWT round 7 entry
+;assert CORESIZE == 8000 && MINDIST == 4000
+;strategy flee then shot (not always :-)
+
+org     start
+RES     equ     #0
+STR     equ     #299
+
+vstep   equ     8
+proc    equ     8
+disp1   equ     0
+disp2   equ     70
+disp3   equ     140
+disp4   equ     210
+disp5   equ     280
+disp6   equ     350
+disp7   equ     420
+disp8   equ     -100
+spacer  equ     0
+A0      equ     1800
+A1      equ     3740
+A2      equ     -2024
+
+;Tornado equ
+step    equ     95
+count   equ     530
+away    equ     4456
+djnoff  equ     -2000
+
+;juliet equs
+ptr     EQU     -1333
+
+;Paper equ
+
+dest0   equ     2200
+dest1   equ     3740
+dest2   equ     -1278
+range   equ     933
+
+;vector bomber equ
+
+target  equ     (zero+4000+20)
+
+zero
+q for 20
+        dat     q%7,    1
+rof
+
+point1  dat     vbomb,  vbomb+A0
+
+vboot
+        spl     1,      <pit
+        spl     1,      <-10
+        spl     bclear
+        spl     1,      <-10
+        mov.i   {point1,<point1         ;copy
+        jmp     @point1
+;break
+shot1   mov     >0,     @vector1-A0
+        mov     >0,     @vector2-A0
+        mov     >0,     @vector3-A0
+        mov     >0,     @vector4-A0
+        mov     >0,     @vector5-A0
+        mov     >0,     @vector6-A0
+        mov     >0,     @vector7-A0     ;vector bombing
+;break
+        jmp     clear1+A2-A0-5
+vbomb   dat     10,     10
+
+point2  dat     clear1+4,A2
+bclear  mov     {point2,<point2
+
+clear1  dat     #10,    #10
+        spl     #0,     #100
+        mov     -2,     >-5
+        djn.f   -1,     <-100
+
+vector1
+s for proc
+        jmp     pit-zero+4000-vstep-disp1,zero+4000+s*vstep+disp1
+rof
+vector2
+s for proc
+        jmp     pit-zero+4000-vstep-disp2,zero+4000+s*vstep+disp2
+rof
+vector3
+s for proc
+        jmp     pit-zero+4000-vstep-disp3,zero+4000+s*vstep+disp3
+rof
+vector4
+s for proc
+        jmp     pit-zero+4000-vstep-disp4,zero+4000+s*vstep+disp4
+rof
+vector5
+s for proc
+        jmp     pit-zero+4000-vstep-disp5,zero+4000+s*vstep+disp5
+rof
+vector6
+s for proc
+        jmp     pit-zero+4000-vstep-disp6,zero+4000+s*vstep+disp6
+rof
+vector7
+s for proc
+        jmp     pit-zero+4000-vstep-disp7,zero+4000+s*vstep+disp7
+rof
+vector8
+s for proc
+        jmp     pit-zero+4000-vstep-disp8,zero+4000+s*vstep+disp8
+rof
+
+pit     mov     -1000, <zero+3500
+        stp     #0,     #0
+for 30
+        spl     pit,    <pit+1
+        spl     pit,    {pit+1
+        rof
+for 50
+        dat     zero,   zero+500
+rof
+;****** START *********
+
+start
+res     ldp.ab  RES,    #0      ;load result last match
+str     ldp.a   STR,    str1    ;load strategy in use
+        seq.ab  #1,     res     ;check result, win OK
+lost    add.a   #1,     str1    ;lost change
+        mod.a   #5,     str1    ;secure jump
+win     stp.ab  str1,   STR     ;save strategy
+str1    jmp     @0,     vboot   ;booted vector bomber + clear
+        dat     0,      vector  ;static vector bomber
+        dat     0,      tornado ;
+        dat     0,      juliet
+        dat     0,      paper
+for 20
+        dat     1,1
+rof
+tornado
+        mov     bombm,  away
+for 12
+        mov     {tornado,<tornado
+rof
+        jmp     @tornado,<tornado
+
+warr
+gate
+        nop     split,  100 ;(clear start)
+
+incr    spl     #3*step,#3*step
+start1  add     incr    ,stone
+stone   mov     step+jump, *(2*step)+jump
+        mov     bombm,   @stone
+        mov     bombs,   *stone
+jump    djn.f   start1, <djnoff
+
+clr     mov     *gate,  >gate
+djmp    djn.f   clr,    {gate-20
+wip     dat     <2667,  <20
+split   spl     #wip-gate,  #wip-gate+5
+bombs   spl     #step,   #1
+;break
+bombm   mov     step,   1
+for 50
+        dat     zero,   zero+500
+rof
+
+;juliet storm (sorry Myer I'm very short of time :-)
+
+jgate   dat <-445, <-446
+s       spl #445, <-445
+        spl #0, <-446
+        mov {445-1, -445+2
+        add -3, -1
+        djn.f -2, <-2667-500
+        mov 32, <-20
+go      dat     #0,     #ptr
+juliet  mov     {-1,    <-1
+        mov     {-2,    <-2
+        mov     {-3,    <-3
+        mov     {-4,    <-4
+        mov     {-5,    <-5
+        mov     {-6,    <-6
+        mov     jgate,  ptr+24
+        mov     jgate,  ptr+24
+        jmp     @go,    <4000
+for 50
+        dat     1,1
+        rof
+paper
+        spl     1,      <300    ;\
+        spl     1,      <400    ;-> generate 8 consecutive processes
+        spl     1,      <500
+
+silk    spl     @0,     {dest0
+        mov.i   }-1,    >-1
+silk1   spl     @0,     <dest1  ;split to new copy
+        mov.i   }-1,    >-1     ;copy self to new location
+        mov.i   bomba,  }range
+        mov     {silk1, <silk2
+silk2   jmp     @0,     >dest2
+bomba   dat     <2667,  <1
+
+
+;linear vector bomber
+
+vector
+        mov     <target+50, target+100
+        mov     <target+450,target+300
+        mov     <target+150,target+200
+        mov     <target+250,target+400
+        mov     <target+350,target
+
+        mov     <target+130,target+330
+        mov     <target+230,target+430
+        mov     <target+30, target+370
+        mov     <target+270,target+70
+        mov     <target+170,target+220
+;now it's sure escaped
+step1   equ     85
+count1  equ     533
+away1   equ     -3750
+
+        mov     bm,     djmp1+away1+31
+        mov     bd,     djmp1+away1+32
+        mov     *tptr,  @tptr
+        mov     {tptr,  <tptr
+        mov     {tptr,  <tptr
+        mov     {tptr,  <tptr
+        mov     {tptr,  <tptr
+        mov     {tptr,  <tptr
+        mov     {tptr,  <tptr
+        mov     {tptr,  <tptr
+        jmp     @tptr,  <tptr
+
+tptr    dat     djmp1,   away1+djmp1
+
+bomber1 mov     bd+30,  *stone1
+        mov     bm+30,  @stone1
+stone1  mov     *step1+2,*(2*step1)+2
+        add     incr1,   stone1
+jump1   djn.b   bomber1, #count1
+incr1   spl     #3*step1,#3*step1
+clr1    mov     -12,    }bomber1+1
+djmp1   djn     clr1,   <bomber1-5
+bm      mov.i   #step1, 1
+bd      dat     #step1, #1
+
+a for (MAXLENGTH-CURLINE-1) /3
+        dat     zero,   a
+        dat     1,1
+        dat     fine,   a
+rof
+fine    jmp     zero
+
+end
+_____
+Back Propagation by M R BREMER
+
+No one knew how they would fare this round, myself included--nothing to test
+against, only vague ideas of what to expect.  Seeing Ivner's program after
+the fact had me laughing.  I have lots of respect for an author who will
+intentionally cause his program to die.  Anyways.  I operated on two lines of
+thought:
+        (1) everybody is going to vamp to a brainwashing pit.
+        (2) everybody is going to use switching.
+
+After all, that's what I was doing 8).  My program contains ten totally
+independent vector vamping modules.  Each module throws 10 fangs of the type
+jmp 50 (50 addresses later) jmp 50 (+50 spaces) . . . jmp pit.  I only need
+two fangs per module instead of 10.  Is this better?  I have no idea.
+
+A switching routine ( out of Jack in the box ) selects one of 5 strategies.
+Each strategy executes module x and module x+5 yielding twenty fangs, 25
+addresses apart.  At the end of module x is code to cleanse module x+5 by
+using a-indirect bombing on it.  If I have been targeted by a fang, hopefully
+I'll eliminate the pit with a mov #1, }1 bomb.  I think it should have been
+a mov#1, }0.  Error #1.  Next the code totally eliminates the module, over-
+writing it with dat 1, 1s.  Hopefully this will eliminate any stun attacks.
+Of course module x+5 does the same of x.
+
+Next launch two copies of Phoenix by Jippo.  Plenty of a-indirect bombing.
+Hard on imps.  Of course I also have a backup continuous imp ring launcher
+acquiried from Keystone.
+
+By filling my code with pointers to locations 4000-4500, any bombing done
+by the paper on my code will land on the enemy.
+
+My pit is actually a jumper to two different pits.  One brainwashes and the
+other pit just keeps growing.  Check it out at the very end of my source
+listing.  Neither of my pits core clear.  Error #2.
+
+It seems to have worked though.  Unbelievable.  Sorry it's so long.  I'm not
+good with macros.
+
+-M R Bremer
+
+;name Back Propagation
+;author M R Bremer
+;nsfcwt round 7
+;contact <bremermr@ecn.purdue.edu>
+;strategy       create 10 independent vector fang bombing modules targeting
+;strategy       different parts of enemy code.
+;strategy       use that module from now until start to lose
+;strategy       launch Phoenix (from Jippo) as backup to all
+;strategy       i take _way_ too much time.  i expect to get creamed
+org start
+
+STEP EQU 50
+
+PSTEP   equ     3520
+NSTEP   equ     1520
+ESTEP   equ      830
+
+_STR    EQU #336
+_RES    EQU #0
+
+         spl mimp+5334
+launch2  spl -1                     ; continuous imp-ring launcher
+         spl mimp+2667              ; activated by stone if needed
+mimp     mov.i #0,2667              ;
+for 23
+        jmp 4000, start-5
+rof
+start
+res     ldp.ab _RES, #0
+str     ldp.a _STR, str1        ;load strategy in use
+        seq.ab #1, res          ;check result
+lost    add.a #1, str1          ;lost or tie --> change
+        mod.a #5, str1         ;secure result
+win     stp.ab  str1, _STR
+str1    jmp @0, mod1
+        dat 0, mod2
+        dat 0, mod3
+        dat 0, mod4
+        dat 0, mod5
+for 17
+        jmp 4075, start
+rof
+        spl p1, 0
+pit     spl -1, 0
+        jmp p2, 0
+for 11
+        jmp 4050, start
+rof
+p2      spl #0
+        spl -1
+        spl -2, 0
+        stp.b >-1, -1
+        jmp pit
+
+for 19
+        jmp 4400, start
+rof
+
+mod1    spl mod6
+        mov.i m1fang, start+4000+9*STEP
+        mov.i fang1, start+4000+8*STEP
+        mov.i fang1, start+4000+7*STEP
+        mov.i fang1, start+4000+6*STEP
+        mov.i fang1, start+4000+5*STEP
+        mov.i fang1, start+4000+4*STEP
+        mov.i fang1, start+4000+3*STEP
+        mov.i fang1, start+4000+2*STEP
+        mov.i fang1, start+4000+STEP
+        mov.i fang1, start+4000
+        mov.i av1, *mod6
+        mov.i dat1, >-1
+        djn.b -1, #10
+        spl launch1
+        jmp launch2
+fang1   jmp STEP
+m1fang  jmp -1*(start+4000+9*STEP)+pit
+av1     mov.i #1, }1
+dat1    dat 1, 1
+
+for     12
+        jmp 4250, 4350
+rof
+
+mod2    spl mod7
+        mov.i m2fang, start+4005+9*STEP
+        mov.i fang2, start+4005+8*STEP
+        mov.i fang2, start+4005+7*STEP
+        mov.i fang2, start+4005+6*STEP
+        mov.i fang2, start+4005+5*STEP
+        mov.i fang2, start+4005+4*STEP
+        mov.i fang2, start+4005+3*STEP
+        mov.i fang2, start+4005+2*STEP
+        mov.i fang2, start+4005+STEP
+        mov.i fang2, start+4005
+        mov.i av2, *mod7
+        mov.i dat2, >-1
+        djn.b -1, #10
+        spl launch1
+        jmp launch2
+fang2   jmp STEP
+m2fang  jmp -1*(start+4005+9*STEP)+pit
+av2     mov.i #1, }1
+dat2    dat 1, 1
+
+for 19
+        jmp 4400, 4090
+rof
+
+mod3    spl mod8
+        mov.i m3fang, start+4010+9*STEP
+        mov.i fang3, start+4010+8*STEP
+        mov.i fang3, start+4010+7*STEP
+        mov.i fang3, start+4010+6*STEP
+        mov.i fang3, start+4010+5*STEP
+        mov.i fang3, start+4010+4*STEP
+        mov.i fang3, start+4010+3*STEP
+        mov.i fang3, start+4010+2*STEP
+        mov.i fang3, start+4010+STEP
+        mov.i fang3, start+4010
+        mov.i av3, *mod8
+        mov.i dat3, >-1
+        djn.b -1, #10
+        spl launch1
+        jmp launch2
+fang3   jmp STEP
+m3fang  jmp -1*(start+4010+9*STEP)+pit
+av3     mov.i #1, }1
+dat3    dat 1, 1
+for 19
+        jmp 4400, 4090
+rof
+
+mod4    spl mod9
+        mov.i m4fang, start+4015+9*STEP
+        mov.i fang4, start+4015+8*STEP
+        mov.i fang4, start+4015+7*STEP
+        mov.i fang4, start+4015+6*STEP
+        mov.i fang4, start+4015+5*STEP
+        mov.i fang4, start+4015+4*STEP
+        mov.i fang4, start+4015+3*STEP
+        mov.i fang4, start+4015+2*STEP
+        mov.i fang4, start+4015+STEP
+        mov.i fang4, start+4015
+        mov.i av4, *mod9
+        mov.i dat4, >-1
+        djn.b -1, #10
+        spl launch1
+        jmp launch2
+fang4   jmp STEP
+m4fang  jmp -1*(start+4015+9*STEP)+pit
+av4     mov.i #1, }1
+dat4    dat 1, 1
+for 19
+        jmp 4400, 4090
+rof
+
+
+mod5    spl mod10
+        mov.i m5fang, start+4020+9*STEP
+        mov.i fang5, start+4020+8*STEP
+        mov.i fang5, start+4020+7*STEP
+        mov.i fang5, start+4020+6*STEP
+        mov.i fang5, start+4020+5*STEP
+        mov.i fang5, start+4020+4*STEP
+        mov.i fang5, start+4020+3*STEP
+        mov.i fang5, start+4020+2*STEP
+        mov.i fang5, start+4020+STEP
+        mov.i fang5, start+4020
+        mov.i av5, *mod10
+        mov.i dat5, >-1
+        djn.b -1, #10
+        spl launch1
+        jmp launch2
+fang5   jmp STEP
+m5fang  jmp -1*(start+4020+9*STEP)+pit
+av5     mov.i #1, }1
+dat5    dat 1, 1
+for 19
+        jmp 4400, 4090
+rof
+
+mod6    mov.i m6fang, start+4025+9*STEP
+        mov.i fang6, start+4025+8*STEP
+        mov.i fang6, start+4025+7*STEP
+        mov.i fang6, start+4025+6*STEP
+        mov.i fang6, start+4025+5*STEP
+        mov.i fang6, start+4025+4*STEP
+        mov.i fang6, start+4025+3*STEP
+        mov.i fang6, start+4025+2*STEP
+        mov.i fang6, start+4025+STEP
+        mov.i fang6, start+4025
+        mov.i av6, *mod1+1
+        mov.i dat6, >-1
+        djn.b -1, #10
+        spl launch1
+        jmp launch2
+fang6   jmp STEP
+m6fang  jmp -1*(start+4025+9*STEP)+pit
+av6     mov.i #1, }1
+dat6    dat 1, 1
+for 12
+        jmp 4400, 4090
+rof
+
+c2      spl     1,          <start+4000+123
+        mov.i   -1,         0
+        mov.i   -1,         0
+        mov.i   -1,         0
+
+phoenix spl     @phoenix,   PSTEP
+        mov.i   }phoenix,   >phoenix
+nest    spl     @nest,      NSTEP
+        mov.i   }nest,      >nest
+egg     spl     @egg,       ESTEP
+        mov.i   }egg,       >egg
+        mov.i   ash,        {3999
+        mov.i   ash,        }4001
+ash     dat.f   <2667,      <2*2667
+        dat.f   <2667,      <2*2667
+        dat.f   <2667,      <2*2667
+        dat.f   <2667,      <2*2667
+        dat.f   <2667,      <2*2667
+for 12
+        jmp 4400, 4090
+rof
+
+mod7    mov.i m7fang, start+4030+9*STEP
+        mov.i fang7, start+4030+8*STEP
+        mov.i fang7, start+4030+7*STEP
+        mov.i fang7, start+4030+6*STEP
+        mov.i fang7, start+4030+5*STEP
+        mov.i fang7, start+4030+4*STEP
+        mov.i fang7, start+4030+3*STEP
+        mov.i fang7, start+4030+2*STEP
+        mov.i fang7, start+4030+STEP
+        mov.i fang7, start+4030
+        mov.i av7, *mod2+1
+        mov.i dat7, >-1
+        djn.b -1, #10
+        spl launch1
+        jmp launch2
+fang7   jmp STEP
+m7fang  jmp -1*(start+4030+9*STEP)+pit
+av7     mov.i #1, }1
+dat7    dat 1, 1
+for 12
+        jmp 4400, 4090
+rof
+
+mod8    mov.i m8fang, start+4035+9*STEP
+        mov.i fang8, start+4035+8*STEP
+        mov.i fang8, start+4035+7*STEP
+        mov.i fang8, start+4035+6*STEP
+        mov.i fang8, start+4035+5*STEP
+        mov.i fang8, start+4035+4*STEP
+        mov.i fang8, start+4035+3*STEP
+        mov.i fang8, start+4035+2*STEP
+        mov.i fang8, start+4035+STEP
+        mov.i fang8, start+4035
+        mov.i av8, *mod3+1
+        mov.i dat8, >-1
+        djn.b -1, #10
+        spl launch1
+        jmp launch2
+fang8   jmp STEP
+m8fang  jmp -1*(start+4035+9*STEP)+pit
+av8     mov.i #1, }1
+dat8    dat 1, 1
+for 12
+        jmp 4400, 4090
+rof
+
+mod9    mov.i m9fang, start+4040+9*STEP
+        mov.i fang9, start+4040+8*STEP
+        mov.i fang9, start+4040+7*STEP
+        mov.i fang9, start+4040+6*STEP
+        mov.i fang9, start+4040+5*STEP
+        mov.i fang9, start+4040+4*STEP
+        mov.i fang9, start+4040+3*STEP
+        mov.i fang9, start+4040+2*STEP
+        mov.i fang9, start+4040+STEP
+        mov.i fang9, start+4040
+        mov.i av9, *mod4+1
+        mov.i dat9, >-1
+        djn.b -1, #10
+        spl launch1
+        jmp launch2
+fang9   jmp STEP
+m9fang  jmp -1*(start+4040+9*STEP)+pit
+av9     mov.i #1, }1
+dat9    dat 1, 1
+
+for 12
+        jmp 4400, 4090
+rof
+
+mod10   mov.i m10fang, start+4045+9*STEP
+        mov.i fang10, start+4045+8*STEP
+        mov.i fang10, start+4045+7*STEP
+        mov.i fang10, start+4045+6*STEP
+        mov.i fang10, start+4045+5*STEP
+        mov.i fang10, start+4045+4*STEP
+        mov.i fang10, start+4045+3*STEP
+        mov.i fang10, start+4045+2*STEP
+        mov.i fang10, start+4045+STEP
+        mov.i fang10, start+4045
+        mov.i av10, *mod5+1
+        mov.i dat10, >-1
+        djn.b -1, #10
+        spl launch1
+        jmp launch2
+fang10  jmp STEP
+m10fang jmp -1*(start+4045+9*STEP)+pit
+av10     mov.i #1, }1
+dat10    dat 1, 1
+
+for 12
+        jmp 4400, 4090
+rof
+
+
+launch1
+        spl     c2
+        spl     1,          <start+4000+123
+        mov.i   -1,         0
+        mov.i   -1,         0
+        mov.i   -1,         0
+
+phoenix2 spl     @phoenix2,   PSTEP
+        mov.i   }phoenix2,   >phoenix2
+nest2   spl     @nest2,      NSTEP
+        mov.i   }nest2,      >nest2
+egg2    spl     @egg2,       ESTEP
+        mov.i   }egg2,       >egg2
+        mov.i   ash2,        {3999
+        mov.i   ash2,        }4001
+ash2    dat.f   <2667,      <2*2667
+        dat.f   <2667,      <2*2667
+        dat.f   <2667,      <2*2667
+        dat.f   <2667,      <2*2667
+        dat.f   <2667,      <2*2667
+
+for 12
+        jmp 4400, 4090
+rof
+
+        spl #0, 0
+p1      spl -1, 2
+        mov -1, >-1
+______________________________________________________________________________
+The Hint
+
+This will be the last hint in Core_ Warrior_'s attempt to introduce basic
+warrior strategies.  And we've saved the best for last, at least in my
+opinion.  Vampires such as Sucker, Twilight Pits, Request, Snake, Pyramid,
+and probably a host of others, used to rule the hills of old.  But then came
+A-indirect addressing making anti-vamping much easier to do.  Silk Warrior
+by Jippo incorporated a-indirect bombing in his replicator, which greatly
+improved a vampire resistance.  Soon the slavers were dropping of the hills
+in droves.  Vampires were thought to be obselete, but Paulsson's myVamp
+continues to hold a top spot on the '94 hill so vamping could be your next
+effective strategy.  Or has Paulsson come up with something unexpected?  Code
+for a version ( perhaps the one on the hill ) is included for your review.
+Magnus is very busy and didn't have time to offer his comments.  I would if
+I could, but someone has my corewar disk (I don't own a computer), plus the
+server for my university account can't access the internet right now.  *sigh*
+
+The following comments were taken from a _PUSH OFF_ by P.Kline.  Hope he
+doesn't mind.  Edited for clarity ( just kidding, sheesh ).
+
+Basically a pit-trapper works by making your processes jump into a rapid-
+splitting, core-clearing, self-destroying, nasty bit of code.  You are forced
+to split many many processes, thereby robbing your healthy processes of time.
+You are forced to erase the core, destroying any surviving components.  And
+you finally erase the pit itself, killing your remaining processes.
+
+Vampire strategy goes back to one of the standard battle programs, 'Vampire',
+and was used successfully by Eugene P. Lilitko's Cowboy program to win the
+1988 tournament.  Here's a modern version of Vampire:
+
+fang  jmp trap,4
+
+inc   spl #3364, #-3364 ; start here
+      add inc,fang
+      mov fang,@fang
+      jmp -2
+
+trap  mov 10,<-10       ; Of course this wouldn't have a prayer in stunning
+      spl -1            ; today's paper.  How about mov, spl -1, spl -1,
+      jmp -2            ; spl -1, jmp?
+
+All vampires eventually cause their own processes to jump into the trap to
+speed up the core clear (and to guarantee one).
+
+Vampire's strengths include small size, rapid bombing (with fangs), and
+complete core-clear.  Their most important feature, however is enslaving the
+opponent's processes to do their dirty work.
+
+Variations include booting the code to separate the bomber from the trap,
+putting the fang in different locations, multiple spl's to more rapidly
+overpower the opponent, and 'gates' to stop imps.
+
+Areas to explore:
+    What else can the pit do?
+    Using multiple fang-bombers to better deal with stones.
+    Evolving the fang-bomber into a repeating core-clear.
+_____
+myVamp by MAGNUS PAULSSON
+
+;redcode-94
+;name myVamp v3.7
+;author Paulsson
+;strategy Throw jmp's around at 2/3c.
+;strategy Then a spl/spl/dat and djn coreclear.
+;strategy All in the tiny space of 14 bytes!
+;strategy Submitted: 30 september 95
+;assert CORESIZE > 1
+;kill myVamp
+
+;The vamp bomb is the best bomb, unless it fights a special oponent with
+;anti vamp, most programs on the hill cant affod anti vamp.  Normal vamp
+;adds +step to a field, -step to b field of jmp then uses as bomb (once, to
+;b field) and pointer, myVamp also scans the a-field and bombs if not zero.
+
+step    equ 3024                ;good step, mod 16
+boot    equ     8*200           ;offset so that bomb/scan will be mod 8
+org     start
+
+trap    jmp             11      ;use a as pointer to the pit.
+i       for     10
+                dat.f   0, 0
+rof
+                spl             #0,<trap        ;real trap a bit away from
+                 spl             5,0            ;trap line. note that b-field
+                spl             #0,0            ;is none zero as the enemy is
+                spl             #0,0            ;trapped
+                spl             #0,0
+                spl             #0,0
+                spl             #0,0
+                spl             #0,0
+                spl             #0,0
+                jmp             -4,0
+
+i       for     39-16
+                dat.i   #1, i
+rof
+start   mov.i   }ptr,>ptr       ;boot away
+i for 13
+                mov.i   }ptr,>ptr
+rof
+                jmp             st+boot,1       ;start fighting
+ptr             dat.f   c2,boot+c2
+
+c2      spl.f   #b1, b2+2       ;pointer for coreclear, spl incase of djn'ed
+st      add.f   s, c
+                mov.i   c, @c   ;bomb
+                jmz.a   st, *c  ;scan other place
+                mov.i   @0,*c   ;bomb
+                mov.x   *c,*c   ;make sure bomb points right
+exit    jmz.b   st, trap-boot   ;start clear if trap is hit or enemy trapped
+b1      spl     #b2-c2, b2-c2+2 ;coreclear, same as myZizzor
+                mov.i   *c2, >c2
+                djn.f   -1, {c2-b2+c2-2
+b3      dat.f   <-2666, <2667   ;a little something for Die Hard
+                                ;most imps wont survive anyway.
+b2      spl     #b3-c2, b2-c2+2
+c       jmp     *trap-boot, 0   ;bomb and counter, standard vamp
+s       dat.f   -step, step     ;step
+i for 13
+                dat.i   #1,1    ;filling it up
+                dat.f   1,#1
+rof
+
+We will be taking your suggestions for hints.  If any of you beginner's ( or
+veterans for that matter ) would like to see a topic covered in more detail,
+just ask.
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to:
+Beppe Bezzi <bezzi@iol.it> or Myer R Bremer <bremermr@ecn.purdue.edu>
+

@@ -1,0 +1,718 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 6                                                      November 20, 1995
+______________________________________________________________________________
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth
+http://www.ecst.csuchico.edu/~pizza/koth
+http://pauillac.inria.fr/~doligez/corewar/
+______________________________________________________________________________
+Greetings.
+
+The weeks keep getting shorter, but the tournament entries keep getting more
+complex.  Even so, action on the '94 hill has been furious.  And some old
+faces have returned--J. Pohjalainen, originator of the replication engine
+about everyone is using now.  And Schitzo aka Michael Nonemacher ( I think; I
+haven't been playing all that long . . . ) whose quiz briefly ruled the hill
+this week.  Welcome back.
+
+Damien Doligez seems to have a semi-regular column in the Core_Warrior_.
+This issue he discusses another variation of the continuously launching imp.
+
+Have a good Thanksgiving everyone.
+______________________________________________________________________________
+Tournament Time
+(details at http://www.stormking.com/~koth/nsfcwt.html)
+
+Round 6 is finally over. There was some controversy over self fights
+and handshakes. At the end this didn't make much of a difference.
+The round was run twice. First without self fights and then with self fights.
+The results are almost the same except in one case. Karl Lewin sent in two
+versions of his warrior (The Thinker). One version with handshakes and
+another without handshakes. I included both of these versions in both runs.
+Special thanks for Karl Lewin for Test warrior. It was a valuable tool to
+find out about buggy submissions.
+Test warrior was run also in the tournament, and it gained the first place
+as it was supposed to. Notice that in the self fight run Test warrior didn't
+win 100 % .
+Since the only difference in the results of the two runs is the order of
+Thinker and Winner, we decided to call it a draw between these two
+submissions.
+
+Here is the result of the no self fights run:
+
+Elapsed time: 833 seconds (00:13:53)
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     Test for Timeouts       Karl Lewin              100   0   0   75000
+  2     Blizzard                Anders Ivner             71  18  10   56123
+  3     Psst                    Robert Macrae            67  21  12   53019
+  4     Round 6 Kline           P.Kline                  64  20  16   51936
+  5     nt entry #6             M R Bremer               64  21  16   51529
+  6     Winner                  Steven Morrell           63  21  16   51183
+  7     The Thinker (w/Handshak Karl Lewin               62  23  15   50479
+  8     The Thinker (w/o handsh Karl Lewin               62  23  15   50479
+  9     Machiavelli             Maurizio Vittuari        62  23  15   50356
+ 10     Maverick                Randy Graham             63  25  12   50142
+ 11     Miss Playful            Derek Ross               61  22  16   50109
+ 12     ?{whateverCT#$~S|[]~+'i Paulsson                 59  27  14   47404
+ 13     PlinySwitch - 2990      G. Eadon                 58  27  15   47140
+ 14     Bim bum bam             Beppe Bezzi              57  30  13   46149
+ 15     WhileAway               JKW                      54  31  16   44161
+ 16     Paper-Scissors-Stone #4 Nandor Sieben & Stefan   35  58   7   27887
+ 17     Paper-Scissors-Stone #6 Nandor Sieben & Stefan   17  68  15   16168
+ 18     Paper-Scissors-Stone #7 Nandor Sieben & Stefan   19  74   7   16097
+ 19     Paper-Scissors-Stone #3 Nandor Sieben & Stefan   17  74   9   15006
+ 20     Paranoid                Calvin Loh               16  73  10   14829
+ 21     Paper-Scissors-Stone #1 Nandor Sieben & Stefan   17  76   7   14507
+ 22     Paper-Scissors-Stone #8 Nandor Sieben & Stefan   15  74  11   14084
+ 23     Paper-Scissors-Stone #5 Nandor Sieben & Stefan   13  70  18   13834
+ 24     Paper-Scissors-Stone #9 Nandor Sieben & Stefan   15  76   9   13589
+ 25     Paper-Scissors-Stone #2 Nandor Sieben & Stefan   15  76   9   13386
+ 26     Paper-Scissors-Stone #1 Nandor Sieben & Stefan    1  94   4   2096
+
+
+
+These is the result of the self fight run:
+
+
+Elapsed time: 942 seconds (00:15:42)
+
+Rank    Name                    Author                   %W  %L  %T   Score
+___________________________________________________________________________
+  1     Test for Timeouts       Karl Lewin               93   0   7   77000
+  2     Blizzard                Anders Ivner             66  17  17   58123
+  3     Psst                    Robert Macrae            65  23  11   56019
+  4     Round 6 Kline           P.Kline                  59  19  22   53936
+  5     nt entry #6             M R Bremer               59  19  22   53529
+  6     The Thinker (w/Handshak Karl Lewin               61  25  14   53477
+  7     Winner                  Steven Morrell           58  20  22   53183
+  8     The Thinker (w/o handsh Karl Lewin               58  21  21   52479
+  9     Machiavelli             Maurizio Vittuari        57  21  22   52356
+ 10     Maverick                Randy Graham             58  23  19   52142
+ 11     Miss Playful            Derek Ross               57  21  22   52109
+ 12     ?{whateverCT#$~S|[]~+'i Paulsson                 54  25  20   49404
+ 13     PlinySwitch - 2990      G. Eadon                 54  25  21   49140
+ 14     Bim bum bam             Beppe Bezzi              53  27  20   48149
+ 15     WhileAway               JKW                      50  28  22   46161
+ 16     Paper-Scissors-Stone #4 Nandor Sieben & Stefan   32  54  14   29887
+ 17     Paper-Scissors-Stone #6 Nandor Sieben & Stefan   15  63  21   18168
+ 18     Paper-Scissors-Stone #7 Nandor Sieben & Stefan   18  68  14   18097
+ 19     Paper-Scissors-Stone #3 Nandor Sieben & Stefan   16  68  16   17006
+ 20     Paranoid                Calvin Loh               15  68  17   16829
+ 21     Paper-Scissors-Stone #1 Nandor Sieben & Stefan   16  70  14   16507
+ 22     Paper-Scissors-Stone #8 Nandor Sieben & Stefan   14  68  18   16084
+ 23     Paper-Scissors-Stone #5 Nandor Sieben & Stefan   12  65  24   15834
+ 24     Paper-Scissors-Stone #9 Nandor Sieben & Stefan   14  70  16   15589
+ 25     Paper-Scissors-Stone #2 Nandor Sieben & Stefan   14  71  16   15386
+ 26     Paper-Scissors-Stone #1 Nandor Sieben & Stefan    1  87  12   4096
+
+
+This is the rank after round 6:
+
+
+Name                    1       2       3       4       5       6       total
+
+Steven Morrell          5       10      9       13      14      10      61
+P.Kline                 7.5     9       7       11      11      12      57.5
+Paulsson                7.5     11      11      9       2       5       45.5
+Anders Ivner            5.5     8       4       0       10      14      41.5
+Beppe Bezzi             7       7       13      2       8       3       40
+M R Bremer              7       4       3.6     5       7       11      37.6
+Maurizio Vittuari       6.5     5       6       3       9       8       37.5
+John K. Wilkinson       4       6       12      0       13      2       37
+Robert Macrae           0       0       0       12      12      13      37
+Karl Lewin              0       0       10      4       6       10      30
+Randy Graham            0       0       8       10      4       7       29
+Derek Ross              3.5     3       3.3     7       3       6       25.8
+G. Eadon                1.5     2       5       6       1       4       19.5
+Kurt Franke             0       0       0       8       0       0       8
+Michael Constant        0       0       0       0       5       0       5
+Anders Scholl           0       1       2       1       0       0       4
+John Lewis              0       0       3       0       0       0       3
+Calvin Loh              0       0       1       0       0       1       2
+
+
+Detailed results and the submissions will be sent in a separate file. It wasn't
+clear for a while if handshake is possible. So looking at the submissions
+will be very interesting. We let Corewarrior discuss this topic in depth.
+
+It is clear from game theory that assuming an optimal opponent the best
+strategy is to play randomly. If the opponent does not play using optimal
+strategy then we can do much better. Of course trying to outguess the opponent
+makes our strategy different from the optimal strategy.
+
+There was some concern about mts. The Borland C compiled version of mts has
+difficulty handling big scores. This didn't caused problem in this round
+since the djgpp compiled version was used which can handle huge scores.
+
+Thanks for playing,
+
+Nandor & Stefan.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+    rounds fought: 250
+  instruction set: ICWS '94 Draft
+
+Last challenge: Sun Nov 19 10:25:06 PST 1995
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  42/ 25/ 33                 test L 7e          Beppe Bezzi     159       2
+ 2  41/ 25/ 34                  La Bomba          Beppe Bezzi     157      46
+ 3  47/ 39/ 14                      quiz              Schitzo     155      51
+ 4  42/ 34/ 24                  Derision           M R Bremer     149      70
+ 5  34/ 31/ 35                 Torch t18              P.Kline     136     430
+ 6  28/ 20/ 52 Fly Fishing w/Plastic Wor           Karl Lewin     136      28
+ 7  37/ 39/ 24               myVamp v3.7             Paulsson     134     398
+ 8  40/ 46/ 13       Leprechaun on speed         Anders Ivner     134     226
+ 9  35/ 37/ 28                endpoint .           M R Bremer     134      75
+10  34/ 35/ 31                       Phq    Maurizio Vittuari     132     532
+11  38/ 43/ 20             Porch Swing +         Randy Graham     132     131
+12  33/ 35/ 31              Son & Father    Maurizio Vittuari     131      81
+13  32/ 33/ 35              Father & Son    Maurizio Vittuari     131      80
+14  35/ 40/ 25               Armory - A5            Wilkinson     130     569
+15  38/ 48/ 14             Scissors v.a1    John K. Wilkinson     129      22
+16  25/ 22/ 54          juliet and paper M R Bremer, B. Bezzi     128      47
+17  27/ 28/ 45           Jack in the box          Beppe Bezzi     125     418
+18  20/ 18/ 63           TimeScape (1.7)       J. Pohjalainen     121       3
+19  15/ 10/ 75                Evolve 6.3       John Wilkinson     121      11
+20  31/ 45/ 23                     myTry             Paulsson     117       1
+
+Bezzi continues to dominate the hill with La Bomba.  His test L 7e is no
+doubt an improvement that no one wants to see ( but him ).  quiz is the only
+serious contender for the throne at this point.  Forty-seven percent wins
+is quite impressive.  Karl Lewin makes the jump from the b hill with his
+Fly Fishing w/ Plastic Worms.  One of the more original names I've seen.
+Jack in the box and Armory have been floating in the bottom half lately.
+It's too soon to tell if their effectiveness is gone.
+______________________________________________________________________________
+94 - What's New
+
+ 1  42/ 25/ 33                 test L 7e          Beppe Bezzi     159       2
+ 3  47/ 39/ 14                      quiz              Schitzo     155      51
+ 6  28/ 20/ 52 Fly Fishing w/Plastic Wor           Karl Lewin     136      28
+15  38/ 48/ 14             Scissors v.a1    John K. Wilkinson     129      22
+16  25/ 22/ 54          juliet and paper M R Bremer, B. Bezzi     128      47
+19  15/ 10/ 75                Evolve 6.3       John Wilkinson     121      11
+20  31/ 45/ 23                     myTry             Paulsson     117       1
+______________________________________________________________________________
+94 - What's No More
+
+21  38/ 48/ 14   Anti Die-Hard Bevo (3c)       John Wilkinson     128     176
+21  27/ 28/ 45              .Brain Vamp.  B.Bezzi, M.Paulsson     125      74
+21  37/ 48/ 15         Leprechaun deluxe         Anders Ivner     126     284
+21  28/ 34/ 37           Thieves Like Us           M R Bremer     122      45
+21  31/ 47/ 22                Frontwards       Steven Morrell     116     323
+21  15/  7/ 78            Chugging Along           Karl Lewin     122      84
+21  24/ 22/ 54            Impfinity v3e7               Planar     125      70
+
+Carnage on the '94 hill!  A combined age of 1,056 was kicked off the hill
+this week.  Hopefully the seven new warriors are worthy successors.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+Hill Specs:
+         coresize: 8000
+   max. processes: 8000
+         duration: after 80,000 cycles, a tie is declared.
+max. entry length: 100
+ minimum distance: 100
+      maximum age: At age 100, warriors are retired.
+    rounds fought: 250
+  instruction set: ICWS '94 Draft
+
+Last challenge: Sun Nov 19 15:33:24 PST 1995
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  44/ 37/ 19            Fire Master v1            JS Pulido     150       8
+ 2  37/ 26/ 37                 teamwork?          Kurt Franke     149       4
+ 3  40/ 31/ 29                Lurker 1.1          Kurt Franke     148       2
+ 4  39/ 40/ 21                      Look            J. Doster     138      31
+ 5  28/ 20/ 52                    Schizo            J. Doster     136      34
+ 6  25/ 16/ 59           Impfinity v3c11               Planar     133      46
+ 7  24/ 21/ 55                 Paper8-II             G. Eadon     127      18
+ 8  32/ 39/ 29                   Test-Fc             G. Eadon     125      89
+ 9  31/ 38/ 31              Hint Test v4           M R Bremer     123      35
+10  24/ 26/ 49               Loh_tst_1.3           Calvin Loh     123       7
+11  28/ 37/ 34           0.5 jmz scanner          Kurt Franke     120       3
+12  33/ 48/ 19                Recon V7.2         A. Nevermind     118       5
+13  17/ 19/ 64                 Sheet 1.0            J. Doster     115      44
+14  13/ 10/ 77              Impfinity v1               Planar     115      78
+15  12/ 10/ 79             RingWorm_v2.5           Calvin Loh     113      17
+16  15/ 19/ 66             RingWorm_v2.4           Calvin Loh     112      32
+17  28/ 46/ 25        Paper Shredder 2.1          Kurt Franke     110       1
+18  10/  5/  5                 teamwork?          Kurt Franke      33      15
+19   9/  6/  4                Lurker 1.1          Kurt Franke      30      64
+20   8/  7/  4                 Searching          Kurt Franke      29      70
+
+juliet storm was retired from the hill this week, meaning the hill has aged
+100 warriors since the introduction of the Core_Warrior_.  Franke managed to
+kill all his warriors somehow.  Some new strategy?  Franke, Doster, and Eadon
+have all been doing well on the hill, but none are savvy enough as Pulido to
+gain the top spot.  I predict Kurt will be the next author to gain entry to
+the '94 hill.  He better prove me right ( or somebody prove me wrong ).
+______________________________________________________________________________
+The Hint
+
+Hey kids.  Look what we have in store for you today: the next installment
+of the Core_Warrior_ hint exploring standard warrior strategies.  Scanners
+and replicators have been thouroughly ( hopefully ) discussed.  Next in line
+are the dumb brutes--bombers.  Bombers have been well treated in Morrell's
+tutorial 'chapter 2' accessible from the pizza or stormking pages at the
+berkeley ftp site, so we'll concentrate on two veterans--Blue Funk 3 and
+juliet storm along with the comments of their authors.  These two warriors
+are typical of the 'classic' stone.  Another group of bombers such as Torch,
+HeremScimitar, and Tornado represent another type that will be discussed
+next week.  Stay tuned.  ( For a detailed explanation on how stones work, see
+Morrell's book, chapter 2 ).  Thanks to Morrell for his contribution on Blue
+Funk.
+______________________________________________________________________________
+BLUE FUNK 3 by Steven Morrell
+
+The two things a stone tries hardest to optimize are size and speed.  A good
+metric to start out with is what I call the "stone index:" size/speed.  Blue
+Funk 3 has a stone index of 5 instructions / approximately 33% c = 15.  Iron
+Gate 1.5 has a stone index of 13 instructions/ 2/3 c = 19.5.  Hence, if all
+else is equal, Blue Funk 3 will win more often.
+
+How much more often?  If warrior A has a stone index of  m  and warrior B
+has a stone index of n, then warrior A will win n/(m+n) of the time.  So
+Blue Funk 3 should win 56.5% of the time.  (Iron Gate is very resistant to
+stones.)
+
+All else, of course, is not equal.  The imp-ring slows Blue Funk 3 down
+dramatically and lends no aid to the warrior on the current hill, with every
+anti-imp strategy working against Blue Funk 3's imp.  But, color is on the
+side of Blue Funk 3:  While the scanner focuses upon the decoy, the bomber
+can color even more core with it's post-inc and DJN-stream.  These aren't
+the main weapon, but they are free attacks, so quite useful.  Against most
+scanners, a DJN.f stream can be remarkably lethal (as all the Genetic
+Algorithm folks find out).
+
+This is all academic, as Blue Funk 3 doesn't stand a chance on the modern
+hill.  Frontwards, for instance, also has a stone index of 15 during the
+scanning phase, kills this kind of imp-ring, is very durable in the sense
+that 30% of its instructions are not used after the initial scan, and kills
+a better grade of paper than Blue Funk 3 could hope to.
+
+Also, there is a "mesh" issue when stones fight stones.  Stones have an
+annoying habit of bombing themselves if things are not calibrated very well,
+so they don't generally use a very small mod (say, 1 to 3) for their step
+size.  I was happy to get Blue Funk 3 down to mod 4, but this means that
+small programs, like P.Kline's deadly core-clear (3 executing instructions),
+can slip through the cracks.  That's 25% non-contested wins!
+
+The best programs for both mesh and stone index that I know of are
+W.Sheppard's RedRain (mod 2, stone index 8) and No Ties Allowed (mod 2,
+stone index 9).  Unfortunately, neither of them have a core-clear or imp
+gate, so they don't do too well on the hills anymore.
+
+Now for the details for Blue Funk 3:  Ideally, a stone will bomb everywhere
+except for the stone itself.  That is how P.Kline's Emerald (stone
+component) is supposed to work, but it has a very subtle bug in it.  Blue
+Funk 3 uses the same general mechanism without the bugs.
+
+After it is booted, the stone looks like this:
+
+
+emerald   SPL #-step,<step
+stone     MOV >-step,step+1        ;hit
+          ADD emerald,stone
+cnt       DJN.f  stone,<emerald-50
+          DAT 0,0
+cc        DAT #-7                  ;hit
+
+The bombing instruction (at "stone") will post-decrement the B-fields of the
+instructions labeled ;hit.  When "stone" gets hit (after a complete mod-4
+pass), the destination pointer slips to a new mod-4 pattern.  By the time
+this slips the fourth time, every location in core has been bombed.
+
+The instruction that hits "stone" looks like "MOV >0,n", which doesn't do
+anything except make the bombing pattern slip.  The instruction that hits
+"cc" looks like "MOV >4,n" when cc contains n-4, so it is equally harmless
+and self-adjusting.  (For instance, the first time  cc  is used,  stone  is
+MOV >4,-3, and  cc  is DAT #0,#-7.  Hence  stone-3 is copied neatly to
+itself, and  cc  becomes DAT #0,#-6 for the next time around.)  The result
+of all of this foolishness is that the stone doesn't bomb itself until it
+has bombed all of the rest of core 1.5 times!
+
+;redcode-94 verbose
+;name  Blue Funk 3
+;author Steven Morrell
+;strategy  Fixed another in-memory/in-register bug
+;macro
+
+org boot
+
+step equ 3044
+
+for 78
+dat <imp,<2667
+rof
+
+emerald   SPL #-step,<step
+stone     MOV >-step,step+1
+          ADD emerald,stone
+cnt       DJN.f  stone,<emerald-50
+
+cc   dat #-7
+
+boot mov cc,out-200+5
+out  spl @0,out-200
+     mov emerald,>out
+     mov emerald+1,>out
+     mov emerald+2,>out
+     mov emerald+3,>out
+     spl i
+     spl i31
+i12  spl imp2
+imp1 jmp >0,imp
+i31  spl imp1
+imp3 jmp >0,imp+5334
+i    spl i12
+     spl imp3
+imp2 jmp >0,imp+2667
+
+imp  mov.i #3044,2667
+______________________________________________________________________________
+JULIET STORM by M R Bremer
+
+I started coding juliet storm when B Panama X and Blue Funk 3 by Steven
+Morrell were both doing _very_ well on the hill.  B Panama was a combination
+stone/paper and Blue Funk was a bomber/imp.  Since B Panama was on top of
+the hill, I decided to follow the leader.  juliet storm was originally
+intended to be part of my own stone/paper.  That's why there are two splits
+in the stone--to keep up with the replicator.  When I challenged the hill
+with my 'incomplete' warrior, it scored surprisingly well.  Amazingly well.
+So I became obsessed with making it the best bomber on the hill.  Out of that
+effort came juliet.
+
+The bombing step size was chosen to find size 5 and size 10 opponents rapidly
+and still be small enough for a decent imp gate.  I found out that the double
+split consumed so many processes, that stun attacks on my imps had little
+effect.  This greatly improved my score against Agony II.  They also helped
+juliet to 'jump' into papers when overwritten.  The extra 'gate' line was used
+in case the coreclear move was decremented.  juliet continues to bomb as she
+clears, but I don't really think this matters much.  The clear ends in a
+hyper-perfect gate ( I think ).  The imp was taken from a posting by T. Hsu on
+vector launced imps.  I wasn't quite savvy enough to write my own at the time.
+
+juliet ruled the '94 draft hill for a few weeks.  It's a _HUGE_ rush when
+you finally get your first warrior to be King of the Hill.  At least I thought
+so.  The introduction of p-space killed her dead, dead, dead.  A stand alone
+bomber has little chance of success on the current hill.
+
+BTW:  the name:  'juliet storm' is a reference to Romeo and Juliet.  Theirs
+was near perfect love.  But in all my relationships, I always manage to
+really anger my girlfriend from time to time--hence the 'storm'.
+
+Nothing matches the fury of a woman.
+
+;redcode-94
+;name juliet storm
+;author M R Bremer
+;strategy bomber--yippee
+
+ptr     EQU -1333
+
+gate    dat <-445, <-446
+s       spl #445, <-445
+        spl #0, <-446
+        mov {445-1, -445+2
+        add -3, -1
+        djn.f -2, <-2667-500
+        mov 33, <-20
+go      dat #0, #ptr
+start   mov {-1, <-1
+        mov {-2, <-2
+        mov {-3, <-3
+        mov {-4, <-4
+        mov {-5, <-5
+        mov {-6, <-6
+        mov gate, ptr+24
+        mov gate, ptr+24
+        spl @go, <-4000
+        jmp boot, <-4013
+for 73
+        dat #0, #0
+rof
+
+imp_sz  equ     2667
+
+boot    spl     1      ,#0
+        spl     1      ,#0
+        spl     <0     ,#vector+1
+        djn.a   @vector,#0
+
+imp     mov.i   #0,imp_sz
+
+        jmp     imp+imp_sz*7,imp+imp_sz*6
+        jmp     imp+imp_sz*5,imp+imp_sz*4
+        jmp     imp+imp_sz*3,imp+imp_sz*2
+vector  jmp     imp+imp_sz  ,imp
+
+        end     start
+______________________________________________________________________________
+You may have noticed the new Hint Warrior on the beginner hill.  It is doing
+quite well.
+
+ 4  38/ 34/ 28              Hint Test v4           M R Bremer     142       1
+
+The old Hint Warrior suffered from scanners.  By pspacing a bomber element
+as a backup, Hint Warrior vastly improves its score.  Losses to papers have
+gone up due to the fact that when a replicator beats the scanner part of
+Mutagen, the bomber is almost sure to tie or lose the next round.  By adding
+an imp, I should be able to reduce the number of losses at least.  Another
+improvement may be to boot of a decoy.  Something to think about for later
+weeks.
+
+;redcode-b
+;name Hint Test v4
+;author M R Bremer
+;strategy Original code based on Scott Manley's Mutagen
+;strategy Once through scan --> spl spl dat dat coreclear
+;strategy Core_Warrior_ #2:  compressed code
+;strategy Core_Warrior_ #4:  improved scanner
+;strategy Core_Warrior_ #6:  pspaced with small bomber
+;kill Hint
+;assert CORESIZE==8000
+org start
+
+dist equ 98
+scan equ dist*2
+
+begin   SPL     b1+2
+        jmp a
+for 20
+        dat 0, 0
+rof
+a       add d,c
+c       cmp a+2*dist,a+dist
+        slt.a #dist+ptr2-a, c
+        djn.f a,<7000
+        mov s, *c
+x       mov m, @c
+        jmn a,a
+s       spl #-dist+1, <0
+        jmp b1
+d       dat <scan,<scan
+m       mov.i dist, }dist
+        dat 0, 0
+        dat 0, 0
+        dat 0, 0
+        dat 0, 0
+        dat 0, 0
+b3      dat <2667, <2667*2      ;a suggestion by Paulsson to kill imps
+b2      spl #b3-ptr2, a-2-6
+b1      spl #b2-ptr2, a-2-5
+        mov *ptr2, <ptr2
+        mov *ptr2, <ptr2
+        mov *ptr2, <ptr2
+        djn.f -3, <6000
+ptr2    dat b1, -100+a
+
+for 21
+        dat 0, 0
+rof
+start   ldp #0, #0
+        ldp #1, #0
+        cmp.b -2, -1
+        jmp bomber, {4000
+        stp #1, #1
+        jmp begin, {4000
+bomber  stp #0, #1
+        jmp juliet, {3000
+for 19
+        dat 0, 0
+rof
+
+
+juliet  spl #445, <-445
+        spl #0, <-446
+        mov {445-1, -445+2
+        add -3, -1
+        djn.f -2, <-2667-500
+        mov.i 1, <-6
+______________________________________________________________________________
+Planar's Corner:
+
+               Continuous spiral launching (continued)
+
+Erratum
+-------
+My previous article about imp spirals contains a few small typos and
+a big one: the line that reads
+
+    [imp+1 imp+step+2 imp+2*step+1 imp+2 imp+step+2 imp+2*step+2 ...]
+
+should be
+
+    [imp+1 imp+step+1 imp+2*step+1 imp+2 imp+step+2 imp+2*step+2 ...]
+
+I hope it didn't confuse anybody.  Also, I have renamed the labels
+between the explanation and the code of Impfinity v1: Z becomes a,
+A becomes b, etc.
+
+Vector launching
+----------------
+Myer told me he wanted to see a continuous vector-launching imp spiral
+(quite a cumbersome phrase, isn't it ?).  We'll start with a normal
+vector launch:
+
+    A      spl     1
+    B      spl     1
+    C      jmp     @V, }0
+    V      dat     0, imp
+    W      dat     0, imp+step
+    X      dat     0, imp+2*step
+    Y      dat     0, imp+1
+    imp    mov     imp, imp+step
+
+Now this is what happens when we execute this code.  I'm still using
+my notation for the process queue.  To execute one step, I remove the
+first element of the list, and push back the new PC value(s) at the end
+of the list.  To execute one round, I execute one step repeatedly, or
+I can equivalently replace each element with the new value(s) it pushes
+back:
+    [A]
+    [B B]
+    [C C C C]
+Now we have four processes ready to execute C.  The first one will jump
+to imp and increment the A-field of C, so C is now:
+
+           jmp     @W, }0
+
+The next process will jump to imp+step and increment the A-field, and
+so on.  On the next round we have:
+    [imp imp+step imp+2*step imp+1]
+(recall that imp+1 is the same as imp+3*step).
+
+How do we turn this into a continuous-launch ?  The first step is to
+add an SPL 0 at the top of the program (as instruction Z).  The SPL
+will produce a steady stream of processes to its left (in the process
+queue):
+                                                [Z]
+                                              [A Z]
+                                          [B B A Z]
+                                  [C C C C B B A Z]
+    [imp imp+step imp+2*step imp+1 C C C C B B A Z]
+
+But now, as the processes at C jump to the imp, we have the same
+problem as last time: the new processes are at the head of the imp
+spiral (the tail is the process that executes first, it is located
+at the smallest address, and the head executes last, at the highest
+address).  Since the spiral advances by one core element at each
+round, we should launch our new processes two elements further than
+the previous ones, so we should add 2 to each vector element at
+each round.  And our pointer (the A-value of C) now points beyond
+the vector, so we should reset it to C.  Lastly, we have four
+processes, so we get out of sync: the vector values should change
+not by 2 but by step+2.  This will never work.
+
+The last problem is easy to fix: launch only three processes or
+get rid of the fourth by making it jump to a DAT statement.
+
+We still have to reset our pointer at each round.  We'll do it
+between Z and A:
+
+    Z       spl     0
+    R       mov.a   #V-C, C
+    A       spl     1
+
+V-C is the address of V relative to C.  When we put it into C's
+A-field it becomes the address of V (here, this is 1).
+
+Now we have to add 2 to each vector element at each round.  I don't
+know how to do it.  We don't have enough instructions to do it by
+postincrement.  So we'll launch the processes at the tail instead of
+launching them at the head.  This means two things: first, we must
+find a Z that will add processes to its right (in the process queue)
+instead of the left.  Second, we can launch without any increment
+because the spiral advances by 1 and we add a ring at the exact
+place that it left: we can launch processes at the same place while
+the spiral advances.
+
+This still won't work because I cannot find a Z that adds processes
+to its right.  With an SPL, the next instruction is pushed, then
+the target, so we would need the SPL to be the next instruction after
+itself, and the target to be R.  Instead, I'll use a two-instruction
+loop:
+
+    P       spl     R
+    Q       jmp     P
+
+This will launch processes to its right, as follows:
+
+    [P]
+    [Q R]
+    [P A]
+    [Q R B B]
+    [P A C C C C]
+
+But it launches only one process every two rounds.  This means that
+the spiral will advance by two locations while I add one ring, so I
+will have to increment my vector elements after all.  This is how
+we'll do it: turn C into a direct jump instead of indirect and the
+vector elements into JMPs instead of DATs.  And use their B-fields
+to increment the A-fields.  This is the whole launcher:
+
+    P       spl     R
+    Q       jmp     P
+    R       mov.a   #V-C, C
+    A       spl     2
+    B       spl     1
+    C       jmp     V, }0
+    V       jmp     imp, }0
+    W       jmp     imp+step, }0
+    X       jmp     imp+2*step, }0
+    imp     mov     0, step
+
+The binary launcher I described last time added one ring every round,
+this one adds one every two rounds.  But we can double the vector and
+launch two rings at once every two rounds.  Then we don't need the
+increments.  Or three rings.  Then we need to decrement the JMP values
+by 1 at each round.  The vector launcher is smaller than the binary
+launcher, but you can't always produce the right number of processes,
+so you may have to add some DAT statements to the vector to get rid of
+the extra processes.  Finally, tail-launching is more easily upset by
+the opponent than head-launching because the newly launched process is
+not refreshed right before its execution: if the tail ever gets
+clobbered, the launcher will work in vain from then on.
+
+
+This is quite long already, so I'll leave continuous SPL/ADD launching
+and Impfinity v3 for next week (hoping it will not get thrown off the
+hill in the meantime).  Maybe I went into too much detail here.
+
+<Damien.Doligez@inria.fr>
+______________________________________________________________________________
+Questions?  Concerns?  Comments?  Complaints?  Mail them to:
+Beppe Bezzi <bezzi@iol.it> or Myer R Bremer <bremermr@ecn.purdue.edu>
+

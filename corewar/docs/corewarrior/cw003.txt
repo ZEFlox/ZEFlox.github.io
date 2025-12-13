@@ -1,0 +1,591 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 3                                                               30/10/95
+______________________________________________________________________________
+
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth
+http://www.ecst.csuchico.edu/~pizza/koth
+______________________________________________________________________________
+
+Hi people,
+
+this week I'm back again to write Core warrior for you. As suggested by
+Myers, very many wrote complaint letter about his number, asking me to write
+again :-) and here I'm. Just kidding.
+Anyone wanting to join the staff is welcome as anyone with hints suggestions
+and warriors to publish.
+_____________________________________________________________________________
+Tournament Time
+(details at http://www.stormking.com/~koth/nsfcwt.html)
+
+
+Results for round 3 of NSFCWT are in. The challenge was to submit a
+*pair* of warriors that would work together to kill other pairs of warriors.
+The score formula was modified to reward partnership, i.e. you received
+more points if you left your team mate alife. Real communication between
+warriors in a team was apparently difficult to implement effectively, since
+only two players chose that strategy (Randy Graham's Aces/Eights and,
+passively, Anders Scholl's Claudia/Lestat). Most players in this round
+submitted partners that were simply unable to kill each other (like papers)
+achieving some sort of cheap cooperativity. It's possible that redcode
+simply can't support effective cooperativity, or maybe it's just a matter
+of tweaking the score formula some more. Anyways, here the scores:
+
+S/P Warrior #1 by G. Eadon scores 3304
+Die Hard by P.Kline scores 2916
+Marcia Trionfale 1.3 by Beppe Bezzi scores 2608
+Tican by John Wilkinson scores 2308
+theMystery2.0 1 by Paulsson scores 2175
+Not Expecting Too Much 1 by Karl Lewin scores 2161
+theMystery2.0 2 by Paulsson scores 2148
+Not Expecting Too Much 2 by Karl Lewin scores 2139
+Aces by Randy Graham scores 2136
+Juliet Storm+Spiral by John Wilkinson scores 2130
+test 1 by Steven Morrell scores 2129
+test 2 by Steven Morrell scores 2101
+Jack in the box by Beppe Bezzi scores 1981
+Twins 2 by Maurizio Vittuari scores 1969
+Twins 1 by Maurizio Vittuari scores 1969
+Eights by Randy Graham scores 1937
+kwclear 2 by Anders Ivner scores 1788
+kwclear 1 by Anders Ivner scores 1683
+lewis 1 by John Lewis scores 1115
+blackTN by P.Kline scores 1102
+lewis 2 by John Lewis scores 1016
+Claudia incarnation0.3 by anders scholl scores 952
+2IR 2 by Calvin Loh scores 694
+2IR 1 by Calvin Loh scores 684
+Lestat Incarnation0.2 by anders scholl scores 579
+S/P Warrior #2 by G. Eadon scores 380
+
+Combined scores:
+Beppe Bezzi             4589
+John Wilkinson          4438
+Magnus Paulsson         4323
+Karl Lewin              4300
+Steven Morrell          4230
+Randy Graham            4073
+Paul Kline              4018
+Maurizio Vittuari       3938
+Greg Eadon              3684
+Anders Ivner            3471
+John Lewis              2131
+Anders Scholl           1531
+Calvin Loh              1378
+
+Overall scores so far:
+Name    pts for round   1        2       3      Tot.
+____________________________________________________
+Paulsson                7.5     11      11      29.5
+Beppe Bezzi             7        7      13      27
+Steven Morrell          5       10       9      24
+P.Kline                 7.5      9       7      23.5
+John K. Wilkinson       4        6      12      22
+Anders Ivner            5.5      8       4      17.5
+Maurizio Vittuari       6.5      5       6      17.5
+M R Bremer              7        4       -      11
+Karl Lewin              -        -      10      10
+G. Eadon                1.5      2       5       8.5
+Randy Graham            -        -       8       8
+Derek Ross              3.5      3       -       6.5
+John Lewis              -        -       3       3
+Anders Scholl            -       1       2       3
+Calvin Loh              -        -       1       1
+
+Magnus Paulsson still leads with 29.5 points, followed by Beppe Bezzi with
+27, and Steven Morrell and Paul Kline with 24 and 23.5 points, respectively.
+
+
+Thanks for playing,
+        Nandor & Stefan
+
+----------
+Standings are still very open with 5 players in but 7.5 points.
+Welcome to Karl Levin, Randy Graham, John Lewis and Calvin Loh, joining the
+tournament this round.
+I should not comment this round but I can see the winner, let's hear his
+first impressions:  "thank you, thank you, has been very, very hard, but I
+did it" :-)))
+_____________________________________________________________________________
+94 Hill - Standings
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  40/ 29/ 31                 Torch t18              P.Kline     150     319
+ 2  44/ 42/ 14       Leprechaun on speed         Anders Ivner     146     115
+ 3  41/ 37/ 22             Porch Swing +         Randy Graham     145      20
+ 4  35/ 27/ 38                       Phq    Maurizio Vittuari     143     421
+ 5  35/ 26/ 39              Father & Son    Maurizio Vittuari     143      22
+ 6  38/ 34/ 28               myVamp v3.7             Paulsson     141     287
+ 7  32/ 23/ 45           Jack in the box          Beppe Bezzi     141     307
+ 8  41/ 42/ 17                Frontwards       Steven Morrell     140     254
+ 9  29/ 19/ 52                 test r 02          Beppe Bezzi     139      35
+10  35/ 31/ 35               Armory - A5            Wilkinson     139     458
+11  31/ 25/ 44              .Brain Vamp.  B.Bezzi, M.Paulsson     137      21
+12  41/ 46/ 13   Anti Die-Hard Bevo (3c)       John Wilkinson     136     124
+13  26/ 16/ 58                     Tican       John Wilkinson     136      13
+14  40/ 44/ 16         Leprechaun deluxe         Anders Ivner     135     224
+15  21/  7/ 73            Chugging Along           Karl Lewin     135       4
+16  34/ 33/ 33               Tornado 1.8          Beppe Bezzi     134     173
+17  31/ 37/ 32                  myZizzor             Paulsson     125      50
+18  17/ 15/ 68               Cotton-DH c    John K. Wilkinson     118       2
+19  15/ 15/ 71               Cotton-DH c    John K. Wilkinson     114       1
+20  30/ 46/ 24                Lurker 1.1          Kurt Franke     113       3
+
+
+Also this week we have standard non-p warriors in great majority (15/5) on
+the hill and keeping the top four positions. Randy Graham showed down with
+its new Porch Swing+, climbing high; a few paper warriors have entered the
+lower part of the hill. A few kills of test warriors have increased the
+top/bottom rate, now at 32.7%
+A quiet week, the tournament is keeping busy most redcoders.
+
+_____________________________________________________________________________
+
+94 - What's new
+
+ 1  44/ 40/ 16             Porch Swing +         Randy Graham     148       1
+Welcome back Randy !!
+10  32/ 31/ 37              Father & Son    Maurizio Vittuari     134       1
+11  28/ 23/ 49                 test r 02          Beppe Bezzi     132       1
+13  31/ 29/ 40              .Brain Vamp.  B.Bezzi, M.Paulsson     132       1
+14  22/  9/ 69            Chugging Along           Karl Lewin     136       1
+19  22/ 18/ 60                     Tican       John Wilkinson     127       1
+18  17/ 18/ 65               Cotton-DH c    John K. Wilkinson     116       1
+18  30/ 50/ 21                Lurker 1.1          Kurt Franke     110       1
+19  15/ 15/ 71               Cotton-DH c    John K. Wilkinson     114       1
+
+Worth noting new Porch Swing +, not dominating like this summer, but always
+a dangerous guy.
+____________________________________________________________________________
+__________
+94 - What's no more
+
+21   2/  1/  2                Brain Vamp  B.Bezzi, M.Paulsson       7     137
+21   1/  2/  2              Firestorm 08          Beppe Bezzi       6     114
+21  36/ 51/ 13              SandBlast 1a    John K. Wilkinson     121      55
+21  37/ 47/ 16                   blackTN              P.Kline     126      43
+21  16/ 11/ 73                  Die Hard              P.Kline     121      13
+
+Very little, in my weeks warriors age without risks :-) A couple of warriors
+have been killed by their author, to be replaced by new versions or others
+warriors.
+Other losses include Sandblast, Black TN and Die Hard.
+_____________________________________________________________________________
+
+What's old
+
+10  35/ 31/ 35               Armory - A5            Wilkinson     139     458
+ 4  35/ 27/ 38                       Phq    Maurizio Vittuari     143     421
+ 1  40/ 29/ 31                 Torch t18              P.Kline     150     319
+ 7  32/ 23/ 45           Jack in the box          Beppe Bezzi     141     307
+ 6  38/ 34/ 28               myVamp v3.7             Paulsson     141     287
+ 8  41/ 42/ 17                Frontwards       Steven Morrell     140     254
+14  40/ 44/ 16         Leprechaun deluxe         Anders Ivner     135     224
+
+Armory is now the leader, with some advantage on Phq and a good one on the
+trio: Torch, Jack in the Box, both over 300, and myVamp. Two new entries in
+the more than 200 old, Frontwards and Leprechaun deluxe.
+All the group seems to be in good health.
+_____________________________________________________________________________
+
+HALL OF FAME
+* means the warrior is still running; > score isn't exact
+
+Pos    Name                  Author          Age     Strategy
+ 1  Iron Gate 1.5          Wayne Sheppard    926    CMP scanner
+ 2  Agony II               Stefan Strack     912    CMP scanner
+ 3  Blue Funk              Steven Morrell    869    Stone/ imp
+ 4  Thermite 1.0           Robert Macrae     802    Qscan -> bomber
+ 5  Blue Funk 3            Steven Morrell    766    Stone/ imp
+ 6  HeremScimitar          A.Ivner,P.Kline   666    Bomber
+ 7  B-Panama X             Steven Morrell    518    Stone/ replicator
+ 8  Armory - A5            Wilkinson         458 *  P-warrior
+ 9  Phq                    Maurizio Vittuari 421 *  Qscan -> replicator
+10  NC 94                  Wayne Sheppard    387    Stone/ imp
+11  Cannonade              P.Kline          >378    Stone/ imp
+12  Torch t17              P.Kline           378    Bomber
+13  Lucky 3                Stefan Strack    >350    Stone/ imp
+14  Request v2.0           Brant D. Thomsen  347    Qvamp -> vampire
+15  Dragon Spear           c w blue          346    ?
+16  juliet storm           M R Bremer        333    Stone/ imp
+17  TimeScape (1.0)        J. Pohjalainen    322    Replicator
+18  Rave 4.1               Stefan Strack     320    CMP scanner
+19  Torch t18              P.Kline           319 *  Bomber
+20  Jack in the box        Beppe Bezzi       307 *  P-warrior
+
+Phq enters the top 10, Torch t18 and Jack in the box enter in the bottom,
+Christopher and Aeka leave the top 20
+_____________________________________________________________________________
+
+Beginner's Hill standings
+
+#  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  53/  8/ 39              juliet storm           M R Bremer     197      41
+ 2  39/  9/ 52                  paper01o          Beppe Bezzi     169       1
+ 3  37/ 15/ 49                    Paper8             G. Eadon     159       3
+ 4  43/ 32/ 25                Lurker 1.1          Kurt Franke     155       2
+ 5  42/ 34/ 24                   Test-Fc             G. Eadon     149      27
+ 6  41/ 41/ 18                 Hint Test           M R Bremer     142      21
+ 7  43/ 44/ 13                 Heatseek2        Phil Whineray     141      19
+ 8  23/  8/ 69              Impfinity v1               Planar     138      16
+ 9  39/ 40/ 21                 Searching          Kurt Franke     137       8
+10  40/ 46/ 14                       Web        Gareth Thomas     133      42
+11  38/ 44/ 18            Mythicon v1.1a             G. Eadon     132     100
+12  35/ 40/ 25                1stscanner          Kurt Franke     130      14
+13  25/ 23/ 53                   Cyclone         Scott Manley     126      29
+14  36/ 53/ 10                   Skimmer        Gareth Thomas     119      68
+15  29/ 39/ 32                    Weasel          Kurt Franke     119      33
+16  29/ 41/ 30                Banzaiv1.3           Calvin Loh     118       5
+17  21/ 29/ 50                  P_Banzai           Calvin Loh     113       4
+18  20/ 27/ 53           Imp Craze 91.43               Planar     113      17
+19  29/ 47/ 24                Banzaiv1.2           Calvin Loh     112       6
+20  32/ 54/ 15                 PlinyScan             G. Eadon     110      23
+
+Sorry for the submission of paper01o, a warrior that entered the -94 hill too.
+I did it to get standings and to compare results with 94 hill's.
+In -94 hill paper01o scored 126, entering near position 15. Its code is
+discussed in the hint, with notes on how to make a similar warrior.
+If anyone wants results of paper01o againts others beginner's or -94 hill
+warriors, mail me. Is worth noting paper01o won all single matches on -b
+hill, (1/0/249 against Paper8 and Impfinity), but the one against PlinyScan
+(82/113/55 for it)
+Against juliet storm, scored but 22/0/228, having very little anti imp.
+
+_____________________________________________________________________________
+
+The hint
+
+Replicators (part 2)
+
+Hi, happy to see you again.
+
+Last time we spoke of basic replicator concepts, now I'll try to speak of
+some advanced topics.
+To begin let's give a look at another replicating engine, the best one in my
+opinion, first introduced by Jippo Pohjalainen in its warrior Timescape.
+We report slightly simplified, the way it has been proposed as White warrior
+by Nandor and Stefan in the tournament.
+
+warrior
+        spl     1,              <-200
+        mov.i   -1,             0           ;this block generates 6 processes
+        spl     1,              <-300
+
+
+tim2    spl     @tim2, }TSTEP
+tim2a   mov.i   }tim2,  >tim2
+
+cel2    spl     @cel2,  }CSTEP  ;these four lines are the main body
+cel2a   mov.i   }cel2,  >cel2
+                                ;here you can insert some bombing line
+ncl2a   mov.i   {cel2,  <ncl2
+ncl2    jmp     @ncl2,  >NSTEP
+
+All you know, having read part 1, how the first four lines work, they split
+away and copy the warrior body where the processes are going to execute, is
+worth noting that the lines cel2, cel2a don't copy  the warrior from the
+beginning but copy two blank lines in the bottom, after ncl2.
+Line ncl2a copies again the warrior, fron cel2 to ncl2+2, backward because
+of the pre decrements and last line jumps to the beginning of this copy
+resetting the pointer.
+The main advantage of this structure is that all the code is executed but
+once, to be left as a decoy to foul scanners; this is a great advantage
+compared with the older structure of the first hint. Another advantage is
+that the warrior will continue to work, slowed, even if wounded by a bomb in
+its last two lines.
+This guy was the harder thing to kill before Paul Kline created Die Hard.
+With this structure have been made some others replicators of success, worth
+mention are Nobody special by Mike Nonemacher and Marcia Trionfale by...me.
+
+Now we have a solid structure to work on, to make it deadlier we can add
+some other form of attack than overwriting our opponent. The original
+Timescape has this single bombing line inserted after cel2a:
+
+        mov.i   <-FSTEP,{FSTEP
+
+how it works, remember we have some processes working in papallel:
+every process takes the cell -FSTEP away, decrements its b-field, take the
+cell pointed by and moves it in the position pointed by the decremented
+a-field of the cell FSTEP cells away. Simple? NO! :-)
+OK. From the beginning:
+
+        dat     0,0
+-FSTEP  dat     0,0             ;will became dat 0,-1
+...
+        mov.i   <-FSTEP,{FSTEP  ;here we are
+...
+begin   mov     bomb,   nearme
+...     [enemy code]            ;Our enemy is here, we are lucky :-)
+
+end     jmp     begin
+        dat     0,0
+FSTEP   dat     0,0             ;will became dat -1,0
+
+Now 1st process takes the cell -FSTEP and decrements its b-field, takes the
+cell pointed by the decremented b-field (in the example the cell before) and
+moves it; where? It takes the cell FSTEP and decrements its a-field thake
+the cell pointed by it, here he hits. Missed, don't worry we have process 2
+taking cell -FSTEP-2 and moving it at FSTEP-2 and so on till we have
+processes executing the bombing line. At the end the enemy is no more, in
+the example at least.
+
+Bombing is useful not only to get rid of our enemy but also to get rid of
+ourself ... yes, enemy scanners have the bad use to cover our poor
+replicators with carpets of spl 0 and similar nasty things. Those bombs
+don't kill, but cause us to generate unuseful processes slowing down our
+spread. If we bomb with dat our old copies, that have a chance to be
+infected, we can reduce this effect; should happen we hit a good copy don't
+worry, we are so many that we can withstand a few losses.
+
+Others warriors use different kind of bombs, more useful to kill our
+enemies, the drawback is that we have to carry the bomb with us. The bombing
+line will beacme:
+
+        mov     bomb,   <target ;or > or { or }
+
+now the first bomb laid down will become the pointer for the following carpet.
+Most used bomb is the anti imp bomb
+        dat     <-2666, <2667
+this bomb is very good at killing 3 points imp ring, otherwise difficult to
+kill by replicators.
+Another bomb I used with some success, in Jack in the box, is this simple one:
+        dat     1,      1
+This bomb is targeted against djn streams and forward clears, two forms of
+attack often used by paper enemies. The effect on streams is to make the
+process go ot of the loop, wasting time; the effect on forward clears is
+deadly, look at a simple forward clear
+
+gate    dat     100,    1000    ;the clear is running 1000 cells away
+....
+clr     mov     bomb,   >gate   ;what's bomb don't matter, sure nothing with
+        jmp     clr             ;a b-field of 1
+
+If we hit gate with a dat 1,1 the clear will begin running inside itself,
+till it reaches  clr line and self destructs, very effective and very funny :-)
+
+Like the bombing/scanning step for stones and scanners the spread constants
+can make the difference beetween a good and a bad warrior. You have to
+choose them so as to assure a good spread of the copies in the core.
+Corestep.c by Jay Han and Mopt by Stefan Strack, available at the FTP site,
+can give you a starting point, but for replicators the job is, far more
+complex because they change their constants in the spread process; let me
+explain with an example, same structure 4 parallel processes:
+
+a       spl     @0,     100
+b       mov     }-1,    >-1
+c       mov     {d,     <d
+d       jmp     @0,     >1000
+
+First time lines a-b are executed they splits and copy 100 locations away
+but, when lines c-d copy them the value of b-field is 104, and so on.
+I don't know any mathematical method or optimization program to find best
+values and I look at what happens using pmarsv. If I notice that modules
+don't spread well I change something and so on, art more than science.
+In the replicator I'm working at now I use a step modulo 200 for first
+constant (anything beetween 100 and 400 is good) a mod 20/40 for second one
+and ... my nose :-) for the last one.
+Stefan Strack suggested a method using Pmars macros to automatize, in part
+at least, the search; here is what he says:
+
+----------
+A better way to optimize constants
+is to run your warrior with pmars and use cdb macros that change code
+sections and record the result. Suppose we want to optimize a slighly
+"un-optimized" version of T.Hsu's Ryooki:
+
+nxt_paper   equ     100 ;chosen with room for improvement
+
+boot_paper  spl     1 ,>4000
+            mov.i   -1,#0
+            mov.i   -1,#0
+
+paper       spl     @paper,<nxt_paper   ; A-fld is src, B-fld is dest
+copy        mov.i   }paper,>paper
+            mov.i   bomb  ,>paper       ; anti-imp
+            mov.i   bomb  ,}800         ; anti-vampire
+            jmn.f   @copy ,{paper
+bomb        dat     <2667 ,<2667*2
+
+and we want to find a better offset between copies than the "100" in the
+nxt_paper EQU. First we need to come up with some good
+ways to measure an even spread between paper bodies in core. Here's an
+approximation that cdb can easily provide:
+
+        after a few thousand cycles, a paper with a good offset
+        1) has more processes
+        2) covers more core locations
+        than a paper with a bad offset
+
+Now the idea is simply to run multiple rounds, systematically changing the
+silk offset at the beginning of each round, and having cdb report process
+number and number of covered core locations after 5000 cycles or so. This can
+all be automated with macros, so you can have pmars find optimal constants
+while you get coffee (jolt? :). Once you have a few candidate offsets, you
+should make  sure they're working as you expect by looking at the core
+display. You can than go on to find optimal bombing constants for your
+set of optimal offsets in pretty much the same manner. As an example using
+Ryooki above:
+
+pmars -br 1000 -e ryooki.red
+00000   SPL.B  $     1, >  4000
+(cdb) 0,7
+00000   SPL.B  $     1, >  4000
+00001   MOV.I  $    -1, #     0
+00002   MOV.I  $    -1, #     0
+00003   SPL.B  @     0, < 100
+00004   MOV.I  }    -1, >    -1
+00005   MOV.I  $     3, >    -2
+00006   MOV.I  $     2, }   800
+00007   JMN.F  @    -3, {    -4
+(cdb) calc i=99
+99
+
+This sets a variable "i" to our starting constant.
+
+(cdb)@ed 3~spl @0,<i=i+1~@sk 5000~@pq~ca i,$+1~@pq off~m count~@go~@st
+100,987
+1830
+(cdb)
+
+This is a bit complicated. The "@ed 3~spl @0,<i=i+1" sequence edits address
+3 and writes to it the instruction "SPL  @     0, <   100", having incremen-
+ted the "i" variable by 1. "@sk 5000" executes 5000 cycles silently, "@pq"
+then switches into "process queue" display/edit mode. "calc i,$+1" echoes
+the current value of the "i" variable, followed by the number of processes
+("$" is the number of the last process). The output is seen on the next line:
+"100,987". "@pq off" then switches back into core display/edit mode.
+"macro count" executes a macro that is already defined in pmars.mac; the
+"count" macro simply echoes the number of core locations that have anything
+other than "dat 0,0" in them (here: 1830). Finally, "@go~@st" advance to the
+end of this round and to the first cycle of the next round.
+
+When you now press <Enter>, the command sequence is repeated with an offset
+value of 101:
+(cdb) <Enter>
+101,1058
+1971
+(cdb)
+The 101 offset results in a greater number of processes (1058) and more
+addresses written to (1971). If you want to run the whole thing automated,
+just inclose the command sequence in a loop (!!~...~!) and send the
+results to a file like so:
+
+(cdb) ca i=99
+99
+(cdb) write ryooki.opt
+Opening logfile
+(cdb) !!~&ed 3~spl @0,<i=i+1~&sk 5000~&pq~ca i,$+1~&pq off~m count~&go~&st~!
+
+To avoid sending _a_lot_ of garbish output to the log file, we have to use &
+in stead of @ in this macro and in the macro count in pmars.mac; just edit it.
+
+count= &ca z=.~m w?~&ca x=.,c=0~!!~m w?~&ca c=c+1~if .!=x~!~ca c~&l z
+w?= &search ,
+
+You can easily make this more complicated by only echoing
+#processes/locations if the values are larger than anything so far (left as an
+exercise to the reader), but at this point you are probably ready
+to save yourself some typing by defining your own macros. Remember that
+you can add macros from within the cdb session using the "@macro ,user"
+command (a shorthand is "m="). You could even replace the rather simplistic
+check for #processes/locations with a more elaborate macro that calculates
+the variance of intervals between papers.
+
+----------
+Now we are ready to start making a paper warrior, what we have to do is
+putting things together and begin working.
+
+First the structure, we'll make a mid-size warrior, 8 lines, so we need 8
+processes.
+
+start   spl     1,      <300    ;so we make 8 parallel processes
+        spl     1,      <400    ;the <### are not needed to make it work
+        spl     1,      <500    ;but may damage something and cost nothing
+
+silk    spl     @0,     {dest0
+        mov.i   }-1,    >-1
+silk1   spl     @0,     <dest1
+        mov.i   }-1,    >-1
+        mov.i   bomba,  }range
+        mov     {silk1, <silk2
+silk2   jmp     @0,     >dest2
+bomba   dat     <2667,  <1
+
+Now the constants: dest0 is the less used, let's take a modulo 200 value,
+for dest1 we take a mod 20 one. Now we begin optimization using Stefan
+method. I have a rather slow computer so I choosed to analyze but values
+ranging from -2000 to -1000. Before doing so I changed the mov bomb line in
+a nop instruction, optimizing bombing will come later.
+
+Running Stefan's macro I got -1278 as best value.
+
+Then I replaced the nop with a mov and runned again the macro, choosing a
+range for bombing beetween 500 and 1000. Best value 933
+
+I put values in the warrior and submitted it to 94 hill: score: 125.98
+Not bad, a little better than hand made one.
+
+For you to enjoy here is the code to play with.
+
+Boyz on the hill, ready your scanners. They are coming :-)
+
+;redcode-94
+;name paper01o
+;author Beppe Bezzi
+;strategy paper module, partially optimized with pmars
+
+;assert CORESIZE == 8000
+
+dest0   equ     2200
+dest1   equ     3740
+dest2   equ     -1278   ;pmars optimized
+range   equ     933     ;pmars optimized
+
+paper
+        spl     1,      <300    ;\
+        spl     1,      <400    ;-> generate 8 consecutive processes
+        spl     1,      <500    ;/
+
+silk    spl     @0,     {dest0
+        mov.i   }-1,    >-1
+silk1   spl     @0,     <dest1
+        mov.i   }-1,    >-1
+        mov.i   bomba,  }range
+        mov     {silk1, <silk2
+silk2   jmp     @0,     >dest2
+bomba   dat     <2667,  <1
+
+end     paper
+
+For next hint I would like a little input from you about the argument to be
+treated; my first choice is p-space followed by bombers, two arguments I
+know at least a little, having made some successful warriors, but I wish to
+hear from you.
+
+_____________________________________________________________________________
+
+For questions mail me <bezzi@iol.it> or if you think it's of general
+interest post to rec.games.corewar
+
+Anyone with hints or warriors to publish is welcome.
+

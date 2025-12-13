@@ -1,0 +1,417 @@
+      .xX$$x.
+   .x$$$$$$$x.
+  d$$$$$$$$$$$
+,$$$$$$$P' `P'                             ,    .
+$$$$$$P'   '                             .d      b
+$$$$$P    b     ,$$x     ,$$x    ,$$x   ,$$b     $$.
+Y$$$$'    `$.  $$$$$$.  $$$$$$  $$P~d$. d$$$b d d$$$
+`$$$$     ,$$ $$$$$$$b $$$P `$ $$$b.$$b `Y$$$d$d$$$'   . . a  . a  a .aa  . a
+ `$$$    ,$$$,$$' `$$$ $$$'  ' $$P$XX$'  `$$$$$$$$$ .dP' `$'$ `$'$ , $''$ `$'$
+  `Y$b ,d$$$P `$b,d$P' `$$.    `$$.  ,    `$$P $$$' Y $.  $    $   $ Y..P  $
+   `$$$$$$$'    $$$P'   `$$b    `$$$P      `P  `$'  `Y'k. $.   $.  $. $$'  $.
+
+Issue 11                                                       January 8, 1996
+______________________________________________________________________________
+Core_Warrior_ is a weekly newsletter promoting the game of corewar.  Emphasis
+is placed on the most active hills--currently the '94 draft hill and the
+beginner hill.  Coverage will follow where ever the action is.  If you have
+no clue what I'm talking about then check out these five-star internet locals
+for more information:
+
+FAQs are available by anonymous FTP from rtfm.mit.edu as
+pub/usenet/news.answers/games/corewar-faq.Z
+FTP site is: ftp.csua.berkeley.edu /pub/corewar
+Web pages are at:
+http://www.stormking.com/~koth                  ;Stormking
+http://www.ecst.csuchico.edu/~pizza/koth        ;Pizza
+http://pauillac.inria.fr/~doligez/corewar/      ;Planar
+
+______________________________________________________________________________
+Hi, and happy new year.
+
+Back home, after some days at the mountains one of my first thoughts
+was checking mail to be sure my old Jack was still here, he is, you
+have been kind with him, so I'll give you another issue of Corewarrior
+instead of spending the time crying on my bed.:-)
+
+Tuc is working hard to change the scripts of Stormking koth, soon
+we'll have new features available, password, detailed status and the
+chance to change ;redcode attribute of our warrior from verbose to
+quiet, for example. Everyone is invited to submit some sample warrior
+to kothtest@valhalla.stormking.com trying any oddity to crash it, this
+avoid problems in future; any suggestion for enhancement is also
+welcome, mail them to tuc@stormking.com
+
+Stefan is still on vacations so we cannot yet see Steven's, Robert's,
+and Paul's, tournament winner and medalists, faces on the web; I'm
+sure all corewar girls are waiting.
+
+And now stop rambling, let the dat bombs speak for me.
+______________________________________________________________________________
+Current Status of the Internet Pizza Server ICWS '94 Draft Hill:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  41/ 38/ 20                      quiz              Schitzo     144     341
+ 2  39/ 36/ 24                   Harmony              P.Kline     142      11
+ 3  39/ 37/ 24             Frontwards v2       Steven Morrell     140     194
+ 4  33/ 31/ 36                 Mason 2.0        Robert Macrae     134      77
+ 5  19/  6/ 74             Evol Cap 6.2a       John Wilkinson     133       8
+ 6  23/ 13/ 64            Impfinity v4g1               Planar     132     141
+ 7  25/ 19/ 56              juliet storm           M R Bremer     132      31
+ 8  26/ 20/ 54                  La Bomba          Beppe Bezzi     132     336
+ 9  18/  5/ 77              Evol Cap 6.2       John Wilkinson     132      25
+10  23/ 14/ 63                  Hector 2          Kurt Franke     131     256
+11  28/ 24/ 49           Jack in the box          Beppe Bezzi     131     708
+12  24/ 17/ 59          juliet and paper M R Bremer, B. Bezzi     131     337
+13  30/ 30/ 40                 Torch t18              P.Kline     130     720
+14  37/ 45/ 18               seventyfive         Anders Ivner     130      50
+15  27/ 24/ 48                endpoint .           M R Bremer     130      13
+16  35/ 41/ 24                Boombastic    Maurizio Vittuari     129      76
+17  36/ 44/ 20             Provascan 3.0          Beppe Bezzi     127      91
+18  17/  7/ 76               Night Train           Karl Lewin     126     228
+19  29/ 32/ 39            Tornado 2.0 h1          Beppe Bezzi     125     181
+20  19/ 14/ 67                     myOmy             Paulsson     125       5
+21  16/  7/ 77              DoorMat v0.1              K Lewin     125     190
+22  18/ 12/ 70                Cheap Hack           M R Bremer     125      28
+23  35/ 54/ 11                     itest                   ai     116       4
+24  21/ 36/ 43                     test9    Maurizio Vittuari     105       1
+25  28/ 55/ 17          John's Zizzor 2g       John Wilkinson     100       7
+
+The hill aged 74 this week with 11 new entries. quiz is always holding
+the king position even if less strongly than in the short past; having
+given the top position to Frontwards, Impfinity and Harmony for short
+periods.
+
+After Aeka we have a new resubmission of an old warrior, juliet storm,
+this time by its author, she holds a good 7th position.
+
+Hill scores are much lower, average 128 (136 last week). Average age
+is 162 (168 last week)
+______________________________________________________________________________
+94 - What's New (in order of appearance)
+
+ 5  43/ 45/ 12               seventyfive         Anders Ivner     140       1
+14  30/ 25/ 45              juliet storm           M R Bremer     134       1
+24  21/ 16/ 63                Cheap Hack           M R Bremer     126       1
+ 9  19/  4/ 77              Evol Cap 6.2       John Wilkinson     134       1
+24  29/ 31/ 40                endpoint .           M R Bremer     127       1
+ 2  40/ 40/ 20                   Harmony              P.Kline     141       1
+ 5  19/  5/ 77             Evol Cap 6.2a       John Wilkinson     132       1
+25  28/ 55/ 17          John's Zizzor 2g       John Wilkinson     100       1
+18  19/ 13/ 68                     myOmy             Paulsson     125       1
+24  36/ 53/ 11                     itest                   ai     118       1
+24  21/ 36/ 43                     test9    Maurizio Vittuari     105       1
+
+Many new entries this week, above all new version of Harmony, after
+some dissonant trial, by Paul Kline; other entries worth noting are
+the fast bomber seventyfive by Anders Ivner, the two Evol Caps by John
+Wilkinson and the evergreen juliet storm by Myer Bremer.
+______________________________________________________________________________
+94 - What's No More
+
+26   0/  1/  3                    testPW    Maurizio Vittuari       3       9
+26   4/  0/  0               Dynamo v.1a    John K. Wilkinson      11       8
+26   1/  3/  0            Provascan 2.0d              B.Bezzi       3       4
+26   2/  1/  1                   Harmony              P.Kline       7      22
+26  35/ 47/ 19                  Qwiksand       Wayne Sheppard     122      99
+26  34/ 43/ 22               myVamp v3.7             Paulsson     125     643
+26  23/ 21/ 56                      Aeka                T.Hsu     124      75
+26  36/ 47/ 18             Porch Swing 2                  JKW     125     226
+26  34/ 44/ 22               Persistence          Kurt Franke     125     136
+26  32/ 40/ 27                  Derision           M R Bremer     124     351
+26  33/ 50/ 17                      crow           Karl Lewin     117     167
+
+The leading trio is broken, myVamp is no more at the venerable age of
+643, 9th in the 94 hall of fame.
+
+Other losses include Derision at 351, Porch swing 2 at 226, two
+centenaries crow and Persistance, a near centenary, Qwiksand, and a
+bunch of warriors killed by their authors. The old Aeka, whose
+resubmission caused a few discussions, is no more a problem, at least
+in 94 hill.
+______________________________________________________________________________
+What's Old
+
+13  30/ 30/ 40                 Torch t18              P.Kline     130     720
+11  28/ 24/ 49           Jack in the box          Beppe Bezzi     131     708
+ 1  41/ 38/ 20                      quiz              Schitzo     144     341
+12  24/ 17/ 59          juliet and paper M R Bremer, B. Bezzi     131     337
+ 8  26/ 20/ 54                  La Bomba          Beppe Bezzi     132     336
+10  23/ 14/ 63                  Hector 2          Kurt Franke     131     256
+18  17/  7/ 76               Night Train           Karl Lewin     126     228
+
+The warrior passing 200 age are still seven, but they are no more the
+same. myVamp and Derision are not more, replaced by Hector and Night
+Train.
+
+quiz, juliet and paper and La Bomba are all very near entering hall of fame.
+_____________________________________________________________________________
+HALL OF FAME
+* means the warrior is still running.
+
+Pos    Name                  Author          Age     Strategy
+ 1  Iron Gate 1.5          Wayne Sheppard    926    CMP scanner
+ 2  Agony II               Stefan Strack     912    CMP scanner
+ 3  Blue Funk              Steven Morrell    869    Stone/ imp
+ 4  Thermite 1.0           Robert Macrae     802    Qscan -> bomber
+ 5  Blue Funk 3            Steven Morrell    766    Stone/ imp
+ 6  Torch t18              P.Kline           720 *  Bomber
+ 7  Jack in the box        Beppe Bezzi       708 *  P-warrior
+ 8  HeremScimitar          A.Ivner,P.Kline   666    Bomber
+ 9  myVamp v3.7            Paulsson          643    Vampire
+10  Armory - A5            Wilkinson         609    P-warrior
+11  Phq                    Maurizio Vittuari 589    Qscan -> replicator
+12  B-Panama X             Steven Morrell    518    Stone/ replicator
+13  NC 94                  Wayne Sheppard    387    Stone/ imp
+14  Cannonade              P.Kline           382    Stone/ imp
+15  Torch t17              P.Kline           378    Bomber
+16  Lucky 3                Stefan Strack     355    Stone/ imp
+17  Derision               M R Bremer        351    Scanner
+18  Request v2.0           Brant D. Thomsen  347    Qvamp -> vampire
+19  Dragon Spear           c w blue          346    CMP scanner
+20  Leprechaun on speed    Anders Ivner      344    Qscan -> scanner/bomber
+
+myVamp leave the venerable trio a little before establishing the
+Swedish top score, Torch and Jack pass HeremScimitar and 700 in good
+health, next target Blue Funk 3.
+
+Bremer's Derision enters the hall in 17th position pushing juliet storm off.
+
+______________________________________________________________________________
+Current Status of the Internet Pizza Server Beginner's Hill:
+
+ #  %W/ %L/ %T                      Name               Author   Score     Age
+ 1  61/ 26/ 12 Koolaid II: The Wrath of          David Boeren     196      11
+ 2  48/ 14/ 38              Spacehead1.1                Warpi     182      72
+ 3  45/ 12/ 43                 Spacehead                Warpi     178      83
+ 4  55/ 31/ 14               Our Vamp v2 R Bartolome & JS Pul     178      60
+ 5  38/ 14/ 48             Thunder V 1.0       Andy Nevermind     163       7
+ 6  42/ 31/ 27           Winter Werewolf         W. Mintardjo     153      52
+ 7  43/ 36/ 21                Paperstone                Warpi     151      87
+ 8  32/ 17/ 51              Spiral Again           Calvin Loh     147       1
+ 9  27/ 12/ 62                  GCSpiral              Example     142      53
+10  26/ 14/ 59               SpiralTest2           Calvin Loh     139      10
+11  36/ 36/ 28           Paperstone v1.2                Warpi     137      84
+12  43/ 49/  7               polyphemous                Kafka     137      94
+13  36/ 39/ 25                RedPixel.2           John Lewis     134       8
+14  33/ 35/ 32 Everybody Must Get Stoned       Nathan Summers     132      96
+15  33/ 36/ 30 Everybody Must Get Vamped       Nathan Summers     131      19
+16  37/ 43/ 20                 Slime 1.1        Anton Marsden     130      12
+17  35/ 45/ 20             Test Stone #1         David Boeren     125      27
+18  31/ 38/ 30 EveryoneMustGetStoned 2.5       Nathan Summers     125      18
+19  33/ 43/ 24                    test-A       Raul Bartolome     124      34
+20  35/ 45/ 20           Czar Master 3.0        Dark Scneider     124      21
+21  33/ 43/ 24                    test-b       Raul Bartolome     122      35
+22  30/ 38/ 32     Forked Lite Ning 4.02 Ansel Greenwood Serm     121       9
+23  29/ 41/ 30     Forked Lite Ning 4.06 Ansel Greenwood Serm     117       3
+24  29/ 42/ 30                  Craw IIe                 Bach     116       2
+25  25/ 39/ 35     Forked Lite Ning 4.03 Ansel Greenwood Serm     111       5
+
+Aeka and Rave have been retired and now the hill is dominated by
+Boren's Koolaid II that, if I'm not wrong, did the 94 hill for a while
+too. Go on trying, if you made it once you are not so far.
+______________________________________________________________________________
+The hint Steps
+
+Bombing and scanning steps are an important choice to make when coding
+a warrior; the right choice may be the thing that change your score of
+many positions in the hill, and require a bit of wisdom.
+
+Having to bomb, for example, every fourth cell of core (modulo 4) we
+can choose any number with 4 as greater common divisor with Coresize,
+but results are greatly different if we choose a bad or a good one.
+
+Using four as step against a twelve lines long opponent, makes us bomb
+it thrice every time we bomb it once, a sort of overkill that's not
+needed in most cases; our oponent instead, using a smarter step and
+better spreading its bombs may bomb us but once three times as
+often. Result: 75/25 for him :-(
+
+Number theory help us in our choice, even if, as usual in corewar,
+there is not a best choice but a sort of tradeoff.
+
+Steven Morrell so speaks in its book:
+----
+One factor that could mean the difference between a top-rate stone and an
+unsuccessful stone is the choice of step size.  The program that manages to
+bomb the enemy first has a decided advantage, and some bombing step sizes
+are more efficient at scanning for the enemy than others.  So what makes a
+good step size?
+
+Ideally, it ought to hit every location in 8000 bombs, every other location
+in 8000/2=4000 bombs, every third location in 8000/3=2667 bombs, etc.
+Unfortunately, this is impossible, especially with a single step size, but
+it suggests a basic strategy -- go for the biggest programs first and then
+fill in the gaps.
+
+One way of rating the efficiency of a step size is to find the length of
+the largest unbombed section of code after each bomb is dropped.  By adding
+up all of these lengths, we get a number that tells us how big an average
+gap is.  (Indeed, by dividing this number by the number of bombs dropped,
+we get the average gap size.)  If we minimize this number over all step
+sizes, we get the "Optima Numbers."  For a coresize of 8000, these optima
+numbers are:
+
+    mod-1  3359/3039  under-100 -> 73
+    mod-2  3094/2234  under-100 -> 98
+    mod-4  3364/3044  under-100 -> 76
+    mod-5  3315/2365  under-100 -> 95
+    mod-8  2936/2376
+    mod-10 2930/2430
+
+Another common rating is how closely to in half the new bomb subdivides the
+old gap when it is dropped.  By taking the differences between where the
+bombs fall and the middle of each gap and adding these distances up, we get
+an alternate method for testing efficiency.
+
+Both of these methods are useful for finding general-purpose step sizes.
+But suppose you wanted to find a step size optimized for killing other
+stones.  Since stones usually have four or five instructions, you would
+want a step size that would bomb every 4th and 5th instruction quickly,
+regardless of how it does in general.
+
+Fortunately, there is a program in the public domain that calculates all
+of these things quicky:
+Corestep by Jay Han can be found as
+misc/corestep.c, and calcutates optima numbers and optimal step sizes.
+You will need a C compiler to use it, but it is otherwise self-contained.
+For more infromation, FTP a copy and read through it.  The classic formula
+calculates optima numbers, the alternate formula calculates the sum of the
+distances between bombs and midpoints, and find-X calculates optimal step
+sizes against a specific program length.
+
+If you don't have access to a C compiler or want this for some other
+reason, P. Kline has compiled a list of all 8000 step-sizes with their mod,
+find-4, find-5, find-10, and find-13 numbers, along with imp-killing
+constants and imp-numbers.  This table is designed for use in spreadsheets
+or databases. It is available in the misc/ directory under the name num8000.txt
+---
+
+If you look at the steps of published warriors you can notice that the
+optima numbers are not always used and smaller steps are usually
+preferred; the reason of this is mainly because there is no nedd to
+quickly find a 500 lines long target and a small step can be used as a
+gate, or as pointer in the clear, saving some space.
+
+How to choose, beetween some good number, the one to use is often a
+matter of choice. The modulo has to be chosen according to the size of
+our warrior, in such a way as not to bomb ourself; once chosen it we
+have to select a target size: tiny (5 lines), small (around 10 lines),
+average (around 13/15) and select a number with a good find for our
+target, and an average one for the others. In our choice we have to
+consider the mod 1 numbers with a good find for our selected
+modulo. They have bombing patterns approximating closely the one we
+want, and usually end bombing the cell immediately before or after the
+one we start with.
+
+
+_____________________________________________________________________________
+Planar's corner
+
+This is Impfinity v4g1, the latest (and first truly successful)
+version of my stone/imp.
+
+The general organization is the same as v3i: a pair of stones and a
+pair of continuous-launching spirals on top of each other.  The stones
+haven't changed either.
+
+What has changed is the pumps: I've implemented the idea of
+self-priming pumps that I got while writing for Core Warrior 7.  This
+replaces a 3-instruction pump and 4-instruction primer with a
+4-instruction pump.
+
+But the most important change is the length of the fuse.  In
+Impfinity v3i, I start the imp-launcher, wait for a while, then start
+the stones.  The "wait for a while" part is what I call the fuse.  I
+experimented with the fuse length.  A shorter fuse will make the
+spiral weaker, thus giving up more losses, but it will also make the
+bombing more aggressive, thus bringing in more wins.  Against my test
+suite, the shorter fuse was always better.
+
+Finally, instead of having the pump start the stone after a while, I
+made the boot code start the stone right after the pump, jumping to
+the loop body instead of the SPL itself: the closer to the JMP, the
+earlier the SPL will start accumulating processes (the shorter the
+fuse).  Again, the shortest fuse is the best one.
+
+Anyway, this is Impfinity v4g1, seen as low as 11th and as high as 1st
+on the hill.  There was a lot of movement on the hill recently.  Now
+that the papers seem to be back, I don't think Impfinity will fare so
+well.  This is the exact code that I sent to the hill.  Try and abuse
+the boot constants if you dare !
+
+-- Planar
+
+
+;redcode-94
+;name Impfinity v4g1
+;author Planar
+;strategy boot,imp,stone,clear
+;strategy   With self-priming pump and very short fuse.
+;assert CORESIZE == 8000
+;kill Impfinity
+
+istep   equ     1143
+bstep01 equ     2214
+bstep02 equ     3285
+magic01 equ     (2)
+magic02 equ     (-1)
+
+trash   equ     (Z-285)
+impoff  equ     (Z+437)
+pmpof01 equ     (impoff+1*istep-577)
+pmpof02 equ     (impoff+4*istep-496)
+stnof01 equ     (impoff+3*istep-215)
+stnof02 equ     (impoff+6*istep-158)
+
+        org     boot
+Z
+boot    spl     boot02
+
+i FOR 2
+
+boot&i
+j FOR 4
+        mov.i   <psrc&i, <pdst&i
+        mov.i   }psrc&i, }pdst&i
+ROF
+        mov.i   *psrc&i, *pdst&i
+        mov.i   instr&i, impoff+(i-1)*istep
+        spl     @pdst&i, >trash-15-i*2
+        jmp     *pdst&i, >trash-i*2
+
+psrc&i  dat     bomb&i, pend&i
+pdst&i  dat     stnof&i, pmpof&i+pend&i-pump&i
+
+point&i equ     (pump&i-pmpof&i+impoff+(i-1)*istep)
+
+pump&i  spl     #1, >prime&i
+ptr&i   spl     pump&i-pmpof&i+impoff-istep-1, {335+i
+        add.f   #istep+1, ptr&i
+prime&i mov.i   point&i, point&i-2
+pend&i
+
+instr&i mov.i   #1, istep
+
+bomb&i  dat     <2667, <5334
+stone&i spl     #stone&i+bstep&i+magic&i, {-650
+        mov.i   bomb&i, }stone&i
+        add.f   #bstep&i-1, stone&i
+j&i     djn.f   stone&i, <i-50
+send&i
+
+j FOR i==1
+k FOR 17
+        mov.i   #1, 1
+        mov.i   #1, @1
+        spl     #1, 1
+ROF
+ROF
+ROF
+        end
+
+______________________________________________________________________________
+Questions?  Concerns?  Comments?   Complaints?  Mail them to:
+Beppe Bezzi <bezzi@iol.it>, Myer R Bremer <bremermr@ecn.purdue.edu> or
+Maurizio Vittuari <pan0178@iperbole.bologna.it>
+
