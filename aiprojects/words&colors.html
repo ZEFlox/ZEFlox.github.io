@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>词语调色 · Words in Color</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#F7F4EF;
+    --card:#FFFDFB;
+    --ink:#1C1A17;
+    --ink2:#56514A;
+    --muted:#948E85;
+    --line:rgba(28,26,23,.10);
+    --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+    --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  }
+  html,body{height:100%}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    -webkit-tap-highlight-color:transparent;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-height:100vh;
+    padding:26px 20px 56px;
+    background-image:
+      radial-gradient(60% 50% at 12% 0%, rgba(226,188,148,.18), transparent 70%),
+      radial-gradient(50% 45% at 92% 6%, rgba(160,180,196,.16), transparent 70%);
+    background-attachment:fixed;
+  }
+
+  .shell{width:100%;max-width:880px;display:flex;flex-direction:column;flex:1}
+  .topbar{display:flex;align-items:center;gap:18px;height:34px;margin-bottom:26px;flex-shrink:0}
+  .brand{font-size:13px;letter-spacing:.22em;font-weight:600;white-space:nowrap}
+  .brand span{display:inline-block;margin-left:8px;font-size:9px;letter-spacing:.2em;color:var(--muted);font-weight:400;vertical-align:2px}
+  .progress{flex:1;height:2px;background:rgba(28,26,23,.10);border-radius:2px;overflow:hidden;opacity:0;transition:opacity .4s ease;min-width:40px}
+  .progress.on{opacity:1}
+  .progress i{display:block;height:100%;width:0;background:var(--ink);border-radius:2px;transition:width .45s cubic-bezier(.4,0,.2,1)}
+  .counter{font-size:11px;letter-spacing:.14em;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;min-width:64px;text-align:right;opacity:0;transition:opacity .4s ease}
+  .counter.on{opacity:1}
+
+  main{flex:1;display:flex;align-items:center;justify-content:center;width:100%}
+  .screen{display:none;width:100%}
+  .screen.active{display:block;animation:screenIn .5s cubic-bezier(.2,.8,.2,1)}
+  @keyframes screenIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+  .btn{
+    font-family:inherit;font-size:14px;letter-spacing:.04em;border:none;border-radius:999px;cursor:pointer;
+    padding:14px 30px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,opacity .18s ease;
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;
+    touch-action:manipulation;
+  }
+  .btn-primary{background:var(--ink);color:#FFFDFB;box-shadow:0 6px 18px rgba(28,26,23,.16)}
+  .btn-primary:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 10px 26px rgba(28,26,23,.22)}
+  .btn-primary:disabled{opacity:.2;cursor:not-allowed;box-shadow:none}
+  .btn-ghost{background:transparent;color:var(--ink2);box-shadow:inset 0 0 0 1px var(--line)}
+  .btn-ghost:hover{background:rgba(28,26,23,.04);color:var(--ink)}
+  .btn:active:not(:disabled){transform:scale(.985)}
+
+  /* ---------- intro ---------- */
+  .intro-card{padding:10px 4px}
+  .intro-title{font-family:var(--serif);font-size:clamp(40px,8vw,68px);line-height:1.18;letter-spacing:.02em;font-weight:600}
+  .intro-ribbon{display:flex;gap:6px;margin-top:36px}
+  .intro-ribbon i{height:30px;flex:1;border-radius:5px;display:block}
+  .intro-actions{margin-top:36px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .seed{
+    font-family:inherit;font-size:13px;color:var(--ink);letter-spacing:.04em;
+    width:168px;height:44px;padding:0 18px;border-radius:999px;
+    border:1px solid var(--line);background:#fff;outline:none;
+    transition:border-color .18s ease,box-shadow .18s ease;
+  }
+  .seed::placeholder{color:var(--muted)}
+  .seed:focus{border-color:rgba(28,26,23,.32);box-shadow:0 0 0 3px rgba(28,26,23,.05)}
+  .intro-foot{margin-top:16px;font-size:12px;color:var(--muted);letter-spacing:.04em}
+
+  /* ---------- quiz ---------- */
+  .quiz{width:100%}
+  .word-stage{
+    text-align:center;padding:clamp(10px,5vh,44px) 0 clamp(20px,5vh,40px);
+    min-height:clamp(140px,25vh,220px);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .word{
+    font-family:var(--serif);font-size:clamp(48px,12vw,92px);line-height:1.14;
+    letter-spacing:.10em;font-weight:600;text-indent:.10em;
+  }
+  .enter{animation:wordIn .5s cubic-bezier(.2,.8,.2,1)}
+  @keyframes wordIn{from{opacity:0;transform:translateY(14px) scale(.985);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+
+  .picker{
+    background:var(--card);border:1px solid var(--line);border-radius:26px;padding:22px;
+    box-shadow:0 1px 2px rgba(28,26,23,.03),0 18px 50px rgba(28,26,23,.055);
+  }
+  /* 取色：常驻的调色板 */
+  .picker-panel{margin-bottom:4px}
+  .pad{position:relative;height:150px;cursor:crosshair;touch-action:none}
+  .pad canvas{display:block;width:100%;height:100%;border-radius:14px;box-shadow:inset 0 0 0 1px rgba(28,26,23,.08)}
+  .hue{position:relative;height:14px;margin-top:14px;cursor:pointer;touch-action:none}
+  .hue canvas{display:block;width:100%;height:100%;border-radius:7px;box-shadow:inset 0 0 0 1px rgba(28,26,23,.10)}
+  .dot{
+    position:absolute;width:18px;height:18px;border-radius:50%;background:transparent;
+    border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.28),0 2px 6px rgba(0,0,0,.3);
+    transform:translate(-50%,-50%);pointer-events:none;transition:opacity .2s ease;
+  }
+  .hue .dot{width:16px;height:16px}
+  .dots-off .dot{opacity:0}
+
+  .picker-foot{display:flex;align-items:center;gap:10px;margin-top:18px}
+  .chip{
+    width:34px;height:34px;border-radius:10px;flex-shrink:0;background:#EFEAE2;
+    box-shadow:inset 0 0 0 1px rgba(28,26,23,.08);
+    display:flex;align-items:center;justify-content:center;
+    font-size:11px;color:var(--muted);transition:background .22s ease;
+  }
+  .hex{font-size:12px;letter-spacing:.06em;color:var(--muted);font-variant-numeric:tabular-nums}
+  #confirmBtn{margin-left:auto;padding:12px 26px}
+
+  .share-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+  .picker-foot{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:16px}
+  #confirmBtn{padding:12px 26px}
+
+  /* ---------- report ---------- */
+  .report{
+    background:var(--card);border:1px solid var(--line);border-radius:30px;
+    padding:clamp(26px,5vw,50px);
+    box-shadow:0 1px 2px rgba(28,26,23,.03),0 22px 60px rgba(28,26,23,.07);
+    margin:6px 0 10px;
+  }
+  .archetype{font-family:var(--serif);font-size:clamp(44px,9vw,70px);line-height:1.1;letter-spacing:.06em;font-weight:600}
+  .archetype-en{margin-top:10px;font-size:10px;letter-spacing:.3em;color:var(--muted)}
+  .archetype-desc{margin-top:20px;font-size:15px;line-height:1.95;color:var(--ink2);max-width:540px}
+
+  .sec-title{font-size:10px;letter-spacing:.24em;color:var(--muted);margin:38px 0 16px;display:flex;align-items:center;gap:14px}
+  .sec-title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .metrics{display:grid;grid-template-columns:1fr 1fr;gap:22px 34px}
+  .metric-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:9px}
+  .metric-label{font-size:13px;letter-spacing:.06em;color:var(--ink2)}
+  .metric-val{font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600}
+  .bar{height:4px;border-radius:4px;background:rgba(28,26,23,.13);overflow:hidden}
+  .bar i{display:block;height:100%;width:0;border-radius:4px;background:var(--ink);transition:width 1s cubic-bezier(.25,.8,.25,1)}
+  .metric-ends{display:flex;justify-content:space-between;margin-top:7px;font-size:10px;color:var(--muted);letter-spacing:.08em}
+
+  .drift-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .drift-side{display:flex;align-items:center;gap:11px}
+  .drift-chip{width:44px;height:44px;border-radius:13px;box-shadow:inset 0 0 0 1px rgba(28,26,23,.07)}
+  .drift-tag{font-size:12px;letter-spacing:.06em;color:var(--ink2)}
+  .drift-arrow{color:var(--muted);font-size:15px}
+  .drift-text{margin-top:16px;font-size:14px;line-height:1.9;color:var(--ink2)}
+
+  .gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .gal-chip{
+    aspect-ratio:1.15;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:15px;letter-spacing:.06em;
+    box-shadow:inset 0 0 0 1px rgba(28,26,23,.06);
+  }
+
+  .conclusion{margin-top:38px;padding-top:24px;border-top:1px solid var(--line);font-size:15px;line-height:2;color:var(--ink)}
+  .conclusion em{font-style:normal;background:linear-gradient(transparent 62%,rgba(28,26,23,.10) 62%);padding-bottom:2px}
+
+  .actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+  .share-wrap{margin-top:28px;padding-top:26px;border-top:1px solid var(--line);text-align:center}
+  .share-wrap[hidden]{display:none}
+  #shareImg{width:100%;max-width:360px;border-radius:16px;display:block;margin:0 auto 18px;box-shadow:0 16px 44px rgba(28,26,23,.16);animation:screenIn .5s cubic-bezier(.2,.8,.2,1)}
+
+  @media (max-width:720px){
+    body{padding:18px 14px 44px}
+    .brand span{display:none}
+    .pad{height:130px}
+    .picker{padding:16px;border-radius:22px}
+    .metrics{grid-template-columns:1fr;gap:18px}
+    .gallery{grid-template-columns:repeat(3,1fr)}
+    .drift-row{flex-direction:column;align-items:flex-start;gap:12px}
+    .drift-arrow{transform:rotate(90deg);margin-left:18px}
+    .report{border-radius:24px}
+    #confirmBtn{padding:12px 20px}
+  }
+  @media (max-width:380px){
+    .pad{height:118px}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="topbar">
+    <div class="brand">词语调色<span>WORDS IN COLOR</span></div>
+    <div class="progress" id="progress"><i id="progressFill"></i></div>
+    <div class="counter" id="counter">01 / 15</div>
+  </div>
+
+  <main>
+    <!-- ============ INTRO ============ -->
+    <section id="screen-intro" class="screen active">
+      <div class="intro-card">
+        <h1 class="intro-title">给一个词<br>选一种颜色</h1>
+        <div class="intro-ribbon" id="introRibbon"></div>
+        <div class="intro-actions">
+          <button class="btn btn-primary" id="startBtn">开始</button>
+          <input class="seed" id="seedInput" type="text" maxlength="24" placeholder="种子（可选）" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="intro-foot">15 题 · 凭直觉，没有对错</div>
+      </div>
+    </section>
+
+    <!-- ============ QUIZ ============ -->
+    <section id="screen-quiz" class="screen">
+      <div class="quiz">
+        <div class="word-stage">
+          <div class="word" id="word">钥匙</div>
+        </div>
+        <div class="picker">
+          <div class="picker-panel dots-off" id="pickerPanel">
+            <div class="pad" id="svPad">
+              <canvas id="svBoard"></canvas>
+              <i class="dot" id="svDot"></i>
+            </div>
+            <div class="hue" id="hueWrap">
+              <canvas id="hueBoard"></canvas>
+              <i class="dot" id="hueDot"></i>
+            </div>
+          </div>
+          <div class="picker-foot">
+            <span class="chip" id="chip">?</span>
+            <span class="hex" id="hexText">未选择</span>
+            <button class="btn btn-primary" id="confirmBtn" disabled>确认</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REPORT ============ -->
+    <section id="screen-report" class="screen">
+      <div class="report">
+        <h1 class="archetype" id="archName">熔金</h1>
+        <div class="archetype-en" id="archEn">MOLTEN</div>
+        <p class="archetype-desc" id="archDesc"></p>
+
+        <div class="sec-title">四个维度</div>
+        <div class="metrics" id="metrics"></div>
+
+        <div class="sec-title">从具体到抽象</div>
+        <div class="drift-row">
+          <div class="drift-side">
+            <div class="drift-chip" id="driftC1"></div>
+            <div class="drift-tag">前五题</div>
+          </div>
+          <div class="drift-arrow">→</div>
+          <div class="drift-side">
+            <div class="drift-chip" id="driftC2"></div>
+            <div class="drift-tag">后五题</div>
+          </div>
+        </div>
+        <p class="drift-text" id="driftText"></p>
+
+        <div class="sec-title">十五笔</div>
+        <div class="gallery" id="gallery"></div>
+
+        <div class="conclusion" id="conclusion"></div>
+
+        <div class="actions">
+          <button class="btn btn-primary" id="shareBtn">生成分享图</button>
+          <button class="btn btn-ghost" id="restartBtn">重测</button>
+        </div>
+
+        <div class="share-wrap" id="shareWrap" hidden>
+          <img id="shareImg" alt="分享图">
+          <div class="share-btns">
+            <a id="downloadLink" class="btn btn-primary" download="words-in-color.png">保存</a>
+            <button id="copyBtn" class="btn btn-ghost" type="button">复制图片</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+/* ============================================================
+   题库：60 词，分 5 层抽象度，每层 12 个
+   刻意避开有强烈固定色彩联想的词
+   ============================================================ */
+const BANK = [
+  /* L1 具体之物 */
+  { w:'钥匙',   lv:1 }, { w:'抽屉',   lv:1 }, { w:'台阶',   lv:1 },
+  { w:'枕头',   lv:1 }, { w:'绳子',   lv:1 }, { w:'瓶盖',   lv:1 },
+  { w:'信封',   lv:1 }, { w:'指甲',   lv:1 }, { w:'书签',   lv:1 },
+  { w:'口袋',   lv:1 }, { w:'挂钩',   lv:1 }, { w:'标签',   lv:1 },
+  /* L2 日常动作 */
+  { w:'系鞋带', lv:2 }, { w:'排队',   lv:2 }, { w:'迟到',   lv:2 },
+  { w:'道歉',   lv:2 }, { w:'打哈欠', lv:2 }, { w:'搬家',   lv:2 },
+  { w:'数数',   lv:2 }, { w:'擦桌子', lv:2 }, { w:'等电梯', lv:2 },
+  { w:'洗杯子', lv:2 }, { w:'锁门',   lv:2 }, { w:'拆快递', lv:2 },
+  /* L3 情绪与关系 */
+  { w:'尴尬',   lv:3 }, { w:'耐心',   lv:3 }, { w:'客气',   lv:3 },
+  { w:'想念',   lv:3 }, { w:'心软',   lv:3 }, { w:'倔强',   lv:3 },
+  { w:'分寸',   lv:3 }, { w:'默契',   lv:3 }, { w:'误会',   lv:3 },
+  { w:'撒娇',   lv:3 }, { w:'洁癖',   lv:3 }, { w:'认生',   lv:3 },
+  /* L4 抽象概念 */
+  { w:'秩序',   lv:4 }, { w:'巧合',   lv:4 }, { w:'边界',   lv:4 },
+  { w:'可能性', lv:4 }, { w:'习惯',   lv:4 }, { w:'概率',   lv:4 },
+  { w:'证据',   lv:4 }, { w:'距离',   lv:4 }, { w:'运气',   lv:4 },
+  { w:'规则',   lv:4 }, { w:'顺序',   lv:4 }, { w:'效率',   lv:4 },
+  /* L5 更远的判断 */
+  { w:'意义',   lv:5 }, { w:'必然',   lv:5 }, { w:'偶然',   lv:5 },
+  { w:'此刻',   lv:5 }, { w:'痕迹',   lv:5 }, { w:'预言',   lv:5 },
+  { w:'逻辑',   lv:5 }, { w:'悖论',   lv:5 }, { w:'起源',   lv:5 },
+  { w:'尽头',   lv:5 }, { w:'答案',   lv:5 }, { w:'注定',   lv:5 }
+];
+
+const TOTAL = 15;        // 每题抽 3 个层级 × 5 层
+const PER_LEVEL = 3;
+
+/* ============================================================
+   色彩工具
+   ============================================================ */
+function hexToRgb(hex){
+  let h = hex.replace('#','').trim();
+  if(h.length === 3) h = h.split('').map(c=>c+c).join('');
+  return { r:parseInt(h.slice(0,2),16), g:parseInt(h.slice(2,4),16), b:parseInt(h.slice(4,6),16) };
+}
+function rgbToHsl(r,g,b){
+  r/=255; g/=255; b/=255;
+  const max = Math.max(r,g,b), min = Math.min(r,g,b);
+  const l = (max+min)/2;
+  let h = 0, s = 0;
+  const d = max-min;
+  if(d !== 0){
+    s = l > .5 ? d/(2-max-min) : d/(max+min);
+    switch(max){
+      case r: h = ((g-b)/d + (g<b?6:0)); break;
+      case g: h = ((b-r)/d + 2); break;
+      default: h = ((r-g)/d + 4);
+    }
+    h *= 60;
+  }
+  return { h, s:s*100, l:l*100 };
+}
+function hslToHex(h,s,l){
+  h = ((h%360)+360)%360; s/=100; l/=100;
+  const k = n => (n + h/30) % 12;
+  const a = s * Math.min(l, 1-l);
+  const f = n => l - a * Math.max(-1, Math.min(k(n)-3, Math.min(9-k(n), 1)));
+  const to = v => Math.round(255*Math.max(0,Math.min(1,v))).toString(16).padStart(2,'0');
+  return '#' + to(f(0)) + to(f(8)) + to(f(4));
+}
+function hexToHsl(hex){ const c = hexToRgb(hex); return rgbToHsl(c.r,c.g,c.b); }
+function luminance(hex){
+  const { r,g,b } = hexToRgb(hex);
+  const f = c => { c/=255; return c <= .03928 ? c/12.92 : Math.pow((c+.055)/1.055, 2.4); };
+  return .2126*f(r) + .7152*f(g) + .0722*f(b);
+}
+function textOn(hex){ return luminance(hex) > .55 ? '#1C1A17' : '#FFFDFB'; }
+function hexA(hex,a){ const {r,g,b} = hexToRgb(hex); return 'rgba('+r+','+g+','+b+','+a+')'; }
+function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
+function shuffle(arr, rng){
+  const r = rng || Math.random;
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){ const j = Math.floor(r()*(i+1)); [a[i],a[j]] = [a[j],a[i]]; }
+  return a;
+}
+/* 种子 → 可复现的伪随机数（同一串种子抽到同一套题） */
+function hashSeed(str){
+  let h = 2166136261;
+  for(let i=0;i<str.length;i++){ h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return h >>> 0;
+}
+function mulberry32(a){
+  return function(){
+    a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+/* 没填种子时自动生成一个，保证每次测试都能复现 */
+function genSeed(){
+  return Math.random().toString(36).slice(2, 7).toUpperCase();
+}
+function avgHex(items){
+  const s = items.reduce((a,i)=>{ const c = hexToRgb(i.hex); a.r+=c.r; a.g+=c.g; a.b+=c.b; return a; },{r:0,g:0,b:0});
+  const n = items.length || 1;
+  const to = v => Math.round(v/n).toString(16).padStart(2,'0');
+  return '#' + to(s.r) + to(s.g) + to(s.b);
+}
+function hueName(h){
+  if(h < 15 || h >= 345) return '红';
+  if(h < 40) return '橙';
+  if(h < 65) return '黄';
+  if(h < 95) return '黄绿';
+  if(h < 150) return '绿';
+  if(h < 185) return '青';
+  if(h < 250) return '蓝';
+  if(h < 290) return '紫';
+  if(h < 330) return '品红';
+  return '玫红';
+}
+
+/* ============================================================
+   抽题：每层抽 3 个，再按层级排序（抽象度递进）
+   传入同一 rng 时结果完全一致 → 种子相同 = 同一份测试
+   ============================================================ */
+function drawWords(rng){
+  const picked = [];
+  for(let lv=1; lv<=5; lv++){
+    const pool = shuffle(BANK.filter(w => w.lv === lv), rng);
+    picked.push(...pool.slice(0, PER_LEVEL));
+  }
+  return picked;   // lv 升序 = 由具体到抽象
+}
+
+/* ============================================================
+   状态
+   ============================================================ */
+const state = {
+  queue: [],        // 本次抽到的 15 个词
+  index: 0,
+  picks: [],
+  selected: null,
+  seed: '',
+  data: null
+};
+const el = id => document.getElementById(id);
+
+/* 首页色带：固定配色，同一套色阶（明度、饱和度接近）保证和谐 */
+const RIBBON = ['#D64330','#E07B3E','#E2B14A','#B4C54F','#65B981','#52A2B8','#6078B9','#A364B1','#C86277'];
+
+RIBBON.forEach(c=>{
+  const i = document.createElement('i');
+  i.style.background = c;
+  document.getElementById('introRibbon').appendChild(i);
+});
+
+/* ============================================================
+   流程
+   ============================================================ */
+function showScreen(name){
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  el('screen-' + name).classList.add('active');
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+function renderQuestion(){
+  const item = state.queue[state.index];
+  state.selected = null;
+
+  const word = el('word');
+  word.textContent = item.w;
+  /* 三字词稍微收一点字号 */
+  word.style.fontSize = item.w.length >= 3 ? 'clamp(40px,10vw,78px)' : '';
+
+  const stage = document.querySelector('.word-stage');
+  stage.classList.remove('enter');
+  void stage.offsetWidth;
+  stage.classList.add('enter');
+
+  el('pickerPanel').classList.add('dots-off');
+  resetPickUI();
+
+  el('progressFill').style.width = (state.index / TOTAL * 100) + '%';
+  el('counter').textContent = String(state.index+1).padStart(2,'0') + ' / ' + TOTAL;
+}
+
+/* ============================================================
+   页面内嵌调色板（HSV 方块 + 色相条）
+   ============================================================ */
+const picker = { h: 12, s: 68, v: 82 };
+
+function hsvToHex(h,s,v){
+  s/=100; v/=100;
+  const c = v*s, x = c*(1-Math.abs((h/60)%2-1)), m = v-c;
+  let r=0,g=0,b=0;
+  if(h<60){ r=c; g=x; } else if(h<120){ r=x; g=c; }
+  else if(h<180){ g=c; b=x; } else if(h<240){ g=x; b=c; }
+  else if(h<300){ r=x; b=c; } else { r=c; b=x; }
+  const to = n => Math.round((n+m)*255).toString(16).padStart(2,'0');
+  return '#' + to(r) + to(g) + to(b);
+}
+
+function fitCanvas(cv){
+  const w = cv.clientWidth || 1, h = cv.clientHeight || 1;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  cv.width = Math.round(w*dpr);
+  cv.height = Math.round(h*dpr);
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  return { ctx, w, h };
+}
+
+function drawSV(){
+  const { ctx, w, h } = fitCanvas(el('svBoard'));
+  ctx.fillStyle = hsvToHex(picker.h, 100, 100);
+  ctx.fillRect(0,0,w,h);
+  let g = ctx.createLinearGradient(0,0,w,0);
+  g.addColorStop(0,'#FFFFFF');
+  g.addColorStop(1,'rgba(255,255,255,0)');
+  ctx.fillStyle = g; ctx.fillRect(0,0,w,h);
+  g = ctx.createLinearGradient(0,0,0,h);
+  g.addColorStop(0,'rgba(0,0,0,0)');
+  g.addColorStop(1,'#000000');
+  ctx.fillStyle = g; ctx.fillRect(0,0,w,h);
+}
+
+function drawHue(){
+  const { ctx, w, h } = fitCanvas(el('hueBoard'));
+  const g = ctx.createLinearGradient(0,0,w,0);
+  for(let k=0;k<=12;k++) g.addColorStop(k/12, hsvToHex(k*30, 100, 100));
+  ctx.fillStyle = g; ctx.fillRect(0,0,w,h);
+}
+
+function syncPickerUI(){
+  const hex = hsvToHex(picker.h, picker.s, picker.v);
+  el('svDot').style.left = picker.s + '%';
+  el('svDot').style.top = (100 - picker.v) + '%';
+  el('hueDot').style.left = (picker.h / 360 * 100) + '%';
+  el('hueDot').style.background = hsvToHex(picker.h, 100, 100);
+  el('pickerPanel').classList.remove('dots-off');
+  pick(hex);
+}
+
+function bindPad(wrap, onMove){
+  let active = false;
+  const handle = e => {
+    const r = wrap.getBoundingClientRect();
+    onMove(clamp((e.clientX - r.left)/r.width, 0, 1), clamp((e.clientY - r.top)/r.height, 0, 1));
+    syncPickerUI();
+  };
+  wrap.addEventListener('pointerdown', e=>{
+    active = true;
+    if(wrap.setPointerCapture) wrap.setPointerCapture(e.pointerId);
+    handle(e); e.preventDefault();
+  });
+  wrap.addEventListener('pointermove', e=>{ if(active) handle(e); });
+  wrap.addEventListener('pointerup', ()=>{ active = false; });
+  wrap.addEventListener('pointercancel', ()=>{ active = false; });
+}
+bindPad(el('svPad'), (x,y)=>{
+  picker.s = x*100;
+  picker.v = (1-y)*100;
+});
+bindPad(el('hueWrap'), x=>{
+  picker.h = Math.min(x*360, 359.9);
+  drawSV();
+});
+
+let pickerRaf = 0;
+window.addEventListener('resize', ()=>{
+  if(!el('screen-quiz').classList.contains('active')) return;
+  cancelAnimationFrame(pickerRaf);
+  pickerRaf = requestAnimationFrame(()=>{ drawSV(); drawHue(); });
+});
+
+function resetPickUI(){
+  state.selected = null;
+  const chip = el('chip');
+  chip.style.background = '#EFEAE2';
+  chip.textContent = '?';
+  const code = el('hexText');
+  code.textContent = '未选择';
+  code.style.color = 'var(--muted)';
+  el('confirmBtn').disabled = true;
+}
+
+function pick(hex){
+  state.selected = hex;
+  const chip = el('chip');
+  chip.style.background = hex;
+  chip.textContent = '';
+  const code = el('hexText');
+  code.textContent = hex.slice(1).toUpperCase();
+  code.style.color = 'var(--ink2)';
+  el('confirmBtn').disabled = false;
+}
+
+function confirmPick(){
+  if(!state.selected) return;
+  state.picks.push({ word: state.queue[state.index].w, hex: state.selected });
+  state.index++;
+
+  if(state.index >= TOTAL){
+    el('progressFill').style.width = '100%';
+    el('counter').textContent = '完成';
+    renderReport();
+    showScreen('report');
+  } else {
+    renderQuestion();
+  }
+}
+
+el('startBtn').addEventListener('click', ()=>{
+  const typed = el('seedInput').value.trim();
+  state.seed = typed || genSeed();
+  const rng = mulberry32(hashSeed(state.seed));
+  state.queue = drawWords(rng);
+  state.index = 0;
+  state.picks = [];
+  state.data = null;
+  el('progress').classList.add('on');
+  el('counter').classList.add('on');
+  renderQuestion();
+  showScreen('quiz');
+  requestAnimationFrame(()=>{ drawSV(); drawHue(); });
+});
+
+el('confirmBtn').addEventListener('click', confirmPick);
+
+document.addEventListener('keydown', e=>{
+  if(el('screen-quiz').classList.contains('active') && e.key === 'Enter' && !el('confirmBtn').disabled){
+    e.preventDefault();
+    confirmPick();
+  }
+});
+
+el('restartBtn').addEventListener('click', ()=>{
+  state.queue = []; state.index = 0; state.picks = []; state.data = null;
+  el('progressFill').style.width = '0%';
+  el('progress').classList.remove('on');
+  el('counter').classList.remove('on');
+  el('shareWrap').hidden = true;
+  showScreen('intro');
+});
+
+/* ============================================================
+   分析
+   ============================================================ */
+const ARCH = {
+  'warm-dense':   { name:'熔金', en:'MOLTEN',    desc:'你的调色近乎燃烧。橙红、琥珀、锈色轮流上场，颜色带着温度和一点攻击性——你不太允许一个词是「淡」的。能被叫出名字的东西，对你来说都该是滚烫的。' },
+  'warm-mid':     { name:'琥珀', en:'AMBER',     desc:'暖色是你默认的秩序：土黄、赭石、晒过的木头。但你在浓度上留了呼吸，不把话说满。你相信好的东西都是被时间慢慢焐热的。' },
+  'warm-pale':    { name:'陶土', en:'CLAY',      desc:'你偏爱被太阳晒过、又褪了一层色的暖调。像陶器、旧信纸、下午四点的墙。你的温柔不带侵略性，是那种待久了才觉出暖的类型。' },
+  'neutral-dense':{ name:'爵士', en:'JAZZ',      desc:'你在冷暖之间随意横跳，用高浓度制造意外的和声。别人看到的是没有章法，你听到的是切分音——每个词都值得一次即兴。' },
+  'neutral-mid':  { name:'灰调', en:'GREY TONE', desc:'你的色彩不站队：冷暖各半，浓度适中，像一堵精心调过色的墙。你擅长让所有冲突的东西待在同一张画面里还不吵。' },
+  'neutral-pale': { name:'雾面', en:'MATTE',     desc:'你几乎给每个颜色都蒙了一层灰。世界在你眼里是柔焦的，边缘不锋利，情绪也不高声。你的克制不是冷淡，是把音量调低之后才听得见的细节。' },
+  'cool-dense':   { name:'深海', en:'ABYSS',     desc:'浓郁的冷色系主导了你的直觉：靛、深蓝、沉紫。安静，但压强很大。你不轻易表态，可一旦给某个词上了色，就很难再改。' },
+  'cool-mid':     { name:'靛青', en:'INDIGO',    desc:'冷色是你的底色，但你不拒绝一点温度混进来。你处理情绪的方式是先把它们降温，再看清楚它们原本的样子。' },
+  'cool-pale':    { name:'晴空', en:'PALE SKY',  desc:'你选的都是被稀释过的冷色：晨雾、远山、很浅的蓝。你相信距离感是一种善意——把颜色调淡，是为了让词自己呼吸。' },
+  'warm-dark':    { name:'焦土', en:'BURNT',     desc:'你偏爱被烧过一遍的暖色：暗红、赭褐、炭化的橙。它们不发光，只余温。你的情绪很少当场爆发，而是留在灰烬里慢慢烘焙。' },
+  'neutral-dark': { name:'墨岩', en:'GRAPHITE',  desc:'你把颜色都压进了低处：炭黑、烟灰、墨绿。你不相信鲜艳能说明什么，深色才是你存放重量的地方。' },
+  'cool-dark':    { name:'夜航', en:'NIGHTFALL', desc:'你的冷色都不是给白天用的：靛蓝、墨绿、深夜的紫。你在暗处看得比谁都清楚，也在暗处待得比谁都久。' }
+};
+
+function circularMean(items){
+  let x=0, y=0, w=0;
+  items.forEach(it=>{
+    const r = it.h * Math.PI/180, ww = Math.max(it.s, 10)/100;
+    x += Math.cos(r)*ww; y += Math.sin(r)*ww; w += ww;
+  });
+  if(!w) return { h:0, r:0 };
+  return { h:(Math.atan2(y/w,x/w)*180/Math.PI + 360)%360, r:Math.hypot(x/w, y/w) };
+}
+
+function analyze(picks){
+  const items = picks.map(p=>{
+    const c = hexToRgb(p.hex);
+    const h = rgbToHsl(c.r,c.g,c.b);
+    return { word:p.word, hex:p.hex, h:h.h, s:h.s, l:h.l };
+  });
+  const n = items.length;
+  const avg = f => items.reduce((a,it)=>a+f(it),0)/n;
+
+  /* 温度：以 30° 橙为最暖，按饱和度加权 */
+  let ws = 0, wt = 0;
+  items.forEach(it=>{
+    const w = 0.2 + 0.8*(it.s/100);
+    const warm = 0.5 + 0.5*Math.cos((it.h - 30)*Math.PI/180);
+    ws += warm*w; wt += w;
+  });
+  const warmth = wt ? ws/wt*100 : 50;
+
+  const sat = avg(it=>it.s);
+  const light = avg(it=>it.l);
+
+  const cm = circularMean(items);
+  const consistency = clamp(cm.r*100, 0, 100);
+  const meanHue = cm.h;
+
+  /* 具体 vs 抽象：前五题 对 后五题 */
+  const K = 5;
+  const concrete = items.slice(0, K);
+  const abstract = items.slice(-K);
+  const mean = (arr,f) => arr.reduce((a,i)=>a+f(i),0)/arr.length;
+  const cL = mean(concrete, i=>i.l), aL = mean(abstract, i=>i.l);
+  const cS = mean(concrete, i=>i.s), aS = mean(abstract, i=>i.s);
+  const cH = circularMean(concrete).h, aH = circularMean(abstract).h;
+  const dH = ((aH - cH + 540) % 360) - 180;
+
+  /* 原型 */
+  const tempBand = warmth >= 57 ? 'warm' : warmth <= 43 ? 'cool' : 'neutral';
+  const concBand = sat >= 60 ? 'dense' : sat <= 36 ? 'pale' : 'mid';
+  /* 低彩度又偏暗时，单独归入暗调原型 */
+  const key = (light <= 38 && concBand !== 'dense') ? tempBand + '-dark' : tempBand + '-' + concBand;
+  const arch = ARCH[key];
+
+  /* 文案 */
+  const head = warmth >= 57 ? '你的色彩整体偏暖' : warmth <= 43 ? '你的色彩整体偏冷' : '你的色彩在冷暖之间保持平衡';
+  const concTxt = sat >= 60 ? '几乎每一笔都在用力' : sat <= 36 ? '每一笔都被水稀释过' : '浓淡都留着余地';
+  const lightTxt = light >= 64 ? '整体压在亮部，你似乎偏爱光'
+                 : light <= 38 ? '整体沉在暗部，你更信任阴影'
+                 : '明度停在中段，不亮也不暗';
+
+  let driftTxt = aL - cL > 7  ? '词越抽象，你反而把颜色调得越亮——越说不清的东西，在你这里越接近光。'
+               : aL - cL < -7 ? '越抽象的词，你给的颜色越沉——抽象对你不轻，它是有重量的。'
+               : '从具体走到抽象，你的明度几乎没变：你相信事物本质上是同一种亮度。';
+  if(aS - cS > 8) driftTxt += '抽象词也更浓，你不愿意用淡色敷衍说不清的东西。';
+  else if(aS - cS < -8) driftTxt += '抽象词反而更淡，你不愿意用浓色定义无法定义的东西。';
+  else driftTxt += '浓度也一直稳定，手感不随词的抽象程度改变。';
+  if(Math.abs(dH) > 22) driftTxt += '色相也从偏' + hueName(cH) + '漂向偏' + hueName(aH) + '。';
+
+  const orderTxt = consistency >= 66 ? '你的色域收得很紧——你似乎相信，一件事只有一个对的颜色。'
+                 : consistency <= 32 ? '你的色域铺得很开——每个词在你这里都是一个独立的宇宙。'
+                 : '你的色域中等宽：有主轴，但允许例外。';
+
+  return {
+    items, warmth, sat, light, consistency, meanHue, arch, tempBand, concBand,
+    concrete, abstract,
+    avgConcrete: avgHex(concrete),
+    avgAbstract: avgHex(abstract),
+    driftTxt,
+    conclusion: head + '，' + concTxt + '；' + lightTxt + '。' + orderTxt
+  };
+}
+
+/* ============================================================
+   报告
+   ============================================================ */
+function renderReport(){
+  const a = analyze(state.picks);
+  state.data = a;
+
+  el('archName').textContent = a.arch.name;
+  el('archEn').textContent = a.arch.en;
+  el('archDesc').textContent = a.arch.desc;
+
+  const metrics = [
+    { label:'温度',   value:a.warmth,      l:'冷', r:'暖', val:v => v>=57?'暖':(v<=43?'冷':'中性') },
+    { label:'浓度',   value:a.sat,         l:'淡', r:'浓', val:v => v>=60?'浓':(v<=36?'淡':'适中') },
+    { label:'明度',   value:a.light,       l:'暗', r:'亮', val:v => v>=64?'亮':(v<=38?'暗':'中') },
+    { label:'一致性', value:a.consistency, l:'散', r:'聚', val:v => v>=66?'集中':(v<=32?'分散':'中等') }
+  ];
+  el('metrics').innerHTML = metrics.map(m=>{
+    const v = Math.round(m.value);
+    return `
+    <div class="metric">
+      <div class="metric-head">
+        <span class="metric-label">${m.label}</span>
+        <span class="metric-val">${m.val(v)} · ${v}</span>
+      </div>
+      <div class="bar"><i data-w="${clamp(v,3,100)}"></i></div>
+      <div class="metric-ends"><span>${m.l}</span><span>${m.r}</span></div>
+    </div>`;
+  }).join('');
+  requestAnimationFrame(()=>{
+    document.querySelectorAll('.bar i').forEach(i=>{ i.style.width = i.dataset.w + '%'; });
+  });
+
+  el('driftC1').style.background = a.avgConcrete;
+  el('driftC2').style.background = a.avgAbstract;
+  el('driftText').textContent = a.driftTxt;
+
+  el('gallery').innerHTML = a.items.map(it=>`
+    <div class="gal-chip" style="background:${it.hex};color:${textOn(it.hex)}">${it.word}</div>
+  `).join('');
+
+  el('conclusion').innerHTML = a.conclusion.replace(/(色彩整体偏[暖冷]|冷暖之间保持平衡)/, '<em>$1</em>');
+  el('shareWrap').hidden = true;
+}
+
+/* ============================================================
+   分享图 1080 × 1700
+   ============================================================ */
+function roundRectPath(ctx,x,y,w,h,r){
+  r = Math.min(r, w/2, h/2);
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);
+  ctx.arcTo(x+w,y,x+w,y+h,r);
+  ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r);
+  ctx.arcTo(x,y,x+w,y,r);
+  ctx.closePath();
+}
+
+const NO_LINE_START = '。，、；：？！）」』】…·,.;:?!)]}%';
+function wrapText(ctx, text, maxWidth){
+  const lines = [];
+  let line = '';
+  for(const ch of text){
+    if(ch === '\n'){ lines.push(line); line = ''; continue; }
+    const test = line + ch;
+    if(ctx.measureText(test).width > maxWidth && line && !NO_LINE_START.includes(ch)){
+      lines.push(line); line = ch;
+    } else {
+      line = test;   /* 标点悬挂，避免句号落在行首 */
+    }
+  }
+  if(line) lines.push(line);
+  return lines;
+}
+
+function generateShareImage(a){
+  const W = 1080, H = 1740;
+  const cv = document.createElement('canvas');
+  cv.width = W; cv.height = H;
+  const ctx = cv.getContext('2d');
+  const SANS = '"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif';
+  const SERIF = '"Noto Serif SC","Songti SC","STSong","SimSun",serif';
+  const INK = '#1C1A17', MUTED = '#8E8880';
+
+  ctx.fillStyle = '#F2EEE7';
+  ctx.fillRect(0,0,W,H);
+
+  /* 卡片 */
+  const CX = 56, CY = 56, CW = 968, CH = 1628, R = 44;
+  ctx.save();
+  ctx.shadowColor = 'rgba(28,26,23,.14)';
+  ctx.shadowBlur = 60; ctx.shadowOffsetY = 22;
+  roundRectPath(ctx, CX, CY, CW, CH, R);
+  ctx.fillStyle = '#FFFDFB';
+  ctx.fill();
+  ctx.restore();
+
+  /* 代表色：最接近整体均值的那个颜色，再稍微收敛饱和度，避免刺眼 */
+  const acc = a.items.reduce((s,it)=>{ const c = hexToRgb(it.hex); s.r+=c.r; s.g+=c.g; s.b+=c.b; return s; }, {r:0,g:0,b:0});
+  acc.r/=a.items.length; acc.g/=a.items.length; acc.b/=a.items.length;
+  let dom = a.items[0], domD = Infinity;
+  a.items.forEach(it=>{
+    const c = hexToRgb(it.hex);
+    const d = (c.r-acc.r)**2 + (c.g-acc.g)**2 + (c.b-acc.b)**2;
+    if(d < domD){ domD = d; dom = it; }
+  });
+  const domHsl = hexToHsl(dom.hex);
+  const barHex = hslToHex(domHsl.h, Math.min(domHsl.s, 80)*.9, clamp(domHsl.l, 40, 62));
+  dom = { hex: barHex };
+
+  /* 光晕 */
+  ctx.save();
+  roundRectPath(ctx, CX, CY, CW, CH, R);
+  ctx.clip();
+  let g = ctx.createRadialGradient(W-130, 60, 20, W-130, 60, 620);
+  g.addColorStop(0, hexA(dom.hex, .17));
+  g.addColorStop(1, hexA(dom.hex, 0));
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+  g = ctx.createRadialGradient(80, H-60, 20, 80, H-60, 500);
+  g.addColorStop(0, hexA(a.avgAbstract, .10));
+  g.addColorStop(1, hexA(a.avgAbstract, 0));
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+  ctx.restore();
+
+  const X0 = 124, X1 = 956, CWID = X1 - X0;
+
+  /* 顶部标识 + 种子 */
+  ctx.textAlign = 'left';
+  ctx.fillStyle = MUTED;
+  ctx.font = '500 21px ' + SANS;
+  if('letterSpacing' in ctx) ctx.letterSpacing = '7px';
+  ctx.fillText('词语调色 · WORDS IN COLOR', X0, 176);
+  if('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+
+  if(state.seed){
+    ctx.textAlign = 'right';
+    ctx.font = '500 21px ' + SANS;
+    if('letterSpacing' in ctx) ctx.letterSpacing = '3px';
+    ctx.fillText('种子  ' + state.seed, X1, 176);
+    if('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+    ctx.textAlign = 'left';
+  }
+
+  ctx.strokeStyle = 'rgba(28,26,23,.12)';
+  ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(X0, 212); ctx.lineTo(X1, 212); ctx.stroke();
+
+  /* 原型 */
+  ctx.fillStyle = INK;
+  ctx.font = '600 114px ' + SERIF;
+  ctx.fillText(a.arch.name, X0, 344);
+
+  ctx.fillStyle = MUTED;
+  ctx.font = '500 20px ' + SANS;
+  if('letterSpacing' in ctx) ctx.letterSpacing = '9px';
+  ctx.fillText(a.arch.en, X0 + 6, 392);
+  if('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+
+  /* 描述 */
+  ctx.fillStyle = '#4E4942';
+  ctx.font = '400 29px ' + SANS;
+  const allDesc = wrapText(ctx, a.arch.desc, CWID);
+  const descLines = allDesc.slice(0,3);
+  if(allDesc.length > 3) descLines[2] = descLines[2].replace(/.{1}$/, '…');
+  descLines.forEach((ln,i)=> ctx.fillText(ln, X0, 460 + i*50));
+
+  /* 十五笔：3 行 × 5 列 */
+  const cols = 5, gap = 14;
+  const chipW = (CWID - (cols-1)*gap) / cols;
+  const chipH = 124;
+  const rowsY = [650, 650 + chipH + 18, 650 + (chipH + 18)*2];
+  a.items.forEach((it,i)=>{
+    const r = Math.floor(i/cols), c = i%cols;
+    const x = X0 + c*(chipW + gap), y = rowsY[r];
+    roundRectPath(ctx, x, y, chipW, chipH, 22);
+    ctx.fillStyle = it.hex; ctx.fill();
+    ctx.strokeStyle = 'rgba(28,26,23,.07)'; ctx.lineWidth = 1; ctx.stroke();
+
+    ctx.fillStyle = textOn(it.hex);
+    ctx.font = '500 26px ' + SERIF;
+    ctx.textAlign = 'center';
+    ctx.fillText(it.word, x + chipW/2, y + chipH/2 + 9);
+    ctx.textAlign = 'left';
+  });
+
+  /* 维度条 */
+  const metrics = [
+    ['温度', a.warmth, '冷', '暖'],
+    ['浓度', a.sat,    '淡', '浓'],
+    ['明度', a.light,  '暗', '亮'],
+    ['一致性', a.consistency, '散', '聚']
+  ];
+  const barX = X0 + 128, barW = X1 - 90 - barX;
+  metrics.forEach((m,i)=>{
+    const y = 1130 + i*58;
+    ctx.fillStyle = '#5A554E';
+    ctx.font = '400 24px ' + SANS;
+    ctx.fillText(m[0], X0, y + 8);
+
+    roundRectPath(ctx, barX, y - 4, barW, 10, 5);
+    ctx.fillStyle = 'rgba(28,26,23,.09)'; ctx.fill();
+
+    const w = Math.max(6, barW * clamp(m[1],0,100)/100);
+    roundRectPath(ctx, barX, y - 4, w, 10, 5);
+    ctx.fillStyle = dom.hex; ctx.fill();
+
+    ctx.fillStyle = MUTED;
+    ctx.font = '400 21px ' + SANS;
+    ctx.textAlign = 'right';
+    ctx.fillText(Math.round(m[1]), X1, y + 8);
+    ctx.textAlign = 'left';
+  });
+
+  /* 结论 */
+  ctx.strokeStyle = 'rgba(28,26,23,.12)';
+  ctx.beginPath(); ctx.moveTo(X0, 1360); ctx.lineTo(X1, 1360); ctx.stroke();
+
+  ctx.fillStyle = INK;
+  ctx.font = '400 28px ' + SANS;
+  const conLines = wrapText(ctx, a.conclusion, CWID).slice(0,3);
+  conLines.forEach((ln,i)=> ctx.fillText(ln, X0, 1418 + i*46));
+
+  /* 页脚 */
+  const d = new Date();
+  const ds = d.getFullYear() + '.' + String(d.getMonth()+1).padStart(2,'0') + '.' + String(d.getDate()).padStart(2,'0');
+  ctx.fillStyle = MUTED;
+  ctx.font = '400 20px ' + SANS;
+  if('letterSpacing' in ctx) ctx.letterSpacing = '5px';
+  ctx.fillText('WORDS IN COLOR  ·  ' + ds, X0, 1612);
+  if('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+
+  a.items.forEach((it,i)=>{
+    ctx.beginPath();
+    ctx.arc(X1 - 6 - i*18, 1605, 6, 0, Math.PI*2);
+    ctx.fillStyle = it.hex; ctx.fill();
+  });
+
+  return cv.toDataURL('image/png');
+}
+
+el('shareBtn').addEventListener('click', ()=>{
+  const a = state.data || analyze(state.picks);
+  const url = generateShareImage(a);
+  const img = el('shareImg');
+  img.src = url;
+  const link = el('downloadLink');
+  link.href = url;
+  link.download = '词语调色-' + a.arch.name + '.png';
+  el('copyBtn').textContent = '复制图片';
+  const wrap = el('shareWrap');
+  wrap.hidden = false;
+  setTimeout(()=> wrap.scrollIntoView({ behavior:'smooth', block:'center' }), 60);
+});
+
+/* 把分享图复制到剪贴板 */
+function dataUrlToBlob(u){
+  const [head, b64] = u.split(',');
+  const mime = (head.match(/:(.*?);/) || [,'image/png'])[1];
+  const bin = atob(b64);
+  const arr = new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++) arr[i] = bin.charCodeAt(i);
+  return new Blob([arr], { type: mime });
+}
+
+el('copyBtn').addEventListener('click', async ()=>{
+  const btn = el('copyBtn');
+  const src = el('shareImg').src;
+  if(!src) return;
+  try{
+    if(!navigator.clipboard || !window.ClipboardItem) throw new Error('unsupported');
+    await navigator.clipboard.write([ new ClipboardItem({ 'image/png': dataUrlToBlob(src) }) ]);
+    btn.textContent = '已复制 ✓';
+    setTimeout(()=>{ btn.textContent = '复制图片'; }, 1800);
+  }catch(err){
+    btn.textContent = '复制失败，请保存';
+    setTimeout(()=>{ btn.textContent = '复制图片'; }, 2200);
+  }
+});
+</script>
+</body>
+</html>
